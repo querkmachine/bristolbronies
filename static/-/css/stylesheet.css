@@ -1,0 +1,30 @@
+/* line 9, ../scss/stylesheet.scss */
+img, video, audio {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 16, ../scss/stylesheet.scss */
+.container {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+/* line 23, ../scss/stylesheet.scss */
+.global-main {
+  margin-top: 25%;
+}
+
+/* line 29, ../scss/stylesheet.scss */
+.the-big-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+/* line 35, ../scss/stylesheet.scss */
+.the-big-picture img {
+  display: block;
+  margin: 0 auto;
+}

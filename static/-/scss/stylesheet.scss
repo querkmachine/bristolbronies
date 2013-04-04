@@ -1,0 +1,39 @@
+html {
+  
+}
+
+body {
+  
+}
+
+img, video, audio {
+  max-width: 100%; 
+  height: auto;
+}
+
+// GRID
+
+.container {
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+// TOP - BODY - BOTTOM
+
+.global-main {
+  margin-top: 25%;
+}
+
+// THE BIG PICTURE
+
+.the-big-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
