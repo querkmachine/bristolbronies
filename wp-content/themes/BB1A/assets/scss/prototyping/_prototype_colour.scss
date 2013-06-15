@@ -1,0 +1,20 @@
+/* 
+* PROTOTYPE COLOURS
+* Greyscale colour scheming, intended for mockups and prototypes, not for production.
+*
+* ONION by Grey Hargreaves
+* www.greysadventures.com
+*/
+
+$black: #000;
+$white: #fff;
+$grey: #777;
+$grey-light: lighten($grey, 40%);
+$grey-dark: darken($grey, 40%);
+
+// COMMON
+html { background: $white; }
+body { color: $black; }
+
+// FEATURE BLOCKS
+.feature { color: $black; background: $grey-light; }

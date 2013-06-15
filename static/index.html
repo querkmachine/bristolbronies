@@ -65,6 +65,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="profile" href="http://microformats.org/profile/hcalendar">
 
   <!-- Content meta -->
   <meta name="description" content="">
@@ -88,7 +89,7 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Open+Sans:300,700,300italic,700italic">
-  <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Arvo">
+  <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Arvo:400,700">
   <link rel="stylesheet" media="all" href="/-/css/stylesheet.css">
 
   <!-- Scripts -->
@@ -99,6 +100,13 @@
 
 </head>
 <body>
+
+  <div class="breakpoint-meter">
+    <strong>Active stylesheets:</strong>
+    <div class="mobile">MOBILE</div>
+    <div class="tablet">TABLET</div>
+    <div class="screen">SCREEN</div>
+  </div>
 
   <!--[if lt IE 8]>
   <div class="browser-alert">You are using an obsolete and insecure browser. To get the best experience here and elsewhere, <a href="http://browsehappy.org/">please upgrade your browser</a>.</div>
@@ -111,7 +119,7 @@
       <div class="container">
         <div class="branding">
           <strong>
-            <a href="/">Bristol Bronies</a>
+            <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
           </strong>
         </div>
         <nav class="global-navigation" role="navigation">
@@ -126,21 +134,78 @@
     </header><!-- /.global-header -->
 
     <div class="the-big-picture">
-      <img src="//fpoimg.com/1320x530" alt="">
+      <img src="/uploads/banners/group1.jpg" alt="">
     </div><!-- /.the-big-picture -->
 
     <main class="global-main" role="main">
       <div class="container">
-        body
+        <div class="ticker">
+          <strong>Coming up:</strong>
+          <a href="#">ESWE presents: The Grand Galloping Gala cosplay meet</a>
+        </div><!-- /.ticker -->
+      </div>
+      <div class="container">
+        <div class="global-content">
+
+          <div class="homepage-blurb">
+            <div class="hero">
+              <strong>We are the Bristol Bronies.</strong> We run events for bronies in Bristol. (Surprising, isn't it?)
+            </div>
+          </div><!-- /.homepage-blurb -->
+
+          <div class="module-group row">
+            <aside class="one-third">
+              <div class="module module-twitter">
+                <a href="#">
+                  <img src="/-/img/module-twitter.jpg" alt="">
+                  <div href="#" class="caption">
+                    <strong>Follow us on Twitter</strong>
+                    Up-to-the-minute meet information!
+                  </div>
+                </a>
+              </div>
+            </aside>
+            <aside class="one-third">
+              <div class="module module-badges">
+                <a href="#">
+                  <img src="/-/img/module-badges.jpg" alt="">
+                  <div class="caption">
+                    <strong>Get your free badge when you attend your first meet!</strong>
+                  </div>
+                </a>
+              </div>
+            </aside>
+            <aside class="one-third">
+              <div class="module module-facebook">
+                <a href="#">
+                  <img src="/-/img/module-facebook.jpg" alt="">
+                  <div class="caption">
+                    <strong>Like us on Facebook</strong>
+                    People posting things!
+                  </div>
+                </a>
+              </div>
+            </aside>
+          </div><!-- /.module-group -->
+
+        </div>
       </div>
     </main><!-- /.global-main -->
 
     <footer class="global-footer" role="contentinfo">
       <div class="container">
+        <nav class="secondary-navigation">
+          <ul>
+            <li><a href="#">Donate</a></li>
+            <li><a href="#">Captain Izzie</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
         <div class="boilerplate">
           <small>
-            &copy; 2013 Bristol Bronies. All rights reserved.<br>
-            My Little Pony: Friendship is Magic is &copy; Hasbro. Bristol Bronies is not affiliated in any way with Hasbro or DHX Media. No copyright infringement intended.
+            &copy; 2013 Bristol Bronies. All rights reserved.
+            My Little Pony: Friendship is Magic is &copy; Hasbro. Bristol Bronies is not affiliated in any way with Hasbro or DHX Media. No copyright infringement intended. Another one of <a href="http://greysadventures.com/">Grey's Adventures</a>.
           </small>
         </div>
       </div>

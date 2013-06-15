@@ -1,0 +1,29 @@
+/* 
+* RESET
+* 
+* ONION by Grey Hargreaves
+* www.greysadventures.com
+*/
+
+html, body,
+div, span, article, aside, figure, figcaption, footer, header, group, main, menu, nav, section,
+object, embed, iframe, applet, audio, video, img, picture,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, dl, dt, dd, ol, ul, li,
+a, pre, abbr, address, cite, code, del, ins, dfn, em, kbd, q, samp, small, sub, sup, var, b, i, u, s, strong, time, mark, bdi, bdo, ruby, rt, rp,
+form, fieldset, legend, label, input, button, select, textarea, keygen, output, progress, meter,
+details, summary, command, menu,
+table, thead, tbody, tfoot, caption, tr, th, td,
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+article, aside, figure, figcaption, footer, header, hgroup, main, nav, section, video, audio, details {
+  display: block;
+}
