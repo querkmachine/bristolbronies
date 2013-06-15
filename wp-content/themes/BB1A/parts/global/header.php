@@ -70,7 +70,7 @@
 
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/modernizr.js"></script>
 
-  <title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
+  <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
 
 </head>
 <body>
