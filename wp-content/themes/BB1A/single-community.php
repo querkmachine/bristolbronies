@@ -24,7 +24,7 @@
         <?php $camera = cameraUsed($cleansed_image_url); ?>
         <aside class="post-card post-event-details">
           <?php if($camera['latitude']['ref'] && $camera['longitude']['ref']) { ?>
-          <div class="post-card-map" style="background-image: url('http://maps.googleapis.com/maps/api/staticmap?zoom=14&amp;size=480x160&amp;scale=2&amp;maptype=roadmap&amp;markers=icon:http://bristolbronies.co.uk/wp-content/themes/BB1A/assets/img/map_marker.png%7C<?php echo $camera['latitude']['deg']; ?>,<?php echo $camera['longitude']['deg']; ?>&amp;sensor=false');">
+          <div class="post-card-map" style="background-image: url('http://maps.googleapis.com/maps/api/staticmap?zoom=14&amp;size=480x160&amp;scale=2&amp;maptype=roadmap&amp;markers=icon:http://bristolbronies.co.uk/wp-content/themes/BB1A/assets/img/map_marker2.png%7Cshadow:false%7C<?php echo $camera['latitude']['deg']; ?>,<?php echo $camera['longitude']['deg']; ?>&amp;sensor=false');">
           </div>
           <?php } ?>
           <div class="post-card-details">
