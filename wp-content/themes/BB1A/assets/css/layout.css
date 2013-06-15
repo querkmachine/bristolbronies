@@ -130,6 +130,18 @@ small {
   clear: both;
 }
 
+/* line 77, ../scss/elements/common/_common.scss */
+.hidden {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("../type/fontawesome-webfont.eot?v=3.1.0");

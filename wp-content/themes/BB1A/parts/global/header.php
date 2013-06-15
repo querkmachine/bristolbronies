@@ -94,10 +94,10 @@
     ?>
     <div class="social-links">
       <ul>
-        <li><a href="http://twitter.com/bristolbronies"><i class="icon-twitter"></i></a></li>
-        <li><a href="http://facebook.com/bristolbronies"><i class="icon-facebook"></i></a></li>
-        <li><a href="http://plus.google.com/communities/100145300203565604559"><i class="icon-google-plus"></i></a></li>
-        <li><a href="irc://irc.canternet.org/bristolbronies"><i class="icon-comments-alt"></i></a></li>
+        <li><a href="http://twitter.com/bristolbronies"><i class="icon-twitter"></i><span class="hidden">@bristolbronies on Twitter</span></a></li>
+        <li><a href="http://facebook.com/bristolbronies"><i class="icon-facebook"></i><span class="hidden">Bristol Bronies on Facebook</span></a></li>
+        <li><a href="http://plus.google.com/communities/100145300203565604559"><i class="icon-google-plus"></i><span class="hidden">Bristol Bronies on Google+</span></a></li>
+        <li><a href="irc://irc.canternet.org/bristolbronies"><i class="icon-comments-alt"></i><span class="hidden">#bristolbronies IRC (requires IRC client)</span></a></li>
       </ul>
     </div>
   </header>
