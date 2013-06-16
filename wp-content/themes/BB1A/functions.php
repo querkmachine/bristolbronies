@@ -5,6 +5,12 @@
   register_nav_menus(array('primary' => 'Primary Navigation'));
   register_nav_menus(array('secondary' => 'Secondary Navigation'));
 
+  function my_mime_types($mime_types) {
+    $mime_types['svg'] = 'image/svg+xml';
+    return $mime_types;
+  }
+  add_filter('upload_mimes', 'my_mime_types', 1, 1);
+
   function my_custom_post_news() {
     $labels = array(
       'name' => _x('News', 'post type general name'),
