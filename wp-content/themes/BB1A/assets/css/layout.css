@@ -2452,24 +2452,3 @@ html.js .media-grid {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* line 714, ../scss/project/_project.scss */
-.palette {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/* line 718, ../scss/project/_project.scss */
-.palette li {
-  padding: 2px 5px;
-  overflow: hidden;
-}
-
-@media only screen and (min-width: 768px) {
-  /* line 728, ../scss/project/_project.scss */
-  .palette li span {
-    display: block;
-    width: 25%;
-    float: left;
-  }
-}
