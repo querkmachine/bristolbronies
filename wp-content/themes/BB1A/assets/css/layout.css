@@ -115,22 +115,28 @@ img, audio, video, picture, iframe {
 }
 
 /* line 64, ../scss/elements/common/_common.scss */
+img {
+  image-rendering: optimizeQuality;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 69, ../scss/elements/common/_common.scss */
 a img {
   border: 0;
 }
 
-/* line 68, ../scss/elements/common/_common.scss */
+/* line 73, ../scss/elements/common/_common.scss */
 small {
   font-size: 80%;
 }
 
-/* line 72, ../scss/elements/common/_common.scss */
+/* line 77, ../scss/elements/common/_common.scss */
 .clear {
   display: none;
   clear: both;
 }
 
-/* line 77, ../scss/elements/common/_common.scss */
+/* line 82, ../scss/elements/common/_common.scss */
 .hidden {
   width: 1px;
   height: 1px;

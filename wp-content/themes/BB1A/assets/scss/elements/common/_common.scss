@@ -61,6 +61,11 @@ img, audio, video, picture, iframe {
   height: auto;
 }
 
+img {
+  image-rendering: optimizeQuality;
+  -ms-interpolation-mode: bicubic;
+}
+
 a img {
   border: 0;
 }
