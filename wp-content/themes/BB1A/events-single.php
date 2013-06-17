@@ -15,8 +15,11 @@
   <?php } ?>
 
   <main class="container" id="main" role="main">
+    <article class="post">
 
-    <?php the_content(); ?>
+      <?php the_content(); ?>
+
+    </article>
 
   </main>
 
