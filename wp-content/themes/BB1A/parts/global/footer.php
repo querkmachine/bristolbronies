@@ -15,8 +15,6 @@
     </div>
   </footer>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/fitvids.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/jquery.isotope-min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/script.js"></script>
@@ -32,8 +30,6 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-
-  <?php wp_footer(); ?>
 
 </body>
 </html>

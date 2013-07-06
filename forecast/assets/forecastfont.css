@@ -1,0 +1,70 @@
+/*
+ * Created with iconvau.lt
+ */
+
+@font-face {
+  font-family: "iconvault";
+  src: url("iconvault_forecastfont.eot");
+  src: url("iconvault_forecastfont.eot?#iefix") format("embedded-opentype"),
+       url("iconvault_forecastfont.woff") format("woff"),
+       url("iconvault_forecastfont.ttf") format("truetype"),
+       url("iconvault_forecastfont.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.basecloud:before,
+.forecast-night:before,
+.forecast-sunny:before,
+.forecast-frosty:before,
+.forecast-windysnow:before,
+.forecast-showers:before,
+.forecast-cloud:before,
+.forecast-rainy:before,
+.forecast-mist:before,
+.forecast-windysnowcloud:before,
+.forecast-drizzle:before,
+.forecast-snowy:before,
+.forecast-sleet:before,
+.forecast-moon:before,
+.forecast-windyrain:before,
+.forecast-hail:before,
+.forecast-sunset:before,
+.forecast-windyraincloud:before,
+.forecast-sunrise:before,
+.forecast-sun:before,
+.forecast-thunder:before,
+.forecast-windy:before {
+  font-family: "iconvault";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+.basecloud:before { content: "\f105"; }
+.forecast-night:before { content: "\f100"; }
+.forecast-sunny:before { content: "\f101"; }
+.forecast-frosty:before { content: "\f102"; }
+.forecast-windysnow:before { content: "\f103"; }
+.forecast-showers:before { content: "\f104"; }
+.forecast-cloud:before { content: "\f106"; }
+.forecast-rainy:before { content: "\f107"; }
+.forecast-mist:before { content: "\f108"; }
+.forecast-windysnowcloud:before { content: "\f109"; }
+.forecast-drizzle:before { content: "\f10a"; }
+.forecast-snowy:before { content: "\f10b"; }
+.forecast-sleet:before { content: "\f10c"; }
+.forecast-moon:before { content: "\f10d"; }
+.forecast-windyrain:before { content: "\f10e"; }
+.forecast-hail:before { content: "\f10f"; }
+.forecast-sunset:before { content: "\f110"; }
+.forecast-windyraincloud:before { content: "\f111"; }
+.forecast-sunrise:before { content: "\f112"; }
+.forecast-sun:before { content: "\f113"; }
+.forecast-thunder:before { content: "\f114"; }
+.forecast-windy:before { content: "\f115"; }

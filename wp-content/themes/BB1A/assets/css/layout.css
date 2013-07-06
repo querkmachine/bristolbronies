@@ -2162,10 +2162,53 @@ main:after {
   background-size: cover;
 }
 /* line 397, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper {
+  height: 7em;
+  position: relative;
+  border-bottom: 1px solid #dfdfdf;
+  overflow: hidden;
+}
+/* line 402, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper span {
+  position: absolute;
+  top: -0.2em;
+  left: 0;
+  font-size: 8em;
+}
+/* line 409, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper .forecast-sun,
+.post .post-card .forecast-icon-wrapper .forecast-sunny {
+  color: orange;
+}
+/* line 413, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper .forecast-moon,
+.post .post-card .forecast-icon-wrapper .forecast-night {
+  color: #4681c3;
+}
+/* line 419, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper .basecloud,
+.post .post-card .forecast-icon-wrapper .forecast-cloud,
+.post .post-card .forecast-icon-wrapper .forecast-mist,
+.post .post-card .forecast-icon-wrapper .forecast-windy {
+  color: #cccccc;
+}
+/* line 426, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper .forecast-drizzle,
+.post .post-card .forecast-icon-wrapper .forecast-rainy,
+.post .post-card .forecast-icon-wrapper .forecast-showers,
+.post .post-card .forecast-icon-wrapper .forecast-windyrain,
+.post .post-card .forecast-icon-wrapper .forecast-sleet {
+  color: #82b2e4;
+}
+/* line 429, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper .forecast-frosty {
+  color: #85d8f7;
+}
+/* line 433, ../scss/project/_project.scss */
 .post .post-card .post-card-details {
   padding: 1em;
 }
-/* line 399, ../scss/project/_project.scss */
+/* line 435, ../scss/project/_project.scss */
 .post .post-card .post-card-details h1 {
   margin-bottom: .5em;
   font-size: 1.4em;
@@ -2173,74 +2216,78 @@ main:after {
   font-weight: 900;
   text-transform: uppercase;
 }
-/* line 405, ../scss/project/_project.scss */
+/* line 441, ../scss/project/_project.scss */
 .post .post-card .post-card-details h1 a {
   color: #323232;
   text-decoration: none;
 }
-/* line 410, ../scss/project/_project.scss */
+/* line 446, ../scss/project/_project.scss */
 .post .post-card .post-card-details ul {
   margin: 0;
   padding: 0;
   font-size: 0.9em;
   list-style: none;
 }
-/* line 415, ../scss/project/_project.scss */
+/* line 451, ../scss/project/_project.scss */
 .post .post-card .post-card-details ul li {
   margin-top: .3em;
   padding-left: 20px;
   position: relative;
 }
-/* line 419, ../scss/project/_project.scss */
+/* line 455, ../scss/project/_project.scss */
 .post .post-card .post-card-details ul li i {
   width: 14px;
-  position: absolute;
-  top: 0;
-  left: 0;
   color: #e02436;
   text-align: center;
   line-height: 1.6em;
 }
-/* line 434, ../scss/project/_project.scss */
-.post.weekly .post-header .post-title {
-  font-size: 1.5em;
+/* line 460, ../scss/project/_project.scss */
+.post .post-card .post-card-details ul li i:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 465, ../scss/project/_project.scss */
+.post .post-card .post-card-details ul li i:not(:first-child) {
+  margin-left: 10px;
+  margin-right: 2px;
 }
 
-/* line 442, ../scss/project/_project.scss */
+/* line 484, ../scss/project/_project.scss */
 .em-booking p {
   margin-bottom: 20px;
 }
-/* line 446, ../scss/project/_project.scss */
+/* line 488, ../scss/project/_project.scss */
 .em-booking .em-booking-form .em-form-row {
   margin-bottom: 10px;
 }
-/* line 448, ../scss/project/_project.scss */
+/* line 490, ../scss/project/_project.scss */
 .em-booking .em-booking-form .em-form-row:last-child {
   margin-bottom: 0;
 }
-/* line 452, ../scss/project/_project.scss */
+/* line 494, ../scss/project/_project.scss */
 .em-booking .em-booking-form .em-booking-buttons {
   text-align: right;
 }
-/* line 455, ../scss/project/_project.scss */
+/* line 497, ../scss/project/_project.scss */
 .em-booking .em-booking-form .em-booking-submit {
   padding: 6px 12px;
   color: #fff;
   background-color: #777777;
   cursor: pointer;
 }
-/* line 461, ../scss/project/_project.scss */
+/* line 503, ../scss/project/_project.scss */
 .em-booking .em-booking-form .em-booking-submit:hover, .em-booking .em-booking-form .em-booking-submit:active {
   background-color: #e02436;
 }
-/* line 465, ../scss/project/_project.scss */
+/* line 507, ../scss/project/_project.scss */
 .em-booking .em-booking-form label {
   display: block;
   margin-bottom: 5px;
   font-size: 0.8em;
   text-transform: uppercase;
 }
-/* line 474, ../scss/project/_project.scss */
+/* line 516, ../scss/project/_project.scss */
 .em-booking .em-booking-form input[type=text],
 .em-booking .em-booking-form input[type=email],
 .em-booking .em-booking-form textarea,
@@ -2254,78 +2301,78 @@ main:after {
   color: inherit;
   background: #fff;
 }
-/* line 481, ../scss/project/_project.scss */
+/* line 523, ../scss/project/_project.scss */
 .em-booking .em-booking-form input[type=text]:focus,
 .em-booking .em-booking-form input[type=email]:focus,
 .em-booking .em-booking-form textarea:focus,
 .em-booking .em-booking-form select:focus {
   border-color: #777777;
 }
-/* line 485, ../scss/project/_project.scss */
+/* line 527, ../scss/project/_project.scss */
 .em-booking .em-booking-form textarea {
   resize: vertical;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 495, ../scss/project/_project.scss */
+  /* line 538, ../scss/project/_project.scss */
   .post .post-header .post-title {
     font-size: 5em;
   }
-  /* line 501, ../scss/project/_project.scss */
+  /* line 544, ../scss/project/_project.scss */
   .post .post-body p:first-child {
     font-size: 1.4em;
     line-height: 1.4em;
   }
-  /* line 509, ../scss/project/_project.scss */
+  /* line 552, ../scss/project/_project.scss */
   .post.weekly .post-header .post-title {
     font-size: 3em;
   }
 }
-/* line 520, ../scss/project/_project.scss */
+/* line 563, ../scss/project/_project.scss */
 .media {
   width: 100%;
 }
-/* line 523, ../scss/project/_project.scss */
+/* line 566, ../scss/project/_project.scss */
 .media .media-meet {
   display: none;
   padding: 0.6em 1em;
   border-bottom: 1px solid #dfdfdf;
 }
-/* line 527, ../scss/project/_project.scss */
+/* line 570, ../scss/project/_project.scss */
 .media .media-meet h1 {
   font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
-/* line 531, ../scss/project/_project.scss */
+/* line 574, ../scss/project/_project.scss */
 .media .media-meet h1 a {
   color: #e02436;
   text-decoration: none;
 }
-/* line 537, ../scss/project/_project.scss */
+/* line 580, ../scss/project/_project.scss */
 .media .media-item {
   font-size: 0;
   line-height: 0;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 553, ../scss/project/_project.scss */
+  /* line 596, ../scss/project/_project.scss */
   .media {
     width: 50%;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 561, ../scss/project/_project.scss */
+  /* line 604, ../scss/project/_project.scss */
   .media {
     width: 25%;
   }
 
-  /* line 565, ../scss/project/_project.scss */
+  /* line 608, ../scss/project/_project.scss */
   .media.video {
     width: 50%;
   }
 }
-/* line 573, ../scss/project/_project.scss */
+/* line 616, ../scss/project/_project.scss */
 .page-id-2 {
   background-color: #323232;
   background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1368291658'), url("https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/943100_514647065261362_1846980143_n.jpg");
@@ -2337,55 +2384,55 @@ main:after {
   -o-background-size: auto auto, cover;
   background-size: auto auto, cover;
 }
-/* line 580, ../scss/project/_project.scss */
+/* line 623, ../scss/project/_project.scss */
 .page-id-2 .primary-navigation {
   border-color: #777777;
 }
-/* line 582, ../scss/project/_project.scss */
+/* line 625, ../scss/project/_project.scss */
 .page-id-2 .primary-navigation a {
   color: #fff;
 }
-/* line 585, ../scss/project/_project.scss */
+/* line 628, ../scss/project/_project.scss */
 .page-id-2 .primary-navigation a:hover, .page-id-2 .primary-navigation a:focus {
   background-color: #777777;
 }
-/* line 591, ../scss/project/_project.scss */
+/* line 634, ../scss/project/_project.scss */
 .page-id-2 .social-links a {
   background-color: #e02436;
 }
-/* line 595, ../scss/project/_project.scss */
+/* line 638, ../scss/project/_project.scss */
 .page-id-2 #main {
   padding: 4em 0 12em;
 }
-/* line 600, ../scss/project/_project.scss */
+/* line 643, ../scss/project/_project.scss */
 .page-id-2 .post .post-title a {
   color: #dfdfdf;
 }
-/* line 603, ../scss/project/_project.scss */
+/* line 646, ../scss/project/_project.scss */
 .page-id-2 .post .post-title a:hover, .page-id-2 .post .post-title a:focus {
   color: #fff;
 }
-/* line 609, ../scss/project/_project.scss */
+/* line 652, ../scss/project/_project.scss */
 .page-id-2 .secondary-navigation {
   color: #fff;
 }
-/* line 611, ../scss/project/_project.scss */
+/* line 654, ../scss/project/_project.scss */
 .page-id-2 .secondary-navigation a {
   color: #fff;
 }
-/* line 615, ../scss/project/_project.scss */
+/* line 658, ../scss/project/_project.scss */
 .page-id-2 .boilerplate {
   color: #fff;
 }
 
 @media only screen and (min-height: 600px) {
-  /* line 623, ../scss/project/_project.scss */
+  /* line 666, ../scss/project/_project.scss */
   .page-id-2 #main {
     min-height: 18em;
     padding: 8em 0 18em;
   }
 }
-/* line 634, ../scss/project/_project.scss */
+/* line 677, ../scss/project/_project.scss */
 .meets-section .meets-section-header {
   margin-bottom: 1em;
   padding: 3px;
@@ -2394,60 +2441,60 @@ main:after {
   font-size: 0.9em;
   text-transform: uppercase;
 }
-/* line 644, ../scss/project/_project.scss */
+/* line 687, ../scss/project/_project.scss */
 .meets-section.meets-section-past .post .post-title {
   font-size: 1.5em;
 }
 
 @media only screen and (min-width: 768px) {
-  /* line 655, ../scss/project/_project.scss */
+  /* line 698, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post {
     width: 48%;
     margin-left: 4%;
     float: left;
   }
-  /* line 659, ../scss/project/_project.scss */
+  /* line 702, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post:nth-child(2n) {
     margin-left: 0;
     clear: left;
   }
-  /* line 663, ../scss/project/_project.scss */
+  /* line 706, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 2.5em;
   }
 }
-/* line 675, ../scss/project/_project.scss */
+/* line 718, ../scss/project/_project.scss */
 .post-type-archive-community .media-grid {
   margin-top: 2em;
   margin-bottom: 4em;
 }
-/* line 678, ../scss/project/_project.scss */
+/* line 721, ../scss/project/_project.scss */
 .post-type-archive-community .media-grid img {
   -webkit-filter: grayscale(100%) opacity(80%);
   -webkit-transition: -webkit-filter 0.1s ease-in-out;
 }
-/* line 681, ../scss/project/_project.scss */
+/* line 724, ../scss/project/_project.scss */
 .post-type-archive-community .media-grid img:hover {
   -webkit-filter: grayscale(0) opacity(100%);
 }
 
-/* line 689, ../scss/project/_project.scss */
+/* line 732, ../scss/project/_project.scss */
 html.js .media-grid {
   display: none;
 }
 
-/* line 697, ../scss/project/_project.scss */
+/* line 740, ../scss/project/_project.scss */
 .error404 .feature-image {
   background-color: #c6d2e1;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 572px 389px;
 }
-/* line 703, ../scss/project/_project.scss */
+/* line 746, ../scss/project/_project.scss */
 .error404 .post {
   text-align: center;
 }
-/* line 705, ../scss/project/_project.scss */
+/* line 748, ../scss/project/_project.scss */
 .error404 .post .post-body {
   margin-left: auto;
   margin-right: auto;

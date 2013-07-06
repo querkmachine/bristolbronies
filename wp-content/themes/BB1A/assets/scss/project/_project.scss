@@ -394,6 +394,42 @@ main {
       background-position: center center;
       @include background-size(cover);
     }
+    .forecast-icon-wrapper {
+      height: 7em;
+      position: relative;
+      border-bottom: 1px solid #dfdfdf;
+      overflow: hidden;
+      span {
+        position: absolute;
+        top: -0.2em;
+        left: 0;
+        font-size: 8em;
+      }
+      .forecast-sun, 
+      .forecast-sunny {
+        color: rgb(255, 165, 0);
+      }
+      .forecast-moon,
+      .forecast-night {
+        color: #4681c3;
+      }
+      .basecloud,
+      .forecast-cloud,
+      .forecast-mist,
+      .forecast-windy {
+        color: rgb(204, 204, 204);
+      }
+      .forecast-drizzle,
+      .forecast-rainy,
+      .forecast-showers,
+      .forecast-windyrain,
+      .forecast-sleet {
+        color: #82b2e4;
+      }
+      .forecast-frosty {
+        color: #85d8f7;
+      }
+    }
     .post-card-details {
       padding: 1em;
       h1 {
@@ -418,24 +454,30 @@ main {
           position: relative;
           i {
             width: 14px;
-            position: absolute;
-            top: 0;
-            left: 0;
             color: $red;
             text-align: center;
             line-height: 1.6em;
+            &:first-child {
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            &:not(:first-child) {
+              margin-left: 10px;
+              margin-right: 2px;
+            }
           }
         }
       }
     }
   }
-  &.weekly {
-    .post-header {
-      .post-title {
-        font-size: 1.5em;
-      }
-    }
-  }
+  // &.weekly {
+  //   .post-header {
+  //     .post-title {
+  //       font-size: 1.5em;
+  //     }
+  //   }
+  // }
 }
 
 .em-booking {
@@ -486,6 +528,7 @@ main {
       resize: vertical;
     }
   }
+
 }
 
 @media only screen and (min-width: 768px) {

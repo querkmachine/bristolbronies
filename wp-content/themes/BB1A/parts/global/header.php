@@ -67,12 +67,14 @@
 
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900,900italic|Open+Sans:300italic,700italic,300,700">
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/layout.css">
+  <link rel="stylesheet" type="text/css" href="/forecast/assets/forecastfont.css">
 
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/modernizr.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+
 
   <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
-
-  <?php wp_head(); ?>
 
 </head>
 <body>

@@ -19,8 +19,26 @@
 
       <?php the_content(); ?>
 
-    </article>
+      <?php 
+        $event_meta = em_get_event(get_the_ID(), 'post_id');
+        $location_meta = em_get_location($event_meta->location_id);
+      ?>
 
+      <?php if($event_meta->end > time()) { ?>
+      <aside class="post-card post-event-weather" id="ajax-forecast"></aside>
+      <script>
+        $(document).ready(function() {
+          $.get('/forecast?lat=<?php echo $location_meta->latitude; ?>&lng=<?php echo $location_meta->longitude; ?>&start=<?php echo $event_meta->start; ?>', function(data) {
+            $('#ajax-forecast').html(data);
+            console.log("Forecast loading...")
+          }).done(function() { console.log("Forecast loaded."); 
+          }).fail(function() { console.log("Forecast failed."); 
+          });
+        });
+      </script>
+      <?php } ?>
+
+    </article>
   </main>
 
 <?php endwhile; ?>

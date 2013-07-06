@@ -1,16 +1,28 @@
 <?php
 
+  //
+  //
+  // ADD SUPPORT FOR FEATURED POST IMAGES
   add_theme_support('post-thumbnails');
   
+  //
+  //
+  // REGISTER SITE MENUS
   register_nav_menus(array('primary' => 'Primary Navigation'));
   register_nav_menus(array('secondary' => 'Secondary Navigation'));
 
+  //
+  //
+  // ADD SUPPORT FOR UPLOADING SVGS
   function my_mime_types($mime_types) {
     $mime_types['svg'] = 'image/svg+xml';
     return $mime_types;
   }
   add_filter('upload_mimes', 'my_mime_types', 1, 1);
 
+  //
+  //
+  // NEWS POST TYPE
   function my_custom_post_news() {
     $labels = array(
       'name' => _x('News', 'post type general name'),
@@ -39,6 +51,9 @@
   }
   add_action('init', 'my_custom_post_news');
 
+  //
+  //
+  // COMMUNITY POST TYPE
   function my_custom_post_community() {
     $labels = array(
       'name' => _x('Media', 'post type general name'),
@@ -69,9 +84,8 @@
 
   //
   //
-  //
+  // GRAB EXIF DATA FROM PHOTOGRAPHS
   // http://www.php.net/manual/en/function.exif-read-data.php#107888
-
   function cameraUsed($imagePath) {
 
     // Check if the variable is set and if the file itself exists before continuing
