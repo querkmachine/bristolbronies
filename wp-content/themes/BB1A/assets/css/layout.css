@@ -2181,25 +2181,25 @@ html.svg .branding a {
 }
 /* line 413, ../scss/project/_project.scss */
 .post .post-card .forecast-icon-wrapper span {
+  display: inline-block;
   position: absolute;
   top: -0.2em;
   left: 0;
   font-size: 8em;
 }
-/* line 419, ../scss/project/_project.scss */
-.post .post-card .forecast-icon-wrapper .beta-tag {
-  top: 0;
-  left: 0;
-  right: 0;
-  font-size: 0.8em;
-  text-align: right;
-}
-/* line 425, ../scss/project/_project.scss */
-.post .post-card .forecast-icon-wrapper .beta-tag a {
+/* line 420, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper .badge {
   padding: 1px 3px;
-  color: #454545;
+  top: 0;
+  left: auto;
+  right: 0;
   background: #dfdfdf;
+  font-size: 0.8em;
   font-style: italic;
+}
+/* line 428, ../scss/project/_project.scss */
+.post .post-card .forecast-icon-wrapper .badge a {
+  color: #454545;
   text-decoration: none;
 }
 /* line 434, ../scss/project/_project.scss */

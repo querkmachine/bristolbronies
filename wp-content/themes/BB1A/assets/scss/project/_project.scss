@@ -411,22 +411,22 @@ main {
       position: relative;
       border-bottom: 1px solid #dfdfdf;
       span {
+        display: inline-block;
         position: absolute;
         top: -0.2em;
         left: 0;
         font-size: 8em;
       }
-      .beta-tag {
+      .badge {
+        padding: 1px 3px;
         top: 0;
-        left: 0;
+        left: auto;
         right: 0;
+        background: #dfdfdf;  
         font-size: 0.8em;
-        text-align: right;
+        font-style: italic;
         a {
-          padding: 1px 3px;
           color: #454545;
-          background: #dfdfdf;
-          font-style: italic;
           text-decoration: none;
         }
       }
