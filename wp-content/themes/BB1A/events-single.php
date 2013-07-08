@@ -25,14 +25,13 @@
       ?>
 
       <?php if($event_meta->end > time()) { ?>
-      <aside class="post-card post-event-weather" id="ajax-forecast"></aside>
+      <aside class="post-card post-event-weather loading-spinner" id="ajax-forecast"></aside>
       <script>
         $(document).ready(function() {
           $.get('/forecast?lat=<?php echo $location_meta->latitude; ?>&lng=<?php echo $location_meta->longitude; ?>&start=<?php echo $event_meta->start; ?>', function(data) {
             $('#ajax-forecast').html(data);
-            console.log("Forecast loading...")
-          }).done(function() { console.log("Forecast loaded."); 
-          }).fail(function() { console.log("Forecast failed."); 
+          }).done(function() { $("#ajax-forecast").removeClass('loading-spinner');
+          }).fail(function() { console.log("Error: Forecast load failed."); 
           });
         });
       </script>
