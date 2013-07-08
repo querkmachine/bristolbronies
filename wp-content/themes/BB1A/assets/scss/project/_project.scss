@@ -161,6 +161,9 @@ main {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
       background-image: image-url('logo@2x.png');
     }
+    html.svg & {
+      background-image: image-url('logo.svg'); 
+    }
   }
 }
 
