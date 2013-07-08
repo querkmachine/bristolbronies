@@ -60,6 +60,7 @@ if($latitude && $longitude && $timestamp) {
 
 ?>
         <div class="forecast-icon-wrapper">
+          <span class="beta-tag"><a href="/news/beta-forecast/">beta</a></span>
           <?php if($basecloud) { ?><span class="basecloud"></span><?php } ?>
           <?php for($i=0;$i<count($icons);$i++) { ?><span class="forecast-<?php echo $icons[$i]; ?>"></span><?php } ?>
         </div>

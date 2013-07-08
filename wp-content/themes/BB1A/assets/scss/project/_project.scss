@@ -395,15 +395,28 @@ main {
       @include background-size(cover);
     }
     .forecast-icon-wrapper {
-      height: 7em;
+      height: 8em;
       position: relative;
       border-bottom: 1px solid #dfdfdf;
-      overflow: hidden;
       span {
         position: absolute;
         top: -0.2em;
         left: 0;
         font-size: 8em;
+      }
+      .beta-tag {
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 0.8em;
+        text-align: right;
+        a {
+          padding: 1px 3px;
+          color: #454545;
+          background: #dfdfdf;
+          font-style: italic;
+          text-decoration: none;
+        }
       }
       .forecast-sun, 
       .forecast-sunny {
@@ -426,7 +439,8 @@ main {
       .forecast-sleet {
         color: #82b2e4;
       }
-      .forecast-frosty {
+      .forecast-frosty,
+      .forecast-snowy {
         color: #85d8f7;
       }
     }
