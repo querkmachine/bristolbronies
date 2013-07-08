@@ -2375,7 +2375,7 @@ main:after {
 /* line 616, ../scss/project/_project.scss */
 .page-id-2 {
   background-color: #323232;
-  background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1368291658'), url("https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/943100_514647065261362_1846980143_n.jpg");
+  background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1368291658'), url('/wp-content/themes/BB1A/assets/img/homepage_background.jpg?1373279182');
   background-repeat: repeat, no-repeat;
   background-position: center center;
   background-scroll: fixed, fixed;

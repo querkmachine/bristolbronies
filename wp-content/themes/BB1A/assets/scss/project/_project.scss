@@ -615,7 +615,7 @@ main {
 
 .page-id-2 {
   background-color: $grey-dark;
-  background-image: image-url('overlay.png'), url('https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/943100_514647065261362_1846980143_n.jpg');
+  background-image: image-url('overlay.png'), image-url('homepage_background.jpg');
   background-repeat: repeat, no-repeat;
   background-position: center center;
   background-scroll: fixed, fixed;
