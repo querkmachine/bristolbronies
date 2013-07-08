@@ -25,4 +25,10 @@
 
 // PROJECT FILES
 // @import "project/mixins";
-@import "project/project";
+@media screen {
+  @import "project/project";
+}
+
+@media print {
+  @import "project/print";
+}
