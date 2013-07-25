@@ -25,5 +25,4 @@
     </div>
   </main>
   
-<?php get_template_part('parts/global/affiliates'); ?>
 <?php get_template_part('parts/global/footer'); ?> 
