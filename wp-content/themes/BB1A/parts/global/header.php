@@ -68,6 +68,7 @@
   <link rel="stylesheet" media="all" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:900,900italic|Open+Sans:300italic,700italic,300,700">
   <link rel="stylesheet" media="all" type="text/css" href="/forecast/assets/forecastfont.css">
   <link rel="stylesheet" media="all" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/layout.css">
+  <?php while ( have_posts() ) : the_post(); ?><style media="screen" type="text/css"><?php echo get_post_meta(get_the_ID(), 'custom_css', true); ?></style><?php endwhile; ?>
 
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/libs/modernizr.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
