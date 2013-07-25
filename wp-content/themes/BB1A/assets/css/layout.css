@@ -2322,6 +2322,53 @@ a [class*=" icon-"]:before {
   }
 
   /* line 634, ../scss/project/_project.scss */
+  #affiliates {
+    padding: 1em 0;
+    background-color: #dfdfdf;
+  }
+  /* line 637, ../scss/project/_project.scss */
+  #affiliates header {
+    margin-bottom: 1em;
+  }
+  /* line 639, ../scss/project/_project.scss */
+  #affiliates header h1 {
+    color: #777777;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+    font-size: 0.9em;
+  }
+  /* line 645, ../scss/project/_project.scss */
+  #affiliates ul {
+    overflow: hidden;
+    list-style: none;
+  }
+  /* line 648, ../scss/project/_project.scss */
+  #affiliates ul li {
+    width: 19.2%;
+    margin-right: 1%;
+    float: left;
+    line-height: 0;
+  }
+  /* line 653, ../scss/project/_project.scss */
+  #affiliates ul li:last-child {
+    margin-right: 0;
+  }
+  /* line 656, ../scss/project/_project.scss */
+  #affiliates ul li a {
+    display: block;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+  }
+  /* line 662, ../scss/project/_project.scss */
+  #affiliates ul li a:hover, #affiliates ul li a:focus {
+    opacity: 1;
+    -webkit-filter: grayscale(0%);
+  }
+
+  /* line 673, ../scss/project/_project.scss */
   .page-id-2 {
     background-color: #323232;
     background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1368291658'), url('/wp-content/themes/BB1A/assets/img/homepage_background.jpg?1373279182');
@@ -2333,48 +2380,48 @@ a [class*=" icon-"]:before {
     -o-background-size: auto auto, cover;
     background-size: auto auto, cover;
   }
-  /* line 641, ../scss/project/_project.scss */
+  /* line 680, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation {
     border-color: #777777;
   }
-  /* line 643, ../scss/project/_project.scss */
+  /* line 682, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a {
     color: #fff;
   }
-  /* line 646, ../scss/project/_project.scss */
+  /* line 685, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a:hover, .page-id-2 .primary-navigation a:focus {
     background-color: #777777;
   }
-  /* line 652, ../scss/project/_project.scss */
+  /* line 691, ../scss/project/_project.scss */
   .page-id-2 .social-links a {
     background-color: #e02436;
   }
-  /* line 656, ../scss/project/_project.scss */
+  /* line 695, ../scss/project/_project.scss */
   .page-id-2 #main {
     padding: 4em 0 12em;
   }
-  /* line 661, ../scss/project/_project.scss */
+  /* line 700, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a {
     color: #dfdfdf;
   }
-  /* line 664, ../scss/project/_project.scss */
+  /* line 703, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a:hover, .page-id-2 .post .post-title a:focus {
     color: #fff;
   }
-  /* line 670, ../scss/project/_project.scss */
+  /* line 709, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation {
     color: #fff;
   }
-  /* line 672, ../scss/project/_project.scss */
+  /* line 711, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation a {
     color: #fff;
   }
-  /* line 676, ../scss/project/_project.scss */
+  /* line 715, ../scss/project/_project.scss */
   .page-id-2 .boilerplate {
     color: #fff;
   }
 
-  /* line 695, ../scss/project/_project.scss */
+  /* line 734, ../scss/project/_project.scss */
   .meets-section .meets-section-header {
     margin-bottom: 1em;
     padding: 3px;
@@ -2383,43 +2430,43 @@ a [class*=" icon-"]:before {
     font-size: 0.9em;
     text-transform: uppercase;
   }
-  /* line 705, ../scss/project/_project.scss */
+  /* line 744, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 1.5em;
   }
 
-  /* line 736, ../scss/project/_project.scss */
+  /* line 775, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid {
     margin-top: 2em;
     margin-bottom: 4em;
   }
-  /* line 739, ../scss/project/_project.scss */
+  /* line 778, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid img {
     -webkit-filter: grayscale(100%) opacity(80%);
     -webkit-transition: -webkit-filter 0.1s ease-in-out;
   }
-  /* line 742, ../scss/project/_project.scss */
+  /* line 781, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid img:hover {
     -webkit-filter: grayscale(0) opacity(100%);
   }
 
-  /* line 750, ../scss/project/_project.scss */
+  /* line 789, ../scss/project/_project.scss */
   html.js .media-grid {
     display: none;
   }
 
-  /* line 758, ../scss/project/_project.scss */
+  /* line 797, ../scss/project/_project.scss */
   .error404 .feature-image {
     background-color: #c6d2e1;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 572px 389px;
   }
-  /* line 764, ../scss/project/_project.scss */
+  /* line 803, ../scss/project/_project.scss */
   .error404 .post {
     text-align: center;
   }
-  /* line 766, ../scss/project/_project.scss */
+  /* line 805, ../scss/project/_project.scss */
   .error404 .post .post-body {
     margin-left: auto;
     margin-right: auto;
@@ -2506,25 +2553,25 @@ a [class*=" icon-"]:before {
   }
 }
 @media only screen and (min-height: 600px) {
-  /* line 684, ../scss/project/_project.scss */
+  /* line 723, ../scss/project/_project.scss */
   .page-id-2 #main {
     min-height: 18em;
     padding: 8em 0 18em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 716, ../scss/project/_project.scss */
+  /* line 755, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post {
     width: 48%;
     margin-left: 4%;
     float: left;
   }
-  /* line 720, ../scss/project/_project.scss */
+  /* line 759, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post:nth-child(2n) {
     margin-left: 0;
     clear: left;
   }
-  /* line 724, ../scss/project/_project.scss */
+  /* line 763, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 2.5em;
   }

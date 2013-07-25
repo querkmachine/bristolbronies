@@ -629,6 +629,45 @@ main {
 
 }
 
+// AFFILIATES
+
+#affiliates {
+  padding: 1em 0;
+  background-color: $grey-light;
+  header {
+    margin-bottom: 1em;
+    h1 {
+      color: $grey;
+      font-family: $body-font;
+      font-size: 0.9em;
+    }
+  }
+  ul {
+    overflow: hidden;
+    list-style: none;
+    li {
+      width: 19.2%;
+      margin-right: 1%;
+      float: left;
+      line-height: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        display: block;
+        opacity: 0.5;
+        -webkit-filter: grayscale(100%);
+        @include transition(opacity .4s ease-in-out, -webkit-filter .4s ease-in-out);
+        &:hover,
+        &:focus {
+          opacity: 1;
+          -webkit-filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}
+
 // HOMEPAGE 
 
 .page-id-2 {
