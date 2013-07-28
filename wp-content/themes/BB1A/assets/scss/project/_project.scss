@@ -580,7 +580,7 @@ main {
       }
     }
     .post-body {
-      width: 30em;
+      max-width: 30em;
       float: left;
       p {
         &:first-child {
@@ -590,7 +590,7 @@ main {
       }
     }
     .post-aside {
-      width: 15em;
+      max-width: 15em;
       margin-top: 3em;
       float: right;
       clear: right;
@@ -610,7 +610,7 @@ main {
 
   .post {
     .post-aside {
-      width: 25em;
+      max-width: 25em;
     }
   }
 

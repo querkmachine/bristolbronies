@@ -2549,7 +2549,7 @@ a [class*=" icon-"]:before {
   }
   /* line 582, ../scss/project/_project.scss */
   .post .post-body {
-    width: 30em;
+    max-width: 30em;
     float: left;
   }
   /* line 586, ../scss/project/_project.scss */
@@ -2559,7 +2559,7 @@ a [class*=" icon-"]:before {
   }
   /* line 592, ../scss/project/_project.scss */
   .post .post-aside {
-    width: 15em;
+    max-width: 15em;
     margin-top: 3em;
     float: right;
     clear: right;
@@ -2572,7 +2572,7 @@ a [class*=" icon-"]:before {
 @media only screen and (min-width: 960px) {
   /* line 612, ../scss/project/_project.scss */
   .post .post-aside {
-    width: 25em;
+    max-width: 25em;
   }
 }
 @media only screen and (min-width: 768px) {
