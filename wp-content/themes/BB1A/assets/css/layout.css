@@ -2033,8 +2033,15 @@ a [class*=" icon-"]:before {
   /* line 320, ../scss/project/_project.scss */
   .post {
     margin-bottom: 2em;
+    *zoom: 1;
   }
-  /* line 323, ../scss/project/_project.scss */
+  /* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  .post:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* line 324, ../scss/project/_project.scss */
   .post .post-header .post-leader {
     display: inline-block;
     padding: 0.25em 0.5em;
@@ -2045,7 +2052,7 @@ a [class*=" icon-"]:before {
     text-transform: uppercase;
     white-space: nowrap;
   }
-  /* line 333, ../scss/project/_project.scss */
+  /* line 334, ../scss/project/_project.scss */
   .post .post-header .post-title {
     margin-top: 0.15em;
     font-size: 2.7em;
@@ -2054,25 +2061,25 @@ a [class*=" icon-"]:before {
     text-transform: uppercase;
     line-height: 1em;
   }
-  /* line 340, ../scss/project/_project.scss */
+  /* line 341, ../scss/project/_project.scss */
   .post .post-header .post-title a {
     color: #323232;
     text-decoration: none;
   }
-  /* line 344, ../scss/project/_project.scss */
+  /* line 345, ../scss/project/_project.scss */
   .post .post-header .post-title a:hover, .post .post-header .post-title a:focus {
     color: #777777;
   }
-  /* line 350, ../scss/project/_project.scss */
+  /* line 351, ../scss/project/_project.scss */
   .post .post-body {
     margin-top: 3em;
     line-height: 1.6em;
   }
-  /* line 353, ../scss/project/_project.scss */
+  /* line 354, ../scss/project/_project.scss */
   .post .post-body p, .post .post-body ul, .post .post-body ol, .post .post-body h2 {
     margin-bottom: 20px;
   }
-  /* line 356, ../scss/project/_project.scss */
+  /* line 357, ../scss/project/_project.scss */
   .post .post-body h2 {
     padding-top: 20px;
     font-size: 1.5em;
@@ -2080,21 +2087,21 @@ a [class*=" icon-"]:before {
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 363, ../scss/project/_project.scss */
+  /* line 364, ../scss/project/_project.scss */
   .post .post-body h4 {
     font-weight: 300;
     font-style: italic;
   }
-  /* line 367, ../scss/project/_project.scss */
+  /* line 368, ../scss/project/_project.scss */
   .post .post-body ul {
     list-style: none;
   }
-  /* line 369, ../scss/project/_project.scss */
+  /* line 370, ../scss/project/_project.scss */
   .post .post-body ul li {
     padding-left: 20px;
     position: relative;
   }
-  /* line 372, ../scss/project/_project.scss */
+  /* line 373, ../scss/project/_project.scss */
   .post .post-body ul li:before {
     content: "\25CF";
     width: 14px;
@@ -2105,33 +2112,33 @@ a [class*=" icon-"]:before {
     text-align: center;
     line-height: 1.6em;
   }
-  /* line 384, ../scss/project/_project.scss */
+  /* line 385, ../scss/project/_project.scss */
   .post .post-body ol {
     list-style: decimal;
     margin-left: 20px;
   }
-  /* line 389, ../scss/project/_project.scss */
+  /* line 390, ../scss/project/_project.scss */
   .post .post-body p:first-child {
     font-size: 1.2em;
     line-height: 1.4em;
   }
-  /* line 399, ../scss/project/_project.scss */
+  /* line 400, ../scss/project/_project.scss */
   .post .post-neighbours ul li strong {
     display: block;
     color: #323232;
     font-size: 0.8em;
     font-style: italic;
   }
-  /* line 409, ../scss/project/_project.scss */
+  /* line 410, ../scss/project/_project.scss */
   .post .post-aside + .post-aside {
     margin-top: 20px;
   }
-  /* line 413, ../scss/project/_project.scss */
+  /* line 414, ../scss/project/_project.scss */
   .post .post-card {
     max-width: 30em;
     border: 1px solid #dfdfdf;
   }
-  /* line 416, ../scss/project/_project.scss */
+  /* line 417, ../scss/project/_project.scss */
   .post .post-card .post-card-map {
     padding-bottom: 160px;
     border-bottom: 1px solid #dfdfdf;
@@ -2141,13 +2148,13 @@ a [class*=" icon-"]:before {
     -o-background-size: cover;
     background-size: cover;
   }
-  /* line 422, ../scss/project/_project.scss */
+  /* line 423, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper {
     height: 8em;
     position: relative;
     border-bottom: 1px solid #dfdfdf;
   }
-  /* line 426, ../scss/project/_project.scss */
+  /* line 427, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper span {
     display: inline-block;
     position: absolute;
@@ -2155,7 +2162,7 @@ a [class*=" icon-"]:before {
     left: 0;
     font-size: 8em;
   }
-  /* line 433, ../scss/project/_project.scss */
+  /* line 434, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .badge {
     padding: 1px 3px;
     top: 0;
@@ -2165,29 +2172,29 @@ a [class*=" icon-"]:before {
     font-size: 0.8em;
     font-style: italic;
   }
-  /* line 441, ../scss/project/_project.scss */
+  /* line 442, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .badge a {
     color: #454545;
     text-decoration: none;
   }
-  /* line 447, ../scss/project/_project.scss */
+  /* line 448, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-sun,
   .post .post-card .forecast-icon-wrapper .forecast-sunny {
     color: orange;
   }
-  /* line 451, ../scss/project/_project.scss */
+  /* line 452, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-moon,
   .post .post-card .forecast-icon-wrapper .forecast-night {
     color: #4681c3;
   }
-  /* line 457, ../scss/project/_project.scss */
+  /* line 458, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .basecloud,
   .post .post-card .forecast-icon-wrapper .forecast-cloud,
   .post .post-card .forecast-icon-wrapper .forecast-mist,
   .post .post-card .forecast-icon-wrapper .forecast-windy {
     color: #cccccc;
   }
-  /* line 464, ../scss/project/_project.scss */
+  /* line 465, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-drizzle,
   .post .post-card .forecast-icon-wrapper .forecast-rainy,
   .post .post-card .forecast-icon-wrapper .forecast-showers,
@@ -2195,16 +2202,16 @@ a [class*=" icon-"]:before {
   .post .post-card .forecast-icon-wrapper .forecast-sleet {
     color: #82b2e4;
   }
-  /* line 468, ../scss/project/_project.scss */
+  /* line 469, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-frosty,
   .post .post-card .forecast-icon-wrapper .forecast-snowy {
     color: #85d8f7;
   }
-  /* line 472, ../scss/project/_project.scss */
+  /* line 473, ../scss/project/_project.scss */
   .post .post-card .post-card-details {
     padding: 1em;
   }
-  /* line 474, ../scss/project/_project.scss */
+  /* line 475, ../scss/project/_project.scss */
   .post .post-card .post-card-details h1 {
     margin-bottom: .5em;
     font-size: 1.4em;
@@ -2212,78 +2219,78 @@ a [class*=" icon-"]:before {
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 480, ../scss/project/_project.scss */
+  /* line 481, ../scss/project/_project.scss */
   .post .post-card .post-card-details h1 a {
     color: #323232;
     text-decoration: none;
   }
-  /* line 485, ../scss/project/_project.scss */
+  /* line 486, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul {
     margin: 0;
     padding: 0;
     font-size: 0.9em;
     list-style: none;
   }
-  /* line 490, ../scss/project/_project.scss */
+  /* line 491, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li {
     margin-top: .3em;
     padding-left: 20px;
     position: relative;
   }
-  /* line 494, ../scss/project/_project.scss */
+  /* line 495, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i {
     width: 14px;
     color: #e02436;
     text-align: center;
     line-height: 1.6em;
   }
-  /* line 499, ../scss/project/_project.scss */
+  /* line 500, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i:first-child {
     position: absolute;
     top: 0;
     left: 0;
   }
-  /* line 504, ../scss/project/_project.scss */
+  /* line 505, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i:not(:first-child) {
     margin-left: 10px;
     margin-right: 2px;
   }
 
-  /* line 523, ../scss/project/_project.scss */
+  /* line 524, ../scss/project/_project.scss */
   .em-booking p {
     margin-bottom: 20px;
   }
-  /* line 527, ../scss/project/_project.scss */
+  /* line 528, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-form-row {
     margin-bottom: 10px;
   }
-  /* line 529, ../scss/project/_project.scss */
+  /* line 530, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-form-row:last-child {
     margin-bottom: 0;
   }
-  /* line 533, ../scss/project/_project.scss */
+  /* line 534, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-buttons {
     text-align: right;
   }
-  /* line 536, ../scss/project/_project.scss */
+  /* line 537, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-submit {
     padding: 6px 12px;
     color: #fff;
     background-color: #777777;
     cursor: pointer;
   }
-  /* line 542, ../scss/project/_project.scss */
+  /* line 543, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-submit:hover, .em-booking .em-booking-form .em-booking-submit:active {
     background-color: #e02436;
   }
-  /* line 546, ../scss/project/_project.scss */
+  /* line 547, ../scss/project/_project.scss */
   .em-booking .em-booking-form label {
     display: block;
     margin-bottom: 5px;
     font-size: 0.8em;
     text-transform: uppercase;
   }
-  /* line 555, ../scss/project/_project.scss */
+  /* line 556, ../scss/project/_project.scss */
   .em-booking .em-booking-form input[type=text],
   .em-booking .em-booking-form input[type=email],
   .em-booking .em-booking-form textarea,
@@ -2297,77 +2304,77 @@ a [class*=" icon-"]:before {
     color: inherit;
     background: #fff;
   }
-  /* line 562, ../scss/project/_project.scss */
+  /* line 563, ../scss/project/_project.scss */
   .em-booking .em-booking-form input[type=text]:focus,
   .em-booking .em-booking-form input[type=email]:focus,
   .em-booking .em-booking-form textarea:focus,
   .em-booking .em-booking-form select:focus {
     border-color: #777777;
   }
-  /* line 566, ../scss/project/_project.scss */
+  /* line 567, ../scss/project/_project.scss */
   .em-booking .em-booking-form textarea {
     resize: vertical;
   }
 
-  /* line 619, ../scss/project/_project.scss */
+  /* line 621, ../scss/project/_project.scss */
   .media {
     width: 100%;
   }
-  /* line 622, ../scss/project/_project.scss */
+  /* line 624, ../scss/project/_project.scss */
   .media .media-meet {
     display: none;
     padding: 0.6em 1em;
     border-bottom: 1px solid #dfdfdf;
   }
-  /* line 626, ../scss/project/_project.scss */
+  /* line 628, ../scss/project/_project.scss */
   .media .media-meet h1 {
     font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 630, ../scss/project/_project.scss */
+  /* line 632, ../scss/project/_project.scss */
   .media .media-meet h1 a {
     color: #e02436;
     text-decoration: none;
   }
-  /* line 636, ../scss/project/_project.scss */
+  /* line 638, ../scss/project/_project.scss */
   .media .media-item {
     font-size: 0;
     line-height: 0;
   }
 
-  /* line 672, ../scss/project/_project.scss */
+  /* line 674, ../scss/project/_project.scss */
   #affiliates {
     padding: 1em 0;
     background-color: #dfdfdf;
   }
-  /* line 675, ../scss/project/_project.scss */
+  /* line 677, ../scss/project/_project.scss */
   #affiliates header {
     margin-bottom: 1em;
   }
-  /* line 677, ../scss/project/_project.scss */
+  /* line 679, ../scss/project/_project.scss */
   #affiliates header h1 {
     color: #777777;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
     font-size: 0.9em;
   }
-  /* line 683, ../scss/project/_project.scss */
+  /* line 685, ../scss/project/_project.scss */
   #affiliates ul {
     overflow: hidden;
     list-style: none;
   }
-  /* line 686, ../scss/project/_project.scss */
+  /* line 688, ../scss/project/_project.scss */
   #affiliates ul li {
     width: 19.2%;
     margin-right: 1%;
     float: left;
     line-height: 0;
   }
-  /* line 691, ../scss/project/_project.scss */
+  /* line 693, ../scss/project/_project.scss */
   #affiliates ul li:last-child {
     margin-right: 0;
   }
-  /* line 694, ../scss/project/_project.scss */
+  /* line 696, ../scss/project/_project.scss */
   #affiliates ul li a {
     display: block;
     opacity: 0.5;
@@ -2377,13 +2384,13 @@ a [class*=" icon-"]:before {
     -o-transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
     transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
   }
-  /* line 700, ../scss/project/_project.scss */
+  /* line 702, ../scss/project/_project.scss */
   #affiliates ul li a:hover, #affiliates ul li a:focus {
     opacity: 1;
     -webkit-filter: grayscale(0%);
   }
 
-  /* line 711, ../scss/project/_project.scss */
+  /* line 713, ../scss/project/_project.scss */
   .page-id-2 {
     background-color: #323232;
     background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1368291658'), url('/wp-content/themes/BB1A/assets/img/homepage_background.jpg?1373279182');
@@ -2395,48 +2402,48 @@ a [class*=" icon-"]:before {
     -o-background-size: auto auto, cover;
     background-size: auto auto, cover;
   }
-  /* line 718, ../scss/project/_project.scss */
+  /* line 720, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation {
     border-color: #777777;
   }
-  /* line 720, ../scss/project/_project.scss */
+  /* line 722, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a {
     color: #fff;
   }
-  /* line 723, ../scss/project/_project.scss */
+  /* line 725, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a:hover, .page-id-2 .primary-navigation a:focus {
     background-color: #777777;
   }
-  /* line 729, ../scss/project/_project.scss */
+  /* line 731, ../scss/project/_project.scss */
   .page-id-2 .social-links a {
     background-color: #e02436;
   }
-  /* line 733, ../scss/project/_project.scss */
+  /* line 735, ../scss/project/_project.scss */
   .page-id-2 #main {
     padding: 4em 0 12em;
   }
-  /* line 738, ../scss/project/_project.scss */
+  /* line 740, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a {
     color: #dfdfdf;
   }
-  /* line 741, ../scss/project/_project.scss */
+  /* line 743, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a:hover, .page-id-2 .post .post-title a:focus {
     color: #fff;
   }
-  /* line 747, ../scss/project/_project.scss */
+  /* line 749, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation {
     color: #fff;
   }
-  /* line 749, ../scss/project/_project.scss */
+  /* line 751, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation a {
     color: #fff;
   }
-  /* line 753, ../scss/project/_project.scss */
+  /* line 755, ../scss/project/_project.scss */
   .page-id-2 .boilerplate {
     color: #fff;
   }
 
-  /* line 772, ../scss/project/_project.scss */
+  /* line 774, ../scss/project/_project.scss */
   .meets-section .meets-section-header {
     margin-bottom: 1em;
     padding: 3px;
@@ -2445,43 +2452,43 @@ a [class*=" icon-"]:before {
     font-size: 0.9em;
     text-transform: uppercase;
   }
-  /* line 782, ../scss/project/_project.scss */
+  /* line 784, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 1.5em;
   }
 
-  /* line 813, ../scss/project/_project.scss */
+  /* line 815, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid {
     margin-top: 2em;
     margin-bottom: 4em;
   }
-  /* line 816, ../scss/project/_project.scss */
+  /* line 818, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid img {
     -webkit-filter: grayscale(100%) opacity(80%);
     -webkit-transition: -webkit-filter 0.1s ease-in-out;
   }
-  /* line 819, ../scss/project/_project.scss */
+  /* line 821, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid img:hover {
     -webkit-filter: grayscale(0) opacity(100%);
   }
 
-  /* line 827, ../scss/project/_project.scss */
+  /* line 829, ../scss/project/_project.scss */
   html.js .media-grid {
     display: none;
   }
 
-  /* line 835, ../scss/project/_project.scss */
+  /* line 837, ../scss/project/_project.scss */
   .error404 .feature-image {
     background-color: #c6d2e1;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 572px 389px;
   }
-  /* line 841, ../scss/project/_project.scss */
+  /* line 843, ../scss/project/_project.scss */
   .error404 .post {
     text-align: center;
   }
-  /* line 843, ../scss/project/_project.scss */
+  /* line 845, ../scss/project/_project.scss */
   .error404 .post .post-body {
     margin-left: auto;
     margin-right: auto;
@@ -2536,74 +2543,75 @@ a [class*=" icon-"]:before {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 577, ../scss/project/_project.scss */
+  /* line 578, ../scss/project/_project.scss */
   .post .post-header .post-title {
     font-size: 5em;
   }
-  /* line 581, ../scss/project/_project.scss */
+  /* line 582, ../scss/project/_project.scss */
   .post .post-body {
     width: 30em;
     float: left;
   }
-  /* line 585, ../scss/project/_project.scss */
+  /* line 586, ../scss/project/_project.scss */
   .post .post-body p:first-child {
     font-size: 1.4em;
     line-height: 1.4em;
   }
-  /* line 591, ../scss/project/_project.scss */
+  /* line 592, ../scss/project/_project.scss */
   .post .post-aside {
     width: 15em;
     margin-top: 3em;
     float: right;
+    clear: right;
   }
-  /* line 598, ../scss/project/_project.scss */
+  /* line 600, ../scss/project/_project.scss */
   .post.weekly .post-header .post-title {
     font-size: 3em;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 610, ../scss/project/_project.scss */
+  /* line 612, ../scss/project/_project.scss */
   .post .post-aside {
     width: 25em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 652, ../scss/project/_project.scss */
+  /* line 654, ../scss/project/_project.scss */
   .media {
     width: 50%;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 660, ../scss/project/_project.scss */
+  /* line 662, ../scss/project/_project.scss */
   .media {
     width: 25%;
   }
 
-  /* line 664, ../scss/project/_project.scss */
+  /* line 666, ../scss/project/_project.scss */
   .media.video {
     width: 50%;
   }
 }
 @media only screen and (min-height: 600px) {
-  /* line 761, ../scss/project/_project.scss */
+  /* line 763, ../scss/project/_project.scss */
   .page-id-2 #main {
     min-height: 18em;
     padding: 8em 0 18em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 793, ../scss/project/_project.scss */
+  /* line 795, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post {
     width: 48%;
     margin-left: 4%;
     float: left;
   }
-  /* line 797, ../scss/project/_project.scss */
+  /* line 799, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post:nth-child(2n) {
     margin-left: 0;
     clear: left;
   }
-  /* line 801, ../scss/project/_project.scss */
+  /* line 803, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 2.5em;
   }

@@ -319,6 +319,7 @@ main {
 
 .post {
   margin-bottom: 2em;
+  @include pie-clearfix;
   .post-header {
     .post-leader {
       display: inline-block;
@@ -592,6 +593,7 @@ main {
       width: 15em;
       margin-top: 3em;
       float: right;
+      clear: right;
     }
     &.weekly {
       .post-header {
