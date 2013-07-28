@@ -32,7 +32,7 @@
               <?php if(get_post_meta(get_the_ID(), 'author', true)) { ?>
               <li class="photographer">
                 <i class="icon-user"></i>
-                <strong><?php echo get_post_meta(get_the_ID(), 'author', true); ?></strong>
+                Photographed by <strong><?php echo get_post_meta(get_the_ID(), 'author', true); ?></strong>
               </li>
               <?php } ?>
               <?php if($camera['date']) { ?>

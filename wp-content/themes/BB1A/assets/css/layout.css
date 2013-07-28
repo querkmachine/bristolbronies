@@ -1756,12 +1756,18 @@ a [class*=" icon-"]:before {
   }
 
   /* line 25, ../scss/project/_project.scss */
+  b, strong {
+    font-weight: 700;
+    /* Firefox seems to bug out without this, for some reason */
+  }
+
+  /* line 29, ../scss/project/_project.scss */
   input, button, textarea, select {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
     font-weight: 300;
   }
 
-  /* line 30, ../scss/project/_project.scss */
+  /* line 34, ../scss/project/_project.scss */
   a {
     color: #e02436;
     -webkit-transition: color 0.1s ease-in-out;
@@ -1769,41 +1775,41 @@ a [class*=" icon-"]:before {
     -o-transition: color 0.1s ease-in-out;
     transition: color 0.1s ease-in-out;
   }
-  /* line 33, ../scss/project/_project.scss */
+  /* line 37, ../scss/project/_project.scss */
   a:visited {
     color: #777777;
   }
-  /* line 37, ../scss/project/_project.scss */
+  /* line 41, ../scss/project/_project.scss */
   a:hover, a:focus {
     color: #c22232;
   }
 
-  /* line 42, ../scss/project/_project.scss */
+  /* line 46, ../scss/project/_project.scss */
   abbr {
     border-bottom: 1px dotted #777777;
     cursor: help;
   }
 
-  /* line 49, ../scss/project/_project.scss */
+  /* line 53, ../scss/project/_project.scss */
   .container {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* line 81, ../scss/project/_project.scss */
+  /* line 85, ../scss/project/_project.scss */
   #header {
     padding: 2em 0 3em;
     overflow: hidden;
   }
 
-  /* line 88, ../scss/project/_project.scss */
+  /* line 92, ../scss/project/_project.scss */
   #footer {
     padding: 3em 0 2em;
     overflow: hidden;
   }
 
-  /* line 95, ../scss/project/_project.scss */
+  /* line 99, ../scss/project/_project.scss */
   main {
     *zoom: 1;
   }
@@ -1814,7 +1820,7 @@ a [class*=" icon-"]:before {
     clear: both;
   }
 
-  /* line 101, ../scss/project/_project.scss */
+  /* line 105, ../scss/project/_project.scss */
   .btn {
     display: inline-block;
     margin-right: 10px;
@@ -1826,7 +1832,7 @@ a [class*=" icon-"]:before {
     text-decoration: none;
     white-space: nowrap;
   }
-  /* line 111, ../scss/project/_project.scss */
+  /* line 115, ../scss/project/_project.scss */
   .btn i {
     margin-right: -0.2em;
     position: absolute;
@@ -1836,7 +1842,7 @@ a [class*=" icon-"]:before {
     font-size: 1.6em;
     text-decoration: none;
   }
-  /* line 120, ../scss/project/_project.scss */
+  /* line 124, ../scss/project/_project.scss */
   .btn:after {
     content: "";
     position: absolute;
@@ -1846,26 +1852,26 @@ a [class*=" icon-"]:before {
     border-left: 10px solid #e02436;
     border-bottom: 10px solid transparent;
   }
-  /* line 129, ../scss/project/_project.scss */
+  /* line 133, ../scss/project/_project.scss */
   .btn:visited {
     color: #fff;
   }
-  /* line 133, ../scss/project/_project.scss */
+  /* line 137, ../scss/project/_project.scss */
   .btn:hover, .btn:focus {
     color: #fff;
     text-decoration: underline;
   }
-  /* line 137, ../scss/project/_project.scss */
+  /* line 141, ../scss/project/_project.scss */
   .btn.invert {
     color: #e02436;
     background-color: #323232;
   }
-  /* line 140, ../scss/project/_project.scss */
+  /* line 144, ../scss/project/_project.scss */
   .btn.invert:after {
     border-left-color: #323232;
   }
 
-  /* line 146, ../scss/project/_project.scss */
+  /* line 150, ../scss/project/_project.scss */
   .loading-spinner {
     min-height: 36px;
     background-image: url('/wp-content/themes/BB1A/assets/img/spinner.gif?1373283110');
@@ -1873,12 +1879,12 @@ a [class*=" icon-"]:before {
     background-repeat: no-repeat;
   }
 
-  /* line 155, ../scss/project/_project.scss */
+  /* line 159, ../scss/project/_project.scss */
   .branding {
     width: 160px;
     float: left;
   }
-  /* line 158, ../scss/project/_project.scss */
+  /* line 162, ../scss/project/_project.scss */
   .branding a {
     display: block;
     text-indent: -119988px;
@@ -1894,25 +1900,21 @@ a [class*=" icon-"]:before {
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
   }
-  /* line 165, ../scss/project/_project.scss */
+  /* line 169, ../scss/project/_project.scss */
   html.svg .branding a {
     background-image: url('/wp-content/themes/BB1A/assets/img/logo.svg?1371158265');
   }
 
-  /* line 173, ../scss/project/_project.scss */
-  .primary-navigation {
-    width: 129px;
-    height: 160px;
-    margin-left: 10px;
-    float: left;
+  /* line 177, ../scss/project/_project.scss */
+  .primary-navigation, .post .post-neighbours {
     border-left: 1px solid #dfdfdf;
   }
   /* line 179, ../scss/project/_project.scss */
-  .primary-navigation ul {
+  .primary-navigation ul, .post .post-neighbours ul {
     padding: 16px 0;
   }
   /* line 182, ../scss/project/_project.scss */
-  .primary-navigation a {
+  .primary-navigation a, .post .post-neighbours a {
     display: block;
     padding: 5px 10px;
     color: #777777;
@@ -1920,61 +1922,69 @@ a [class*=" icon-"]:before {
     line-height: 22px;
   }
   /* line 190, ../scss/project/_project.scss */
-  .primary-navigation a:hover, .primary-navigation a:focus, .primary-navigation a.current {
+  .primary-navigation a:hover, .post .post-neighbours a:hover, .primary-navigation a:focus, .post .post-neighbours a:focus, .primary-navigation a.current, .post .post-neighbours a.current {
     color: #323232;
     background-color: #dfdfdf;
   }
 
-  /* line 199, ../scss/project/_project.scss */
+  /* line 197, ../scss/project/_project.scss */
+  .primary-navigation {
+    width: 129px;
+    height: 160px;
+    margin-left: 10px;
+    float: left;
+  }
+
+  /* line 207, ../scss/project/_project.scss */
   .secondary-navigation {
     margin-bottom: 0.5em;
     font-size: 0.8em;
   }
-  /* line 202, ../scss/project/_project.scss */
+  /* line 210, ../scss/project/_project.scss */
   .secondary-navigation ul {
     overflow: hidden;
   }
-  /* line 205, ../scss/project/_project.scss */
+  /* line 213, ../scss/project/_project.scss */
   .secondary-navigation li {
     display: block;
     float: left;
   }
-  /* line 208, ../scss/project/_project.scss */
+  /* line 216, ../scss/project/_project.scss */
   .secondary-navigation li:after {
     content: "/";
     margin: 0 0.5em;
   }
-  /* line 212, ../scss/project/_project.scss */
+  /* line 220, ../scss/project/_project.scss */
   .secondary-navigation li:last-child:after {
     content: "";
   }
-  /* line 216, ../scss/project/_project.scss */
+  /* line 224, ../scss/project/_project.scss */
   .secondary-navigation a {
     color: #777777;
     white-space: nowrap;
   }
-  /* line 220, ../scss/project/_project.scss */
+  /* line 228, ../scss/project/_project.scss */
   .secondary-navigation a:hover, .secondary-navigation a:focus {
     color: #323232;
   }
 
-  /* line 228, ../scss/project/_project.scss */
+  /* line 236, ../scss/project/_project.scss */
   .social-links {
     display: none;
     float: right;
   }
-  /* line 231, ../scss/project/_project.scss */
+  /* line 239, ../scss/project/_project.scss */
   .social-links ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  /* line 236, ../scss/project/_project.scss */
+  /* line 244, ../scss/project/_project.scss */
   .social-links li {
     display: inline-block;
     margin-left: 2px;
   }
-  /* line 240, ../scss/project/_project.scss */
+  /* line 248, ../scss/project/_project.scss */
   .social-links a {
     display: block;
     width: 1.2em;
@@ -1995,12 +2005,12 @@ a [class*=" icon-"]:before {
     -o-transition: background-color 0.1s ease-in-out;
     transition: background-color 0.1s ease-in-out;
   }
-  /* line 253, ../scss/project/_project.scss */
+  /* line 261, ../scss/project/_project.scss */
   .social-links a:hover, .social-links a:focus {
     background-color: #e02436;
   }
 
-  /* line 269, ../scss/project/_project.scss */
+  /* line 277, ../scss/project/_project.scss */
   .feature-image {
     width: 100%;
     max-width: 1250px;
@@ -2015,16 +2025,16 @@ a [class*=" icon-"]:before {
     background-size: cover;
   }
 
-  /* line 306, ../scss/project/_project.scss */
+  /* line 314, ../scss/project/_project.scss */
   .boilerplate {
     color: #777777;
   }
 
-  /* line 312, ../scss/project/_project.scss */
+  /* line 320, ../scss/project/_project.scss */
   .post {
     margin-bottom: 2em;
   }
-  /* line 315, ../scss/project/_project.scss */
+  /* line 323, ../scss/project/_project.scss */
   .post .post-header .post-leader {
     display: inline-block;
     padding: 0.25em 0.5em;
@@ -2035,7 +2045,7 @@ a [class*=" icon-"]:before {
     text-transform: uppercase;
     white-space: nowrap;
   }
-  /* line 325, ../scss/project/_project.scss */
+  /* line 333, ../scss/project/_project.scss */
   .post .post-header .post-title {
     margin-top: 0.15em;
     font-size: 2.7em;
@@ -2044,27 +2054,25 @@ a [class*=" icon-"]:before {
     text-transform: uppercase;
     line-height: 1em;
   }
-  /* line 332, ../scss/project/_project.scss */
+  /* line 340, ../scss/project/_project.scss */
   .post .post-header .post-title a {
     color: #323232;
     text-decoration: none;
   }
-  /* line 336, ../scss/project/_project.scss */
+  /* line 344, ../scss/project/_project.scss */
   .post .post-header .post-title a:hover, .post .post-header .post-title a:focus {
     color: #777777;
   }
-  /* line 342, ../scss/project/_project.scss */
+  /* line 350, ../scss/project/_project.scss */
   .post .post-body {
-    width: 100%;
-    max-width: 30em;
     margin-top: 3em;
     line-height: 1.6em;
   }
-  /* line 347, ../scss/project/_project.scss */
+  /* line 353, ../scss/project/_project.scss */
   .post .post-body p, .post .post-body ul, .post .post-body ol, .post .post-body h2 {
     margin-bottom: 20px;
   }
-  /* line 350, ../scss/project/_project.scss */
+  /* line 356, ../scss/project/_project.scss */
   .post .post-body h2 {
     padding-top: 20px;
     font-size: 1.5em;
@@ -2072,21 +2080,21 @@ a [class*=" icon-"]:before {
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 357, ../scss/project/_project.scss */
+  /* line 363, ../scss/project/_project.scss */
   .post .post-body h4 {
     font-weight: 300;
     font-style: italic;
   }
-  /* line 361, ../scss/project/_project.scss */
+  /* line 367, ../scss/project/_project.scss */
   .post .post-body ul {
     list-style: none;
   }
-  /* line 363, ../scss/project/_project.scss */
+  /* line 369, ../scss/project/_project.scss */
   .post .post-body ul li {
     padding-left: 20px;
     position: relative;
   }
-  /* line 366, ../scss/project/_project.scss */
+  /* line 372, ../scss/project/_project.scss */
   .post .post-body ul li:before {
     content: "\25CF";
     width: 14px;
@@ -2097,26 +2105,33 @@ a [class*=" icon-"]:before {
     text-align: center;
     line-height: 1.6em;
   }
-  /* line 378, ../scss/project/_project.scss */
+  /* line 384, ../scss/project/_project.scss */
   .post .post-body ol {
     list-style: decimal;
     margin-left: 20px;
   }
-  /* line 383, ../scss/project/_project.scss */
+  /* line 389, ../scss/project/_project.scss */
   .post .post-body p:first-child {
     font-size: 1.2em;
     line-height: 1.4em;
   }
-  /* line 389, ../scss/project/_project.scss */
+  /* line 399, ../scss/project/_project.scss */
+  .post .post-neighbours ul li strong {
+    display: block;
+    color: #323232;
+    font-size: 0.8em;
+    font-style: italic;
+  }
+  /* line 409, ../scss/project/_project.scss */
+  .post .post-aside + .post-aside {
+    margin-top: 20px;
+  }
+  /* line 413, ../scss/project/_project.scss */
   .post .post-card {
     max-width: 30em;
     border: 1px solid #dfdfdf;
   }
-  /* line 392, ../scss/project/_project.scss */
-  .post .post-card + .post-card {
-    margin-top: 20px;
-  }
-  /* line 395, ../scss/project/_project.scss */
+  /* line 416, ../scss/project/_project.scss */
   .post .post-card .post-card-map {
     padding-bottom: 160px;
     border-bottom: 1px solid #dfdfdf;
@@ -2126,13 +2141,13 @@ a [class*=" icon-"]:before {
     -o-background-size: cover;
     background-size: cover;
   }
-  /* line 401, ../scss/project/_project.scss */
+  /* line 422, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper {
     height: 8em;
     position: relative;
     border-bottom: 1px solid #dfdfdf;
   }
-  /* line 405, ../scss/project/_project.scss */
+  /* line 426, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper span {
     display: inline-block;
     position: absolute;
@@ -2140,7 +2155,7 @@ a [class*=" icon-"]:before {
     left: 0;
     font-size: 8em;
   }
-  /* line 412, ../scss/project/_project.scss */
+  /* line 433, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .badge {
     padding: 1px 3px;
     top: 0;
@@ -2150,29 +2165,29 @@ a [class*=" icon-"]:before {
     font-size: 0.8em;
     font-style: italic;
   }
-  /* line 420, ../scss/project/_project.scss */
+  /* line 441, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .badge a {
     color: #454545;
     text-decoration: none;
   }
-  /* line 426, ../scss/project/_project.scss */
+  /* line 447, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-sun,
   .post .post-card .forecast-icon-wrapper .forecast-sunny {
     color: orange;
   }
-  /* line 430, ../scss/project/_project.scss */
+  /* line 451, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-moon,
   .post .post-card .forecast-icon-wrapper .forecast-night {
     color: #4681c3;
   }
-  /* line 436, ../scss/project/_project.scss */
+  /* line 457, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .basecloud,
   .post .post-card .forecast-icon-wrapper .forecast-cloud,
   .post .post-card .forecast-icon-wrapper .forecast-mist,
   .post .post-card .forecast-icon-wrapper .forecast-windy {
     color: #cccccc;
   }
-  /* line 443, ../scss/project/_project.scss */
+  /* line 464, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-drizzle,
   .post .post-card .forecast-icon-wrapper .forecast-rainy,
   .post .post-card .forecast-icon-wrapper .forecast-showers,
@@ -2180,16 +2195,16 @@ a [class*=" icon-"]:before {
   .post .post-card .forecast-icon-wrapper .forecast-sleet {
     color: #82b2e4;
   }
-  /* line 447, ../scss/project/_project.scss */
+  /* line 468, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-frosty,
   .post .post-card .forecast-icon-wrapper .forecast-snowy {
     color: #85d8f7;
   }
-  /* line 451, ../scss/project/_project.scss */
+  /* line 472, ../scss/project/_project.scss */
   .post .post-card .post-card-details {
     padding: 1em;
   }
-  /* line 453, ../scss/project/_project.scss */
+  /* line 474, ../scss/project/_project.scss */
   .post .post-card .post-card-details h1 {
     margin-bottom: .5em;
     font-size: 1.4em;
@@ -2197,78 +2212,78 @@ a [class*=" icon-"]:before {
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 459, ../scss/project/_project.scss */
+  /* line 480, ../scss/project/_project.scss */
   .post .post-card .post-card-details h1 a {
     color: #323232;
     text-decoration: none;
   }
-  /* line 464, ../scss/project/_project.scss */
+  /* line 485, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul {
     margin: 0;
     padding: 0;
     font-size: 0.9em;
     list-style: none;
   }
-  /* line 469, ../scss/project/_project.scss */
+  /* line 490, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li {
     margin-top: .3em;
     padding-left: 20px;
     position: relative;
   }
-  /* line 473, ../scss/project/_project.scss */
+  /* line 494, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i {
     width: 14px;
     color: #e02436;
     text-align: center;
     line-height: 1.6em;
   }
-  /* line 478, ../scss/project/_project.scss */
+  /* line 499, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i:first-child {
     position: absolute;
     top: 0;
     left: 0;
   }
-  /* line 483, ../scss/project/_project.scss */
+  /* line 504, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i:not(:first-child) {
     margin-left: 10px;
     margin-right: 2px;
   }
 
-  /* line 502, ../scss/project/_project.scss */
+  /* line 523, ../scss/project/_project.scss */
   .em-booking p {
     margin-bottom: 20px;
   }
-  /* line 506, ../scss/project/_project.scss */
+  /* line 527, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-form-row {
     margin-bottom: 10px;
   }
-  /* line 508, ../scss/project/_project.scss */
+  /* line 529, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-form-row:last-child {
     margin-bottom: 0;
   }
-  /* line 512, ../scss/project/_project.scss */
+  /* line 533, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-buttons {
     text-align: right;
   }
-  /* line 515, ../scss/project/_project.scss */
+  /* line 536, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-submit {
     padding: 6px 12px;
     color: #fff;
     background-color: #777777;
     cursor: pointer;
   }
-  /* line 521, ../scss/project/_project.scss */
+  /* line 542, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-submit:hover, .em-booking .em-booking-form .em-booking-submit:active {
     background-color: #e02436;
   }
-  /* line 525, ../scss/project/_project.scss */
+  /* line 546, ../scss/project/_project.scss */
   .em-booking .em-booking-form label {
     display: block;
     margin-bottom: 5px;
     font-size: 0.8em;
     text-transform: uppercase;
   }
-  /* line 534, ../scss/project/_project.scss */
+  /* line 555, ../scss/project/_project.scss */
   .em-booking .em-booking-form input[type=text],
   .em-booking .em-booking-form input[type=email],
   .em-booking .em-booking-form textarea,
@@ -2282,77 +2297,77 @@ a [class*=" icon-"]:before {
     color: inherit;
     background: #fff;
   }
-  /* line 541, ../scss/project/_project.scss */
+  /* line 562, ../scss/project/_project.scss */
   .em-booking .em-booking-form input[type=text]:focus,
   .em-booking .em-booking-form input[type=email]:focus,
   .em-booking .em-booking-form textarea:focus,
   .em-booking .em-booking-form select:focus {
     border-color: #777777;
   }
-  /* line 545, ../scss/project/_project.scss */
+  /* line 566, ../scss/project/_project.scss */
   .em-booking .em-booking-form textarea {
     resize: vertical;
   }
 
-  /* line 581, ../scss/project/_project.scss */
+  /* line 619, ../scss/project/_project.scss */
   .media {
     width: 100%;
   }
-  /* line 584, ../scss/project/_project.scss */
+  /* line 622, ../scss/project/_project.scss */
   .media .media-meet {
     display: none;
     padding: 0.6em 1em;
     border-bottom: 1px solid #dfdfdf;
   }
-  /* line 588, ../scss/project/_project.scss */
+  /* line 626, ../scss/project/_project.scss */
   .media .media-meet h1 {
     font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 592, ../scss/project/_project.scss */
+  /* line 630, ../scss/project/_project.scss */
   .media .media-meet h1 a {
     color: #e02436;
     text-decoration: none;
   }
-  /* line 598, ../scss/project/_project.scss */
+  /* line 636, ../scss/project/_project.scss */
   .media .media-item {
     font-size: 0;
     line-height: 0;
   }
 
-  /* line 634, ../scss/project/_project.scss */
+  /* line 672, ../scss/project/_project.scss */
   #affiliates {
     padding: 1em 0;
     background-color: #dfdfdf;
   }
-  /* line 637, ../scss/project/_project.scss */
+  /* line 675, ../scss/project/_project.scss */
   #affiliates header {
     margin-bottom: 1em;
   }
-  /* line 639, ../scss/project/_project.scss */
+  /* line 677, ../scss/project/_project.scss */
   #affiliates header h1 {
     color: #777777;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
     font-size: 0.9em;
   }
-  /* line 645, ../scss/project/_project.scss */
+  /* line 683, ../scss/project/_project.scss */
   #affiliates ul {
     overflow: hidden;
     list-style: none;
   }
-  /* line 648, ../scss/project/_project.scss */
+  /* line 686, ../scss/project/_project.scss */
   #affiliates ul li {
     width: 19.2%;
     margin-right: 1%;
     float: left;
     line-height: 0;
   }
-  /* line 653, ../scss/project/_project.scss */
+  /* line 691, ../scss/project/_project.scss */
   #affiliates ul li:last-child {
     margin-right: 0;
   }
-  /* line 656, ../scss/project/_project.scss */
+  /* line 694, ../scss/project/_project.scss */
   #affiliates ul li a {
     display: block;
     opacity: 0.5;
@@ -2362,13 +2377,13 @@ a [class*=" icon-"]:before {
     -o-transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
     transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
   }
-  /* line 662, ../scss/project/_project.scss */
+  /* line 700, ../scss/project/_project.scss */
   #affiliates ul li a:hover, #affiliates ul li a:focus {
     opacity: 1;
     -webkit-filter: grayscale(0%);
   }
 
-  /* line 673, ../scss/project/_project.scss */
+  /* line 711, ../scss/project/_project.scss */
   .page-id-2 {
     background-color: #323232;
     background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1368291658'), url('/wp-content/themes/BB1A/assets/img/homepage_background.jpg?1373279182');
@@ -2380,48 +2395,48 @@ a [class*=" icon-"]:before {
     -o-background-size: auto auto, cover;
     background-size: auto auto, cover;
   }
-  /* line 680, ../scss/project/_project.scss */
+  /* line 718, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation {
     border-color: #777777;
   }
-  /* line 682, ../scss/project/_project.scss */
+  /* line 720, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a {
     color: #fff;
   }
-  /* line 685, ../scss/project/_project.scss */
+  /* line 723, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a:hover, .page-id-2 .primary-navigation a:focus {
     background-color: #777777;
   }
-  /* line 691, ../scss/project/_project.scss */
+  /* line 729, ../scss/project/_project.scss */
   .page-id-2 .social-links a {
     background-color: #e02436;
   }
-  /* line 695, ../scss/project/_project.scss */
+  /* line 733, ../scss/project/_project.scss */
   .page-id-2 #main {
     padding: 4em 0 12em;
   }
-  /* line 700, ../scss/project/_project.scss */
+  /* line 738, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a {
     color: #dfdfdf;
   }
-  /* line 703, ../scss/project/_project.scss */
+  /* line 741, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a:hover, .page-id-2 .post .post-title a:focus {
     color: #fff;
   }
-  /* line 709, ../scss/project/_project.scss */
+  /* line 747, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation {
     color: #fff;
   }
-  /* line 711, ../scss/project/_project.scss */
+  /* line 749, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation a {
     color: #fff;
   }
-  /* line 715, ../scss/project/_project.scss */
+  /* line 753, ../scss/project/_project.scss */
   .page-id-2 .boilerplate {
     color: #fff;
   }
 
-  /* line 734, ../scss/project/_project.scss */
+  /* line 772, ../scss/project/_project.scss */
   .meets-section .meets-section-header {
     margin-bottom: 1em;
     padding: 3px;
@@ -2430,148 +2445,165 @@ a [class*=" icon-"]:before {
     font-size: 0.9em;
     text-transform: uppercase;
   }
-  /* line 744, ../scss/project/_project.scss */
+  /* line 782, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 1.5em;
   }
 
-  /* line 775, ../scss/project/_project.scss */
+  /* line 813, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid {
     margin-top: 2em;
     margin-bottom: 4em;
   }
-  /* line 778, ../scss/project/_project.scss */
+  /* line 816, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid img {
     -webkit-filter: grayscale(100%) opacity(80%);
     -webkit-transition: -webkit-filter 0.1s ease-in-out;
   }
-  /* line 781, ../scss/project/_project.scss */
+  /* line 819, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid img:hover {
     -webkit-filter: grayscale(0) opacity(100%);
   }
 
-  /* line 789, ../scss/project/_project.scss */
+  /* line 827, ../scss/project/_project.scss */
   html.js .media-grid {
     display: none;
   }
 
-  /* line 797, ../scss/project/_project.scss */
+  /* line 835, ../scss/project/_project.scss */
   .error404 .feature-image {
     background-color: #c6d2e1;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 572px 389px;
   }
-  /* line 803, ../scss/project/_project.scss */
+  /* line 841, ../scss/project/_project.scss */
   .error404 .post {
     text-align: center;
   }
-  /* line 805, ../scss/project/_project.scss */
+  /* line 843, ../scss/project/_project.scss */
   .error404 .post .post-body {
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media only screen and (min-width: 480px) {
-  /* line 57, ../scss/project/_project.scss */
+  /* line 61, ../scss/project/_project.scss */
   .container {
     width: 420px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 65, ../scss/project/_project.scss */
+  /* line 69, ../scss/project/_project.scss */
   .container {
     width: 748px;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 73, ../scss/project/_project.scss */
+  /* line 77, ../scss/project/_project.scss */
   .container {
     width: 940px;
   }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
-  /* line 158, ../scss/project/_project.scss */
+  /* line 162, ../scss/project/_project.scss */
   .branding a {
     background-image: url('/wp-content/themes/BB1A/assets/img/logo@2x.png?1368284094');
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 261, ../scss/project/_project.scss */
+  /* line 269, ../scss/project/_project.scss */
   .social-links {
     display: block;
   }
 }
 @media only screen and (min-width: 480px) {
-  /* line 282, ../scss/project/_project.scss */
+  /* line 290, ../scss/project/_project.scss */
   .feature-image {
     height: 8em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 290, ../scss/project/_project.scss */
+  /* line 298, ../scss/project/_project.scss */
   .feature-image {
     height: 12em;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 298, ../scss/project/_project.scss */
+  /* line 306, ../scss/project/_project.scss */
   .feature-image {
     height: 16em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 556, ../scss/project/_project.scss */
+  /* line 577, ../scss/project/_project.scss */
   .post .post-header .post-title {
     font-size: 5em;
   }
-  /* line 562, ../scss/project/_project.scss */
+  /* line 581, ../scss/project/_project.scss */
+  .post .post-body {
+    width: 30em;
+    float: left;
+  }
+  /* line 585, ../scss/project/_project.scss */
   .post .post-body p:first-child {
     font-size: 1.4em;
     line-height: 1.4em;
   }
-  /* line 570, ../scss/project/_project.scss */
+  /* line 591, ../scss/project/_project.scss */
+  .post .post-aside {
+    width: 15em;
+    margin-top: 3em;
+    float: right;
+  }
+  /* line 598, ../scss/project/_project.scss */
   .post.weekly .post-header .post-title {
     font-size: 3em;
   }
 }
+@media only screen and (min-width: 960px) {
+  /* line 610, ../scss/project/_project.scss */
+  .post .post-aside {
+    width: 25em;
+  }
+}
 @media only screen and (min-width: 768px) {
-  /* line 614, ../scss/project/_project.scss */
+  /* line 652, ../scss/project/_project.scss */
   .media {
     width: 50%;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 622, ../scss/project/_project.scss */
+  /* line 660, ../scss/project/_project.scss */
   .media {
     width: 25%;
   }
 
-  /* line 626, ../scss/project/_project.scss */
+  /* line 664, ../scss/project/_project.scss */
   .media.video {
     width: 50%;
   }
 }
 @media only screen and (min-height: 600px) {
-  /* line 723, ../scss/project/_project.scss */
+  /* line 761, ../scss/project/_project.scss */
   .page-id-2 #main {
     min-height: 18em;
     padding: 8em 0 18em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 755, ../scss/project/_project.scss */
+  /* line 793, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post {
     width: 48%;
     margin-left: 4%;
     float: left;
   }
-  /* line 759, ../scss/project/_project.scss */
+  /* line 797, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post:nth-child(2n) {
     margin-left: 0;
     clear: left;
   }
-  /* line 763, ../scss/project/_project.scss */
+  /* line 801, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 2.5em;
   }

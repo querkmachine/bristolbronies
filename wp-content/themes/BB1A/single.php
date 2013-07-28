@@ -24,6 +24,12 @@
         <div class="post-body">
           <?php the_content(); ?>
         </div>
+        <nav class="post-aside post-neighbours">
+          <ul>
+            <li><?php previous_post_link('%link', '<strong>Previously:</strong> %title'); ?></li>
+            <li><?php next_post_link('%link', '<strong>Up next:</strong> %title'); ?></li>
+          </ul>
+        </nav>
       </article>
 
   </main>

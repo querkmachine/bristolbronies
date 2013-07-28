@@ -25,7 +25,7 @@
       ?>
 
       <?php if($event_meta->end > time()) { ?>
-      <aside class="post-card post-event-weather loading-spinner" id="ajax-forecast"></aside>
+      <aside class="post-card post-aside post-event-weather loading-spinner" id="ajax-forecast"></aside>
       <script>
         $(document).ready(function() {
           $.get('/forecast?lat=<?php echo $location_meta->latitude; ?>&lng=<?php echo $location_meta->longitude; ?>&start=<?php echo $event_meta->start; ?>', function(data) {

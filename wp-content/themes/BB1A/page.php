@@ -21,6 +21,15 @@
         <div class="post-body">
           <?php the_content(); ?>
         </div>
+        <?php /* <aside class="post-aside post-neighbours">
+          <?php 
+            wp_list_pages(array(
+              'child_of' => $post->post_parent,
+              'exclude' => $post->ID,
+              'depth' => 1
+            ));
+          ?>
+        </aside>*/ ?>
       </article>
 
   </main>

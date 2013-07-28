@@ -22,6 +22,10 @@ body {
   font-weight: 300;
 }
 
+b, strong {
+  font-weight: 700; /* Firefox seems to bug out without this, for some reason */
+}
+
 input, button, textarea, select {
   font-family: $body-font;
   font-weight: 300;
@@ -170,11 +174,7 @@ main {
 
 // PRIMARY NAVIGATION
 
-.primary-navigation {
-  width: 129px;
-  height: 160px;
-  margin-left: 10px;
-  float: left;
+%navigation-list {
   border-left: 1px solid $grey-light;
   ul {
     padding: 16px 0;
@@ -192,6 +192,14 @@ main {
       background-color: $grey-light;
     }
   }
+}
+
+.primary-navigation {
+  width: 129px;
+  height: 160px;
+  margin-left: 10px;
+  float: left;
+  @extend %navigation-list; 
 }
 
 // SECONDARY NAVIGATION
@@ -340,8 +348,6 @@ main {
     }
   }
   .post-body {
-    width: 100%;
-    max-width: 30em;
     margin-top: 3em;
     line-height: 1.6em;
     p, ul, ol, h2 {
@@ -386,12 +392,27 @@ main {
       }
     }
   }
+  .post-neighbours {
+    @extend %navigation-list;
+    ul {
+      li {
+        strong {
+          display: block;
+          color: $grey-dark;
+          font-size: 0.8em;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .post-aside {
+    + .post-aside {
+      margin-top: 20px;
+    }
+  }
   .post-card {
     max-width: 30em;
     border: 1px solid $grey-light;
-    + .post-card {
-      margin-top: 20px;
-    }
     .post-card-map {
       padding-bottom: 160px;
       border-bottom: 1px solid $grey-light;
@@ -558,6 +579,8 @@ main {
       }
     }
     .post-body {
+      width: 30em;
+      float: left;
       p {
         &:first-child {
           font-size: 1.4em;
@@ -565,12 +588,27 @@ main {
         }
       }
     }
+    .post-aside {
+      width: 15em;
+      margin-top: 3em;
+      float: right;
+    }
     &.weekly {
       .post-header {
         .post-title {
           font-size: 3em;
         }
       }
+    }
+  }
+
+}
+
+@media only screen and (min-width: 960px) {
+
+  .post {
+    .post-aside {
+      width: 25em;
     }
   }
 
