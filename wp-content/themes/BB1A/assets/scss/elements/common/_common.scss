@@ -56,10 +56,12 @@ nav {
   }
 }
 
-img, audio, video, picture, iframe {
+img, audio, video, picture {
   max-width: 100%;
   height: auto;
 }
+
+iframe {}
 
 img {
   image-rendering: optimizeQuality;

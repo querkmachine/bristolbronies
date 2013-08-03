@@ -4,6 +4,32 @@
 
   <main class="container" id="main" role="main">
 
+    <?php if(get_post_meta(get_the_ID(), 'youtube_id', true)) { ?>
+
+      <article class="post">
+        <figure class="post-media">
+          <iframe width="1280" height="720" src="//www.youtube.com/embed/<?php echo get_post_meta(get_the_ID(), 'youtube_id', true); ?>" frameborder="0" allowfullscreen></iframe>
+        </figure>
+        <div class="post-body">
+          <p><?php the_title(); ?></p>
+          <?php the_content(); ?>
+        </div>
+        <aside class="post-card post-aside post-event-details">
+          <div class="post-card-details">
+            <ul class="meta">
+              <?php if(get_post_meta(get_the_ID(), 'author', true)) { ?>
+              <li class="photographer">
+                <i class="icon-user"></i>
+                Recorded by <strong><?php echo get_post_meta(get_the_ID(), 'author', true); ?></strong>
+              </li>
+              <?php } ?>
+            </ul>
+          </div>
+        </aside>
+      </article>
+
+    <?php } else { //format check ?>
+
       <article class="post">
         <?php
           if ( has_post_thumbnail() ) {
@@ -11,7 +37,6 @@
           $full_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
           $cleansed_image_url = str_replace(site_url().'/', '', $full_image_url[0]);
         ?>
-        <!-- <?php echo $cleansed_image_url; ?> -->
         <figure class="post-media">
           <a href="<?php echo $full_image_url[0]; ?>">
             <img src="<?php echo $large_image_url[0]; ?>" alt="">
@@ -62,6 +87,8 @@
           </div>
         </aside>
       </article>
+
+    <?php } // format check ?>
 
   </main>
 

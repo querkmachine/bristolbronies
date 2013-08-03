@@ -3,7 +3,7 @@ var $mediaGrid = $(".media-grid");
 
 $(document).ready(function() {
   
-  $(".media.video .media-item").fitVids();
+  $(".media.video .media-item, .post .post-media").fitVids();
 
 });
 

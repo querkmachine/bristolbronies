@@ -626,16 +626,17 @@ main {
 .media {
   width: 100%;
   //border: 1px solid $grey-light;
-  .media-meet {
-    display: none;
-    padding: 0.6em 1em;
+  .media-title {
     border-bottom: 1px solid $grey-light;
     h1 {
       font-family: $header-font;
       font-weight: 900;
       text-transform: uppercase;
       a {
-        color: $red;
+        display: block;
+        padding: 0.6em 1em;
+        color: $grey-dark;
+        background-color: $grey-light;
         text-decoration: none;
       }
     }
