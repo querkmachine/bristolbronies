@@ -26,7 +26,7 @@
           <figure class="media video">
             <div class="media-item">
               <a href="<?php the_permalink(); ?>">
-                <img src="//i1.ytimg.com/vi/<?php echo get_post_meta(get_the_ID(), 'youtube_id', true); ?>/maxresdefault.jpg" alt="">
+                <img src="//i1.ytimg.com/vi/<?php echo get_post_meta(get_the_ID(), 'youtube_id', true); ?>/0.jpg" alt="">
               </a>
             </div>
           </figure>
