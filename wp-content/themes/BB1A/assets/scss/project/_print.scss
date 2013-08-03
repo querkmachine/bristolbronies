@@ -131,6 +131,9 @@ body {
           margin-top: .3em;
           padding-left: 20px;
           position: relative;
+          &:first-child {
+            margin-top: 0;
+          }
           i {
             width: 14px;
             color: $red;

@@ -2793,25 +2793,29 @@ a [class*=" icon-"]:before {
     position: relative;
   }
   /* line 134, ../scss/project/_print.scss */
+  .post .post-card .post-card-details ul li:first-child {
+    margin-top: 0;
+  }
+  /* line 137, ../scss/project/_print.scss */
   .post .post-card .post-card-details ul li i {
     width: 14px;
     color: #e02436;
     text-align: center;
     line-height: 1.6em;
   }
-  /* line 139, ../scss/project/_print.scss */
+  /* line 142, ../scss/project/_print.scss */
   .post .post-card .post-card-details ul li i:first-child {
     position: absolute;
     top: 0;
     left: 0;
   }
-  /* line 144, ../scss/project/_print.scss */
+  /* line 147, ../scss/project/_print.scss */
   .post .post-card .post-card-details ul li i:not(:first-child) {
     margin-left: 10px;
     margin-right: 2px;
   }
 
-  /* line 155, ../scss/project/_print.scss */
+  /* line 158, ../scss/project/_print.scss */
   .em-booking {
     display: none;
   }
