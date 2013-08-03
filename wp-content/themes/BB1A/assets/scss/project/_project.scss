@@ -642,32 +642,15 @@ main {
     }
   }
   .media-item {
-    position: relative;
     font-size: 0;
     line-height: 0;
   }
   &.photo {
-    .media-item {
+    img {
 
-    }
-  }
-  &.video {
-    position: relative;
-    &:after {
-      content: "\f144";
-      margin-top: -30px;
-      margin-left: -30px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: #fff;
-      font-family: FontAwesome;
-      font-size: 60px;
-      font-weight: normal;
-      font-style: normal;
-      text-decoration: inherit;
-      -webkit-font-smoothing: antialiased;
-      *margin-right: .3em; // fixes ie7 issues
+      &:hover {
+
+      }
     }
   }
 }
@@ -839,7 +822,6 @@ main {
     margin-top: 2em;
     margin-bottom: 4em;
     img {
-      width: 100%;
       -webkit-filter: grayscale(100%) opacity(80%);
       -webkit-transition: -webkit-filter .1s ease-in-out;
       &:hover {
