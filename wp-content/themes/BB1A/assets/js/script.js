@@ -1,9 +1,8 @@
 $(document).ready(function() {  
   initFitVids();
-  initMediaGrid();
 });
 
-$(window).resize(function() {
+$(window).load(function() {
   initMediaGrid();
 });
 

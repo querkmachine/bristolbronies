@@ -41,7 +41,7 @@
           <figure class="media photo">
             <div class="media-item">
               <a href="<?php the_permalink(); ?>">
-                <img class="lazy" src="<?php echo $thumbnail_url[0]; ?>" data-src="<?php echo $thumbnail_url[0]; ?>" alt="">
+                <img class="lazy" src="<?php echo $thumbnail_url[0]; ?>" data-src="<?php echo $image_url[0]; ?>" alt="">
               </a>
             </div>
           </figure>
