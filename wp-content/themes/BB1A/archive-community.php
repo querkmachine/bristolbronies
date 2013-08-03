@@ -4,7 +4,7 @@
 */
 ?><?php get_template_part('parts/global/header'); ?>
 
-  <main class="container" id="main" role="main">
+  <main class="media-container" id="main" role="main">
 
     <?php query_posts('post_type=community'); ?>
     <div class="media-grid">
@@ -26,7 +26,7 @@
           <figure class="media video">
             <div class="media-item">
               <a href="<?php the_permalink(); ?>">
-                <img src="//i1.ytimg.com/vi/<?php echo get_post_meta(get_the_ID(), 'youtube_id', true); ?>/0.jpg" alt="">
+                <img class="lazy" src="//i1.ytimg.com/vi/<?php echo get_post_meta(get_the_ID(), 'youtube_id', true); ?>/2.jpg" data-src="//i1.ytimg.com/vi/<?php echo get_post_meta(get_the_ID(), 'youtube_id', true); ?>/0.jpg" alt="">
               </a>
             </div>
           </figure>
@@ -35,12 +35,13 @@
 
           <?php
             if ( has_post_thumbnail() ) {
-            $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), array(420,10000));
+            $thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium');
+            $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
           ?>
           <figure class="media photo">
             <div class="media-item">
               <a href="<?php the_permalink(); ?>">
-                <img src="<?php echo $image_url[0]; ?>" alt="">
+                <img class="lazy" src="<?php echo $thumbnail_url[0]; ?>" data-src="<?php echo $thumbnail_url[0]; ?>" alt="">
               </a>
             </div>
           </figure>

@@ -80,6 +80,12 @@ abbr {
 
 }
 
+.media-container {
+  max-width: 1680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // HEADER
 
 #header {
@@ -625,7 +631,6 @@ main {
 
 .media {
   width: 100%;
-  //border: 1px solid $grey-light;
   .media-title {
     border-bottom: 1px solid $grey-light;
     h1 {
@@ -644,35 +649,21 @@ main {
   .media-item {
     font-size: 0;
     line-height: 0;
-  }
-  &.photo {
     img {
-
-      &:hover {
-
-      }
+      width: 100%;
     }
   }
 }
 
-@media only screen and (min-width: 768px) {
-
+.media-grid {
   .media {
-    width: 50%;
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+    }
+    @media only screen and (min-width: 960px) {
+      width: 25%;
+    }
   }
-
-}
-
-@media only screen and (min-width: 960px) {
-
-  .media {
-    width: 25%;
-  }
-
-  .media.video {
-    width: 50%;
-  }
-
 }
 
 // AFFILIATES
@@ -821,21 +812,14 @@ main {
   .media-grid {
     margin-top: 2em;
     margin-bottom: 4em;
-    img {
-      -webkit-filter: grayscale(100%) opacity(80%);
-      -webkit-transition: -webkit-filter .1s ease-in-out;
-      &:hover {
-        -webkit-filter: grayscale(0) opacity(100%);
-      }
-    }
   }
 }
 
-html.js {
-  .media-grid {
-    display: none;
-  }
-}
+// html.js {
+//   .media-grid {
+//     display: none;
+//   }
+// }
 
 // 404 ERROR
 
