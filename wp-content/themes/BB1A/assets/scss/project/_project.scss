@@ -349,6 +349,7 @@ main {
     }
   }
   .post-body {
+    width: 100%;
     margin-top: 3em;
     line-height: 1.6em;
     p, ul, ol, h2 {
@@ -493,6 +494,9 @@ main {
           margin-top: .3em;
           padding-left: 20px;
           position: relative;
+          &:first-child {
+            margin-top: 0;
+          }
           i {
             width: 14px;
             color: $red;

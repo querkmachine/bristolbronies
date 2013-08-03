@@ -12,17 +12,18 @@
           $cleansed_image_url = str_replace(site_url().'/', '', $full_image_url[0]);
         ?>
         <!-- <?php echo $cleansed_image_url; ?> -->
-        <header class="post-media">
+        <figure class="post-media">
           <a href="<?php echo $full_image_url[0]; ?>">
             <img src="<?php echo $large_image_url[0]; ?>" alt="">
           </a>
-        </header>
+        </figure>
         <?php } ?>
         <div class="post-body">
+          <p><?php the_title(); ?></p>
           <?php the_content(); ?>
         </div>
         <?php $camera = cameraUsed($cleansed_image_url); ?>
-        <aside class="post-card post-event-details">
+        <aside class="post-card post-aside post-event-details">
           <?php if($camera['latitude']['ref'] && $camera['longitude']['ref']) { ?>
           <div class="post-card-map" style="background-image: url('http://maps.googleapis.com/maps/api/staticmap?zoom=14&amp;size=480x160&amp;scale=2&amp;maptype=roadmap&amp;markers=icon:http://bristolbronies.co.uk/wp-content/themes/BB1A/assets/img/map_marker2.png%7Cshadow:false%7C<?php echo $camera['latitude']['deg']; ?>,<?php echo $camera['longitude']['deg']; ?>&amp;sensor=false');">
           </div>

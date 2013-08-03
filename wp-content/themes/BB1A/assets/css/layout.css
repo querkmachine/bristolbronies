@@ -1813,7 +1813,7 @@ a [class*=" icon-"]:before {
   main {
     *zoom: 1;
   }
-  /* line 38, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   main:after {
     content: "";
     display: table;
@@ -1874,7 +1874,7 @@ a [class*=" icon-"]:before {
   /* line 150, ../scss/project/_project.scss */
   .loading-spinner {
     min-height: 36px;
-    background-image: url('/wp-content/themes/BB1A/assets/img/spinner.gif?1375102714');
+    background-image: url('/wp-content/themes/BB1A/assets/img/spinner.gif?1373283110');
     background-position: center center;
     background-repeat: no-repeat;
   }
@@ -1890,7 +1890,7 @@ a [class*=" icon-"]:before {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/wp-content/themes/BB1A/assets/img/logo.png?1375102714');
+    background-image: url('/wp-content/themes/BB1A/assets/img/logo.png?1368284071');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 160px;
@@ -1902,7 +1902,7 @@ a [class*=" icon-"]:before {
   }
   /* line 169, ../scss/project/_project.scss */
   html.svg .branding a {
-    background-image: url('/wp-content/themes/BB1A/assets/img/logo.svg?1375102714');
+    background-image: url('/wp-content/themes/BB1A/assets/img/logo.svg?1371158265');
   }
 
   /* line 177, ../scss/project/_project.scss */
@@ -2035,7 +2035,7 @@ a [class*=" icon-"]:before {
     margin-bottom: 2em;
     *zoom: 1;
   }
-  /* line 38, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .post:after {
     content: "";
     display: table;
@@ -2072,14 +2072,15 @@ a [class*=" icon-"]:before {
   }
   /* line 351, ../scss/project/_project.scss */
   .post .post-body {
+    width: 100%;
     margin-top: 3em;
     line-height: 1.6em;
   }
-  /* line 354, ../scss/project/_project.scss */
+  /* line 355, ../scss/project/_project.scss */
   .post .post-body p, .post .post-body ul, .post .post-body ol, .post .post-body h2 {
     margin-bottom: 20px;
   }
-  /* line 357, ../scss/project/_project.scss */
+  /* line 358, ../scss/project/_project.scss */
   .post .post-body h2 {
     padding-top: 20px;
     font-size: 1.5em;
@@ -2087,21 +2088,21 @@ a [class*=" icon-"]:before {
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 364, ../scss/project/_project.scss */
+  /* line 365, ../scss/project/_project.scss */
   .post .post-body h4 {
     font-weight: 300;
     font-style: italic;
   }
-  /* line 368, ../scss/project/_project.scss */
+  /* line 369, ../scss/project/_project.scss */
   .post .post-body ul {
     list-style: none;
   }
-  /* line 370, ../scss/project/_project.scss */
+  /* line 371, ../scss/project/_project.scss */
   .post .post-body ul li {
     padding-left: 20px;
     position: relative;
   }
-  /* line 373, ../scss/project/_project.scss */
+  /* line 374, ../scss/project/_project.scss */
   .post .post-body ul li:before {
     content: "\25CF";
     width: 14px;
@@ -2112,37 +2113,37 @@ a [class*=" icon-"]:before {
     text-align: center;
     line-height: 1.6em;
   }
-  /* line 385, ../scss/project/_project.scss */
+  /* line 386, ../scss/project/_project.scss */
   .post .post-body ol {
     list-style: decimal;
     margin-left: 20px;
   }
-  /* line 390, ../scss/project/_project.scss */
+  /* line 391, ../scss/project/_project.scss */
   .post .post-body p:first-child {
     font-size: 1.2em;
     line-height: 1.4em;
   }
-  /* line 400, ../scss/project/_project.scss */
+  /* line 401, ../scss/project/_project.scss */
   .post .post-neighbours ul li strong {
     display: block;
     color: #323232;
     font-size: 0.8em;
     font-style: italic;
   }
-  /* line 409, ../scss/project/_project.scss */
+  /* line 410, ../scss/project/_project.scss */
   .post .post-aside {
     width: 100%;
   }
-  /* line 411, ../scss/project/_project.scss */
+  /* line 412, ../scss/project/_project.scss */
   .post .post-aside + .post-aside {
     margin-top: 20px;
   }
-  /* line 415, ../scss/project/_project.scss */
+  /* line 416, ../scss/project/_project.scss */
   .post .post-card {
     max-width: 30em;
     border: 1px solid #dfdfdf;
   }
-  /* line 418, ../scss/project/_project.scss */
+  /* line 419, ../scss/project/_project.scss */
   .post .post-card .post-card-map {
     padding-bottom: 160px;
     border-bottom: 1px solid #dfdfdf;
@@ -2152,13 +2153,13 @@ a [class*=" icon-"]:before {
     -o-background-size: cover;
     background-size: cover;
   }
-  /* line 424, ../scss/project/_project.scss */
+  /* line 425, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper {
     height: 8em;
     position: relative;
     border-bottom: 1px solid #dfdfdf;
   }
-  /* line 428, ../scss/project/_project.scss */
+  /* line 429, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper span {
     display: inline-block;
     position: absolute;
@@ -2166,7 +2167,7 @@ a [class*=" icon-"]:before {
     left: 0;
     font-size: 8em;
   }
-  /* line 435, ../scss/project/_project.scss */
+  /* line 436, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .badge {
     padding: 1px 3px;
     top: 0;
@@ -2176,29 +2177,29 @@ a [class*=" icon-"]:before {
     font-size: 0.8em;
     font-style: italic;
   }
-  /* line 443, ../scss/project/_project.scss */
+  /* line 444, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .badge a {
     color: #454545;
     text-decoration: none;
   }
-  /* line 449, ../scss/project/_project.scss */
+  /* line 450, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-sun,
   .post .post-card .forecast-icon-wrapper .forecast-sunny {
     color: orange;
   }
-  /* line 453, ../scss/project/_project.scss */
+  /* line 454, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-moon,
   .post .post-card .forecast-icon-wrapper .forecast-night {
     color: #4681c3;
   }
-  /* line 459, ../scss/project/_project.scss */
+  /* line 460, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .basecloud,
   .post .post-card .forecast-icon-wrapper .forecast-cloud,
   .post .post-card .forecast-icon-wrapper .forecast-mist,
   .post .post-card .forecast-icon-wrapper .forecast-windy {
     color: #cccccc;
   }
-  /* line 466, ../scss/project/_project.scss */
+  /* line 467, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-drizzle,
   .post .post-card .forecast-icon-wrapper .forecast-rainy,
   .post .post-card .forecast-icon-wrapper .forecast-showers,
@@ -2206,16 +2207,16 @@ a [class*=" icon-"]:before {
   .post .post-card .forecast-icon-wrapper .forecast-sleet {
     color: #82b2e4;
   }
-  /* line 470, ../scss/project/_project.scss */
+  /* line 471, ../scss/project/_project.scss */
   .post .post-card .forecast-icon-wrapper .forecast-frosty,
   .post .post-card .forecast-icon-wrapper .forecast-snowy {
     color: #85d8f7;
   }
-  /* line 474, ../scss/project/_project.scss */
+  /* line 475, ../scss/project/_project.scss */
   .post .post-card .post-card-details {
     padding: 1em;
   }
-  /* line 476, ../scss/project/_project.scss */
+  /* line 477, ../scss/project/_project.scss */
   .post .post-card .post-card-details h1 {
     margin-bottom: .5em;
     font-size: 1.4em;
@@ -2223,78 +2224,82 @@ a [class*=" icon-"]:before {
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 482, ../scss/project/_project.scss */
+  /* line 483, ../scss/project/_project.scss */
   .post .post-card .post-card-details h1 a {
     color: #323232;
     text-decoration: none;
   }
-  /* line 487, ../scss/project/_project.scss */
+  /* line 488, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul {
     margin: 0;
     padding: 0;
     font-size: 0.9em;
     list-style: none;
   }
-  /* line 492, ../scss/project/_project.scss */
+  /* line 493, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li {
     margin-top: .3em;
     padding-left: 20px;
     position: relative;
   }
-  /* line 496, ../scss/project/_project.scss */
+  /* line 497, ../scss/project/_project.scss */
+  .post .post-card .post-card-details ul li:first-child {
+    margin-top: 0;
+  }
+  /* line 500, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i {
     width: 14px;
     color: #e02436;
     text-align: center;
     line-height: 1.6em;
   }
-  /* line 501, ../scss/project/_project.scss */
+  /* line 505, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i:first-child {
     position: absolute;
     top: 0;
     left: 0;
   }
-  /* line 506, ../scss/project/_project.scss */
+  /* line 510, ../scss/project/_project.scss */
   .post .post-card .post-card-details ul li i:not(:first-child) {
     margin-left: 10px;
     margin-right: 2px;
   }
 
-  /* line 525, ../scss/project/_project.scss */
+  /* line 529, ../scss/project/_project.scss */
   .em-booking p {
     margin-bottom: 20px;
   }
-  /* line 529, ../scss/project/_project.scss */
+  /* line 533, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-form-row {
     margin-bottom: 10px;
   }
-  /* line 531, ../scss/project/_project.scss */
+  /* line 535, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-form-row:last-child {
     margin-bottom: 0;
   }
-  /* line 535, ../scss/project/_project.scss */
+  /* line 539, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-buttons {
     text-align: right;
   }
-  /* line 538, ../scss/project/_project.scss */
+  /* line 542, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-submit {
     padding: 6px 12px;
     color: #fff;
     background-color: #777777;
     cursor: pointer;
   }
-  /* line 544, ../scss/project/_project.scss */
+  /* line 548, ../scss/project/_project.scss */
   .em-booking .em-booking-form .em-booking-submit:hover, .em-booking .em-booking-form .em-booking-submit:active {
     background-color: #e02436;
   }
-  /* line 548, ../scss/project/_project.scss */
+  /* line 552, ../scss/project/_project.scss */
   .em-booking .em-booking-form label {
     display: block;
     margin-bottom: 5px;
     font-size: 0.8em;
     text-transform: uppercase;
   }
-  /* line 557, ../scss/project/_project.scss */
+  /* line 561, ../scss/project/_project.scss */
   .em-booking .em-booking-form input[type=text],
   .em-booking .em-booking-form input[type=email],
   .em-booking .em-booking-form textarea,
@@ -2308,77 +2313,77 @@ a [class*=" icon-"]:before {
     color: inherit;
     background: #fff;
   }
-  /* line 564, ../scss/project/_project.scss */
+  /* line 568, ../scss/project/_project.scss */
   .em-booking .em-booking-form input[type=text]:focus,
   .em-booking .em-booking-form input[type=email]:focus,
   .em-booking .em-booking-form textarea:focus,
   .em-booking .em-booking-form select:focus {
     border-color: #777777;
   }
-  /* line 568, ../scss/project/_project.scss */
+  /* line 572, ../scss/project/_project.scss */
   .em-booking .em-booking-form textarea {
     resize: vertical;
   }
 
-  /* line 622, ../scss/project/_project.scss */
+  /* line 626, ../scss/project/_project.scss */
   .media {
     width: 100%;
   }
-  /* line 625, ../scss/project/_project.scss */
+  /* line 629, ../scss/project/_project.scss */
   .media .media-meet {
     display: none;
     padding: 0.6em 1em;
     border-bottom: 1px solid #dfdfdf;
   }
-  /* line 629, ../scss/project/_project.scss */
+  /* line 633, ../scss/project/_project.scss */
   .media .media-meet h1 {
     font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
     font-weight: 900;
     text-transform: uppercase;
   }
-  /* line 633, ../scss/project/_project.scss */
+  /* line 637, ../scss/project/_project.scss */
   .media .media-meet h1 a {
     color: #e02436;
     text-decoration: none;
   }
-  /* line 639, ../scss/project/_project.scss */
+  /* line 643, ../scss/project/_project.scss */
   .media .media-item {
     font-size: 0;
     line-height: 0;
   }
 
-  /* line 675, ../scss/project/_project.scss */
+  /* line 679, ../scss/project/_project.scss */
   #affiliates {
     padding: 1em 0;
     background-color: #dfdfdf;
   }
-  /* line 678, ../scss/project/_project.scss */
+  /* line 682, ../scss/project/_project.scss */
   #affiliates header {
     margin-bottom: 1em;
   }
-  /* line 680, ../scss/project/_project.scss */
+  /* line 684, ../scss/project/_project.scss */
   #affiliates header h1 {
     color: #777777;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
     font-size: 0.9em;
   }
-  /* line 686, ../scss/project/_project.scss */
+  /* line 690, ../scss/project/_project.scss */
   #affiliates ul {
     overflow: hidden;
     list-style: none;
   }
-  /* line 689, ../scss/project/_project.scss */
+  /* line 693, ../scss/project/_project.scss */
   #affiliates ul li {
     width: 19.2%;
     margin-right: 1%;
     float: left;
     line-height: 0;
   }
-  /* line 694, ../scss/project/_project.scss */
+  /* line 698, ../scss/project/_project.scss */
   #affiliates ul li:last-child {
     margin-right: 0;
   }
-  /* line 697, ../scss/project/_project.scss */
+  /* line 701, ../scss/project/_project.scss */
   #affiliates ul li a {
     display: block;
     opacity: 0.5;
@@ -2388,16 +2393,16 @@ a [class*=" icon-"]:before {
     -o-transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
     transition: opacity 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
   }
-  /* line 703, ../scss/project/_project.scss */
+  /* line 707, ../scss/project/_project.scss */
   #affiliates ul li a:hover, #affiliates ul li a:focus {
     opacity: 1;
     -webkit-filter: grayscale(0%);
   }
 
-  /* line 714, ../scss/project/_project.scss */
+  /* line 718, ../scss/project/_project.scss */
   .page-id-2 {
     background-color: #323232;
-    background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1375102714'), url('/wp-content/themes/BB1A/assets/img/homepage_background.jpg?1375102714');
+    background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1368291658'), url('/wp-content/themes/BB1A/assets/img/homepage_background.jpg?1373279182');
     background-repeat: repeat, no-repeat;
     background-position: center center;
     background-scroll: fixed, fixed;
@@ -2406,48 +2411,48 @@ a [class*=" icon-"]:before {
     -o-background-size: auto auto, cover;
     background-size: auto auto, cover;
   }
-  /* line 721, ../scss/project/_project.scss */
+  /* line 725, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation {
     border-color: #777777;
   }
-  /* line 723, ../scss/project/_project.scss */
+  /* line 727, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a {
     color: #fff;
   }
-  /* line 726, ../scss/project/_project.scss */
+  /* line 730, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a:hover, .page-id-2 .primary-navigation a:focus {
     background-color: #777777;
   }
-  /* line 732, ../scss/project/_project.scss */
+  /* line 736, ../scss/project/_project.scss */
   .page-id-2 .social-links a {
     background-color: #e02436;
   }
-  /* line 736, ../scss/project/_project.scss */
+  /* line 740, ../scss/project/_project.scss */
   .page-id-2 #main {
     padding: 4em 0 12em;
   }
-  /* line 741, ../scss/project/_project.scss */
+  /* line 745, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a {
     color: #dfdfdf;
   }
-  /* line 744, ../scss/project/_project.scss */
+  /* line 748, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a:hover, .page-id-2 .post .post-title a:focus {
     color: #fff;
   }
-  /* line 750, ../scss/project/_project.scss */
+  /* line 754, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation {
     color: #fff;
   }
-  /* line 752, ../scss/project/_project.scss */
+  /* line 756, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation a {
     color: #fff;
   }
-  /* line 756, ../scss/project/_project.scss */
+  /* line 760, ../scss/project/_project.scss */
   .page-id-2 .boilerplate {
     color: #fff;
   }
 
-  /* line 775, ../scss/project/_project.scss */
+  /* line 779, ../scss/project/_project.scss */
   .meets-section .meets-section-header {
     margin-bottom: 1em;
     padding: 3px;
@@ -2456,43 +2461,43 @@ a [class*=" icon-"]:before {
     font-size: 0.9em;
     text-transform: uppercase;
   }
-  /* line 785, ../scss/project/_project.scss */
+  /* line 789, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 1.5em;
   }
 
-  /* line 816, ../scss/project/_project.scss */
+  /* line 820, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid {
     margin-top: 2em;
     margin-bottom: 4em;
   }
-  /* line 819, ../scss/project/_project.scss */
+  /* line 823, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid img {
     -webkit-filter: grayscale(100%) opacity(80%);
     -webkit-transition: -webkit-filter 0.1s ease-in-out;
   }
-  /* line 822, ../scss/project/_project.scss */
+  /* line 826, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid img:hover {
     -webkit-filter: grayscale(0) opacity(100%);
   }
 
-  /* line 830, ../scss/project/_project.scss */
+  /* line 834, ../scss/project/_project.scss */
   html.js .media-grid {
     display: none;
   }
 
-  /* line 838, ../scss/project/_project.scss */
+  /* line 842, ../scss/project/_project.scss */
   .error404 .feature-image {
     background-color: #c6d2e1;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 572px 389px;
   }
-  /* line 844, ../scss/project/_project.scss */
+  /* line 848, ../scss/project/_project.scss */
   .error404 .post {
     text-align: center;
   }
-  /* line 846, ../scss/project/_project.scss */
+  /* line 850, ../scss/project/_project.scss */
   .error404 .post .post-body {
     margin-left: auto;
     margin-right: auto;
@@ -2519,7 +2524,7 @@ a [class*=" icon-"]:before {
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   /* line 162, ../scss/project/_project.scss */
   .branding a {
-    background-image: url('/wp-content/themes/BB1A/assets/img/logo@2x.png?1375102714');
+    background-image: url('/wp-content/themes/BB1A/assets/img/logo@2x.png?1368284094');
   }
 }
 @media only screen and (min-width: 768px) {
@@ -2547,75 +2552,75 @@ a [class*=" icon-"]:before {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 579, ../scss/project/_project.scss */
+  /* line 583, ../scss/project/_project.scss */
   .post .post-header .post-title {
     font-size: 5em;
   }
-  /* line 583, ../scss/project/_project.scss */
+  /* line 587, ../scss/project/_project.scss */
   .post .post-body {
     max-width: 30em;
     float: left;
   }
-  /* line 587, ../scss/project/_project.scss */
+  /* line 591, ../scss/project/_project.scss */
   .post .post-body p:first-child {
     font-size: 1.4em;
     line-height: 1.4em;
   }
-  /* line 593, ../scss/project/_project.scss */
+  /* line 597, ../scss/project/_project.scss */
   .post .post-aside {
     max-width: 15em;
     margin-top: 3em;
     float: right;
     clear: right;
   }
-  /* line 601, ../scss/project/_project.scss */
+  /* line 605, ../scss/project/_project.scss */
   .post.weekly .post-header .post-title {
     font-size: 3em;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 613, ../scss/project/_project.scss */
+  /* line 617, ../scss/project/_project.scss */
   .post .post-aside {
     max-width: 25em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 655, ../scss/project/_project.scss */
+  /* line 659, ../scss/project/_project.scss */
   .media {
     width: 50%;
   }
 }
 @media only screen and (min-width: 960px) {
-  /* line 663, ../scss/project/_project.scss */
+  /* line 667, ../scss/project/_project.scss */
   .media {
     width: 25%;
   }
 
-  /* line 667, ../scss/project/_project.scss */
+  /* line 671, ../scss/project/_project.scss */
   .media.video {
     width: 50%;
   }
 }
 @media only screen and (min-height: 600px) {
-  /* line 764, ../scss/project/_project.scss */
+  /* line 768, ../scss/project/_project.scss */
   .page-id-2 #main {
     min-height: 18em;
     padding: 8em 0 18em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 796, ../scss/project/_project.scss */
+  /* line 800, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post {
     width: 48%;
     margin-left: 4%;
     float: left;
   }
-  /* line 800, ../scss/project/_project.scss */
+  /* line 804, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post:nth-child(2n) {
     margin-left: 0;
     clear: left;
   }
-  /* line 804, ../scss/project/_project.scss */
+  /* line 808, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 2.5em;
   }
