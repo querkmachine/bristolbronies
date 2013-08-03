@@ -655,22 +655,26 @@ main {
     }
   }
   &.video {
-    position: relative;
-    &:after {
-      content: "\f144";
-      margin-top: -30px;
-      margin-left: -30px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: #fff;
-      font-family: FontAwesome;
-      font-size: 60px;
-      font-weight: normal;
-      font-style: normal;
-      text-decoration: inherit;
-      -webkit-font-smoothing: antialiased;
-      *margin-right: .3em; // fixes ie7 issues
+    a {
+      display: block;
+      position: relative;
+      &:after {
+        content: "\f144";
+        margin-top: -30px;
+        margin-left: -30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        font-family: FontAwesome;
+        font-size: 60px;
+        font-weight: normal;
+        font-style: normal;
+        text-decoration: none;
+        line-height: 60px;
+        -webkit-font-smoothing: antialiased;
+        *margin-right: .3em; // fixes ie7 issues
+      }
     }
   }
 }
@@ -832,6 +836,23 @@ main {
   .media-grid {
     margin-top: 2em;
     margin-bottom: 4em;
+    .media {
+      a {
+        // display: block;
+        // position: relative;
+        // &:after {
+        //   content: "";
+        //   position: absolute;
+        //   top: 0; left: 0; bottom: 0; right: 0;
+        // }
+        // &:hover,
+        // &:focus {
+        //   &:after {
+        //     border: 5px solid $red;
+        //   }
+        // }
+      }
+    }
   }
 }
 
