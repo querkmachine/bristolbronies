@@ -35,8 +35,8 @@
 
           <?php
             if ( has_post_thumbnail() ) {
-            $thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium');
-            $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
+            $thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail');
+            $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium');
           ?>
           <figure class="media photo">
             <div class="media-item">
