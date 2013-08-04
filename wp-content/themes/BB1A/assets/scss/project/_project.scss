@@ -399,6 +399,9 @@ main {
         line-height: 1.4em;
       }
     }
+    img {
+      height: auto;
+    }
   }
   .post-neighbours {
     @extend %navigation-list;
