@@ -12,7 +12,7 @@
               $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), array(188,188));
         ?>
         <li>
-          <a href="<?php echo get_post_meta(get_the_ID(), 'affiliate_url', true); ?>">
+          <a href="<?php echo get_post_meta(get_the_ID(), 'affiliate_url', true); ?>" onclick="_gaq.push(['_trackEvent', 'Affliate Link', 'Click', '<?php echo addslashes(get_the_title()); ?>']);">
             <img src="<?php echo $large_image_url[0]; ?>" alt="<?php the_title(); ?>">
           </a>
         </li>

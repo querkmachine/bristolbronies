@@ -99,10 +99,10 @@
     ?>
     <div class="social-links">
       <ul>
-        <li><a href="http://twitter.com/bristolbronies"><i class="icon-twitter"></i><span class="hidden">@bristolbronies on Twitter</span></a></li>
-        <li><a href="http://facebook.com/bristolbronies"><i class="icon-facebook"></i><span class="hidden">Bristol Bronies on Facebook</span></a></li>
-        <li><a href="http://plus.google.com/communities/100145300203565604559"><i class="icon-google-plus"></i><span class="hidden">Bristol Bronies on Google+</span></a></li>
-        <li><a href="irc://irc.canternet.org/bristolbronies"><i class="icon-comments-alt"></i><span class="hidden">#bristolbronies IRC (requires IRC client)</span></a></li>
+        <li><a href="http://twitter.com/bristolbronies" onclick="_gaq.push(['_trackEvent', 'Social Link', 'Click', 'Twitter']);"><i class="icon-twitter"></i><span class="hidden">@bristolbronies on Twitter</span></a></li>
+        <li><a href="http://facebook.com/bristolbronies" onclick="_gaq.push(['_trackEvent', 'Social Link', 'Click', 'Facebook']);"><i class="icon-facebook"></i><span class="hidden">Bristol Bronies on Facebook</span></a></li>
+        <li><a href="http://plus.google.com/communities/100145300203565604559" onclick="_gaq.push(['_trackEvent', 'Social Link', 'Click', 'Google+']);"><i class="icon-google-plus"></i><span class="hidden">Bristol Bronies on Google+</span></a></li>
+        <li><a href="irc://irc.canternet.org/bristolbronies" onclick="_gaq.push(['_trackEvent', 'Social Link', 'Click', 'IRC']);"><i class="icon-comments-alt"></i><span class="hidden">#bristolbronies IRC (requires IRC client)</span></a></li>
       </ul>
     </div>
   </header>
