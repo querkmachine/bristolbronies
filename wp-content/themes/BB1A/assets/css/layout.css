@@ -2440,58 +2440,63 @@ a [class*=" icon-"]:before {
 
   /* line 740, ../scss/project/_project.scss */
   .page-id-2 {
+    min-height: 100%;
     background-color: #323232;
-    background-image: url('/wp-content/themes/BB1A/assets/img/overlay.png?1368291658'), url('/wp-content/themes/BB1A/assets/img/homepage_background.jpg?1373279182');
-    background-repeat: repeat, no-repeat;
-    background-position: center center;
-    background-scroll: fixed, fixed;
-    -webkit-background-size: auto auto, cover;
-    -moz-background-size: auto auto, cover;
-    -o-background-size: auto auto, cover;
-    background-size: auto auto, cover;
+    background-image: url('/wp-content/themes/BB1A/assets/img/homepage_background.jpg?1377383420');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-scroll: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
-  /* line 747, ../scss/project/_project.scss */
+  /* line 742, ../scss/project/_project.scss */
+  .page-id-2 body {
+    min-height: 100%;
+  }
+  /* line 749, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation {
     border-color: #777777;
   }
-  /* line 749, ../scss/project/_project.scss */
+  /* line 751, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a {
     color: #fff;
   }
-  /* line 752, ../scss/project/_project.scss */
+  /* line 754, ../scss/project/_project.scss */
   .page-id-2 .primary-navigation a:hover, .page-id-2 .primary-navigation a:focus {
     background-color: #777777;
   }
-  /* line 758, ../scss/project/_project.scss */
+  /* line 760, ../scss/project/_project.scss */
   .page-id-2 .social-links a {
     background-color: #e02436;
   }
-  /* line 762, ../scss/project/_project.scss */
+  /* line 764, ../scss/project/_project.scss */
   .page-id-2 #main {
-    padding: 4em 0 12em;
+    padding: 3em 0 12em;
   }
-  /* line 767, ../scss/project/_project.scss */
+  /* line 769, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a {
     color: #dfdfdf;
   }
-  /* line 770, ../scss/project/_project.scss */
+  /* line 772, ../scss/project/_project.scss */
   .page-id-2 .post .post-title a:hover, .page-id-2 .post .post-title a:focus {
     color: #fff;
   }
-  /* line 776, ../scss/project/_project.scss */
+  /* line 778, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation {
     color: #fff;
   }
-  /* line 778, ../scss/project/_project.scss */
+  /* line 780, ../scss/project/_project.scss */
   .page-id-2 .secondary-navigation a {
     color: #fff;
   }
-  /* line 782, ../scss/project/_project.scss */
+  /* line 784, ../scss/project/_project.scss */
   .page-id-2 .boilerplate {
     color: #fff;
   }
 
-  /* line 801, ../scss/project/_project.scss */
+  /* line 803, ../scss/project/_project.scss */
   .meets-section .meets-section-header {
     margin-bottom: 1em;
     padding: 3px;
@@ -2500,29 +2505,29 @@ a [class*=" icon-"]:before {
     font-size: 0.9em;
     text-transform: uppercase;
   }
-  /* line 811, ../scss/project/_project.scss */
+  /* line 813, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 1.5em;
   }
 
-  /* line 842, ../scss/project/_project.scss */
+  /* line 844, ../scss/project/_project.scss */
   .post-type-archive-community .media-grid {
     margin-top: 2em;
     margin-bottom: 4em;
   }
 
-  /* line 874, ../scss/project/_project.scss */
+  /* line 876, ../scss/project/_project.scss */
   .error404 .feature-image {
     background-color: #c6d2e1;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 572px 389px;
   }
-  /* line 880, ../scss/project/_project.scss */
+  /* line 882, ../scss/project/_project.scss */
   .error404 .post {
     text-align: center;
   }
-  /* line 882, ../scss/project/_project.scss */
+  /* line 884, ../scss/project/_project.scss */
   .error404 .post .post-body {
     margin-left: auto;
     margin-right: auto;
@@ -2629,25 +2634,25 @@ a [class*=" icon-"]:before {
 }
 
 @media only screen and (min-height: 600px) {
-  /* line 790, ../scss/project/_project.scss */
+  /* line 792, ../scss/project/_project.scss */
   .page-id-2 #main {
     min-height: 18em;
-    padding: 8em 0 18em;
+    padding: 5em 0 14em;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 822, ../scss/project/_project.scss */
+  /* line 824, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post {
     width: 48%;
     margin-left: 4%;
     float: left;
   }
-  /* line 826, ../scss/project/_project.scss */
+  /* line 828, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post:nth-child(2n) {
     margin-left: 0;
     clear: left;
   }
-  /* line 830, ../scss/project/_project.scss */
+  /* line 832, ../scss/project/_project.scss */
   .meets-section.meets-section-past .post .post-title {
     font-size: 2.5em;
   }

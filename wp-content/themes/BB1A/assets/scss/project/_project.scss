@@ -738,12 +738,14 @@ main {
 // HOMEPAGE 
 
 .page-id-2 {
+  min-height: 100%;
+  body { min-height: 100%; }
   background-color: $grey-dark;
-  background-image: image-url('overlay.png'), image-url('homepage_background.jpg');
-  background-repeat: repeat, no-repeat;
-  background-position: center center;
-  background-scroll: fixed, fixed;
-  @include background-size(auto auto, cover);
+  background-image: image-url('homepage_background.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-scroll: fixed;
+  @include background-size(cover);
   .primary-navigation {
     border-color: $grey;
     a {
@@ -760,7 +762,7 @@ main {
     }
   }
   #main {
-    padding: 4em 0 12em;
+    padding: 3em 0 12em;
   }
   .post {
     .post-title {
@@ -789,7 +791,7 @@ main {
   .page-id-2 {
     #main {
       min-height: 18em;
-      padding: 8em 0 18em;
+      padding: 5em 0 14em;
     }
   }
 
