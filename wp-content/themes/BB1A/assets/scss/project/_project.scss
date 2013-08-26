@@ -844,31 +844,8 @@ main {
   .media-grid {
     margin-top: 2em;
     margin-bottom: 4em;
-    .media {
-      a {
-        // display: block;
-        // position: relative;
-        // &:after {
-        //   content: "";
-        //   position: absolute;
-        //   top: 0; left: 0; bottom: 0; right: 0;
-        // }
-        // &:hover,
-        // &:focus {
-        //   &:after {
-        //     border: 5px solid $red;
-        //   }
-        // }
-      }
-    }
   }
 }
-
-// html.js {
-//   .media-grid {
-//     display: none;
-//   }
-// }
 
 // 404 ERROR
 

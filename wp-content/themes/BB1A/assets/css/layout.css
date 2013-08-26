@@ -2516,18 +2516,18 @@ a [class*=" icon-"]:before {
     margin-bottom: 4em;
   }
 
-  /* line 876, ../scss/project/_project.scss */
+  /* line 853, ../scss/project/_project.scss */
   .error404 .feature-image {
     background-color: #c6d2e1;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 572px 389px;
   }
-  /* line 882, ../scss/project/_project.scss */
+  /* line 859, ../scss/project/_project.scss */
   .error404 .post {
     text-align: center;
   }
-  /* line 884, ../scss/project/_project.scss */
+  /* line 861, ../scss/project/_project.scss */
   .error404 .post .post-body {
     margin-left: auto;
     margin-right: auto;

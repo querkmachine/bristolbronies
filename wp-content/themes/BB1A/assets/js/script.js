@@ -11,17 +11,6 @@ function initFitVids() {
 }
 
 function initMediaGrid() {
-  // var $win = $(window),
-  //     $con = $(".media-grid"),
-  //     $imgs = $("img.lazy");
-  // $con.isotope({
-  //   itemSelector: ".media",
-  //   masonry: { columnWidth: Math.floor($con.width() / 4) },
-  //   onLayout: function() {
-  //     $win.trigger("scroll");
-  //   }
-  // });
-  // $imgs.unveil();
   var $container = $('.media-grid');
   $container.packery({ 
     itemSelector: '.media',
@@ -31,23 +20,3 @@ function initMediaGrid() {
   });
   $("img.lazy").unveil();
 }
-
-// $(window).load(function() {
-
-//   $mediaGrid.fadeIn().isotope({
-//     itemSelector: ".media",
-//     resizable: false,
-//     masonry: { columnWidth: $mediaGrid.width() / 4 }
-//   });
-
-// });
-
-// $(window).resize(function() {
-
-//   $mediaGrid.isotope({
-//     itemSelector: ".media",
-//     resizable: false,
-//     masonry: { columnWidth: $mediaGrid.width() / 4 }
-//   });
-
-// });
