@@ -693,6 +693,12 @@ main {
     @media only screen and (min-width: 960px) {
       width: 25%;
     }
+    html.no-js & {
+      height: 15em;
+      float: left;
+      overflow: hidden;
+      background-color: $grey-light;
+    }
   }
 }
 

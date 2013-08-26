@@ -7,7 +7,7 @@
   <main class="media-container" id="main" role="main">
 
     <?php query_posts('post_type=community'); ?>
-    <div class="media-grid">
+    <div class="media-grid unloaded">
       <?php while ( have_posts() ) : the_post(); ?>
 
         <?php if(in_array("youtube_id", get_post_custom_keys(get_the_ID()))) { ?>
