@@ -150,13 +150,14 @@ class EM_Bookings extends EM_Object implements Iterator{
 	
 	/**
 	 * Returns EM_Tickets object with available tickets
+	 * @param boolean $include_member_tickets - if set to true, member-ony tickets will be considered available even if logged out
 	 * @return EM_Tickets
 	 */
-	function get_available_tickets(){
+	function get_available_tickets( $include_member_tickets = false ){
 		$tickets = array();
 		foreach ($this->get_tickets() as $EM_Ticket){
 			/* @var $EM_Ticket EM_Ticket */
-			if( $EM_Ticket->is_available() ){
+			if( $EM_Ticket->is_available($include_member_tickets) ){
 				//within time range
 				if( $EM_Ticket->get_available_spaces() > 0 ){
 					$tickets[] = $EM_Ticket;
@@ -164,7 +165,7 @@ class EM_Bookings extends EM_Object implements Iterator{
 			}
 		}
 		$EM_Tickets = new EM_Tickets($tickets);
-		return apply_filters('em_bookings_get_tickets', $EM_Tickets, $this);
+		return apply_filters('em_bookings_get_available_tickets', $EM_Tickets, $this);
 	}
 	
 	function get_user_list(){
@@ -189,8 +190,8 @@ class EM_Bookings extends EM_Object implements Iterator{
 		return apply_filters('em_bookings_ticket_exists',false, false,$this);
 	}
 	
-	function has_space(){
-		return count($this->get_available_tickets()->tickets) > 0;
+	function has_space( $include_member_tickets = false ){
+		return count($this->get_available_tickets( $include_member_tickets )->tickets) > 0;
 	}
 	
 	function has_open_time(){
@@ -204,10 +205,10 @@ class EM_Bookings extends EM_Object implements Iterator{
 	    return $return;
 	}
 	
-	function is_open(){
+	function is_open($include_member_tickets = false){
 		//TODO extend booking options
-		$return = $this->has_open_time() && $this->has_space();
-		return apply_filters('em_bookings_is_open', $return, $this);
+		$return = $this->has_open_time() && $this->has_space($include_member_tickets);
+		return apply_filters('em_bookings_is_open', $return, $this, $include_member_tickets);
 	}
 	
 	/**
@@ -497,7 +498,7 @@ class EM_Bookings extends EM_Object implements Iterator{
 		$accepted_fields = $EM_Booking->get_fields(true);
 		$orderby = self::build_sql_orderby($args, $accepted_fields);
 		//Now, build orderby sql
-		$orderby_sql = ( count($orderby) > 0 ) ? 'ORDER BY '. implode(', ', $orderby) : '';
+		$orderby_sql = ( count($orderby) > 0 ) ? 'ORDER BY '. implode(', ', $orderby) : 'ORDER BY booking_date';
 		//Selector
 		$selectors = ( $count ) ?  'COUNT(*)':'*';
 		
@@ -556,8 +557,8 @@ class EM_Bookings extends EM_Object implements Iterator{
 	
 	static function enqueue_js(){
         if( !defined('EM_BOOKING_JS_LOADED') ){ //request loading of JS file in footer of page load
-        	add_action('wp_footer','EM_Bookings::em_booking_js_footer');
-        	add_action('admin_footer','EM_Bookings::em_booking_js_footer');
+        	add_action('wp_footer','EM_Bookings::em_booking_js_footer', 20);
+        	add_action('admin_footer','EM_Bookings::em_booking_js_footer', 20);
         	define('EM_BOOKING_JS_LOADED',true);
         }
 	}
@@ -618,7 +619,7 @@ class EM_Bookings extends EM_Object implements Iterator{
 	 * @see wp-content/plugins/events-manager/classes/EM_Object#build_sql_orderby()
 	 */
 	function build_sql_orderby( $args, $accepted_fields, $default_order = 'ASC' ){
-		return apply_filters( 'em_bookings_build_sql_orderby', parent::build_sql_orderby($args, $accepted_fields, get_option('dbem_events_default_order')), $args, $accepted_fields, $default_order );
+		return apply_filters( 'em_bookings_build_sql_orderby', parent::build_sql_orderby($args, $accepted_fields, get_option('dbem_bookings_default_order','booking_date')), $args, $accepted_fields, $default_order );
 	}
 	
 	/* 

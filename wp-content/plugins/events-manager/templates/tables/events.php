@@ -26,7 +26,10 @@
 			</div>
 			<p class="search-box">
 				<label class="screen-reader-text" for="post-search-input"><?php _e('Search Events','dbem'); ?>:</label>
-				<input type="text" id="post-search-input" name="em_search" value="<?php echo (!empty($_REQUEST['em_search'])) ? $_REQUEST['em_search']:''; ?>" />
+				<input type="text" id="post-search-input" name="em_search" value="<?php echo (!empty($_REQUEST['em_search'])) ? esc_attr($_REQUEST['em_search']):''; ?>" />
+				<?php if( !empty($_REQUEST['view']) ): ?>
+				<input type="hidden" name="view" value="<?php echo esc_attr($_REQUEST['view']); ?>" />
+				<?php endif; ?>
 				<input type="submit" value="<?php _e('Search Events','dbem'); ?>" class="button" />
 			</p>
 			<div class="tablenav">
@@ -71,7 +74,7 @@
 						$localised_end_date = date_i18n(get_option('dbem_date_format'), $EM_Event->end);
 						$style = "";
 						$today = current_time('timestamp');
-						$location_summary = "<b>" . $EM_Event->get_location()->location_name . "</b><br/>" . $EM_Event->get_location()->location_address . " - " . $EM_Event->get_location()->location_town;
+						$location_summary = "<b>" . esc_html($EM_Event->get_location()->location_name) . "</b><br/>" . esc_html($EM_Event->get_location()->location_address) . " - " . esc_html($EM_Event->get_location()->location_town);
 						
 						if ($EM_Event->start < $today && $EM_Event->end < $today){						
 							$class .= " past";
@@ -95,8 +98,8 @@
 								if( get_option('dbem_rsvp_enabled') == 1 && $EM_Event->event_rsvp == 1 ){
 									?>
 									<br/>
-									<a href="<?php echo esc_url($EM_Event->get_bookings_url()); ?>"><?php echo __("Bookings",'dbem'); ?></a> &ndash;
-									<?php _e("Booked",'dbem'); ?>: <?php echo $EM_Event->get_bookings()->get_booked_spaces()."/".$EM_Event->get_spaces(); ?>
+									<a href="<?php echo $EM_Event->get_bookings_url(); ?>"><?php esc_html_e("Bookings",'dbem'); ?></a> &ndash;
+									<?php esc_html_e("Booked",'dbem'); ?>: <?php echo $EM_Event->get_bookings()->get_booked_spaces()."/".$EM_Event->get_spaces(); ?>
 									<?php if( get_option('dbem_bookings_approval') == 1 ): ?>
 										| <?php _e("Pending",'dbem') ?>: <?php echo $EM_Event->get_bookings()->get_pending_spaces(); ?>
 									<?php endif;
