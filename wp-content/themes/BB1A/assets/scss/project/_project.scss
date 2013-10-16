@@ -554,7 +554,7 @@ main {
       background-color: $grey;
       cursor: pointer;
       &:hover,
-      &:active {
+      &:focus {
         background-color: $red;
       }
     }
@@ -582,7 +582,26 @@ main {
       resize: vertical;
     }
   }
-
+  .statusnotice {
+    .em-warning {
+      padding: 6px;
+      border: 1px solid;
+      &.em-warning-confirms {
+        border-color: #d6e9c6;
+        color: #468847;
+        background-color: #dff0d8;
+      }
+      &.em-warning-errors {
+        border-color: #eed3d7;
+        color: #b94a48;
+        background-color: #f2dede;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+    + .em-booking-form { display: none; } // dirty hacks
+  }
 }
 
 @media only screen and (min-width: 768px) {
