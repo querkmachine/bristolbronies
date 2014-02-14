@@ -34,10 +34,10 @@
                  +++++++++++;              ,llllllll'++++++++++
                 '++++++++++"               `""""""""'+++++++++"
 
---><!doctype html>
+-->
 <!--[if lt IE 7 ]><html <?php body_class('no-js ie6'); ?> lang="en"><![endif]--> 
 <!--[if IE 7 ]><html <?php body_class('no-js ie7'); ?> lang="en"><![endif]--> 
-<!--[if IE 8 ]><html c<?php body_class('no-js ie8'); ?> lang="en"><![endif]--> 
+<!--[if IE 8 ]><html <?php body_class('no-js ie8'); ?> lang="en"><![endif]--> 
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html <?php body_class('no-js'); ?> lang="en"><!--<![endif]-->
 <head>
 
