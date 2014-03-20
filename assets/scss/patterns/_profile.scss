@@ -1,0 +1,60 @@
+/**
+ * patterns->profile
+ */
+
+.profile {
+  .profile__avatar {
+    margin-bottom: -(rem-calc(($rem-base*5)/2));
+    position: relative;
+    top: -(rem-calc(($rem-base*5)/2));
+    // img {
+    //   @include border-radius(100%);
+    //   width: rem-calc($rem-base*5);
+    //   height: rem-calc($rem-base*5);   
+    //   html.cssmask & {
+    //     @include border-radius(0);
+    //     -webkit-mask-image: image-url('logo-mask.svg');
+    //     mask: url(image-url('logo-mask.svg', true) + '#logo_mask');
+    //   }
+    // }
+    img {
+      width: rem-calc($rem-base*5);
+      height: rem-calc($rem-base*5);
+      border: 1px solid palette(grey, x-light);
+      -webkit-border-radius: 100%;
+         -moz-border-radius: 100%;
+              border-radius: 100%;
+    }
+  }
+  .profile__biography {
+    p {
+      margin: 0;
+    }
+  }
+  .profile__captain {
+    @extend %h5;
+    font-weight: bold;
+    small {
+      display: block;
+    }
+  }
+  .profile__social-links {
+    @extend .slab--x-light-grey;
+    border-top: 1px solid palette(grey, x-light);
+    ul {
+      margin: 0;
+      padding: rem-calc($rem-base/2);
+      li {
+        display: inline-block;
+        margin: rem-calc(0 $rem-base/4);
+      }
+    }
+    a {
+      color: palette(grey);
+      &:hover,
+      &:focus {
+        color: palette(grey, dark);
+      }
+    }
+  }
+}

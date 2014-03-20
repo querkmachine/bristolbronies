@@ -1,0 +1,25 @@
+.figure {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  video, 
+  audio {
+
+  }
+  blockquote {
+    font-family: $title-font; 
+    font-size: rem-calc($rem-base*1.7);
+    line-height: 1.2em;
+    @media #{$medium-up} {
+      font-size: rem-calc($rem-base*2);
+    }
+  }
+  .figure__caption {
+    width: 100%;
+    max-width: 20em;
+    margin-top: rem-calc($rem-base/2);
+    color: palette(grey);
+    @extend .caption;
+  }
+}

@@ -1,0 +1,25 @@
+/**
+ * site->global
+ */
+
+html {
+  color: $text-color;
+  background-color: palette(black);
+}
+
+body {
+
+}
+
+hr {
+  margin: rem-calc($rem-base*3 0);
+}
+
+.browser-warning {
+  @extend .slab--yellow;
+  padding: rem-calc($rem-base/2);
+  text-align: center;
+  a {
+    color: inherit;
+  }
+}

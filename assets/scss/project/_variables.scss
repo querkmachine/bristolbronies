@@ -1,0 +1,73 @@
+/**
+ * project->variables
+ */
+
+// Media query ranges
+$small-range:   (0em, 40em);
+$medium-range:  (40.063em, 50em);
+$large-range:   (50.063em, 90em);
+$xlarge-range:  (90.063em, 120em);
+$xxlarge-range: (120.063em);
+
+// Media queries
+$screen:        "only screen";
+$landscape:     "#{$screen} and (orientation: landscape)";
+$portrait:      "#{$screen} and (orientation: portrait)";
+$small-up:      $screen;
+$small-only:    "#{$screen} and (max-width:#{upper-bound($small-range)})";
+$medium-up:     "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only:   "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+$large-up:      "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only:    "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+$xlarge-up:     "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only:   "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+$xxlarge-up:    "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only:  $xxlarge-up;
+
+// Grid
+$rem-base:              16px;
+$grid-row-width:        rem-calc(1140);
+$grid-skinny-row-width: rem-calc(960);
+$grid-column-gutter:    rem-calc(30);
+$grid-total-columns:    12;
+
+// colors
+$palette: (
+  red: (
+    base: #e02436, 
+    dark: #930916
+  ),
+  blue: (
+    base: #4298bb,
+    dark: #004b6a
+  ),
+  yellow: (
+    base: #fedd44
+  ),
+  purple: (
+    base: #69579c
+  ),
+  green: (
+    base: #00a175,
+    dark: #006E50
+  ),
+  grey: (
+    base: #716e6d,
+    dark: #444444,
+    light: #959599,
+    x-light: #e5e5e5
+  ),
+  black: (
+    base: #000
+  ),
+  white: (
+    base: #fff
+  )
+);
+
+$text-color: palette(grey, dark);
+
+// Font stacks
+$body-font:     "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+$title-font:    Lato, $body-font;
+$detail-font:   Georgia, "Times New Roman", Times, serif;

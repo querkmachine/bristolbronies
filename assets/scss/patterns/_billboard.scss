@@ -1,0 +1,35 @@
+/**
+ * patterns->billboard
+ */
+
+.billboard {
+  position: relative;
+  border: 1px solid palette(grey, x-light);
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  overflow: hidden;
+  a {
+    display: block;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  img {
+    width: 100%;
+    border-bottom: 1px solid palette(grey, x-light);
+  }
+  .billboard__caption {
+    display: block;
+    padding: rem-calc($rem-base/2);
+    h1 {
+      @extend %h5;
+    }
+    p {
+      margin: 0;
+      @extend .caption;
+    }
+  }
+}
