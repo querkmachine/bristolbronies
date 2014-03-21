@@ -4,13 +4,12 @@
 
 .header {
   position: relative;
-  border-top: 4px solid palette(grey, x-light);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   .header__inner {
     @extend .clearfix;
-    // padding: rem-calc($rem-base 0);
+    padding: rem-calc($rem-base 0);
   }
 }
 
@@ -61,7 +60,6 @@
 }
 
 %navigation {
-  margin-top: -4px;
   ul {
     margin: 0;
     padding: 0;
