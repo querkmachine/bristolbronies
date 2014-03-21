@@ -106,12 +106,15 @@
   }
 }
 
-.social-navigation {
+.control-navigation {
   float: right;
   @extend %navigation;
   .fa {
     font-size: larger;
     line-height: 0;
+    &.fa-money {
+      color: palette(green);
+    }
   }
 }
 
