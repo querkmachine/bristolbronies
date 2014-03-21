@@ -45,3 +45,7 @@
 @function image-url($url) {
   @return url("/assets/img/" + $url); 
 }
+
+@function font-url($url) {
+  @return url("/assets/type/" + $url);
+}

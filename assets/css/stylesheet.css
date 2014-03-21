@@ -4,6 +4,7 @@
  */
 @import url("//fonts.googleapis.com/css?family=Lato:300,900|Open+Sans:300,300italic,700,700italic");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 /**
  * reset->reset
  *
@@ -759,6 +760,90 @@ button {
     color: #716e6d; }
     .profile .profile__social-links a:hover, .profile .profile__social-links a:focus {
       color: #444444; }
+
+/**
+ * sections->forecast
+ */
+@font-face {
+  font-family: "forecastfont";
+  src: url("/assets/type/iconvault_forecastfont.eot");
+  src: url("/assets/type/iconvault_forecastfont.eot?#iefix") format("embedded-opentype"), url("/assets/type/iconvault_forecastfont.woff") format("woff"), url("/assets/type/iconvault_forecastfont.ttf") format("truetype"), url("/assets/type/iconvault_forecastfont.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.fi:before {
+  font-family: "forecastfont";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit; }
+.fi-basecloud:before {
+  content: "\f105"; }
+.fi-night:before {
+  content: "\f100"; }
+.fi-sunny:before {
+  content: "\f101"; }
+.fi-frosty:before {
+  content: "\f102"; }
+.fi-windysnow:before {
+  content: "\f103"; }
+.fi-showers:before {
+  content: "\f104"; }
+.fi-cloud:before {
+  content: "\f106"; }
+.fi-rainy:before {
+  content: "\f107"; }
+.fi-mist:before {
+  content: "\f108"; }
+.fi-windysnowcloud:before {
+  content: "\f109"; }
+.fi-drizzle:before {
+  content: "\f10a"; }
+.fi-snowy:before {
+  content: "\f10b"; }
+.fi-sleet:before {
+  content: "\f10c"; }
+.fi-moon:before {
+  content: "\f10d"; }
+.fi-windyrain:before {
+  content: "\f10e"; }
+.fi-hail:before {
+  content: "\f10f"; }
+.fi-sunset:before {
+  content: "\f110"; }
+.fi-windyraincloud:before {
+  content: "\f111"; }
+.fi-sunrise:before {
+  content: "\f112"; }
+.fi-sun:before {
+  content: "\f113"; }
+.fi-thunder:before {
+  content: "\f114"; }
+.fi-windy:before {
+  content: "\f115"; }
+.fi-sun, .fi-sunny {
+  color: orange; }
+.fi-moon, .fi-night {
+  color: #4681c3; }
+.fi-basecloud, .fi-cloud, .fi-mist, .fi-windy {
+  color: #cccccc; }
+.fi-drizzle, .fi-rainy, .fi-showers, .fi-windyrain, .fi-sleet {
+  color: #82b2e4; }
+.fi-frosty, .fi-snowy {
+  color: #85d8f7; }
+
+.forecast .forecast__icon .fi {
+  margin-left: -2.5rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 5rem;
+  line-height: 5rem; }
+.forecast .forecast__summary p {
+  margin: 0; }
 
 /**
  * site->global
