@@ -19,23 +19,20 @@
 @import "project/mixins";
 
 // Important stuff
-@import "components/grid";
-//@import "components/visibility";
-@import "components/typography";
-@import "components/form";
 @import "components/button";
+@import "components/form";
+@import "components/grid";
 @import "components/postcard";
+@import "components/typography";
 
 // Patterns
-@import "patterns/slab";
 @import "patterns/billboard";
-// @import "patterns/posts";
+@import "patterns/breadcrumb";
 @import "patterns/figure";
-@import "patterns/profile";
 @import "patterns/forecast";
-// @import "patterns/booking-form";
-// @import "patterns/media-grid";
+@import "patterns/profile";
 @import "patterns/search-result";
+@import "patterns/slab";
 
 // The site stuff
 @import "site/global";
@@ -44,5 +41,3 @@
 
 // Bits and bobs
 // @import "sections/homepage";
-// @import "sections/community";
-// @import "sections/about";
