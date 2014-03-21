@@ -17,6 +17,20 @@
       @media #{$large-up} {
         display: block;
       }
+      li {
+        width: rem-calc(80);
+        display: inline-block;
+        margin: rem-calc(0 $rem-base/4 $rem-base/4 0);
+      }
+      img {
+        -webkit-filter: grayscale(100%);
+        opacity: 0.5;
+        -webkit-transition: all .3s ease;
+        &:hover {
+          -webkit-filter: grayscale(0);
+          opacity: 1; 
+        }
+      }
     }
     ul {
       margin-bottom: rem-calc($rem-base);

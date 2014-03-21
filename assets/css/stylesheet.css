@@ -896,6 +896,17 @@ hr {
     @media only screen and (min-width: 50.063em) {
       .footer .footer-links .footer-links__affiliate {
         display: block; } }
+    .footer .footer-links .footer-links__affiliate li {
+      width: 5rem;
+      display: inline-block;
+      margin: 0 0.25rem 0.25rem 0; }
+    .footer .footer-links .footer-links__affiliate img {
+      -webkit-filter: grayscale(100%);
+      opacity: 0.5;
+      -webkit-transition: all .3s ease; }
+      .footer .footer-links .footer-links__affiliate img:hover {
+        -webkit-filter: grayscale(0);
+        opacity: 1; }
   .footer .footer-links ul {
     margin-bottom: 1rem;
     padding: 0;
