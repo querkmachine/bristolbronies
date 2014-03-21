@@ -854,35 +854,16 @@ button {
   list-style: none; }
 .results .results__item {
   margin-bottom: 1rem; }
-  .results .results__item .results__image {
-    width: 16.66667%;
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-    position: relative;
-    float: left; }
-    @media only screen and (min-width: 40.063em) {
-      .results .results__item .results__image {
-        width: 16.66667%; } }
-    @media only screen and (min-width: 50.063em) {
-      .results .results__item .results__image {
-        width: 8.33333%; } }
   .results .results__item .results__content {
-    width: 83.33333%;
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-    position: relative;
-    float: left; }
-    @media only screen and (min-width: 40.063em) {
-      .results .results__item .results__content {
-        width: 83.33333%; } }
-    @media only screen and (min-width: 50.063em) {
-      .results .results__item .results__content {
-        width: 41.66667%; } }
-    .results .results__item .results__content h4 a {
+    max-width: 35em; }
+    .results .results__item .results__content .results__title a {
       text-decoration: none; }
-    .results .results__item .results__content p {
+    .results .results__item .results__content .results__text,
+    .results .results__item .results__content .results__url {
       margin: 0;
       font-size: smaller; }
+    .results .results__item .results__content .results__url {
+      color: #959599; }
 
 /**
  * site->global
