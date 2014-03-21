@@ -18,6 +18,8 @@
     display: block;
     padding: rem-calc($rem-base/2 $rem-base/2 (($rem-base/2)-4px) $rem-base/2);
     border-bottom: 4px solid palette(grey, x-light);
+    font-family: $title-font;
+    font-weight: 900;
     text-align: center;
     text-decoration: none;
     &:hover,
