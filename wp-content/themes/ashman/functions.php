@@ -25,7 +25,7 @@ function ashman_search_url_rewrite_rule() {
     exit();
   } 
 }
-add_action('template_redirect', 'search_url_rewrite_rule');
+add_action('template_redirect', 'ashman_search_url_rewrite_rule');
 
 /**
  * Highlight search terms
