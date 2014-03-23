@@ -17,7 +17,7 @@
             </div>
           </article>
           <div class="sidebar">
-            yes
+            <?php dynamic_sidebar('primary'); ?>
           </div>
         </div>
 <?php

@@ -10,6 +10,12 @@ register_nav_menus(array('footer' => 'Footer navigation'));
 register_nav_menus(array('social' => 'Social links'));
 
 /**
+ * Register sidebars
+ */
+
+register_sidebar(array('name' => 'Main sidebar', 'id' => 'primary'));
+
+/**
  * Enable HTML5 output
  */
 
