@@ -1,5 +1,11 @@
       </main>
 
+      <?php if(function_exists('bcn_display') && !is_front_page()) { ?>
+        <div class="breadcrumbs">
+          <?php bcn_display(); ?>
+        </div>
+      <?php } ?>
+
       <footer class="footer" id="bottom" role="contentinfo">
         <div class="footer-links">
           <div class="row">

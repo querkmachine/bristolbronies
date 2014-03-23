@@ -28,8 +28,3 @@
       </header>
 
       <main class="main" id="content" role="main">
-        <?php if(function_exists('bcn_display') && !is_front_page()) { ?>
-          <div class="breadcrumbs">
-            <?php bcn_display(); ?>
-          </div>
-        <?php } ?>

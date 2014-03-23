@@ -31,3 +31,9 @@ hr {
 .main {
   margin: rem-calc($rem-base*2 0);
 }
+
+.breadcrumbs {
+  @extend .row; 
+  @include pad-this();
+  margin-bottom: rem-calc($rem-base);
+}

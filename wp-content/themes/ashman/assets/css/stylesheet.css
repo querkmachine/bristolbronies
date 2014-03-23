@@ -289,16 +289,16 @@ legend {
   overflow: hidden;
   clip: rect(0 0 0 0); }
 
-.clearfix:after, .row:after, .results .results__item:after, .header .header__inner:after, .pagination ul:after {
+.clearfix:after, .row:after, .results .results__item:after, .breadcrumbs:after, .header .header__inner:after, .pagination ul:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
-* html .clearfix, * html .row, * html .results .results__item, .results * html .results__item, * html .header .header__inner, .header * html .header__inner, * html .pagination ul, .pagination * html ul {
+* html .clearfix, * html .row, * html .results .results__item, .results * html .results__item, * html .breadcrumbs, * html .header .header__inner, .header * html .header__inner, * html .pagination ul, .pagination * html ul {
   height: 1%;
   /* IE6 */ }
-*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .results .results__item, .results *:first-child + html .results__item, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .pagination ul, .pagination *:first-child + html ul {
+*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .results .results__item, .results *:first-child + html .results__item, *:first-child + html .breadcrumbs, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .pagination ul, .pagination *:first-child + html ul {
   min-height: 1px;
   /* IE7 */ }
 
@@ -491,14 +491,14 @@ select {
 /**
  * components->grid
  */
-.row, .results .results__item, .header .header__inner {
+.row, .results .results__item, .breadcrumbs, .header .header__inner {
   width: 100%;
   max-width: 71.25rem;
   margin-right: auto;
   margin-left: auto; }
-  .row.row--skinny, .results .row--skinny.results__item, .header .row--skinny.header__inner {
+  .row.row--skinny, .results .row--skinny.results__item, .row--skinny.breadcrumbs, .header .row--skinny.header__inner {
     max-width: 60rem; }
-  .row.row--fullwidth, .results .row--fullwidth.results__item, .header .row--fullwidth.header__inner {
+  .row.row--fullwidth, .results .row--fullwidth.results__item, .row--fullwidth.breadcrumbs, .header .row--fullwidth.header__inner {
     max-width: none; }
 
 /**
@@ -933,6 +933,11 @@ hr {
 
 .main {
   margin: 2rem 0; }
+
+.breadcrumbs {
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  margin-bottom: 1rem; }
 
 /**
  * site->masthead
