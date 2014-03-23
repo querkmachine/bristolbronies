@@ -21,12 +21,12 @@
             </div>
             <div class="footer-links__column">
               <h6>Find Us Online</h6>
-              <ul>
-                <li><a href="#"><i class="fa fa-twitter fa-fw"></i> @bristolbronies</a></li>
-                <li><a href="#"><i class="fa fa-facebook fa-fw"></i> /bristolbronies</a></li>
-                <li><a href="#"><i class="fa fa-comments fa-fw"></i> #bristolbronies</a></li>
-                <li><a href="#"><i class="fa fa-pencil fa-fw"></i> BroniesWriteStories</a></li>
-              </ul>
+              <?php
+                wp_nav_menu( array(
+                  'theme_location' => 'social',
+                  'container' => false
+                ));
+              ?>
             </div>
             <div class="footer-links__column footer-links__affiliate">
               <h6>In Affiliation With</h6>
