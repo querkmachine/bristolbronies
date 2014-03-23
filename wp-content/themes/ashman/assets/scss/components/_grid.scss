@@ -20,8 +20,7 @@
   @if $α { 
     width: percentage(($α / $grid-total-columns));
   } 
-  padding-right: $grid-column-gutter/2;
-  padding-left: $grid-column-gutter/2;
+  @include pad-this();
   position: relative;
   float: left;
   @if $β { 
@@ -42,4 +41,9 @@
       float: $dir; 
     }
   }
+}
+
+@mixin pad-this() {
+  padding-right: $grid-column-gutter/2;
+  padding-left: $grid-column-gutter/2;
 }

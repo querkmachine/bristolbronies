@@ -43,9 +43,9 @@
 }
 
 @function image-url($url) {
-  @return url("/assets/img/" + $url); 
+  @return url("/wp-content/themes/ashman/assets/img/" + $url); 
 }
 
 @function font-url($url) {
-  @return url("/assets/type/" + $url);
+  @return url("/wp-content/themes/ashman/assets/type/" + $url);
 }
