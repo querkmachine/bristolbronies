@@ -159,7 +159,7 @@ pre {
 
 pre, code, kbd, samp, ruby, rt, rb {
   font-size: 1em;
-  font-family: monospace, serif; }
+  font-family: monospace; }
 
 mark {
   background-color: #ff9;
