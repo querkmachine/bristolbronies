@@ -1,0 +1,56 @@
+      <footer class="footer" id="footer" role="contentinfo">
+        <div class="footer-links">
+          <div class="row">
+            <div class="footer-links__column">
+              <h6><?php bloginfo('name'); ?></h6>
+              <?php
+                wp_nav_menu( array(
+                  'theme_location' => 'primary',
+                  'container' => false
+                ));
+              ?>
+            </div>
+            <div class="footer-links__column">
+              <h6>More Information</h6>
+              <?php
+                wp_nav_menu( array(
+                  'theme_location' => 'footer',
+                  'container' => false
+                ));
+              ?>
+            </div>
+            <div class="footer-links__column">
+              <h6>Find Us Online</h6>
+              <ul>
+                <li><a href="#"><i class="fa fa-twitter fa-fw"></i> @bristolbronies</a></li>
+                <li><a href="#"><i class="fa fa-facebook fa-fw"></i> /bristolbronies</a></li>
+                <li><a href="#"><i class="fa fa-comments fa-fw"></i> #bristolbronies</a></li>
+                <li><a href="#"><i class="fa fa-pencil fa-fw"></i> BroniesWriteStories</a></li>
+              </ul>
+            </div>
+            <div class="footer-links__column footer-links__affiliate">
+              <h6>In Affiliation With</h6>
+              <ul>
+                <li>
+                  <a href="#" target="_blank">
+                    <img src="http://bristolbronies.co.uk/wp-content/uploads/2013/08/ib1SJr1c7a0HZI.png" alt="Bronies UK">
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <img src="http://bristolbronies.co.uk/wp-content/uploads/2013/07/sonicradioboom.png" alt="Sonic Radioboom">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="boilerplate">
+          <div class="row">
+            <small>
+              &copy;2014 Bristol Bronies. All rights reserved. Another one of <a href="http://greysadventures.com/">Grey's Adventures</a>.<br>
+              My Little Pony: Friendship is Magic is &copy; Hasbro. Bristol Bronies is not affiliated in any way with Hasbro or DHX Media. No copyright infringement intended.
+            </small>
+          </div>
+        </div>
+      </footer>

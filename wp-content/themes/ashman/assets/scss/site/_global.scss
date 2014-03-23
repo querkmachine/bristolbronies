@@ -23,3 +23,11 @@ hr {
     color: inherit;
   }
 }
+
+.guns-dont-kill-people {
+  background-color: palette(white);
+}
+
+.main {
+  margin: rem-calc($rem-base*2 0);
+}

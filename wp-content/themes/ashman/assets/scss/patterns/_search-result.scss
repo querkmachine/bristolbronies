@@ -3,6 +3,13 @@
  */
 
 .results {
+  position: fixed;
+  top: $masthead-height;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: palette(grey, x-light);
+  overflow: auto;
   ul {
     margin: 0;
     padding: 0;
