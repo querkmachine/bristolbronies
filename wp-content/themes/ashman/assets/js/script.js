@@ -14,14 +14,13 @@ function initAshmanSearch() {
   $(".header a[href='/search']").on('click', function(e) {
     if(enabled == false) {
       $(this).parent("li").addClass("highlight");
-      //$results.show().load("/search #content");
       $results.show();
+      $results.find("input[name='s']").focus();
       $("html").css("overflow", "hidden");
       enabled = true;
     }
     else {
       $(this).parent("li").removeClass("highlight");
-      //$results.hide().html("");
       $results.hide();
       $("html").css("overflow", "auto");
       enabled = false;
