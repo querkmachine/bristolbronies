@@ -77,8 +77,6 @@
       }
       &.highlight {
         a {
-          padding-top: rem-calc(($masthead-height/3)-4px);
-          border-top: 4px solid palette(red);
           background-color: palette(grey, x-light);
         }
       }

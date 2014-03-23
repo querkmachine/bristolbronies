@@ -1025,8 +1025,6 @@ hr {
       padding-top: 1rem;
       border-top: 4px solid #e02436; }
     .primary-navigation li.highlight a, .control-navigation li.highlight a {
-      padding-top: 1rem;
-      border-top: 4px solid #e02436;
       background-color: #e5e5e5; }
   .primary-navigation a, .control-navigation a {
     display: inline-block;
