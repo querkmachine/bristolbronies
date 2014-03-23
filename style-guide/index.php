@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
 <title>Pattern Primer</title>
 <link rel="stylesheet" href="/assets/css/stylesheet.css">
 <style>
 body {
-    padding: 2em;
+    padding: 2%;
     background-color: #fff;
 }
 .pattern {
@@ -16,7 +17,7 @@ body {
     overflow: hidden;
 }
 .pattern .display {
-    padding: 1em;
+    padding: 2%;
 }
 .pattern .source {
     padding: 0.5em 1em;
