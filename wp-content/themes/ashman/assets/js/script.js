@@ -33,6 +33,7 @@ function initAshmanSearch() {
     if(term){
       $(".js-search-results").load("/search/" + encodeURIComponent(term) + " #results");
       console.log("Searching for: " + encodeURIComponent(term));
+      history.replaceState('', '', '/search/'+encodeURIComponent(term));
     }
     e.preventDefault();
     e.stopPropagation();

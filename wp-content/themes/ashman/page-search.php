@@ -3,10 +3,9 @@
   get_template_part('parts/global/masthead');
 ?>
 
-        <div class="row">
-          <?php get_search_form(true); ?>
-          <ul class="search-results js-search-results">
-          </ul>
+        <?php get_search_form(true); ?>
+        <div class="search-results js-search-results">
+          <ul id="results"></ul>
         </div>
 
 <?php

@@ -3,10 +3,11 @@
   get_template_part('parts/global/masthead');
 ?>
 
+        <?php get_search_form(true); ?>
         <?php
           if(have_posts()) :
         ?>
-        <div class="search-results">
+        <div class="search-results js-search-results">
           <ul id="results">
         <?php
             while(have_posts()) : the_post(); 

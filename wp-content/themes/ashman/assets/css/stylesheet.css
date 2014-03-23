@@ -853,20 +853,26 @@ mark {
   background-color: #e5e5e5;
   overflow: auto; }
 
-.search-form .search-form__field {
-  margin-bottom: 2rem;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  background: none;
-  font-size: 2.25rem;
-  line-height: normal; }
-  @media only screen and (min-width: 40.063em) {
-    .search-form .search-form__field {
-      font-size: 4.5rem; } }
+.search-form {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left; }
+  .search-form .search-form__field {
+    margin-bottom: 2rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: none;
+    font-size: 2.25rem;
+    line-height: normal; }
+    @media only screen and (min-width: 40.063em) {
+      .search-form .search-form__field {
+        font-size: 4.5rem; } }
 
 .search-results ul {
   margin: 0;
