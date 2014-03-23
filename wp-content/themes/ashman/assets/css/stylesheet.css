@@ -289,16 +289,16 @@ legend {
   overflow: hidden;
   clip: rect(0 0 0 0); }
 
-.clearfix:after, .row:after, .results .results__item:after, .breadcrumbs:after, .header .header__inner:after, .pagination ul:after {
+.clearfix:after, .row:after, .search-results .search-results__item:after, .breadcrumbs:after, .header .header__inner:after, .pagination ul:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
-* html .clearfix, * html .row, * html .results .results__item, .results * html .results__item, * html .breadcrumbs, * html .header .header__inner, .header * html .header__inner, * html .pagination ul, .pagination * html ul {
+* html .clearfix, * html .row, * html .search-results .search-results__item, .search-results * html .search-results__item, * html .breadcrumbs, * html .header .header__inner, .header * html .header__inner, * html .pagination ul, .pagination * html ul {
   height: 1%;
   /* IE6 */ }
-*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .results .results__item, .results *:first-child + html .results__item, *:first-child + html .breadcrumbs, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .pagination ul, .pagination *:first-child + html ul {
+*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .search-results .search-results__item, .search-results *:first-child + html .search-results__item, *:first-child + html .breadcrumbs, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .pagination ul, .pagination *:first-child + html ul {
   min-height: 1px;
   /* IE7 */ }
 
@@ -491,14 +491,14 @@ select {
 /**
  * components->grid
  */
-.row, .results .results__item, .breadcrumbs, .header .header__inner {
+.row, .search-results .search-results__item, .breadcrumbs, .header .header__inner {
   width: 100%;
   max-width: 71.25rem;
   margin-right: auto;
   margin-left: auto; }
-  .row.row--skinny, .results .row--skinny.results__item, .row--skinny.breadcrumbs, .header .row--skinny.header__inner {
+  .row.row--skinny, .search-results .row--skinny.search-results__item, .row--skinny.breadcrumbs, .header .row--skinny.header__inner {
     max-width: 60rem; }
-  .row.row--fullwidth, .results .row--fullwidth.results__item, .row--fullwidth.breadcrumbs, .header .row--fullwidth.header__inner {
+  .row.row--fullwidth, .search-results .row--fullwidth.search-results__item, .row--fullwidth.breadcrumbs, .header .row--fullwidth.header__inner {
     max-width: none; }
 
 /**
@@ -841,9 +841,10 @@ mark {
       color: #444444; }
 
 /**
- * pattern->search-result
+ * pattern->search
  */
-.results {
+.search-overlay {
+  padding: 2rem 0;
   position: fixed;
   top: 60px;
   right: 0;
@@ -851,24 +852,39 @@ mark {
   left: 0;
   background-color: #e5e5e5;
   overflow: auto; }
-  .results ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  .results .results__item {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-    margin-bottom: 1rem; }
-    .results .results__item .results__content {
-      max-width: 35em; }
-      .results .results__item .results__content .results__title a {
-        text-decoration: none; }
-      .results .results__item .results__content .results__text,
-      .results .results__item .results__content .results__url {
-        margin: 0;
-        font-size: smaller; }
-      .results .results__item .results__content .results__url {
-        color: #959599; }
+
+.search-form .search-form__field {
+  margin-bottom: 2rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 2.25rem;
+  line-height: normal; }
+  @media only screen and (min-width: 40.063em) {
+    .search-form .search-form__field {
+      font-size: 4.5rem; } }
+
+.search-results ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.search-results .search-results__item {
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  margin-bottom: 1rem; }
+  .search-results .search-results__item .search-results__content {
+    max-width: 35em; }
+    .search-results .search-results__item .search-results__content .search-results__title a {
+      text-decoration: none; }
+    .search-results .search-results__item .search-results__content p {
+      margin: 0;
+      font-size: smaller; }
+    .search-results .search-results__item .search-results__content .search-results__url {
+      color: #959599; }
 
 /**
  * patterns->slab
