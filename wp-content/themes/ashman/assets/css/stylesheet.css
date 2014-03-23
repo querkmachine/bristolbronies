@@ -678,7 +678,7 @@ mark {
   font-size: smaller; }
   .breadcrumbs a {
     text-decoration: none; }
-  .breadcrumbs .fa {
+  .breadcrumbs .sep {
     margin: 0 0.5rem;
     color: #959599; }
 
@@ -966,18 +966,15 @@ hr {
 
 .mobile-navigation-icon {
   display: inline-block;
-  width: 1.4em;
+  width: 3.75rem;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0;
+  right: 0;
   z-index: 10;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   color: #716e6d;
   font-size: 2em;
   text-align: center;
-  line-height: 1.4em;
+  line-height: 3.75rem;
   -webkit-transition: background-color .15s ease;
   -moz-transition: background-color .15s ease;
   transition: background-color .15s ease; }

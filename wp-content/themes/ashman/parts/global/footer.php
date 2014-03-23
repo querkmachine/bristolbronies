@@ -1,4 +1,6 @@
-      <footer class="footer" id="footer" role="contentinfo">
+      </main>
+
+      <footer class="footer" id="bottom" role="contentinfo">
         <div class="footer-links">
           <div class="row">
             <div class="footer-links__column">

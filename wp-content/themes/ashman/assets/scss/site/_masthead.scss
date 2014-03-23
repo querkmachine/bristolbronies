@@ -36,18 +36,15 @@
 
 .mobile-navigation-icon {
   display: inline-block;
-  width: 1.4em;
+  width: rem-calc($masthead-height);
   position: absolute;
-  top: rem-calc($rem-base);
-  right: rem-calc($rem-base);
+  top: 0;
+  right: 0;
   z-index: 10;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
   color: palette(grey);
   font-size: 2em;
   text-align: center;
-  line-height: 1.4em;
+  line-height: rem-calc($masthead-height);
   @media #{$medium-up} {
     display: none;
   }
