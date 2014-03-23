@@ -1,0 +1,18 @@
+/**
+ * patterns->post
+ */
+
+.post {
+  @include column(12, 8);
+  .post--wide {
+    @include column(12);
+  }
+  .post__header {
+
+  }
+  .post__body {
+    p:first-child {
+      @extend .lede;
+    }
+  }
+}

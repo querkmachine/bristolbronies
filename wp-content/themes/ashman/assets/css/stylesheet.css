@@ -619,7 +619,7 @@ p, ul, ol, dl {
   margin: 1rem 0;
   line-height: 1.6875rem; }
 
-.lede {
+.lede, .post .post__body p:first-child {
   font-size: 120%; }
 
 .caption, .billboard .billboard__caption p, .figure .figure__caption {
@@ -808,6 +808,25 @@ mark {
     background-color: #e02436; }
 
 /**
+ * patterns->post
+ */
+.post {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left; }
+  @media only screen and (min-width: 40.063em) {
+    .post {
+      width: 66.66667%; } }
+  .post .post--wide {
+    width: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    position: relative;
+    float: left; }
+
+/**
  * patterns->profile
  */
 .profile .profile__avatar {
@@ -960,6 +979,16 @@ hr {
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
   margin-bottom: 1rem; }
+
+.sidebar {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left; }
+  @media only screen and (min-width: 40.063em) {
+    .sidebar {
+      width: 33.33333%; } }
 
 /**
  * site->masthead

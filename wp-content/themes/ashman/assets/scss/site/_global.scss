@@ -37,3 +37,7 @@ hr {
   @include pad-this();
   margin-bottom: rem-calc($rem-base);
 }
+
+.sidebar {
+  @include column(12, 4);
+}
