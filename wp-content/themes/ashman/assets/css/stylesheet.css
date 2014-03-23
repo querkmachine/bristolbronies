@@ -1039,7 +1039,7 @@ hr {
       display: none; } }
   .mobile-navigation-icon:hover, .mobile-navigation-icon:focus {
     color: #716e6d;
-    background-color: rgba(0, 0, 0, 0.2); }
+    background-color: #e5e5e5; }
 
 .primary-navigation ul, .control-navigation ul {
   margin: 0;

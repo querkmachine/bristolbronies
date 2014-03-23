@@ -54,7 +54,7 @@
   &:hover,
   &:focus {
     color: palette(grey);
-    background-color: rgba(palette(black), 0.2);
+    background-color: palette(grey, x-light);
   }
 }
 
