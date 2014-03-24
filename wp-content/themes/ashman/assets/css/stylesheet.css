@@ -288,16 +288,16 @@ legend {
   overflow: hidden;
   clip: rect(0 0 0 0); }
 
-.clearfix:after, .row:after, .search-results .search-results__item:after, .breadcrumbs:after, .header .header__inner:after, .pagination ul:after, .post:after {
+.clearfix:after, .row:after, .hero-image:after, .search-results .search-results__item:after, .breadcrumbs:after, .header .header__inner:after, .pagination ul:after, .post:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
-* html .clearfix, * html .row, * html .search-results .search-results__item, .search-results * html .search-results__item, * html .breadcrumbs, * html .header .header__inner, .header * html .header__inner, * html .pagination ul, .pagination * html ul, * html .post {
+* html .clearfix, * html .row, * html .hero-image, * html .search-results .search-results__item, .search-results * html .search-results__item, * html .breadcrumbs, * html .header .header__inner, .header * html .header__inner, * html .pagination ul, .pagination * html ul, * html .post {
   height: 1%;
   /* IE6 */ }
-*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .search-results .search-results__item, .search-results *:first-child + html .search-results__item, *:first-child + html .breadcrumbs, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .pagination ul, .pagination *:first-child + html ul, *:first-child + html .post {
+*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .hero-image, *:first-child + html .search-results .search-results__item, .search-results *:first-child + html .search-results__item, *:first-child + html .breadcrumbs, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .pagination ul, .pagination *:first-child + html ul, *:first-child + html .post {
   min-height: 1px;
   /* IE7 */ }
 
@@ -485,14 +485,14 @@ select {
 /**
  * components->grid
  */
-.row, .search-results .search-results__item, .breadcrumbs, .header .header__inner {
+.row, .hero-image, .search-results .search-results__item, .breadcrumbs, .header .header__inner {
   width: 100%;
   max-width: 71.25rem;
   margin-right: auto;
   margin-left: auto; }
-  .row.row--skinny, .search-results .row--skinny.search-results__item, .row--skinny.breadcrumbs, .header .row--skinny.header__inner {
+  .row.row--skinny, .row--skinny.hero-image, .search-results .row--skinny.search-results__item, .row--skinny.breadcrumbs, .header .row--skinny.header__inner {
     max-width: 60rem; }
-  .row.row--fullwidth, .search-results .row--fullwidth.search-results__item, .row--fullwidth.breadcrumbs, .header .row--fullwidth.header__inner {
+  .row.row--fullwidth, .row--fullwidth.hero-image, .search-results .row--fullwidth.search-results__item, .row--fullwidth.breadcrumbs, .header .row--fullwidth.header__inner {
     max-width: none; }
 
 /**
@@ -871,7 +871,6 @@ mark {
 
 .hero-image {
   width: 100%;
-  max-width: 1250px;
   margin: 0 auto 2rem auto;
   padding-bottom: 30%;
   background-position: center center;

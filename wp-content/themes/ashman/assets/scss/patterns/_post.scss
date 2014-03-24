@@ -44,8 +44,8 @@
 }
 
 .hero-image {
+  @extend .row;
   width: 100%;
-  max-width: 1250px;
   margin: 0 auto rem-calc($rem-base*2) auto;
   padding-bottom: 30%;
   background-position: center center;
