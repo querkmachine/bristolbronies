@@ -26,9 +26,9 @@ function initAshman404() {
   var children = $errorpage.find("*");
   children.each(function(i) {
     $(this).css({
-      "-webkit-transform": "rotate("+((Math.random()*10)-5)+"deg)",
-      "   -moz-transform": "rotate("+((Math.random()*10)-5)+"deg)",
-      "        transform": "rotate("+((Math.random()*10)-5)+"deg)"
+      "-webkit-transform": "rotate("+((Math.random()*6)-3)+"deg)",
+      "   -moz-transform": "rotate("+((Math.random()*6)-3)+"deg)",
+      "        transform": "rotate("+((Math.random()*6)-3)+"deg)"
     });
   });
 }
