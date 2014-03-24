@@ -16,8 +16,8 @@ hr {
 }
 
 .browser-warning {
-  @extend .slab--yellow;
   padding: rem-calc($rem-base/2);
+  background-color: palette(yellow);
   text-align: center;
   a {
     color: inherit;

@@ -3,6 +3,8 @@
  */
 
 .post {
+  @extend .clearfix;
+  margin-bottom: rem-calc($rem-base*3);
   .post__header {
     @include column(12);
   }

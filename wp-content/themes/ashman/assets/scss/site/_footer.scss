@@ -4,10 +4,10 @@
 
 .footer {
   .footer-links {
-    @extend .slab--dark-grey;
     padding: rem-calc($rem-base 0);
     border-top: $rem-base/4 solid rgba(palette(black), 0.5);
     color: palette(grey, x-light);
+    background-color: palette(grey, dark);
     font-size: smaller;
     .footer-links__column {
       @include column(12, 4, 3);
@@ -50,9 +50,9 @@
     }
   }
   .boilerplate {
-    @extend .slab--black;
     padding: rem-calc($rem-base/2 0);
     color: palette(grey);
+    background-color: palette(black);
     small {
       @include column(12);
       display: block;

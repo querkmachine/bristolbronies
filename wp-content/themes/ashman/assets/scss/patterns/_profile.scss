@@ -39,8 +39,8 @@
     }
   }
   .profile__social-links {
-    @extend .slab--x-light-grey;
     border-top: 1px solid palette(grey, x-light);
+    background-color: palette(grey, x-light);
     ul {
       margin: 0;
       padding: rem-calc($rem-base/2);
