@@ -652,7 +652,8 @@ mark {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background-color: #fedd44; }
+  background-color: #fedd44;
+  text-align: center; }
   .alert p {
     margin: 0;
     position: relative;
@@ -856,6 +857,8 @@ mark {
     @media only screen and (min-width: 40.063em) {
       .post .post__sidebar {
         margin-top: -2.5rem; } }
+    .post .post__sidebar aside {
+      margin-bottom: 1rem; }
   .post .post__meta {
     display: inline;
     margin: 0;

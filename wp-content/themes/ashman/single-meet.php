@@ -9,7 +9,7 @@
 ?>
 
         <?php
-          if ( has_post_thumbnail() ) {
+          if(has_post_thumbnail()) {
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
         ?>
         <div class="hero-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')"></div>
@@ -61,6 +61,16 @@
               </aside>
               <?php 
                 } 
+              ?>
+              <?php 
+                if(get_the_date('U') <= strtotime("2014-03-25")) { 
+              ?>
+              <aside class="alert">
+                <i class="fa fa-warning fa-2x"></i>
+                <p>This page was created in a previous version of the <?php bloginfo('name'); ?> site. Images and styling may not appear as originally intended.</p>
+              </aside>
+              <?php
+                }
               ?>
             </div>
           </article>

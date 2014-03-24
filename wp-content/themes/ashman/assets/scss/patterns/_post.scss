@@ -24,6 +24,9 @@
     @media #{$medium-up} {
       margin-top: -(rem-calc(($rem-base*5)/2));
     }
+    aside {
+      margin-bottom: rem-calc($rem-base);
+    }
   }
   .post__meta {
     @extend %h6; 
