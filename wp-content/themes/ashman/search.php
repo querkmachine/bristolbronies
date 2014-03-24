@@ -8,6 +8,7 @@
 
         <?php get_search_form(true); ?>
         <?php
+          $posts=query_posts($query_string . '&posts_per_page=-1');
           if(have_posts()) :
         ?>
         <div class="search-results js-search-results">
