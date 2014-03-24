@@ -49,6 +49,20 @@ function ashman_search_highlight_term($term, $string) {
   return $string;
 }
 
+/**
+ * Better excerpts 
+ */
+
+function ashman_excerpts($text, $raw_excerpt) {
+  if(!$raw_excerpt) {
+    $content = apply_filters('the_content', strip_shortcodes(get_the_content()));
+    $text = substr($content, 0, strpos($content, '</p>') + 4);
+  }
+  $text = preg_replace("/<img[^>]+\>/i", "", $text); 
+  return $text;
+}
+add_filter('wp_trim_excerpt', 'ashman_excerpts', 10, 2);
+
 /** 
  * Get custom fields 
  */
