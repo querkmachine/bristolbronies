@@ -6,6 +6,12 @@
   get_template_part('parts/global/masthead');
 ?>
 
+        <div class="row">
+          <div class="meets-blurb">
+            <h1>Meets</h1>
+          </div>
+        </div>
+
 <?php 
   if(have_posts()) :
     while(have_posts()) : the_post(); 

@@ -560,14 +560,14 @@ h1 {
       font-size: 3.125rem; } }
 
 h2,
-.error-404 h1 {
+body.error404 .error-404 h1 {
   font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
   font-weight: 900;
   font-size: 2.1875rem;
   line-height: 1.2; }
   @media only screen and (min-width: 40.063em) {
     h2,
-    .error-404 h1 {
+    body.error404 .error-404 h1 {
       font-size: 2.5rem; } }
 
 h3 {
@@ -1161,14 +1161,25 @@ hr {
     color: #716e6d; }
 
 /**
+ * sections-meets
+ */
+body.post-type-archive-meet .meets-blurb {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left;
+  margin-bottom: 3rem; }
+
+/**
  * sections->404
  */
-.error-404 {
+body.error404 .error-404 {
   width: 100%;
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
   position: relative;
   float: left;
   text-align: center; }
-  .error-404 img {
+  body.error404 .error-404 img {
     margin-bottom: 2rem; }
