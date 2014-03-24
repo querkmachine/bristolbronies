@@ -805,23 +805,23 @@ mark {
   margin: 0;
   padding: 0;
   list-item: 0; }
-.pagination li {
-  display: block;
-  width: 10%;
-  float: left; }
-.pagination a {
-  display: block;
-  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
-  border-bottom: 4px solid #e5e5e5;
-  font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
-  font-weight: 900;
-  text-align: center;
-  text-decoration: none; }
-  .pagination a:hover, .pagination a:focus, .pagination a.current {
-    border-bottom-color: #e02436; }
-  .pagination a.current {
-    color: white;
-    background-color: #e02436; }
+  .pagination ul li {
+    display: block;
+    width: 10%;
+    float: left; }
+  .pagination ul .page-numbers {
+    display: block;
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+    border-bottom: 4px solid #e5e5e5;
+    font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none; }
+    .pagination ul .page-numbers:hover, .pagination ul .page-numbers:focus, .pagination ul .page-numbers.current {
+      border-bottom-color: #e02436; }
+    .pagination ul .page-numbers.current {
+      color: white;
+      background-color: #e02436; }
 
 /**
  * patterns->post

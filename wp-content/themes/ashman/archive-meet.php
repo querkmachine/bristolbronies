@@ -64,6 +64,22 @@
   endif; 
 ?>
 
+        <div class="row">
+          <div class="pagination">
+            <?php 
+              $big = 9999999;
+              echo paginate_links(array(
+                'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+                'format' => '?paged=%#%',
+                'current' => max(1, get_query_var('paged')),
+                'total' => $wp_query->max_num_pages,
+                'prev_next' => false,
+                'type' => 'list'
+              ));
+            ?>
+          </div>
+        </div>
+
 <!-- archive-meet.php -->
 
 <?php
