@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Register post thumbnails
+ */
+
+add_theme_support('post-thumbnails');
+
+/**
  * Register navigation menus
  */
 
@@ -47,14 +53,47 @@ function ashman_search_highlight_term($term, $string) {
  * Get custom fields 
  */
 
-function ashman_custom_field($field_name) {
-  if(strlen(get_field($field_name)) > 0) {
-    return get_field($field_name);
+function ashman_custom_field($field_name, $id = false) {
+  if(strlen(get_field($field_name, $id)) > 0) {
+    return get_field($field_name, $id);
   }
   else {
     return false;
   }
 }
+
+/**
+ * Meet post type
+ */
+
+function ashman_meet_post_type() {
+  $labels = array(
+    'name' => _x('Meets', 'post type general name'),
+    'singular_name' => _x('Meet', 'post type singular name'),
+    'add_new' => _x('Add New', 'book'),
+    'add_new_item' => __('Add New Meet'),
+    'edit_item' => __('Edit Meet'),
+    'new_item' => __('New Meet'),
+    'all_items' => __('All Meets'),
+    'view_item' => __('View Meets'),
+    'search_items' => __('Search Meets'),
+    'not_found' => __('No meets found'),
+    'not_found_in_trash' => __('No meets found in the trash'),
+    'parent_item_colon' => '',
+    'menu_name' => 'Meets'
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Contains the meets that we hold.',
+    'public' => true,
+    'menu_position' => 7,
+    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+    'taxonomies' => array('category'),
+    'has_archive' => true
+  );
+  register_post_type('meet', $args);
+}
+add_action('init', 'ashman_meet_post_type');
 
 /**
  * Location post type
@@ -89,37 +128,36 @@ function ashman_location_post_type() {
 add_action('init', 'ashman_location_post_type');
 
 /**
- * Meet post type
+ * Meet Runner post type
  */
 
-function ashman_meet_post_type() {
+function ashman_runner_post_type() {
   $labels = array(
-    'name' => _x('Meets', 'post type general name'),
-    'singular_name' => _x('Meet', 'post type singular name'),
+    'name' => _x('Meet Runners', 'post type general name'),
+    'singular_name' => _x('Meet Runner', 'post type singular name'),
     'add_new' => _x('Add New', 'book'),
-    'add_new_item' => __('Add New Meet'),
-    'edit_item' => __('Edit Meet'),
-    'new_item' => __('New Meet'),
-    'all_items' => __('All Meets'),
-    'view_item' => __('View Meets'),
-    'search_items' => __('Search Meets'),
-    'not_found' => __('No meets found'),
-    'not_found_in_trash' => __('No meets found in the trash'),
+    'add_new_item' => __('Add New Meet Runner'),
+    'edit_item' => __('Edit Meet Runner'),
+    'new_item' => __('New Meet Runner'),
+    'all_items' => __('All Meet Runners'),
+    'view_item' => __('View Meet Runners'),
+    'search_items' => __('Search Meet Runners'),
+    'not_found' => __('No meet runners found'),
+    'not_found_in_trash' => __('No meet runners found in the trash'),
     'parent_item_colon' => '',
-    'menu_name' => 'Meets'
+    'menu_name' => 'Meet Runners'
   );
   $args = array(
     'labels' => $labels,
-    'description' => 'Contains the meets that we hold.',
+    'description' => 'Contains ifnroamtion about meet runners.',
     'public' => true,
     'menu_position' => 7,
-    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
-    'taxonomies' => array('category'),
-    'has_archive' => true
+    'supports' => array('title', 'editor', 'custom-fields'),
+    'has_archive' => false
   );
-  register_post_type('meet', $args);
+  register_post_type('meet_runner', $args);
 }
-add_action('init', 'ashman_meet_post_type');
+add_action('init', 'ashman_runner_post_type');
 
 /**
  * Meet category list
@@ -162,11 +200,12 @@ function ashman_meet_dates($start, $end) {
  */
 
 function ashman_meet_location($id, $output = 'address') {
+  $name = get_the_title($id[0]);
   $data = get_field("location_address", $id[0]);
   switch($output) {
     case 'address':
     default: 
-      $output = $data['address'];
+      $output = $name . ', ' . $data['address'];
       break;
     case 'latitude':
       $output = $data['lat']; 
@@ -179,4 +218,29 @@ function ashman_meet_location($id, $output = 'address') {
       break;
   }
   return $output;
+}
+
+/**
+ * Profile bios
+ */
+
+function ashman_profile_biography($id) {
+  $content_post = get_post($id);
+  $content = $content_post->post_content;
+  $content = apply_filters('the_content', $content);
+  $content = str_replace(']]>', ']]&gt;', $content);
+  return $content;
+}
+
+/**
+ * Profile avatars
+ */
+
+function ashman_profile_avatar($id) {
+  if($url = get_field("runner_avatar", $id)) {
+    return $url;
+  }
+  else {
+    return "http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=96";
+  }
 }

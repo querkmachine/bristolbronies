@@ -6,6 +6,15 @@
   .post__header {
     @include column(12);
   }
+  .post__title {
+    a {
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        border-bottom: rem-calc($rem-base/8) solid palette(red, dark);
+      }
+    }
+  }
   .post__body {
     @include column(12, 8);
     p:first-child {
@@ -14,6 +23,9 @@
   }
   .post__sidebar {
     @include column(12, 4);
+    @media #{$medium-up} {
+      margin-top: -(rem-calc(($rem-base*5)/2));
+    }
   }
   .post__meta {
     @extend %h6; 

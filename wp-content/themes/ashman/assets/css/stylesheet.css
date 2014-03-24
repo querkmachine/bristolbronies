@@ -817,6 +817,10 @@ mark {
   padding-left: 0.9375rem;
   position: relative;
   float: left; }
+.post .post__title a {
+  text-decoration: none; }
+  .post .post__title a:hover, .post .post__title a:focus {
+    border-bottom: 0.125rem solid #930916; }
 .post .post__body {
   width: 100%;
   padding-right: 0.9375rem;
@@ -835,6 +839,9 @@ mark {
   @media only screen and (min-width: 40.063em) {
     .post .post__sidebar {
       width: 33.33333%; } }
+  @media only screen and (min-width: 40.063em) {
+    .post .post__sidebar {
+      margin-top: -2.5rem; } }
 .post .post__meta {
   display: inline;
   margin: 0;

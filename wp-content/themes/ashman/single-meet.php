@@ -23,22 +23,28 @@
               <?php the_content(); ?>
             </div>
             <div class="post__sidebar">
+              <?php 
+                $runners = get_field('meet_runner');
+                foreach($runners as $runner) {
+              ?>
               <aside class="profile postcard">
                 <div class="profile__avatar">
-                  <?php echo get_avatar(get_the_author_meta('ID')); ?>
+                  <img src="<?php echo ashman_profile_avatar($runner); ?>" alt="">
                 </div>
                 <div class="profile__biography postcard__data">
-                  <h1 class="profile__captain"><small>Meet Runner</small> <?php echo get_the_author_meta('display_name'); ?></h1>
-                  <p><?php echo get_the_author_meta('description'); ?></p>
+                  <h1 class="profile__captain"><small>Meet Runner</small> <?php echo get_the_title($runner); ?></h1>
+                  <p><?php echo ashman_profile_biography($runner); ?></p>
                 </div>
                 <div class="profile__social-links">
                   <ul>
-                    <li><a href="#"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li>
-                    <li><a href="#"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus fa-fw"></i> <span class="hidden">Google+</span></a></li>
+                    <?php if(ashman_custom_field("runner_twitter", $runner)) { ?><li><a href="http://twitter.com/<?php echo ashman_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php } ?>
+                    <?php if(ashman_custom_field("runner_facebook", $runner)) { ?><li><a href="http://facebook.com/<?php echo ashman_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php } ?>
                   </ul>
                 </div>
               </aside>
+              <?php 
+                } 
+              ?>
             </div>
           </article>
         </div>
