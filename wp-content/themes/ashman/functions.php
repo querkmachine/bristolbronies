@@ -57,6 +57,38 @@ function ashman_custom_field($field_name) {
 }
 
 /**
+ * Location post type
+ */
+
+function ashman_location_post_type() {
+  $labels = array(
+    'name' => _x('Locations', 'post type general name'),
+    'singular_name' => _x('Location', 'post type singular name'),
+    'add_new' => _x('Add New', 'book'),
+    'add_new_item' => __('Add New Location'),
+    'edit_item' => __('Edit Location'),
+    'new_item' => __('New Location'),
+    'all_items' => __('All Locations'),
+    'view_item' => __('View Locations'),
+    'search_items' => __('Search Locations'),
+    'not_found' => __('No locations found'),
+    'not_found_in_trash' => __('No locations found in the trash'),
+    'parent_item_colon' => '',
+    'menu_name' => 'Locations'
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Contains meet locations and venues.',
+    'public' => true,
+    'menu_position' => 7,
+    'supports' => array('title', 'custom-fields'),
+    'has_archive' => false
+  );
+  register_post_type('location', $args);
+}
+add_action('init', 'ashman_location_post_type');
+
+/**
  * Meet post type
  */
 
@@ -121,6 +153,30 @@ function ashman_meet_dates($start, $end) {
   }
   else {
     $output .= '<time class="dtend" datetime="'.date("c", $end).'">'.date("dS F Y, h:ia", $end).'</time>';
+  }
+  return $output;
+}
+
+/**
+ * Meet location
+ */
+
+function ashman_meet_location($id, $output = 'address') {
+  $data = get_field("location_address", $id[0]);
+  switch($output) {
+    case 'address':
+    default: 
+      $output = $data['address'];
+      break;
+    case 'latitude':
+      $output = $data['lat']; 
+      break;
+    case 'longitude':
+      $output = $data['lng'];
+      break;
+    case 'latlng':
+      $output = $data['lat'] . ',' . $data['lng'];
+      break;
   }
   return $output;
 }

@@ -19,7 +19,7 @@
               <h2 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h2>
               <ul class="post__meta">
                 <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo ashman_meet_dates(ashman_custom_field('meet_start_time'), ashman_custom_field('meet_end_time')); ?></li>
-                <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> Location</li>
+                <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo ashman_meet_location(get_field('meet_location')); ?></li>
               </ul>
             </header>
             <?php if(in_array("meet", ashman_meet_category(get_the_ID(), "slug"))) { ?>
