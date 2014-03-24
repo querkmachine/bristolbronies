@@ -28,9 +28,6 @@ button {
     background-color: darken(palette(grey, light), 5%);
     outline: 0;
   }
-  .fa {
-    line-height: 0;
-  }
   &.button--large {
     font-size: larger;
   }

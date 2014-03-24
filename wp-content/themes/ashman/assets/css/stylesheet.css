@@ -348,11 +348,6 @@ button {
     color: white;
     background-color: #88888c;
     outline: 0; }
-  .button .fa,
-  input[type="submit"] .fa,
-  input[type="reset"] .fa,
-  button .fa {
-    line-height: 0; }
   .button.button--large,
   input[type="submit"].button--large,
   input[type="reset"].button--large,
@@ -1130,8 +1125,7 @@ hr {
   .control-navigation li {
     float: left; }
   .control-navigation .fa {
-    font-size: larger;
-    line-height: 0; }
+    font-size: larger; }
     .control-navigation .fa.fa-money {
       color: #00a175; }
 
