@@ -644,6 +644,24 @@ mark {
   background-color: #fedd44; }
 
 /**
+ * patterns->alerts
+ */
+.alert {
+  padding: 0.5rem 1rem;
+  border: 1px solid #716e6d;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fedd44; }
+  .alert p {
+    margin: 0;
+    position: relative;
+    font-size: smaller;
+    font-weight: bold; }
+  .alert a {
+    color: inherit; }
+
+/**
  * patterns->billboard
  */
 .billboard {
