@@ -163,13 +163,12 @@ add_action('init', 'ashman_runner_post_type');
  * Meet category list
  */
 
-function ashman_meet_category($post_id, $output = 'name') {
+function ashman_meet_category($post_id, $format = 'name') {
   $categories = get_the_category($post_id);
   $output = array();
   foreach($categories as $category) {
-    switch($output) {
+    switch($format) {
       case 'name': 
-      default: 
         $output[] = $category->name;
         break;
       case 'slug':
@@ -199,12 +198,11 @@ function ashman_meet_dates($start, $end) {
  * Meet location
  */
 
-function ashman_meet_location($id, $output = 'address') {
+function ashman_meet_location($id, $format = 'address') {
   $name = get_the_title($id[0]);
   $data = get_field("location_address", $id[0]);
-  switch($output) {
+  switch($format) {
     case 'address':
-    default: 
       $output = $name . ', ' . $data['address'];
       break;
     case 'latitude':
