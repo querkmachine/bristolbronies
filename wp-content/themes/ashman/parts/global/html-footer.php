@@ -1,12 +1,5 @@
   </div>
 
-  <div class="search-overlay js-search-overlay">
-    <div class="row">
-      <?php get_search_form(true); ?>
-      <div class="search-results js-search-results"></div>
-    </div>
-  </div>
-
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-1.11.0.min.js"><\/script>')</script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.fitvids.js"></script>
