@@ -132,10 +132,12 @@ function ashman_location_post_type() {
   $args = array(
     'labels' => $labels,
     'description' => 'Contains meet locations and venues.',
-    'public' => true,
+    'public' => false,
     'menu_position' => 7,
     'supports' => array('title', 'custom-fields'),
-    'has_archive' => false
+    'has_archive' => false,
+    'show_ui' => true,
+    'show_in_menu' => true
   );
   register_post_type('location', $args);
 }
@@ -164,10 +166,12 @@ function ashman_runner_post_type() {
   $args = array(
     'labels' => $labels,
     'description' => 'Contains ifnroamtion about meet runners.',
-    'public' => true,
+    'public' => false,
     'menu_position' => 7,
     'supports' => array('title', 'editor', 'custom-fields'),
-    'has_archive' => false
+    'has_archive' => false,
+    'show_ui' => true,
+    'show_in_menu' => true
   );
   register_post_type('meet_runner', $args);
 }
