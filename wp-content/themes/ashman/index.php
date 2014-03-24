@@ -25,6 +25,8 @@
   endif; 
 ?>
 
+<!-- index.php -->
+
 <?php
   get_template_part('parts/global/footer');
   get_template_part('parts/global/html-footer');

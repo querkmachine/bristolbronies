@@ -1,6 +1,6 @@
 <?php
   /* 
-  Template Name: Search Results
+  Template Name: Search - Results
   */
   get_template_part('parts/global/html-header');
   get_template_part('parts/global/masthead');
@@ -40,6 +40,8 @@
         <?php
           endif; 
         ?>
+
+<!-- search.php -->
 
 <?php
   get_template_part('parts/global/footer');

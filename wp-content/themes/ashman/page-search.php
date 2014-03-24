@@ -1,6 +1,6 @@
 <?php
   /* 
-  Template Name: Search Home
+  Template Name: Search - Home
   */
   get_template_part('parts/global/html-header');
   get_template_part('parts/global/masthead');
@@ -10,6 +10,8 @@
         <div class="search-results js-search-results">
           <ul id="results"></ul>
         </div>
+
+<!-- page-search.php -->
 
 <?php
   get_template_part('parts/global/footer');

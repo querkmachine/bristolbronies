@@ -3,16 +3,29 @@
  */
 
 .post {
-  @include column(12, 8);
-  .post--wide {
+  .post__header {
     @include column(12);
   }
-  .post__header {
-
-  }
   .post__body {
+    @include column(12, 8);
     p:first-child {
       @extend .lede;
+    }
+  }
+  .post__sidebar {
+    @include column(12, 4);
+  }
+  .post__meta {
+    @extend %h6; 
+    display: inline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .fa {
+      color: palette(red);
+    }
+    .post__meta__category {
+      color: palette(grey, light);
     }
   }
 }
