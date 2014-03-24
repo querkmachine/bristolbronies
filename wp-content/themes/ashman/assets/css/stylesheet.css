@@ -817,8 +817,6 @@ mark {
     float: left; }
   .post .post__title a {
     text-decoration: none; }
-    .post .post__title a:hover, .post .post__title a:focus {
-      border-bottom: 0.125rem solid #930916; }
   .post .post__body {
     width: 100%;
     padding-right: 0.9375rem;
@@ -1051,11 +1049,6 @@ hr {
 @media only screen and (min-width: 40.063em) {
   .primary-navigation li, .control-navigation li {
     display: inline; }
-    .primary-navigation li.current-menu-item a, .control-navigation li.current-menu-item a {
-      padding-top: 1rem;
-      border-top: 4px solid #e02436; }
-    .primary-navigation li.highlight a, .control-navigation li.highlight a {
-      background-color: #e5e5e5; }
   .primary-navigation a, .control-navigation a {
     display: inline-block;
     padding: 1.25rem 0.5rem;

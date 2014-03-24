@@ -69,17 +69,6 @@
   @media #{$medium-up} {
     li {
       display: inline;
-      &.current-menu-item {
-        a {
-          padding-top: rem-calc(($masthead-height/3)-4px);
-          border-top: 4px solid palette(red);
-        }
-      }
-      &.highlight {
-        a {
-          background-color: palette(grey, x-light);
-        }
-      }
     }
     a {
       display: inline-block;

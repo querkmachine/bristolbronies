@@ -11,10 +11,6 @@
   .post__title {
     a {
       text-decoration: none;
-      &:hover,
-      &:focus {
-        border-bottom: rem-calc($rem-base/8) solid palette(red, dark);
-      }
     }
   }
   .post__body {
