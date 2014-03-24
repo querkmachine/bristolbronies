@@ -7,11 +7,28 @@
   if(have_posts()) :
     while(have_posts()) : the_post(); 
 ?>
+
+        <?php
+          if ( has_post_thumbnail() ) {
+            $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+        ?>
+        <div class="hero-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')"></div>
+        <?php 
+          } 
+        ?>
         <div class="row">
           <article class="post vevent">
             <header class="post__header">
               <ul class="post__meta">
-                <li class="post__meta__category"><?php foreach(ashman_meet_category(get_the_ID()) as $category) { echo $category; } ?></li>
+                <li class="post__meta__category">
+                  <?php 
+                    $categories = ashman_meet_category(get_the_ID());
+                    for($i = 0; $i < count($categories); $i++) {
+                      echo $categories[$i];
+                      if(!empty($categories[$i+1])) { echo " / "; }
+                    } 
+                  ?>
+                </li>
               </ul>
               <h2 class="post__title summary"><?php the_title(); ?></h2>
               <ul class="post__meta">

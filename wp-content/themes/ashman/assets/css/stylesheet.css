@@ -565,13 +565,15 @@ h1 {
     h1 {
       font-size: 3.125rem; } }
 
-h2 {
+h2,
+.error-404 h1 {
   font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
   font-weight: 900;
   font-size: 2.1875rem;
   line-height: 1.2; }
   @media only screen and (min-width: 40.063em) {
-    h2 {
+    h2,
+    .error-404 h1 {
       font-size: 2.5rem; } }
 
 h3 {
@@ -851,6 +853,23 @@ mark {
     color: #e02436; }
   .post .post__meta .post__meta__category {
     color: #959599; }
+
+.hero-image {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto 2rem auto;
+  padding-bottom: 30%;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: padding-bottom .15s ease;
+  -moz-transition: padding-bottom .15s ease;
+  transition: padding-bottom .15s ease; }
+  @media only screen and (min-width: 40.063em) {
+    .hero-image {
+      padding-bottom: 25%; } }
+  @media only screen and (min-width: 90.063em) {
+    .hero-image {
+      padding-bottom: 20%; } }
 
 /**
  * patterns->profile
@@ -1183,3 +1202,16 @@ hr {
     line-height: 1.3; }
   .footer .boilerplate a {
     color: #716e6d; }
+
+/**
+ * sections->404
+ */
+.error-404 {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left;
+  text-align: center; }
+  .error-404 img {
+    margin-bottom: 2rem; }

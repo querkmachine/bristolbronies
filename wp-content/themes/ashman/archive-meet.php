@@ -14,7 +14,15 @@
           <article class="post vevent">
             <header class="post__header">
               <ul class="post__meta">
-                <li class="post__meta__category"><?php foreach(ashman_meet_category(get_the_ID()) as $category) { echo $category; } ?></li>
+                <li class="post__meta__category">
+                  <?php 
+                    $categories = ashman_meet_category(get_the_ID());
+                    for($i = 0; $i < count($categories); $i++) {
+                      echo $categories[$i];
+                      if(!empty($categories[$i+1])) { echo " / "; }
+                    } 
+                  ?>
+                </li>
               </ul>
               <h2 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h2>
               <ul class="post__meta">

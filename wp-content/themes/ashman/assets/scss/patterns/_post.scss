@@ -41,3 +41,21 @@
     }
   }
 }
+
+.hero-image {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto rem-calc($rem-base*2) auto;
+  padding-bottom: 30%;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: padding-bottom .15s ease;
+     -moz-transition: padding-bottom .15s ease;
+          transition: padding-bottom .15s ease;
+  @media #{$medium-up} {
+    padding-bottom: 25%;
+  }
+  @media #{$xlarge-up} {
+    padding-bottom: 20%;
+  }
+}

@@ -1,5 +1,6 @@
 $(document).ready(function() {
   initAshmanSearch();
+  initAshman404();
   initFitVids();
 });
 
@@ -20,3 +21,14 @@ function initAshmanSearch() {
   });
 }
 
+function initAshman404() {
+  var $errorpage = $("body.error404");
+  var children = $errorpage.find("*");
+  children.each(function(i) {
+    $(this).css({
+      "-webkit-transform": "rotate("+((Math.random()*10)-5)+"deg)",
+      "   -moz-transform": "rotate("+((Math.random()*10)-5)+"deg)",
+      "        transform": "rotate("+((Math.random()*10)-5)+"deg)"
+    });
+  });
+}
