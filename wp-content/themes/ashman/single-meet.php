@@ -37,7 +37,7 @@
               </ul>
             </header>
             <div class="post__body">
-              <?php the_content(); ?>
+              <?php if(strlen(get_the_content()) > 0) { the_content(); } else { echo '<p><em>No meet plans announced.</em></p>'; } ?>
             </div>
             <div class="post__sidebar">
               <?php 
