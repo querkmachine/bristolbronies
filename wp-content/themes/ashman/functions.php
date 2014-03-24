@@ -202,12 +202,12 @@ function ashman_meet_category($post_id, $format = 'name') {
  */
 
 function ashman_meet_dates($start, $end) {
-  $output = '<time class="dtstart" datetime="'.date("c", $start).'">'.date("dS F Y, h:ia", $start).'</time>&ndash;';
+  $output = '<time class="dtstart" datetime="'.date("c", $start).'">'.date("jS F Y, h:ia", $start).'</time>&ndash;';
   if(date("Ymd", $start) === date("Ymd", $end)) {
     $output .= '<time class="dtend" datetime="'.date("c", $end).'">'.date("h:ia", $end).'</time>';
   }
   else {
-    $output .= '<time class="dtend" datetime="'.date("c", $end).'">'.date("dS F Y, h:ia", $end).'</time>';
+    $output .= '<time class="dtend" datetime="'.date("c", $end).'">'.date("jS F Y, h:ia", $end).'</time>';
   }
   return $output;
 }
