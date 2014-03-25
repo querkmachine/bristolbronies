@@ -14,8 +14,18 @@
 
 <?php 
   if(have_posts()) :
+    $divided = false;
     while(have_posts()) : the_post(); 
-      $special = in_array("meet", ashman_meet_category(get_the_ID(), "slug")) ? true : false;
+      if(in_array("meet", ashman_meet_category(get_the_ID(), "slug")) || in_array("special", ashman_meet_category(get_the_ID(), "slug"))) {
+        $special = true;
+      }
+      else {
+        $special = false;
+      }
+      if(!$divided && ashman_custom_field('meet_start_time') < time() && $paged == 0) {
+        echo "<hr>";
+        $divided = true;
+      }
 ?>
         <?php
           if($special && has_post_thumbnail()) {
@@ -74,7 +84,9 @@
                 'current' => max(1, get_query_var('paged')),
                 'total' => $wp_query->max_num_pages,
                 'prev_next' => false,
-                'type' => 'list'
+                'type' => 'list',
+                'end_size' => 0,
+                'mid_size' => 100
               ));
             ?>
           </div>

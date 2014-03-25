@@ -63,7 +63,7 @@
                 } 
               ?>
               <?php 
-                if(get_the_date('U') <= strtotime("2014-03-25")) { 
+                if(get_the_date('U') <= strtotime("2014-03-31")) { 
               ?>
               <aside class="alert">
                 <i class="fa fa-warning fa-2x"></i>
