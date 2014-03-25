@@ -21,13 +21,20 @@
             <header class="post__header">
               <h2 class="post__title"><?php the_title(); ?></h2>
               <ul class="post__meta">
-                <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo ashman_meet_dates(ashman_custom_field('meet_start_time'), ashman_custom_field('meet_end_time')); ?></li>
+                <li class="post__meta__date"><i class="fa fa-pencil-square-o fa-fw"></i> Posted on <time datetime="<?php echo get_the_date("c"); ?>"><?php echo get_the_date("jS F Y, H:ia"); ?></time></li>
+                <li class="post__meta__author"><i class="fa fa-user fa-fw"></i> Written by <?php echo get_the_author(); ?></li>
               </ul>
             </header>
             <div class="post__body">
               <?php the_content(); ?>
             </div>
             <div class="post__sidebar">
+              <aside class="post__neighbours">
+                <ul>
+                  <li><?php previous_post_link('%link', '<strong>Last Post:</strong> %title'); ?></li>
+                  <li><?php next_post_link('%link', '<strong>Next Post:</strong> %title'); ?></li>
+                </ul>
+              </aside>
               <?php 
                 if(get_the_date('U') <= strtotime("2014-03-31")) { 
               ?>
