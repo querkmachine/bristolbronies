@@ -89,7 +89,7 @@ function ashman_meet_post_type() {
     'edit_item' => __('Edit Meet'),
     'new_item' => __('New Meet'),
     'all_items' => __('All Meets'),
-    'view_item' => __('View Meets'),
+    'view_item' => __('View Meet'),
     'search_items' => __('Search Meets'),
     'not_found' => __('No meets found'),
     'not_found_in_trash' => __('No meets found in the trash'),
@@ -122,7 +122,7 @@ function ashman_location_post_type() {
     'edit_item' => __('Edit Location'),
     'new_item' => __('New Location'),
     'all_items' => __('All Locations'),
-    'view_item' => __('View Locations'),
+    'view_item' => __('View Location'),
     'search_items' => __('Search Locations'),
     'not_found' => __('No locations found'),
     'not_found_in_trash' => __('No locations found in the trash'),
@@ -156,7 +156,7 @@ function ashman_runner_post_type() {
     'edit_item' => __('Edit Meet Runner'),
     'new_item' => __('New Meet Runner'),
     'all_items' => __('All Meet Runners'),
-    'view_item' => __('View Meet Runners'),
+    'view_item' => __('View Meet Runner'),
     'search_items' => __('Search Meet Runners'),
     'not_found' => __('No meet runners found'),
     'not_found_in_trash' => __('No meet runners found in the trash'),
@@ -260,3 +260,35 @@ function ashman_profile_avatar($id) {
     return "http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=96";
   }
 }
+
+/**
+ * News post type
+ */
+
+function ashman_news_post_type() {
+  $labels = array(
+    'name' => _x('News', 'post type general name'),
+    'singular_name' => _x('News', 'post type singular name'),
+    'add_new' => _x('Add New', 'book'),
+    'add_new_item' => __('Add News'),
+    'edit_item' => __('Edit News'),
+    'new_item' => __('New News'),
+    'all_items' => __('All News'),
+    'view_item' => __('View News'),
+    'search_items' => __('Search News'),
+    'not_found' => __('No posts found'),
+    'not_found_in_trash' => __('No posts found in the trash'),
+    'parent_item_colon' => '',
+    'menu_name' => 'News'
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Newsy bloggy thing.',
+    'public' => true,
+    'menu_position' => 7,
+    'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
+    'has_archive' => true
+  );
+  register_post_type('news', $args);
+}
+add_action('init', 'ashman_news_post_type');
