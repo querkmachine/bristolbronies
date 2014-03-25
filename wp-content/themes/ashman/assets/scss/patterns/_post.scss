@@ -5,6 +5,24 @@
 .post {
   @extend .clearfix;
   margin-bottom: rem-calc($rem-base*3);
+  &.post--past {
+    opacity: 0.65;
+    -webkit-transition: opacity .15s ease;
+       -moz-transition: opacity .15s ease;
+            transition: opacity .15s ease;
+    a {
+      color: palette(grey);
+      &:hover,
+      &:focus {
+        color: palette(grey, dark);
+      }
+    }
+    .post__meta {
+      .fa {
+        color: palette(grey);
+      }
+    }
+  }
   .post__header {
     @include column(12);
   }

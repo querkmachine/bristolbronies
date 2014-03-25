@@ -14,17 +14,12 @@
 
 <?php 
   if(have_posts()) :
-    $divided = false;
     while(have_posts()) : the_post(); 
       if(in_array("meet", ashman_meet_category(get_the_ID(), "slug")) || in_array("special", ashman_meet_category(get_the_ID(), "slug"))) {
         $special = true;
       }
       else {
         $special = false;
-      }
-      if(!$divided && ashman_custom_field('meet_start_time') < time() && $paged == 0) {
-        echo "<hr>";
-        $divided = true;
       }
 ?>
         <?php
@@ -36,7 +31,7 @@
           } 
         ?>
         <div class="row">
-          <article class="post vevent">
+          <article class="post vevent<?php if(ashman_custom_field('meet_start_time') < time()) { echo " post--past"; } ?>">
             <header class="post__header">
               <ul class="post__meta">
                 <li class="post__meta__category">

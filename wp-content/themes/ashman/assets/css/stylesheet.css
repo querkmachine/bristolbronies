@@ -828,6 +828,17 @@ mark {
  */
 .post {
   margin-bottom: 3rem; }
+  .post.post--past {
+    opacity: 0.65;
+    -webkit-transition: opacity .15s ease;
+    -moz-transition: opacity .15s ease;
+    transition: opacity .15s ease; }
+    .post.post--past a {
+      color: #716e6d; }
+      .post.post--past a:hover, .post.post--past a:focus {
+        color: #444444; }
+    .post.post--past .post__meta .fa {
+      color: #716e6d; }
   .post .post__header {
     width: 100%;
     padding-right: 0.9375rem;
