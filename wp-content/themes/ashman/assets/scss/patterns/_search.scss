@@ -26,6 +26,7 @@
     background: none;
     font-size: rem-calc(36);
     line-height: normal;
+    -webkit-appearance: none;
     @media #{$medium-up} {
       font-size: rem-calc(72);
     }
