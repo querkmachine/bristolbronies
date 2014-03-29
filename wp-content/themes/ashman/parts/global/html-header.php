@@ -42,6 +42,7 @@
 
   <!-- Javascripts -->
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/modernizr-2.7.1.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/pace.min.js"></script>
 
   <!-- Page title -->
   <title>
