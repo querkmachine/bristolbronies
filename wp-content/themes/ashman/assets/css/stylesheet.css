@@ -553,7 +553,7 @@ h1 {
   line-height: 1.2; }
   @media only screen and (min-width: 40.063em) {
     h1 {
-      font-size: 3.125rem; } }
+      font-size: 4.0625rem; } }
 
 h2,
 body.error404 .error-404 h1 {
@@ -1063,6 +1063,7 @@ hr {
     -webkit-transform: translateX(62px);
     -o-transform: width 1s;
     transform: translateX(62px);
+    opacity: 0.5;
     pointer-events: none; }
   .pace.pace-active .pace-progress {
     -webkit-transform: translateY(0);

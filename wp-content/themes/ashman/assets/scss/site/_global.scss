@@ -64,6 +64,7 @@ hr {
     -webkit-transform: translateX(62px);
          -o-transform: width 1s;
             transform: translateX(62px);
+    opacity: 0.5;
     pointer-events: none;
   }
   &.pace-active .pace-progress {
