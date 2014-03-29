@@ -8,7 +8,7 @@
     while(have_posts()) : the_post(); 
 ?>
         <div class="row">
-          <article class="post post--wide">
+          <article class="post">
             <header class="post__header">
               <h1 class="post__title"><?php the_title(); ?></h1>
             </header>

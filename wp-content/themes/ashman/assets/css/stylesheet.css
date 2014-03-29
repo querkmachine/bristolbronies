@@ -836,6 +836,12 @@ mark {
         color: #444444; }
     .post.post--past .post__meta .fa {
       color: #716e6d; }
+  .post.post--wide .post__body {
+    width: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    position: relative;
+    float: left; }
   .post .post__header {
     width: 100%;
     padding-right: 0.9375rem;

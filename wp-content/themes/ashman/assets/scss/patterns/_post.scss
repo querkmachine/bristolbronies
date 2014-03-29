@@ -23,6 +23,11 @@
       }
     }
   }
+  &.post--wide {
+    .post__body {
+      @include column(12);
+    }
+  }
   .post__header {
     @include column(12);
   }

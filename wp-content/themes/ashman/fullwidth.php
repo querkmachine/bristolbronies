@@ -19,9 +19,6 @@
               <?php the_content(); ?>
             </div>
           </article>
-          <div class="sidebar">
-            <?php dynamic_sidebar('primary'); ?>
-          </div>
         </div>
 <?php
     endwhile;
