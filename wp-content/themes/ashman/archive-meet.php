@@ -14,6 +14,7 @@
         </div>
 
 <?php 
+  $posts=query_posts($query_string . '&meta_key=meet_start_time&orderby=meta_value_num&order=DESC');
   if(have_posts()) :
     while(have_posts()) : the_post(); 
       if(in_array("meet", ashman_meet_category(get_the_ID(), "slug")) || in_array("special", ashman_meet_category(get_the_ID(), "slug"))) {
