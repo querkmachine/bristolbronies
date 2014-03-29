@@ -33,7 +33,7 @@
           } 
         ?>
         <div class="row">
-          <article class="post vevent<?php if(ashman_custom_field('meet_start_time') < time()) { echo " post--past"; } ?>">
+          <article class="post vevent<?php if(ashman_custom_field('meet_end_time') < time()) { echo " post--past"; } ?>">
             <header class="post__header">
               <ul class="post__meta">
                 <li class="post__meta__category">
