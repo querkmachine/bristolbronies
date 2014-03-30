@@ -109,6 +109,69 @@ function ashman_meet_post_type() {
 }
 add_action('init', 'ashman_meet_post_type');
 
+function ashman_meet_time_column_title($defaults) {
+  $defaults['meet_time'] = "Running Time";
+  return $defaults;
+}
+add_filter('manage_meet_posts_columns', 'ashman_meet_time_column_title', 10);
+
+function ashman_meet_time_column_content($column_name, $post_id) {
+  if($column_name == "meet_time") {
+    echo ashman_meet_dates(get_field("meet_start_time", $post_id), get_field("meet_end_time", $post_id));
+  }
+}
+add_filter('manage_meet_posts_custom_column', 'ashman_meet_time_column_content', 10, 2);
+
+function ashman_meet_time_column_sortable($columns) {
+  $columns['meet_time'] = 'meet_time';
+  return $columns;
+}
+add_filter('manage_edit-meet_sortable_columns', 'ashman_meet_time_column_sortable');
+
+function ashman_meet_time_column_orderby($query) {
+  $orderby = $query->get('orderby');
+  if($orderby == "meet_time" || !empty($orderby)) {
+    $query->set('meta_key', 'meet_start_time');
+    $query->set('orderby', 'meta_value_num');
+  }
+}
+add_action('pre_get_posts', 'ashman_meet_time_column_orderby');
+
+function ashman_meet_location_column_title($defaults) {
+  $defaults['location'] = "Location";
+  return $defaults;
+}
+add_filter('manage_meet_posts_columns', 'ashman_meet_location_column_title', 10);
+
+function ashman_meet_location_column_content($column_name, $post_id) {
+  if($column_name == "location") {
+    $meet_location = get_field("meet_location", $post_id);
+    for($i = 0; $i < count($meet_location); $i++) {
+      $address = get_field("location_address", $meet_location[$i]);
+      echo get_the_title($meet_location[$i]) . "<br>" . $address['address'];
+      if(!empty($meet_location[$i+1])) { echo "<br>"; }
+    }
+  }
+}
+add_filter('manage_meet_posts_custom_column', 'ashman_meet_location_column_content', 10, 2);
+
+function ashman_meet_runner_column_title($defaults) {
+  $defaults['meet_runner'] = "Meet Runner";
+  return $defaults;
+}
+add_filter('manage_meet_posts_columns', 'ashman_meet_runner_column_title', 10);
+
+function ashman_meet_runner_column_content($column_name, $post_id) {
+  if($column_name == "meet_runner") {
+    $meet_runner = get_field("meet_runner", $post_id);
+    for($i = 0; $i < count($meet_runner); $i++) {
+      echo get_the_title($meet_runner[$i]);
+      if(!empty($meet_runner[$i+1])) { echo ", "; }
+    }
+  }
+}
+add_filter('manage_meet_posts_custom_column', 'ashman_meet_runner_column_content', 11, 2);
+
 /**
  * Location post type
  */
@@ -165,7 +228,7 @@ function ashman_runner_post_type() {
   );
   $args = array(
     'labels' => $labels,
-    'description' => 'Contains ifnroamtion about meet runners.',
+    'description' => 'Contains information about meet runners.',
     'public' => false,
     'menu_position' => 7,
     'supports' => array('title', 'editor', 'custom-fields'),
@@ -348,3 +411,38 @@ function ashman_news_post_type() {
   register_post_type('news', $args);
 }
 add_action('init', 'ashman_news_post_type');
+
+
+/**
+ * Meet Runner post type
+ */
+
+function ashman_community_post_type() {
+  $labels = array(
+    'name' => _x('Community Media', 'post type general name'),
+    'singular_name' => _x('Community Media', 'post type singular name'),
+    'add_new' => _x('Add New', 'book'),
+    'add_new_item' => __('Add New Media'),
+    'edit_item' => __('Edit Media'),
+    'new_item' => __('New Media'),
+    'all_items' => __('All Media'),
+    'view_item' => __('View Media'),
+    'search_items' => __('Search Media'),
+    'not_found' => __('No media found'),
+    'not_found_in_trash' => __('No media found in the trash'),
+    'parent_item_colon' => '',
+    'menu_name' => 'Media'
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Contains photos, videos, text, etc.',
+    'public' => false,
+    'menu_position' => 7,
+    'supports' => array('title', 'editor', 'custom-fields'),
+    'has_archive' => false,
+    'show_ui' => true,
+    'show_in_menu' => true
+  );
+  register_post_type('community', $args);
+}
+add_action('init', 'ashman_community_post_type');

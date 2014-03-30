@@ -1,0 +1,33 @@
+/* Fix strange opacity on admin menu bar */
+#adminmenu .wp-menu-image img {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* Hide comment counter */
+#wpadminbar #wp-admin-bar-comments,
+#wpadminbar #wp-admin-bar-new-content {
+  display: none;
+}
+
+/* Hide unused column */
+body.post-type-meet .column-date {
+  display: none;
+}
+
+/* Hide columns on mobile view */
+@media screen and (max-width: 782px) {
+  body.post-type-meet .column-meet_runner,
+  body.post-type-meet .column-location,
+  body.post-type-meet .column-time { display: none; }
+}
+
+/* Hide unused filter */
+body.post-type-meet .tablenav .actions select[name='m'] {
+  display: none;
+}
+
+/* Hide unused screen option */
+body.post-type-meet .metabox-prefs label[for='date-hide'] {
+  display: none;
+}
