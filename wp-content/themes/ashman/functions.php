@@ -130,7 +130,7 @@ add_filter('manage_edit-meet_sortable_columns', 'ashman_meet_time_column_sortabl
 
 function ashman_meet_time_column_orderby($query) {
   $orderby = $query->get('orderby');
-  if($orderby == "meet_time" || !empty($orderby)) {
+  if($orderby == "meet_time") {
     $query->set('meta_key', 'meet_start_time');
     $query->set('orderby', 'meta_value_num');
   }
