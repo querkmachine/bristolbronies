@@ -31,3 +31,8 @@ body.post-type-meet .tablenav .actions select[name='m'] {
 body.post-type-meet .metabox-prefs label[for='date-hide'] {
   display: none;
 }
+
+/* Login screen logo */
+.login h1 a {
+  background-image: none, url('/wp-content/themes/ashman/assets/img/logo.svg');
+}
