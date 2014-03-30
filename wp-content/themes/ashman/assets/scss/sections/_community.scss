@@ -1,0 +1,31 @@
+/**
+ * sections->community
+ */
+
+body.post-type-archive-community {
+  .community-blurb {
+    @include column(12);
+    margin-bottom: rem-calc($rem-base*3);
+  }
+}
+
+.media-grid {
+  @extend .clearfix;
+  .media-grid__item {
+    width: 50%;
+    @media #{$medium-up} {
+      width: 33.3333%;
+      float: left;
+    }
+    @media #{$large-up} {
+      width: 25%;
+    }
+    @media #{$xlarge-up} {
+      width: 20%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

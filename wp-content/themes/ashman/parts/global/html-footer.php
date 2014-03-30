@@ -3,6 +3,8 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-1.11.0.min.js"><\/script>')</script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.fitvids.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/packery-1.1.0.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.unveil.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js?v=ashman"></script>
 
   <script type="text/javascript">

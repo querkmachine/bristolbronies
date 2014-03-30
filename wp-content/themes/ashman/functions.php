@@ -419,8 +419,8 @@ add_action('init', 'ashman_news_post_type');
 
 function ashman_community_post_type() {
   $labels = array(
-    'name' => _x('Community Media', 'post type general name'),
-    'singular_name' => _x('Community Media', 'post type singular name'),
+    'name' => _x('Community', 'post type general name'),
+    'singular_name' => _x('Community', 'post type singular name'),
     'add_new' => _x('Add New', 'book'),
     'add_new_item' => __('Add New Media'),
     'edit_item' => __('Edit Media'),
@@ -436,10 +436,10 @@ function ashman_community_post_type() {
   $args = array(
     'labels' => $labels,
     'description' => 'Contains photos, videos, text, etc.',
-    'public' => false,
+    'public' => true,
     'menu_position' => 7,
     'supports' => array('title', 'editor', 'custom-fields'),
-    'has_archive' => false,
+    'has_archive' => true,
     'show_ui' => true,
     'show_in_menu' => true
   );

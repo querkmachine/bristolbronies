@@ -4,6 +4,10 @@ $(document).ready(function() {
   initFitVids();
 });
 
+$(window).load(function() {
+  initAshmanCommunity();
+});
+
 function initFitVids() {
   $(document).fitVids();
 }
@@ -31,4 +35,15 @@ function initAshman404() {
       "        transform": "rotate("+((Math.random()*6)-3)+"deg)"
     });
   });
+}
+
+function initAshmanCommunity() {
+  var $container = $('.media-grid');
+  $container.packery({ 
+    itemSelector: '.media-grid__item',
+    gutter: 0,
+    columnWidth: ".media-grid__item",
+    transitionDuration: "0.3s"
+  });
+  $("img.lazy").unveil();
 }

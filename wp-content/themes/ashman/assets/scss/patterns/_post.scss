@@ -41,6 +41,11 @@
     p:first-child {
       @extend .lede;
     }
+    p, ul, ol, dl {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   .post__sidebar {
     @include column(12, 4);

@@ -48,4 +48,11 @@ button {
       background-color: darken(palette(red), 5%);
     }
   }
+  &.button--rss {
+    background-color: palette(orange);
+    &:hover,
+    &:focus {
+      background-color: darken(palette(orange), 5%);
+    }
+  }
 }

@@ -54,17 +54,16 @@ hr {
     z-index: 2000;
     bottom: 0;
     left: 0;
-    height: 58px;
-    background-image: image-url('loading.gif');
+    height: 4px;
+    background-color: palette(red);
     background-position: bottom right;
     background-repeat: no-repeat;
     -webkit-transition: -webkit-transform .6s, width 1s;
        -moz-transition: width 1s;
             transition: transform .6s, width 1s;
-    -webkit-transform: translateX(62px);
+    -webkit-transform: translateY(4px);
          -o-transform: width 1s;
-            transform: translateX(62px);
-    opacity: 0.5;
+            transform: translateY(4px);
     pointer-events: none;
   }
   &.pace-active .pace-progress {

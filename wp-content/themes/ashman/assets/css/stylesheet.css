@@ -284,16 +284,16 @@ legend {
   overflow: hidden;
   clip: rect(0 0 0 0); }
 
-.clearfix:after, .row:after, .hero-image:after, .search-results .search-results__item:after, .breadcrumbs:after, .header .header__inner:after, .pagination ul:after, .post:after {
+.clearfix:after, .row:after, .hero-image:after, .search-results .search-results__item:after, .breadcrumbs:after, .header .header__inner:after, .pagination ul:after, .post:after, .media-grid:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
-* html .clearfix, * html .row, * html .hero-image, * html .search-results .search-results__item, .search-results * html .search-results__item, * html .breadcrumbs, * html .header .header__inner, .header * html .header__inner, * html .pagination ul, .pagination * html ul, * html .post {
+* html .clearfix, * html .row, * html .hero-image, * html .search-results .search-results__item, .search-results * html .search-results__item, * html .breadcrumbs, * html .header .header__inner, .header * html .header__inner, * html .pagination ul, .pagination * html ul, * html .post, * html .media-grid {
   height: 1%;
   /* IE6 */ }
-*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .hero-image, *:first-child + html .search-results .search-results__item, .search-results *:first-child + html .search-results__item, *:first-child + html .breadcrumbs, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .pagination ul, .pagination *:first-child + html ul, *:first-child + html .post {
+*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .hero-image, *:first-child + html .search-results .search-results__item, .search-results *:first-child + html .search-results__item, *:first-child + html .breadcrumbs, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .pagination ul, .pagination *:first-child + html ul, *:first-child + html .post, *:first-child + html .media-grid {
   min-height: 1px;
   /* IE7 */ }
 
@@ -380,6 +380,19 @@ button {
     button.button--negative:hover,
     button.button--negative:focus {
       background-color: #cd1d2e; }
+  .button.button--rss,
+  input[type="submit"].button--rss,
+  input[type="reset"].button--rss,
+  button.button--rss {
+    background-color: #ff6600; }
+    .button.button--rss:hover, .button.button--rss:focus,
+    input[type="submit"].button--rss:hover,
+    input[type="submit"].button--rss:focus,
+    input[type="reset"].button--rss:hover,
+    input[type="reset"].button--rss:focus,
+    button.button--rss:hover,
+    button.button--rss:focus {
+      background-color: #e65c00; }
 
 /**
  * components->form
@@ -859,6 +872,8 @@ mark {
     @media only screen and (min-width: 40.063em) {
       .post .post__body {
         width: 66.66667%; } }
+    .post .post__body p:last-child, .post .post__body ul:last-child, .post .post__body ol:last-child, .post .post__body dl:last-child {
+      margin-bottom: 0; }
   .post .post__sidebar {
     width: 100%;
     padding-right: 0.9375rem;
@@ -1054,17 +1069,16 @@ hr {
     z-index: 2000;
     bottom: 0;
     left: 0;
-    height: 58px;
-    background-image: url("/wp-content/themes/ashman/assets/img/loading.gif");
+    height: 4px;
+    background-color: #e02436;
     background-position: bottom right;
     background-repeat: no-repeat;
     -webkit-transition: -webkit-transform .6s, width 1s;
     -moz-transition: width 1s;
     transition: transform .6s, width 1s;
-    -webkit-transform: translateX(62px);
+    -webkit-transform: translateY(4px);
     -o-transform: width 1s;
-    transform: translateX(62px);
-    opacity: 0.5;
+    transform: translateY(4px);
     pointer-events: none; }
   .pace.pace-active .pace-progress {
     -webkit-transform: translateY(0);
@@ -1255,6 +1269,33 @@ body.post-type-archive-news .news-blurb {
   position: relative;
   float: left;
   margin-bottom: 3rem; }
+
+/**
+ * sections->community
+ */
+body.post-type-archive-community .community-blurb {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left;
+  margin-bottom: 3rem; }
+
+.media-grid .media-grid__item {
+  width: 50%; }
+  @media only screen and (min-width: 40.063em) {
+    .media-grid .media-grid__item {
+      width: 33.3333%;
+      float: left; } }
+  @media only screen and (min-width: 50.063em) {
+    .media-grid .media-grid__item {
+      width: 25%; } }
+  @media only screen and (min-width: 90.063em) {
+    .media-grid .media-grid__item {
+      width: 20%; } }
+  .media-grid .media-grid__item img {
+    width: 100%;
+    height: auto; }
 
 /**
  * sections->404
