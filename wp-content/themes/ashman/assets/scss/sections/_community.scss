@@ -7,49 +7,9 @@ body.post-type-archive-community {
     @include column(12);
     margin-bottom: rem-calc($rem-base*3);
   }
-}
-
-.media-grid {
-  @extend .clearfix;
-  .media-grid__item {
-    position: relative;
-    width: 50%;
-    background-color: palette(black);
-    @media #{$medium-up} {
-      width: 33.3333%;
-      float: left;
-    }
-    @media #{$large-up} {
-      width: 25%;
-    }
-    @media #{$xlarge-up} {
-      width: 20%;
-    }
-    img {
-      width: 100%;
-      height: auto;
-    }
-    a {
-      text-decoration: none;
-      &:hover,
-      &:focus {
-        color: palette(red, dark);
-      }
-    }
-  }
-  .media-grid__meta {
-    margin-top: -50%;
-    position: absolute;
-    right: 0;
-    left: 0;
-    color: palette(white);
-    text-align: center;
-    -webkit-transition: color .15s ease;
-       -moz-transition: color .15s ease;
-            transition: color .15s ease;
-    &:hover,
-    &:focus {
-      color: palette(red);
+  .media-grid {
+    .media-grid__item {
+      background-color: palette(black);
     }
   }
 }

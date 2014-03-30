@@ -38,7 +38,7 @@
   }
   .post__body {
     @include column(12, 8);
-    p:first-child {
+    > p:first-child {
       @extend .lede;
     }
     p, ul, ol, dl {

@@ -15,7 +15,7 @@
 
         <div class="media-grid">
 <?php 
-  $posts=query_posts($query_string . '&posts_per_page=-1');
+  $posts = query_posts($query_string . '&posts_per_page=-1');
   if(have_posts()) :
     while(have_posts()) : the_post(); 
 ?>
@@ -39,10 +39,10 @@
           <figure class="media-grid__item media-grid__item--video">
             <a href="<?php the_permalink(); ?>">
               <img class="lazy" src="<?php echo $thumbnail[0]; ?>" data-src="<?php echo $hires[0]; ?>" alt="<?php the_title(); ?>">
-              <div class="media-grid__meta">
+              <figcaption class="media-grid__meta">
                 <i class="fa fa-play-circle-o fa-fw fa-4x"></i>
                 <h4><?php the_title(); ?></h4>
-              </div>
+              </figcaption>
             </a>
           </figure>
         <?php 
@@ -51,7 +51,10 @@
             default:
         ?>
           <figure class="media-grid__item media-grid__item--text">
-            
+            <a href="<?php the_permalink(); ?>">
+              <h2><?php the_title(); ?></h2>
+              <p><?php the_excerpt(); ?></p>
+            </a>
           </figure>
         <?php 
             break;

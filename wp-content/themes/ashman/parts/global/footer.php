@@ -40,13 +40,13 @@
               <h6>In Affiliation With</h6>
               <ul>
                 <li>
-                  <a href="#" target="_blank">
-                    <img src="http://bristolbronies.co.uk/wp-content/uploads/2013/08/ib1SJr1c7a0HZI.png" alt="Bronies UK">
+                  <a href="http://bronies.org.uk/" target="_blank">
+                    <img src="/wp-content/uploads/2014/03/bb-broniesuk.png" alt="Bronies UK">
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank">
-                    <img src="http://bristolbronies.co.uk/wp-content/uploads/2013/07/sonicradioboom.png" alt="Sonic Radioboom">
+                  <a href="http://www.sonicradioboom.com/" target="_blank">
+                    <img src="/wp-content/uploads/2014/03/bb-sonicradioboom.png" alt="Sonic Radioboom">
                   </a>
                 </li>
               </ul>

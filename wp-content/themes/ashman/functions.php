@@ -240,6 +240,21 @@ function ashman_runner_post_type() {
 }
 add_action('init', 'ashman_runner_post_type');
 
+function ashman_runner_staff_column_title($defaults) {
+  $defaults['staff'] = "Staff?";
+  return $defaults;
+}
+add_filter('manage_meet_runner_posts_columns', 'ashman_runner_staff_column_title', 10);
+
+function ashman_runner_staff_column_content($column_name, $post_id) {
+  if($column_name == "staff") {
+    $staff_status = get_field("runner_staff", $post_id);
+    $staff_status = $staff_status[0];
+    if($staff_status == "true") { echo "&#x2714; Yes"; }
+  }
+}
+add_filter('manage_meet_runner_posts_custom_column', 'ashman_runner_staff_column_content', 10, 2);
+
 /**
  * Meet category list
  */

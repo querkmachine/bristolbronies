@@ -1,0 +1,16 @@
+/**
+ * sections->about
+ */
+
+body.page-id-18 {
+  .post {
+    margin-bottom: 0;
+  }
+  .about-meets {
+    @include column(12, 6);
+  }
+  .about-blurb {
+    @include column(12);
+    margin-bottom: rem-calc($rem-base*3);
+  }
+}
