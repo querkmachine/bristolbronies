@@ -597,7 +597,6 @@ h4 {
       font-size: 1.125rem; } }
 
 h5,
-.billboard .billboard__caption h1,
 .profile .profile__captain {
   margin-bottom: 0.5rem;
   font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
@@ -682,19 +681,45 @@ mark {
   -moz-border-radius: 3px;
   border-radius: 3px;
   overflow: hidden; }
-  .billboard a {
-    display: block;
-    text-decoration: none; }
-    .billboard a:hover, .billboard a:focus {
-      text-decoration: underline; }
   .billboard img {
     width: 100%;
     border-bottom: 1px solid #e5e5e5; }
   .billboard .billboard__caption {
     display: block;
-    padding: 0.5rem; }
+    padding: 1rem; }
     .billboard .billboard__caption p {
       margin: 0; }
+  .billboard .billboard__title {
+    margin-bottom: 0.5rem; }
+    .billboard .billboard__title a {
+      display: block;
+      text-decoration: none; }
+      .billboard .billboard__title a:hover, .billboard .billboard__title a:focus {
+        text-decoration: underline; }
+
+.billboard-list {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left;
+  margin-bottom: 0.9375rem; }
+  @media only screen and (min-width: 40.063em) {
+    .billboard-list {
+      width: 50%; } }
+  @media only screen and (min-width: 50.063em) {
+    .billboard-list {
+      width: 33.33333%; } }
+  @media only screen and (min-width: 40.063em) {
+    .billboard-list {
+      margin-bottom: 1.875rem; }
+      .billboard-list:nth-child(2n+1) {
+        clear: left; } }
+  @media only screen and (min-width: 50.063em) {
+    .billboard-list:nth-child(2n+1) {
+      clear: none; }
+    .billboard-list:nth-child(3n+1) {
+      clear: left; } }
 
 /**
  * patterns->breadcrumb
@@ -708,21 +733,23 @@ mark {
     margin: 0 0.5rem;
     color: #959599; }
 
-.figure img {
-  width: 100%;
-  height: auto; }
-.figure blockquote {
-  font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
-  font-size: 1.7rem;
-  line-height: 1.2em; }
-  @media only screen and (min-width: 40.063em) {
-    .figure blockquote {
-      font-size: 2rem; } }
-.figure .figure__caption {
-  width: 100%;
-  max-width: 20em;
-  margin-top: 0.5rem;
-  color: #716e6d; }
+.figure {
+  margin: 1rem 0; }
+  .figure img {
+    width: 100%;
+    height: auto; }
+  .figure blockquote {
+    font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.2em; }
+    @media only screen and (min-width: 40.063em) {
+      .figure blockquote {
+        font-size: 2rem; } }
+  .figure .figure__caption {
+    width: 100%;
+    max-width: 20em;
+    margin-top: 0.5rem;
+    color: #716e6d; }
 
 /**
  * sections->forecast

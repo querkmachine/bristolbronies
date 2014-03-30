@@ -461,3 +461,110 @@ function ashman_community_post_type() {
   register_post_type('community', $args);
 }
 add_action('init', 'ashman_community_post_type');
+
+/**
+ * Camera metadata
+ */
+
+function cameraUsed($imagePath) {
+
+  // Check if the variable is set and if the file itself exists before continuing
+  if ((isset($imagePath)) and (file_exists($imagePath))) {
+  
+    // There are 2 arrays which contains the information we are after, so it's easier to state them both
+    $exif_ifd0 = read_exif_data($imagePath ,'IFD0' ,0);       
+    $exif_exif = read_exif_data($imagePath ,'EXIF' ,0);
+    
+    //error control
+    $notFound = false;
+    
+    // Make 
+    if (@array_key_exists('Make', $exif_ifd0)) {
+      $camMake = $exif_ifd0['Make'];
+    } else { $camMake = $notFound; }
+    
+    // Model
+    if (@array_key_exists('Model', $exif_ifd0)) {
+      $camModel = $exif_ifd0['Model'];
+    } else { $camModel = $notFound; }
+    
+    // Exposure
+    if (@array_key_exists('ExposureTime', $exif_ifd0)) {
+      $camExposure = $exif_ifd0['ExposureTime'];
+    } else { $camExposure = $notFound; }
+
+    // Aperture
+    if (@array_key_exists('ApertureFNumber', $exif_ifd0['COMPUTED'])) {
+      $camAperture = $exif_ifd0['COMPUTED']['ApertureFNumber'];
+    } else { $camAperture = $notFound; }
+    
+    // Date
+    if (@array_key_exists('DateTime', $exif_ifd0)) {
+      $camDate = $exif_ifd0['DateTime'];
+    } else { $camDate = $notFound; }
+    
+    // ISO
+    if (@array_key_exists('ISOSpeedRatings',$exif_exif)) {
+      $camIso = $exif_exif['ISOSpeedRatings'];
+    } else { $camIso = $notFound; }
+
+    // Focal Length
+    // if (@array_key_exists('FocalLength',$exif_ifd0)) {
+    //   $camFocalLength = $exif_ifd0['FocalLength'];
+    // } else { $camFocalLength = $notFound; }
+
+    // GPS data
+    if(@array_key_exists('GPSLatitudeRef', $exif_ifd0)) {
+      $camLatitude = $exif_ifd0['GPSLatitudeRef'];
+    } else { $camLatitude = $notFound; }
+
+    if($camLatitude != false) { 
+      if(@array_key_exists('GPSLatitude', $exif_ifd0)) {
+        $camLatitudeDegrees = explode("/", $exif_ifd0['GPSLatitude'][0]);
+        $camLatitudeSeconds = explode("/", $exif_ifd0['GPSLatitude'][1]);
+        $camLatitudeSecondsCalc = ((substr($camLatitudeSeconds[0],0,2)*60)+substr($camLatitudeSeconds[0],2,2));
+        $camLatitudeReadableDeg = round(($camLatitudeSecondsCalc / 3600) + $camLatitudeDegrees[0], 6);
+        if(strtoupper($camLatitude) == "S") { $camLatitudeReadableDeg = "-".$camLatitudeReadableDeg; }
+        $camLatitudeReadableGPS = $camLatitude . " " . $camLatitudeDegrees[0] . "&deg; " . ($camLatitudeSeconds[0]/1000);
+      } else { $camLatitudeDegrees = $notFound; $camLatitudeSeconds = $notFound; }
+    }
+
+    if(@array_key_exists('GPSLongitudeRef', $exif_ifd0)) {
+      $camLongitude = $exif_ifd0['GPSLongitudeRef'];
+    } else { $camLongitude = $notFound; }
+
+    if($camLongitude != false) {
+      if(@array_key_exists('GPSLongitude', $exif_ifd0)) {
+        $camLongitudeDegrees = explode("/", $exif_ifd0['GPSLongitude'][0]);
+        $camLongitudeSeconds = explode("/", $exif_ifd0['GPSLongitude'][1]);
+        $camLongitudeSecondsCalc = ((substr($camLongitudeSeconds[0],0,2)*60)+substr($camLongitudeSeconds[0],2,2));
+        $camLongitudeReadableDeg = round(($camLongitudeSecondsCalc / 3600) + $camLongitudeDegrees[0], 6);
+        if(strtoupper($camLongitude) == "W") { $camLongitudeReadableDeg = "-".$camLongitudeReadableDeg; }
+        $camLongitudeReadableGPS = $camLongitude . " " . $camLongitudeDegrees[0] . "&deg; " . ($camLongitudeSeconds[0]/1000);
+      } else { $camLongitudeDegrees = $notFound; $camLongitudeSeconds = $notFound; }
+    }
+
+    $return = array();
+    $return['make'] = $camMake;
+    $return['model'] = $camModel;
+    $return['exposure'] = $camExposure;
+    $return['aperture'] = $camAperture;
+    $return['date'] = $camDate;
+    $return['iso'] = $camIso;
+    //$return['focallength'] = $camFocalLength;
+    $return['latitude'] = array(
+      'ref' => $camLatitude,
+      'deg' => $camLatitudeReadableDeg,
+      'gps' => $camLatitudeReadableGPS
+    );
+    $return['longitude'] = array(
+      'ref' => $camLongitude,
+      'deg' => $camLongitudeReadableDeg,
+      'gps' => $camLongitudeReadableGPS
+    );
+    return $return;
+  
+  } else {
+    return false; 
+  } 
+}
