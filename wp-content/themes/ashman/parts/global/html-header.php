@@ -22,20 +22,20 @@
   <meta name="ICBM" content="">
 
   <!-- Bookmark icons -->
-  <link rel="shortcut icon" href="">                        <!-- 16x16 .ico (legacy browsers) -->
-  <link rel="icon" type="image/png" href="">                <!-- 32x32 .png (new browsers) -->
-  <link rel="apple-touch-icon" sizes="144x144" href="">     <!-- 144x144 .png (retina iPad) -->
-  <link rel="apple-touch-icon" sizes="114x114" href="">     <!-- 114x114 .png (retina iPhone/iPod) -->
-  <link rel="apple-touch-icon" sizes="72x72" href="">       <!-- 72x72 .png (standard iPad) -->
-  <link rel="apple-touch-icon" href="">                     <!-- 57x57 .png (standard iPhone/iPod) -->
-  <meta name="msapplication-TileImage" content="">          <!-- 144x144 .png (Windows 8) -->
-  <meta name="msapplication-square70x70logo" content="">    <!-- 70x70 .png (Windows 8.1) -->
-  <meta name="msapplication-square150x150logo" content="">  <!-- 150x150 .png (Windows 8.1) -->
-  <meta name="msapplication-wide310x150logo" content="">    <!-- 310x150 .png (Windows 8.1) -->
-  <meta name="msapplication-square310x310logo" content="">  <!-- 310x310 .png (Windows 8.1) -->
-  <meta name="msapplication-TileColor" content="#ffffff">   <!-- (Windows 8/8.1) -->
-  <meta name="apple-mobile-web-app-title" content="">       <!-- (iOS) -->
-  <meta name="application-name" content="">                 <!-- (Windows 8.1) -->
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/favicon.ico">
+  <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed-144x144.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed-72x72.png">
+  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
+  <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/img/icons/windows-8.png">
+  <meta name="msapplication-square70x70logo" content="<?php echo get_template_directory_uri(); ?>/assets/img/icons/windows-8-70x70.png">
+  <meta name="msapplication-square150x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/img/icons/windows-8-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/img/icons/windows-8-310x150.png">
+  <meta name="msapplication-square310x310logo" content="<?php echo get_template_directory_uri(); ?>/assets/img/icons/windows-8-310x310.png">
+  <meta name="msapplication-TileColor" content="#e02436">
+  <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
+  <meta name="application-name" content="<?php bloginfo('name'); ?>">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/style.css?v=ashman">
