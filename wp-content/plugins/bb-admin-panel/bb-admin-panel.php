@@ -34,7 +34,9 @@ function ashman_meet_dashboard_widget_content() {
     while(have_posts()) : the_post(); 
       if(get_field("meet_end_time", get_the_ID()) > time()) { 
         $output .= '<li>'; 
-        $output .= '<h4><a href="/wp-admin/post.php?post=' . get_the_ID() . '&action=edit">' . get_the_title() . '</a></h4>';
+        $output .= '<h4><a href="/wp-admin/post.php?post=' . get_the_ID() . '&action=edit">' . get_the_title() . '</a>';
+        if(get_post_status() != "publish") { $output .= ' - ' . get_post_status(); }
+        $output .= '</h4>';
         $output .= '<small>' . ashman_meet_dates(get_field("meet_start_time", get_the_ID()), get_field("meet_end_time", get_the_ID())) . '</small>';
         $output .= '</li>';
       }
