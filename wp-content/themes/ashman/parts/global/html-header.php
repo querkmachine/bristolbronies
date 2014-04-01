@@ -38,7 +38,7 @@
   <meta name="application-name" content="<?php bloginfo('name'); ?>">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/style.css?v=ashman">
+  <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/assets/css/stylesheet.css?v=ashman">
 
   <!-- Javascripts -->
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/modernizr-2.7.1.min.js"></script>
