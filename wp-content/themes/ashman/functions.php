@@ -602,3 +602,37 @@ function ashman_billboard_post_type() {
   register_post_type('billboard', $args);
 }
 add_action('init', 'ashman_billboard_post_type');
+
+/**
+ * Affiliates post type
+ */
+
+function ashman_affiliates_post_type() {
+  $labels = array(
+    'name' => _x('Affiliates', 'post type general name'),
+    'singular_name' => _x('Affiliate', 'post type singular name'),
+    'add_new' => _x('Add New', 'book'),
+    'add_new_item' => __('Add New Affiliate'),
+    'edit_item' => __('Edit Affiliate'),
+    'new_item' => __('New Affiliate'),
+    'all_items' => __('All Affiliates'),
+    'view_item' => __('View Affiliates'),
+    'search_items' => __('Search Affiliates'),
+    'not_found' => __('No affiliates found'),
+    'not_found_in_trash' => __('No affiliates found in the trash'),
+    'parent_item_colon' => '',
+    'menu_name' => 'Affiliates'
+  );
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Contains featured front-page links.',
+    'public' => true,
+    'menu_position' => 7,
+    'supports' => array('title', 'custom-fields'),
+    'has_archive' => false,
+    'show_ui' => true,
+    'show_in_menu' => true
+  );
+  register_post_type('affiliates', $args);
+}
+add_action('init', 'ashman_affiliates_post_type');

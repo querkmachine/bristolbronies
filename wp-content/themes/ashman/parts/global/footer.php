@@ -36,21 +36,9 @@
                 ));
               ?>
             </div>
-            <div class="footer-links__column footer-links__affiliate">
-              <h6>In Affiliation With</h6>
-              <ul>
-                <li>
-                  <a href="http://bronies.org.uk/" target="_blank">
-                    <img src="/wp-content/uploads/2014/03/bb-broniesuk.png" alt="Bronies UK">
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.sonicradioboom.com/" target="_blank">
-                    <img src="/wp-content/uploads/2014/03/bb-sonicradioboom.png" alt="Sonic Radioboom">
-                  </a>
-                </li>
-              </ul>
-            </div>
+<?php
+  get_template_part('parts/global/affiliates');
+?>
           </div>
         </div>
         <div class="boilerplate">
