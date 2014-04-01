@@ -579,13 +579,15 @@ body.error404 .error-404 h1 {
     body.error404 .error-404 h1 {
       font-size: 2.5rem; } }
 
-h3 {
+h3,
+body.page-id-6 .home-blurb p {
   font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
   font-weight: 900;
   font-size: 1.5625rem;
   line-height: 1.15; }
   @media only screen and (min-width: 40.063em) {
-    h3 {
+    h3,
+    body.page-id-6 .home-blurb p {
       font-size: 1.875rem; } }
 
 h4 {
@@ -1331,6 +1333,29 @@ hr {
     line-height: 1.3; }
   .footer .boilerplate a {
     color: #716e6d; }
+
+/**
+ * sections->homepage
+ */
+body.page-id-6 .home-blurb {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left;
+  margin-bottom: 3rem; }
+  body.page-id-6 .home-blurb p {
+    font-weight: normal; }
+body.page-id-6 .next-meet .hero-image {
+  position: relative; }
+  body.page-id-6 .next-meet .hero-image .post {
+    width: auto;
+    margin: 0;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: white; }
 
 /**
  * sections-meets

@@ -1,0 +1,26 @@
+/**
+ * sections->homepage
+ */
+
+body.page-id-6 {
+  .home-blurb {
+    @include column(12);
+    margin-bottom: rem-calc($rem-base*3);
+    p {
+      @extend %h3;
+      font-weight: normal;
+    }
+  }
+  .next-meet .hero-image {
+    position: relative;
+    .post {
+      width: auto;
+      margin: 0;
+      padding: 1rem 0;
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background-color: palette(white);
+    }
+  }
+}
