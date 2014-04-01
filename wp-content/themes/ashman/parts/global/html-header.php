@@ -14,12 +14,12 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
   <!-- Content metadata -->
-  <meta name="author" content="">
-  <meta name="copyright" content="">
-  <meta name="geo.region" content="">                       <!-- See http://www.geo-tag.de/ -->
-  <meta name="geo.placename" content="">
-  <meta name="geo.position" content="">
-  <meta name="ICBM" content="">
+  <meta name="author" content="<?php bloginfo('name'); ?>">
+  <meta name="copyright" content="<?php echo date('Y'); ?> <?php bloginfo('name'); ?>">
+  <meta name="geo.region" content="GB-BST">
+  <meta name="geo.placename" content="Bristol">
+  <meta name="geo.position" content="51.454513;-2.58791">
+  <meta name="ICBM" content="51.454513, -2.58791">
 
   <!-- Bookmark icons -->
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/icons/favicon.ico">
