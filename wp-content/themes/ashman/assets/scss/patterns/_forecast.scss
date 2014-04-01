@@ -78,6 +78,9 @@ $fi-size: 80;
 
 .forecast {
   .forecast__icon {
+    background-image: image-url('loading.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
     .fi {
       margin-left: -(rem-calc($fi-size/2));
       position: absolute;
@@ -87,7 +90,7 @@ $fi-size: 80;
       line-height: rem-calc($fi-size);
     }
   }
-  .forecast__summary {
+  .forecast__data {
     p {
       margin: 0;
     }

@@ -57,7 +57,6 @@
   $posts = query_posts('post_type=meet_runner&posts_per_page=-1&orderby=title&order=ASC');
   if(have_posts()) :
 ?>
->
 
         <div class="row">
           <div class="about-blurb">

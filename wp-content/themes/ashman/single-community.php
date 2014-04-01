@@ -50,7 +50,7 @@
                 } 
               ?>
               <?php 
-                $camera = cameraUsed($cleansed);
+                $camera = community_camera_metadata($cleansed);
                 if($camera['date'] || ($camera['make'] && $camera['model']) || $camera['exposure'] || $camera['aperture'] || $camera['iso']) { 
               ?>
               <aside class="camera-meta postcard">

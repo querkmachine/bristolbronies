@@ -73,6 +73,7 @@
     a {
       display: inline-block;
       padding: rem-calc($masthead-height/3 $rem-base/2);
+      border-top: 0 solid palette(red);
       color: $text-color;
       font-family: $title-font;
       font-size: rem-calc(12);
@@ -82,10 +83,13 @@
       line-height: rem-calc($masthead-height/3);
       letter-spacing: 1px;
       white-space: nowrap;
+      -webkit-transition: border-top-width .15s ease, padding-top .15s ease;
+         -moz-transition: border-top-width .15s ease, padding-top .15s ease;
+              transition: border-top-width .15s ease, padding-top .15s ease;
       &:hover,
       &:focus {
         padding-top: rem-calc(($masthead-height/3)-4px);
-        border-top: 4px solid palette(red);
+        border-top-width: 4px;
       }
     }
   }

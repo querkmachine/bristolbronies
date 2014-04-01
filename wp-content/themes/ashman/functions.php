@@ -466,7 +466,7 @@ add_action('init', 'ashman_community_post_type');
  * Camera metadata
  */
 
-function cameraUsed($imagePath) {
+function community_camera_metadata($imagePath) {
 
   // Check if the variable is set and if the file itself exists before continuing
   if ((isset($imagePath)) and (file_exists($imagePath))) {

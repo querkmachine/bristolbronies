@@ -825,14 +825,18 @@ mark {
 .fi-frosty, .fi-snowy {
   color: #85d8f7; }
 
-.forecast .forecast__icon .fi {
-  margin-left: -2.5rem;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  font-size: 5rem;
-  line-height: 5rem; }
-.forecast .forecast__summary p {
+.forecast .forecast__icon {
+  background-image: url("/wp-content/themes/ashman/assets/img/loading.gif");
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .forecast .forecast__icon .fi {
+    margin-left: -2.5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 5rem;
+    line-height: 5rem; }
+.forecast .forecast__data p {
   margin: 0; }
 
 /**
@@ -1223,6 +1227,7 @@ hr {
   .primary-navigation a, .control-navigation a {
     display: inline-block;
     padding: 1.25rem 0.5rem;
+    border-top: 0 solid #e02436;
     color: #444444;
     font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
     font-size: 0.75rem;
@@ -1231,10 +1236,13 @@ hr {
     text-transform: uppercase;
     line-height: 1.25rem;
     letter-spacing: 1px;
-    white-space: nowrap; }
+    white-space: nowrap;
+    -webkit-transition: border-top-width .15s ease, padding-top .15s ease;
+    -moz-transition: border-top-width .15s ease, padding-top .15s ease;
+    transition: border-top-width .15s ease, padding-top .15s ease; }
     .primary-navigation a:hover, .control-navigation a:hover, .primary-navigation a:focus, .control-navigation a:focus {
       padding-top: 1rem;
-      border-top: 4px solid #e02436; } }
+      border-top-width: 4px; } }
 @media only screen and (min-width: 50.063em) {
   .primary-navigation a, .control-navigation a {
     padding-right: 16px;

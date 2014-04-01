@@ -40,6 +40,17 @@
               <?php if(strlen(get_the_content()) > 0) { the_content(); } else { echo '<p><em>No meet plans announced.</em></p>'; } ?>
             </div>
             <div class="post__sidebar">
+              <?php if(ashman_custom_field('meet_end_time') > time()) { ?>
+              <aside class="forecast js-forecast postcard" data-latitude="51.4861784" data-longitude="-2.5808411" data-timestamp="1396373171">
+                <div class="forecast__icon js-forecast__icon postcard__title"></div>
+                <div class="forecast__data postcard__data">
+                  <p>
+                    <span class="js-forecast__summary">Loading...</span><br>
+                    <strong>High:</strong> <span class="js-forecast__temp-high">0</span>&deg;C &emsp; <strong>Low:</strong> <span class="js-forecast__temp-low">0</span>&deg;C
+                  </p>
+                </div>
+              </aside>
+              <?php } ?>
               <?php 
                 $runners = get_field('meet_runner');
                 foreach($runners as $runner) {
