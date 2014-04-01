@@ -83,9 +83,6 @@
       line-height: rem-calc($masthead-height/3);
       letter-spacing: 1px;
       white-space: nowrap;
-      -webkit-transition: border-top-width .15s ease, padding-top .15s ease;
-         -moz-transition: border-top-width .15s ease, padding-top .15s ease;
-              transition: border-top-width .15s ease, padding-top .15s ease;
       &:hover,
       &:focus {
         padding-top: rem-calc(($masthead-height/3)-4px);

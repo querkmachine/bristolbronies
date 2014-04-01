@@ -1238,10 +1238,7 @@ hr {
     text-transform: uppercase;
     line-height: 1.25rem;
     letter-spacing: 1px;
-    white-space: nowrap;
-    -webkit-transition: border-top-width .15s ease, padding-top .15s ease;
-    -moz-transition: border-top-width .15s ease, padding-top .15s ease;
-    transition: border-top-width .15s ease, padding-top .15s ease; }
+    white-space: nowrap; }
     .primary-navigation a:hover, .control-navigation a:hover, .primary-navigation a:focus, .control-navigation a:focus {
       padding-top: 1rem;
       border-top-width: 4px; } }
