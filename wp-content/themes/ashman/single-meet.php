@@ -41,7 +41,10 @@
             </div>
             <div class="post__sidebar">
               <?php if(ashman_custom_field('meet_end_time') > time()) { ?>
-              <aside class="forecast js-forecast postcard" data-latitude="51.4861784" data-longitude="-2.5808411" data-timestamp="1396373171">
+              <aside class="forecast js-forecast postcard" 
+                data-latitude="<?php echo ashman_meet_location(get_field('meet_location'), "latitude"); ?>" 
+                data-longitude="<?php echo ashman_meet_location(get_field('meet_location'), "longitude"); ?>" 
+                data-timestamp="<?php echo date("U", ashman_custom_field('meet_start_time')); ?>">
                 <div class="forecast__icon js-forecast__icon postcard__title"></div>
                 <div class="forecast__data postcard__data">
                   <p>
