@@ -7,9 +7,11 @@
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.unveil.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js?v=ashman"></script>
 
+  <!-- Google Analytics --> 
   <script type="text/javascript">
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+    _gaq.push(['_setAccount', 'UA-34034973-1']);
+    _gaq.push(['_setDomainName', 'bristolbronies.co.uk']);
     _gaq.push(['_trackPageview']);
     (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
