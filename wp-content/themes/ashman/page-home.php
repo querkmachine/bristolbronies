@@ -6,13 +6,7 @@
 <?php 
   if(have_posts()) :
     while(have_posts()) : the_post(); 
-?>
-        <div class="row">
-          <div class="home-blurb">
-            <?php the_content(); ?>
-          </div>
-        </div>
-<?php
+      $home_blurb = get_the_content();
     endwhile;
   endif; 
 ?>
@@ -31,24 +25,31 @@
          $special = false;
         }
 ?>
-        <div class="next-meet">
-          <?php
-            if($special && has_post_thumbnail()) {
-              $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-          ?>
-          <div class="hero-image row" style="background-image: url('<?php echo $large_image_url[0]; ?>')">
-          <?php 
-            } else {
-          ?>
+        <?php
+          if(has_post_thumbnail()) { 
+            $image_id = get_post_thumbnail_id(); 
+          }
+          else { 
+            $image_array = array(300, 293, 278, 269); 
+            $image_id = rand(0, (count($image_array)-1));
+            $image_id = $image_array[$image_id]; 
+          }
+          $image_url = wp_get_attachment_image_src($image_id, 'full');
+        ?>
+        <div class="homepage-image" style="background-image: url('<?php echo $image_url[0]; ?>');">
           <div class="row">
-          <?php
-            }
-          ?>
+            <div class="home-blurb">
+              <p><?php echo $home_blurb;?></p>
+            </div>
+          </div>
+        </div>
+        <div class="next-meet">
+          <div class="row">
             <article class="post vevent">
               <header class="post__header">
                 <ul class="post__meta">
                   <li class="post__meta__category">
-                    Next meet: 
+                    <strong>Next meet:</strong> 
                     <?php 
                       $categories = ashman_meet_category(get_the_ID());
                       for($i = 0; $i < count($categories); $i++) {

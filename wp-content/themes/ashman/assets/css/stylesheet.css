@@ -1334,25 +1334,42 @@ hr {
 /**
  * sections->homepage
  */
+body.page-id-6 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+  body.page-id-6 .header .header__inner {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    background-color: white; }
+body.page-id-6 .main {
+  margin-top: 0; }
 body.page-id-6 .home-blurb {
   width: 100%;
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
   position: relative;
   float: left;
-  margin-bottom: 3rem; }
+  background-color: white; }
   body.page-id-6 .home-blurb p {
     font-weight: normal; }
-body.page-id-6 .next-meet .hero-image {
-  position: relative; }
-  body.page-id-6 .next-meet .hero-image .post {
-    width: auto;
-    margin: 0;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    background-color: white; }
+body.page-id-6 .homepage-image {
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  padding-top: 45%;
+  background-color: #959599;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: padding-top .15s ease;
+  -moz-transition: padding-top .15s ease;
+  transition: padding-top .15s ease; }
+  @media only screen and (min-width: 40.063em) {
+    body.page-id-6 .homepage-image {
+      padding-top: 30%; } }
+  @media only screen and (min-width: 90.063em) {
+    body.page-id-6 .homepage-image {
+      padding-top: 25%; } }
 
 /**
  * sections-meets

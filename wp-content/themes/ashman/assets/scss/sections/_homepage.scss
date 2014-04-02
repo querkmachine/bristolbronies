@@ -3,24 +3,42 @@
  */
 
 body.page-id-6 {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    .header__inner {
+      @include pad-this();
+      background-color: palette(white);
+    }
+  }
+  .main {
+    margin-top: 0;
+  }
   .home-blurb {
     @include column(12);
-    margin-bottom: rem-calc($rem-base*3);
+    background-color: palette(white);
     p {
       @extend %h3;
       font-weight: normal;
     }
   }
-  .next-meet .hero-image {
-    position: relative;
-    .post {
-      width: auto;
-      margin: 0;
-      padding: 1rem 0;
-      position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      background-color: palette(white);
+  .homepage-image {
+    width: 100%;
+    margin: 0 auto rem-calc($rem-base*3) auto;
+    padding-top: 45%;
+    background-color: palette(grey, light);
+    background-position: center center;
+    background-size: cover;
+    -webkit-transition: padding-top .15s ease;
+       -moz-transition: padding-top .15s ease;
+            transition: padding-top .15s ease;
+    @media #{$medium-up} {
+      padding-top: 30%;
+    }
+    @media #{$xlarge-up} {
+      padding-top: 25%;
     }
   }
 }
