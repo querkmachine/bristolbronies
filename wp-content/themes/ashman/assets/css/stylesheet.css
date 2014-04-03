@@ -1385,8 +1385,6 @@ body.post-type-archive-community .media-grid .media-grid__item {
 /**
  * sections->about
  */
-body.page-id-18 .post {
-  margin-bottom: 0; }
 body.page-id-18 .about-meets {
   width: 100%;
   padding-right: 0.9375rem;

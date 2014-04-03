@@ -11,14 +11,14 @@
     while(have_posts()) : the_post(); 
 ?>
         <div class="row">
-          <article class="post post--wide">
+          <div class="post post--wide">
             <header class="post__header">
               <h1 class="post__title"><?php the_title(); ?></h1>
             </header>
             <div class="post__body">
               <?php the_content(); ?>
             </div>
-          </article>
+          </div>
         </div>
 <?php
     endwhile;
@@ -28,11 +28,16 @@
         <hr>
 
         <div class="row">
-          <div class="about-blurb">
-            <h2>Meets</h2>
-            <p class="lede">We have all sorts of meets going on! </p>
+          <div class="post post--wide">
+            <header class="post__header">
+              <h2 class="post__title">Meets</h2>
+            </header>
+            <div class="post__body">
+              <p>We have all sorts of meets going on!</p>
+            </div>
           </div>
         </div>
+
         <div class="row">
           <div class="about-meets">
 <?php
@@ -65,9 +70,13 @@
 ?>
 
         <div class="row">
-          <div class="about-blurb">
-            <h2>Staff</h2>
-            <p class="lede">The people who make the magic happen.</p>
+          <div class="post post--wide">
+            <header class="post__header">
+              <h2 class="post__title">Staff</h2>
+            </header>
+            <div class="post__body">
+              <p>The people who make the magic happen.</p>
+            </div>
           </div>
         </div>
 
