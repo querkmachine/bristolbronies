@@ -28,13 +28,14 @@
         <?php
           if(has_post_thumbnail()) { 
             $image_id = get_post_thumbnail_id(); 
+            $image_url = wp_get_attachment_image_src($image_id, 'full');
           }
           else { 
-            $image_array = array(300, 293, 278, 269); 
-            $image_id = rand(0, (count($image_array)-1));
-            $image_id = $image_array[$image_id]; 
+            $image_url[0] = "/wp-content/themes/ashman/assets/img/banner/banner-1.jpg";
+            // $image_array = array(300, 293, 278, 269); 
+            // $image_id = rand(0, (count($image_array)-1));
+            // $image_id = $image_array[$image_id]; 
           }
-          $image_url = wp_get_attachment_image_src($image_id, 'full');
         ?>
         <div class="homepage-image" style="background-image: url('<?php echo $image_url[0]; ?>');">
           <div class="row">
