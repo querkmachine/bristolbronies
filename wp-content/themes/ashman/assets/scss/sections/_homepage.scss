@@ -27,7 +27,7 @@ body.page-id-6 {
   .homepage-image {
     width: 100%;
     margin: 0 auto rem-calc($rem-base*3) auto;
-    padding-top: 45%;
+    padding-top: 50%;
     background-color: palette(grey, light);
     background-position: center center;
     background-size: cover;
@@ -35,7 +35,7 @@ body.page-id-6 {
        -moz-transition: padding-top .15s ease;
             transition: padding-top .15s ease;
     @media #{$medium-up} {
-      padding-top: 30%;
+      padding-top: 40%;
     }
     @media #{$xlarge-up} {
       padding-top: 25%;

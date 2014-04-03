@@ -1360,7 +1360,7 @@ body.page-id-6 .home-blurb {
 body.page-id-6 .homepage-image {
   width: 100%;
   margin: 0 auto 3rem auto;
-  padding-top: 45%;
+  padding-top: 50%;
   background-color: #959599;
   background-position: center center;
   background-size: cover;
@@ -1369,7 +1369,7 @@ body.page-id-6 .homepage-image {
   transition: padding-top .15s ease; }
   @media only screen and (min-width: 40.063em) {
     body.page-id-6 .homepage-image {
-      padding-top: 30%; } }
+      padding-top: 40%; } }
   @media only screen and (min-width: 90.063em) {
     body.page-id-6 .homepage-image {
       padding-top: 25%; } }
