@@ -9,8 +9,9 @@ body.page-id-18 {
   .about-meets {
     @include column(12, 6);
   }
-  .about-blurb {
-    @include column(12);
-    margin-bottom: rem-calc($rem-base*3);
+  .bb-badge {
+    width: 150px;
+    margin: rem-calc(0 0 $rem-base $rem-base);
+    float: right;
   }
 }

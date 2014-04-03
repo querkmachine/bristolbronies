@@ -97,6 +97,9 @@ p, ul, ol, dl {
 
 .lede {
   font-size: 120%;
+  @media #{$medium-up} {
+    font-size: 140%;
+  }
 }
 
 .caption {

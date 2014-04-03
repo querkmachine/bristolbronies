@@ -7,9 +7,13 @@
 ?>
 
         <div class="row">
-          <div class="meets-blurb">
-            <h1>Meets</h1>
-            <p class="lede">Meets, socials, special events, movies. We have them all.</p>
+          <div class="post post--wide">
+            <header class="post__header">
+              <h1 class="post__title">Meets</h1>
+            </header>
+            <div class="post__body">
+              <p>Meets, socials, special events, movies. We have them all.</p>
+            </div>
           </div>
         </div>
 

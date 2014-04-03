@@ -629,6 +629,9 @@ p, ul, ol, dl {
 
 .lede, .post .post__body > p:first-child {
   font-size: 120%; }
+  @media only screen and (min-width: 40.063em) {
+    .lede, .post .post__body > p:first-child {
+      font-size: 140%; } }
 
 .caption, .billboard .billboard__caption p, .figure .figure__caption {
   font-size: smaller;
@@ -1370,39 +1373,12 @@ body.page-id-6 .homepage-image {
   @media only screen and (min-width: 90.063em) {
     body.page-id-6 .homepage-image {
       padding-top: 25%; } }
-
-/**
- * sections-meets
- */
-body.post-type-archive-meet .meets-blurb {
-  width: 100%;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
-  position: relative;
-  float: left;
-  margin-bottom: 3rem; }
-
-/**
- * sections-news
- */
-body.post-type-archive-news .news-blurb {
-  width: 100%;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
-  position: relative;
-  float: left;
-  margin-bottom: 3rem; }
+body.page-id-6 .next-meet {
+  margin-bottom: 1rem; }
 
 /**
  * sections->community
  */
-body.post-type-archive-community .community-blurb {
-  width: 100%;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
-  position: relative;
-  float: left;
-  margin-bottom: 3rem; }
 body.post-type-archive-community .media-grid .media-grid__item {
   background-color: black; }
 
@@ -1420,13 +1396,10 @@ body.page-id-18 .about-meets {
   @media only screen and (min-width: 40.063em) {
     body.page-id-18 .about-meets {
       width: 50%; } }
-body.page-id-18 .about-blurb {
-  width: 100%;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
-  position: relative;
-  float: left;
-  margin-bottom: 3rem; }
+body.page-id-18 .bb-badge {
+  width: 150px;
+  margin: 0 0 1rem 1rem;
+  float: right; }
 
 /**
  * sections->404

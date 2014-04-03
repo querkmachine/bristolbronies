@@ -7,9 +7,13 @@
 ?>
 
         <div class="row">
-          <div class="news-blurb">
-            <h1>Bristol Bronies News</h1>
-            <p class="lede">Your one-stop-shop for all the developments in the Bristol Bronies meet-verse.</p>
+          <div class="post post--wide">
+            <header class="post__header">
+              <h1 class="post__title">Bristol Bronies News</h1>
+            </header>
+            <div class="post__body">
+              <p>Your one-stop-shop for all the developments in the Bristol Bronies meet-verse.</p>
+            </div>
           </div>
         </div>
 

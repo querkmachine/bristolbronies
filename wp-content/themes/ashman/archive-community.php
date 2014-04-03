@@ -7,9 +7,13 @@
 ?>
 
         <div class="row">
-          <div class="community-blurb">
-            <h1>Community</h1>
-            <p class="lede">We've got lots of opportunity in this very community!</p>
+          <div class="post post--wide">
+            <header class="post__header">
+              <h1 class="post__title">Community</h1>
+            </header>
+            <div class="post__body">
+              <p>We've got lots of opportunity in this very community!</p>
+            </div>
           </div>
         </div>
 

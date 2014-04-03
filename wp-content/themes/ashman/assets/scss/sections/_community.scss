@@ -3,10 +3,6 @@
  */
 
 body.post-type-archive-community {
-  .community-blurb {
-    @include column(12);
-    margin-bottom: rem-calc($rem-base*3);
-  }
   .media-grid {
     .media-grid__item {
       background-color: palette(black);

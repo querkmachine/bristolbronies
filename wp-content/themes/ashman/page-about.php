@@ -30,14 +30,14 @@
         <div class="row">
           <div class="about-blurb">
             <h2>Meets</h2>
-            <p class="lede">We have all sorts of meets going on!</p>
+            <p class="lede">We have all sorts of meets going on! </p>
           </div>
         </div>
         <div class="row">
           <div class="about-meets">
 <?php
     $categories = get_categories();
-    $break = ceil(count($categories)/2); 
+    $break = ceil((count($categories)+1)/2); 
     $i = 0;
     foreach($categories as $category) {
       if($i == $break) {
@@ -48,6 +48,12 @@
       $i++;
     }
 ?>
+          </div>
+          <div class="about-meets">
+            <p>
+              <img src="/wp-content/uploads/2014/03/bb-button-img-300x300.jpg" class="bb-badge" alt="Bristol Bronies buttons, oh yeah!">
+              Oh, and you get a free Bristol Bronies button badge when you attend your first meet! Awesome!
+            </p>
           </div>
         </div>
 
