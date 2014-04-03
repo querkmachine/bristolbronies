@@ -592,7 +592,7 @@ function ashman_billboard_post_type() {
   $args = array(
     'labels' => $labels,
     'description' => 'Contains featured front-page links.',
-    'public' => true,
+    'public' => false,
     'menu_position' => 7,
     'supports' => array('title', 'editor', 'custom-fields'),
     'has_archive' => false,
@@ -626,7 +626,7 @@ function ashman_affiliates_post_type() {
   $args = array(
     'labels' => $labels,
     'description' => 'Contains featured front-page links.',
-    'public' => true,
+    'public' => false,
     'menu_position' => 7,
     'supports' => array('title', 'custom-fields'),
     'has_archive' => false,
