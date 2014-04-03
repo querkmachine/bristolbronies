@@ -5,6 +5,7 @@
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.fitvids.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/packery-1.1.0.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.unveil.min.js"></script>
+  <script src="//www.cornify.com/js/cornify.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js?v=ashman"></script>
 
   <!-- Google Analytics --> 
