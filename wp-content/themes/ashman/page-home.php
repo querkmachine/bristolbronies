@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="next-meet">
-          <div class="row">
+          <div class="row row--skinny">
             <article class="post vevent">
               <header class="post__header">
                 <ul class="post__meta">
@@ -89,32 +89,8 @@
 
         <div class="row">
 <?php 
-  $posts = query_posts('post_type=billboard&orderby=date&order=DESC&posts_per_page=3');
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
-?>
-          <div class="billboard-list">
-            <figure class="billboard">
-              <?php /*<a href="<?php echo get_field("billboard_url"); ?>">
-                <?php
-                  if(strlen(get_field("billboard_image")) > 0) {
-                    $large_image_url = wp_get_attachment_image_src(get_field("billboard_image"), 'medium');
-                ?>
-                <img src="<?php echo $large_image_url[0]; ?>" alt="<?php the_title(); ?>">
-                <?php 
-                  } 
-                ?>
-              </a>*/ ?>
-              <figcaption class="billboard__caption">
-                <h4 class="billboard__title"><a href="<?php echo get_field("billboard_url"); ?>"><?php the_title(); ?></a></h4>
-                <p><?php the_excerpt(); ?></p>
-              </figcaption>
-            </figure>
-          </div>
-<?php
-    endwhile;
-  endif; 
-  wp_reset_query();
+  get_template_part('parts/global/billboards');
+
 ?>
         </div>
 
