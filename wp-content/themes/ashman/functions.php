@@ -101,7 +101,7 @@ function ashman_meet_post_type() {
     'description' => 'Contains the meets that we hold.',
     'public' => true,
     'menu_position' => 7,
-    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'author'),
     'taxonomies' => array('category'),
     'has_archive' => true
   );
@@ -197,7 +197,7 @@ function ashman_location_post_type() {
     'description' => 'Contains meet locations and venues.',
     'public' => false,
     'menu_position' => 7,
-    'supports' => array('title', 'custom-fields'),
+    'supports' => array('title', 'custom-fields', 'author'),
     'has_archive' => false,
     'show_ui' => true,
     'show_in_menu' => true
@@ -231,7 +231,7 @@ function ashman_runner_post_type() {
     'description' => 'Contains information about meet runners.',
     'public' => false,
     'menu_position' => 7,
-    'supports' => array('title', 'editor', 'custom-fields'),
+    'supports' => array('title', 'editor', 'custom-fields', 'author'),
     'has_archive' => false,
     'show_ui' => true,
     'show_in_menu' => true
@@ -420,7 +420,7 @@ function ashman_news_post_type() {
     'description' => 'Newsy bloggy thing.',
     'public' => true,
     'menu_position' => 7,
-    'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
+    'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'author'),
     'has_archive' => true
   );
   register_post_type('news', $args);
