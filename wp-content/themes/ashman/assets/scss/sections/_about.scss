@@ -4,7 +4,9 @@
 
 body.page-id-18 {
   .about-meets {
-    @include column(12, 6);
+    .about-meets__item {
+      @include column(12, 6);
+    }
   }
   .bb-badge {
     width: 150px;

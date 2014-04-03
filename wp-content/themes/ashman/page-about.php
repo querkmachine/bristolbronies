@@ -40,25 +40,27 @@
 
         <div class="row">
           <div class="about-meets">
+            <div class="about-meets__item">
 <?php
     $categories = get_categories();
     $break = ceil((count($categories)+1)/2); 
     $i = 0;
     foreach($categories as $category) {
       if($i == $break) {
-        echo '</div><div class="about-meets">';
+        echo '</div><div class="about-meets__item">';
       }
       echo '<h4>' . $category->name . '</h4>';
       echo '<p>' . $category->description . '</p>';
       $i++;
     }
 ?>
-          </div>
-          <div class="about-meets">
-            <p>
-              <img src="/wp-content/uploads/2014/03/bb-button-img-300x300.jpg" class="bb-badge" alt="Bristol Bronies buttons, oh yeah!">
-              Oh, and you get a free Bristol Bronies button badge when you attend your first meet! Awesome!
-            </p>
+            </div>
+            <div class="about-meets__item">
+              <p>
+                <img src="/wp-content/uploads/2014/03/bb-button-img-300x300.jpg" class="bb-badge" alt="Bristol Bronies buttons, oh yeah!">
+                Oh, and you get a free Bristol Bronies button badge when you attend your first meet! Awesome!
+              </p>
+            </div>
           </div>
         </div>
 

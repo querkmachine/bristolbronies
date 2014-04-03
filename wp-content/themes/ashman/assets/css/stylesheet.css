@@ -1385,14 +1385,14 @@ body.post-type-archive-community .media-grid .media-grid__item {
 /**
  * sections->about
  */
-body.page-id-18 .about-meets {
+body.page-id-18 .about-meets .about-meets__item {
   width: 100%;
   padding-right: 0.9375rem;
   padding-left: 0.9375rem;
   position: relative;
   float: left; }
   @media only screen and (min-width: 40.063em) {
-    body.page-id-18 .about-meets {
+    body.page-id-18 .about-meets .about-meets__item {
       width: 50%; } }
 body.page-id-18 .bb-badge {
   width: 150px;
