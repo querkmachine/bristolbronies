@@ -1229,6 +1229,9 @@ hr {
 @media only screen and (min-width: 40.063em) {
   .primary-navigation li, .control-navigation li {
     display: inline; }
+    .primary-navigation li.current-menu-item a, .control-navigation li.current-menu-item a, body.single-meet .primary-navigation li.menu-item-70 a, body.single-meet .control-navigation li.menu-item-70 a, body.single-news .primary-navigation li.menu-item-180 a, body.single-news .control-navigation li.menu-item-180 a, body.single-community .primary-navigation li.menu-item-212 a, body.single-community .control-navigation li.menu-item-212 a, body.search-results .primary-navigation li.menu-item-24 a, body.search-results .control-navigation li.menu-item-24 a {
+      padding-top: 1rem;
+      border-top-width: 4px; }
   .primary-navigation a, .control-navigation a {
     display: inline-block;
     padding: 1.25rem 0.5rem;

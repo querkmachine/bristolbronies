@@ -69,6 +69,16 @@
   @media #{$medium-up} {
     li {
       display: inline;
+      &.current-menu-item,
+      body.single-meet &.menu-item-70,
+      body.single-news &.menu-item-180,
+      body.single-community &.menu-item-212,
+      body.search-results &.menu-item-24 {
+        a {
+          padding-top: rem-calc(($masthead-height/3)-4px);
+          border-top-width: 4px;
+        }
+      }
     }
     a {
       display: inline-block;
