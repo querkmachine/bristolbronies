@@ -1405,6 +1405,22 @@ body.page-id-18 .bb-badge {
 /**
  * sections->404
  */
+body.error404 * {
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -moz-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease; }
+  body.error404 *:nth-child(2n) {
+    -webkit-transition-delay: 0.15s;
+    -moz-transition-delay: 0.15s;
+    transition-delay: 0.15s; }
+  body.error404 *:nth-child(3n) {
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    transition-delay: 0.3s; }
+  body.error404 *:nth-child(5n) {
+    -webkit-transition-delay: 0.45s;
+    -moz-transition-delay: 0.45s;
+    transition-delay: 0.45s; }
 body.error404 .error-404 {
   width: 100%;
   padding-right: 0.9375rem;

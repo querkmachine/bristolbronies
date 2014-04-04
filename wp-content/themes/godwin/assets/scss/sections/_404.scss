@@ -3,6 +3,26 @@
  */
 
 body.error404 {
+  * {
+    -webkit-transition: -webkit-transform 0.5s ease;
+       -moz-transition: -webkit-transform 0.5s ease;
+            transition: -webkit-transform 0.5s ease;
+    &:nth-child(2n) {
+      -webkit-transition-delay: 0.15s;
+         -moz-transition-delay: 0.15s;
+              transition-delay: 0.15s;
+    }
+    &:nth-child(3n) {
+      -webkit-transition-delay: 0.3s;
+         -moz-transition-delay: 0.3s;
+              transition-delay: 0.3s;
+    }
+    &:nth-child(5n) {
+      -webkit-transition-delay: 0.45s;
+         -moz-transition-delay: 0.45s;
+              transition-delay: 0.45s;
+    }
+  }
   .error-404 {
     @include column(12);
     text-align: center;
