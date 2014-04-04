@@ -26,7 +26,7 @@
             <header class="post__header">
               <h2 class="post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <ul class="post__meta">
-                <li class="post__meta__date"><i class="fa fa-pencil-square-o fa-fw"></i> Posted on <time datetime="<?php echo get_the_date("c"); ?>"><?php echo get_the_date("jS F Y, g:ia"); ?></time></li>
+                <li class="post__meta__date"><i class="fa fa-pencil-square-o fa-fw"></i> Posted on <time datetime="<?php echo get_the_date("c"); ?>"><?php echo get_the_date("jS F Y, H:ia"); ?></time></li>
                 <li class="post__meta__author"><i class="fa fa-user fa-fw"></i> Written by <?php echo get_the_author(); ?></li>
               </ul>
             </header>

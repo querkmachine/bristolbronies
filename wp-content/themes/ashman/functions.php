@@ -101,7 +101,7 @@ function ashman_meet_post_type() {
     'description' => 'Contains the meets that we hold.',
     'public' => true,
     'menu_position' => 7,
-    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'author'),
+    'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
     'taxonomies' => array('category'),
     'has_archive' => true
   );
@@ -197,7 +197,7 @@ function ashman_location_post_type() {
     'description' => 'Contains meet locations and venues.',
     'public' => false,
     'menu_position' => 7,
-    'supports' => array('title', 'custom-fields', 'author'),
+    'supports' => array('title', 'custom-fields'),
     'has_archive' => false,
     'show_ui' => true,
     'show_in_menu' => true
@@ -231,7 +231,7 @@ function ashman_runner_post_type() {
     'description' => 'Contains information about meet runners.',
     'public' => false,
     'menu_position' => 7,
-    'supports' => array('title', 'editor', 'custom-fields', 'author'),
+    'supports' => array('title', 'editor', 'custom-fields'),
     'has_archive' => false,
     'show_ui' => true,
     'show_in_menu' => true
@@ -280,12 +280,12 @@ function ashman_meet_category($post_id, $format = 'name') {
  */
 
 function ashman_meet_dates($start, $end) {
-  $output = '<time class="dtstart" datetime="'.date("c", $start).'">'.date("jS F Y, g:ia", $start).'</time>&ndash;';
+  $output = '<time class="dtstart" datetime="'.date("c", $start).'">'.date("jS F Y, h:ia", $start).'</time>&ndash;';
   if(date("Ymd", $start) === date("Ymd", $end)) {
-    $output .= '<time class="dtend" datetime="'.date("c", $end).'">'.date("g:ia", $end).'</time>';
+    $output .= '<time class="dtend" datetime="'.date("c", $end).'">'.date("h:ia", $end).'</time>';
   }
   else {
-    $output .= '<time class="dtend" datetime="'.date("c", $end).'">'.date("jS F Y, g:ia", $end).'</time>';
+    $output .= '<time class="dtend" datetime="'.date("c", $end).'">'.date("jS F Y, h:ia", $end).'</time>';
   }
   return $output;
 }
@@ -387,8 +387,8 @@ function ashman_profile_biography($id) {
  */
 
 function ashman_profile_avatar($id) {
-  if($image = get_field("runner_avatar", $id)) {
-    return $image['sizes']['thumbnail'];
+  if($url = get_field("runner_avatar", $id)) {
+    return $url;
   }
   else {
     return "http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=96";
@@ -420,7 +420,7 @@ function ashman_news_post_type() {
     'description' => 'Newsy bloggy thing.',
     'public' => true,
     'menu_position' => 7,
-    'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'author'),
+    'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
     'has_archive' => true
   );
   register_post_type('news', $args);
