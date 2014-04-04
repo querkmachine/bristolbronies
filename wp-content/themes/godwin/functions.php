@@ -1,6 +1,15 @@
 <?php
 
 /**
+ * THEME CODE NAME 
+ *
+ * This is used utterly everywhere, so don't go changing it
+ * unless it's a new version or something.
+ */
+
+define('BB_VERSION', 'godwin');
+
+/**
  * Register post thumbnails
  */
 

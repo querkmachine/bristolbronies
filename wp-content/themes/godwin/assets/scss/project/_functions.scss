@@ -43,9 +43,9 @@
 }
 
 @function image-url($url) {
-  @return url("/wp-content/themes/godwin/assets/img/" + $url); 
+  @return url("/wp-content/themes/" + $BB_VERSION + "/assets/img/" + $url); 
 }
 
 @function font-url($url) {
-  @return url("/wp-content/themes/godwin/assets/type/" + $url);
+  @return url("/wp-content/themes/" + $BB_VERSION + "/assets/type/" + $url);
 }

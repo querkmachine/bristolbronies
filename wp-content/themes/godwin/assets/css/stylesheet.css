@@ -485,11 +485,11 @@ textarea {
 
 select {
   padding-left: 26px;
-  background-image: url("/wp-content/themes/ashman/assets/img/dropdown-arrow.gif");
+  background-image: url("/wp-content/themes/godwin/assets/img/dropdown-arrow.gif");
   background-position: 10px center;
   background-repeat: no-repeat; }
   select:hover, select:focus {
-    background-image: url("/wp-content/themes/ashman/assets/img/dropdown-arrow-focus.gif"); }
+    background-image: url("/wp-content/themes/godwin/assets/img/dropdown-arrow-focus.gif"); }
 
 /**
  * components->grid
@@ -761,8 +761,8 @@ mark {
  */
 @font-face {
   font-family: "forecastfont";
-  src: url("/wp-content/themes/ashman/assets/type/iconvault_forecastfont.eot");
-  src: url("/wp-content/themes/ashman/assets/type/iconvault_forecastfont.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/ashman/assets/type/iconvault_forecastfont.woff") format("woff"), url("/wp-content/themes/ashman/assets/type/iconvault_forecastfont.ttf") format("truetype"), url("/wp-content/themes/ashman/assets/type/iconvault_forecastfont.svg#iconvault") format("svg");
+  src: url("/wp-content/themes/godwin/assets/type/iconvault_forecastfont.eot");
+  src: url("/wp-content/themes/godwin/assets/type/iconvault_forecastfont.eot?#iefix") format("embedded-opentype"), url("/wp-content/themes/godwin/assets/type/iconvault_forecastfont.woff") format("woff"), url("/wp-content/themes/godwin/assets/type/iconvault_forecastfont.ttf") format("truetype"), url("/wp-content/themes/godwin/assets/type/iconvault_forecastfont.svg#iconvault") format("svg");
   font-weight: normal;
   font-style: normal; }
 .fi:before {
@@ -831,7 +831,7 @@ mark {
   color: #85d8f7; }
 
 .forecast .forecast__icon {
-  background-image: url("/wp-content/themes/ashman/assets/img/loading.gif");
+  background-image: url("/wp-content/themes/godwin/assets/img/loading.gif");
   background-position: center center;
   background-repeat: no-repeat; }
   .forecast .forecast__icon .fi {
@@ -1189,7 +1189,7 @@ hr {
     display: block;
     width: 3.75rem;
     height: 3.75rem;
-    background-image: url("/wp-content/themes/ashman/assets/img/logo.png");
+    background-image: url("/wp-content/themes/godwin/assets/img/logo.png");
     background-size: 80% 80%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1197,7 +1197,7 @@ hr {
     white-space: nowrap;
     overflow: hidden; }
     html.svg .branding a {
-      background-image: url("/wp-content/themes/ashman/assets/img/logo-notext.svg"); }
+      background-image: url("/wp-content/themes/godwin/assets/img/logo-notext.svg"); }
 
 .mobile-navigation-icon {
   display: inline-block;

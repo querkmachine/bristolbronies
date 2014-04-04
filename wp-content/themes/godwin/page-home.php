@@ -31,7 +31,7 @@
             $image_url = wp_get_attachment_image_src($image_id, 'full');
           }
           else { 
-            $image_url[0] = "/wp-content/themes/godwin/assets/img/banner/banner-1.jpg";
+            $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
             // $image_array = array(300, 293, 278, 269); 
             // $image_id = rand(0, (count($image_array)-1));
             // $image_id = $image_array[$image_id]; 

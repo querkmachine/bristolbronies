@@ -1,3 +1,5 @@
+var BB_VERSION = "godwin";
+
 $(document).ready(function() {
   initBBSearch();
   initBB404();
@@ -31,7 +33,7 @@ function initForecast() {
       given_timestamp = $forecast.attr('data-timestamp');
   
   $.getJSON(
-    '/wp-content/themes/godwin/parts/meet/forecast.php', 
+    '/wp-content/themes/'+BB_VERSION+'/parts/meet/forecast.php', 
     {
       lat: given_latitude,
       lng: given_longitude,

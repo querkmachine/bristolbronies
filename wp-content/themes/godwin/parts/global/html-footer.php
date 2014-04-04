@@ -6,7 +6,7 @@
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/packery-1.1.0.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.unveil.min.js"></script>
   <script src="//www.cornify.com/js/cornify.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js?v=godwin"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js?v=<?php echo BB_VERSION; ?>"></script>
 
   <!-- Google Analytics --> 
   <script type="text/javascript">
