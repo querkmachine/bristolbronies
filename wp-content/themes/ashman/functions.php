@@ -387,8 +387,8 @@ function ashman_profile_biography($id) {
  */
 
 function ashman_profile_avatar($id) {
-  if($url = get_field("runner_avatar", $id)) {
-    return $url;
+  if($image = get_field("runner_avatar", $id)) {
+    return $image['sizes']['thumbnail'];
   }
   else {
     return "http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=96";
