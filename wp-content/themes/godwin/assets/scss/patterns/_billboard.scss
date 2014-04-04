@@ -3,6 +3,7 @@
  */
 
 .billboard {
+  margin: rem-calc($rem-base 0);
   position: relative;
   border: 1px solid palette(grey, x-light);
   -webkit-border-radius: 3px;

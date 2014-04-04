@@ -680,6 +680,7 @@ mark {
  * patterns->billboard
  */
 .billboard {
+  margin: 1rem 0;
   position: relative;
   border: 1px solid #e5e5e5;
   -webkit-border-radius: 3px;
@@ -1133,14 +1134,9 @@ hr {
   margin-bottom: 1rem; }
 
 .sidebar {
-  width: 100%;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
-  position: relative;
-  float: left; }
-  @media only screen and (min-width: 40.063em) {
-    .sidebar {
-      width: 33.33333%; } }
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
 .pace {
   -webkit-pointer-events: none;

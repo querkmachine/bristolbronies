@@ -15,10 +15,12 @@
             <div class="post__body">
               <?php the_content(); ?>
             </div>
+            <div class="post__sidebar">
+              <ul class="sidebar">
+                <?php dynamic_sidebar('primary'); ?>
+              </ul>
+            </div>
           </article>
-          <div class="sidebar">
-            <?php dynamic_sidebar('primary'); ?>
-          </div>
         </div>
 <?php
     endwhile;
