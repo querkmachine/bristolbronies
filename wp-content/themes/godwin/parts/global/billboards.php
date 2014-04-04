@@ -13,7 +13,7 @@
               </a>
               <figcaption class="billboard__caption">
                 <h4 class="billboard__title"><a href="<?php echo get_field("billboard_url"); ?>"><?php the_title(); ?></a></h4>
-                <p><?php the_excerpt(); ?></p>
+                <?php the_excerpt(); ?>
               </figcaption>
             </figure>
           </div>
