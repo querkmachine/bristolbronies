@@ -882,15 +882,18 @@ mark {
     .media-grid .media-grid__item a:hover, .media-grid .media-grid__item a:focus {
       color: #930916; }
 .media-grid .media-grid__meta {
-  margin-top: -50%;
   position: absolute;
+  top: 50%;
   right: 0;
   left: 0;
   color: white;
   text-align: center;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
-  transition: color .15s ease; }
+  transition: color .15s ease;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%); }
   .media-grid .media-grid__meta:hover, .media-grid .media-grid__meta:focus {
     color: #e02436; }
 
