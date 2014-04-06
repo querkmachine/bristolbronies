@@ -1251,9 +1251,8 @@ hr {
 
 .primary-navigation {
   float: left; }
-  @media only screen and (min-width: 50.063em) {
-    .primary-navigation li {
-      float: left; } }
+  .primary-navigation li {
+    float: left; }
 
 .control-navigation {
   float: right; }

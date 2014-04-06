@@ -111,10 +111,8 @@
 .primary-navigation {
   float: left;
   @extend %navigation;
-  @media #{$large-up} {
-    li {
-      float: left;
-    }
+  li {
+    float: left;
   }
 }
 
