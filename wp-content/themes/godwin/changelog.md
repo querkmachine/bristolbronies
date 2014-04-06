@@ -16,6 +16,7 @@ v4.1 "Godwin" changelog
 CMS changes needed following this update
 ----------------------------------------
 
+* Change theme to v4.1 "Godwin"
 * Re-identify menus.
 * Re-identify widgets.
 ** Add Billboards sidebar widget.
