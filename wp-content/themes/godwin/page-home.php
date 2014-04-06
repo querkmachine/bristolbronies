@@ -12,35 +12,33 @@
 ?>
 
 <?php
-  $posts=query_posts('post_type=meet&meta_key=meet_start_time&orderby=meta_value_num&order=ASC&posts_per_page=-1');
-  if(have_posts()) : 
+  $meet = new WP_Query('post_type=meet&meta_key=meet_start_time&orderby=meta_value_num&order=ASC&posts_per_page=-1');
+  if($meet->have_posts()) : 
     $found = false;
-    while(have_posts()) : the_post();
+    while($meet->have_posts()) : $meet->the_post();
       if(!$found && bb_custom_field("meet_end_time") > time()) :
         $found = true;
         if(in_array("meet", bb_meet_category(get_the_ID(), "slug")) || in_array("special", bb_meet_category(get_the_ID(), "slug"))) {
           $special = true;
         }
         else {
-         $special = false;
+          $special = false;
+        }
+        if(has_post_thumbnail()) { 
+          $image_id = get_post_thumbnail_id(); 
+          $image_url = wp_get_attachment_image_src($image_id, 'full');
+        }
+        else { 
+          $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
+          // $image_array = array(300, 293, 278, 269); 
+          // $image_id = rand(0, (count($image_array)-1));
+          // $image_id = $image_array[$image_id]; 
         }
 ?>
-        <?php
-          if(has_post_thumbnail()) { 
-            $image_id = get_post_thumbnail_id(); 
-            $image_url = wp_get_attachment_image_src($image_id, 'full');
-          }
-          else { 
-            $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
-            // $image_array = array(300, 293, 278, 269); 
-            // $image_id = rand(0, (count($image_array)-1));
-            // $image_id = $image_array[$image_id]; 
-          }
-        ?>
         <div class="homepage-image" style="background-image: url('<?php echo $image_url[0]; ?>');">
           <div class="row">
             <div class="home-blurb">
-              <p><?php echo $home_blurb;?></p>
+              <p><?php echo $home_blurb; ?></p>
             </div>
           </div>
         </div>
@@ -84,8 +82,19 @@
 <?php
       endif;
     endwhile;
+    if(!$found) { 
+      $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
+?>
+        <div class="homepage-image" style="background-image: url('<?php echo $image_url[0]; ?>');">
+          <div class="row">
+            <div class="home-blurb">
+              <p><?php echo $home_blurb; ?></p>
+            </div>
+          </div>
+        </div>
+<?php
+    }
   endif;
-  wp_reset_query();
 ?>
 
         <div class="row">
