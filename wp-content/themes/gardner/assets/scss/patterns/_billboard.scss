@@ -1,0 +1,55 @@
+/**
+ * patterns->billboard
+ */
+
+.billboard {
+  margin: rem-calc($rem-base 0);
+  position: relative;
+  border: 1px solid palette(grey, x-light);
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    border-bottom: 1px solid palette(grey, x-light);
+  }
+  .billboard__caption {
+    display: block;
+    padding: rem-calc($rem-base);
+    p {
+      margin: 0;
+      @extend .caption;
+    }
+  }
+  .billboard__title {
+    margin-bottom: rem-calc($rem-base/2);
+    a {
+      display: block;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.billboard-list {
+  @include column(12, 6, 4);
+  margin-bottom: $grid-column-gutter/2;
+  @media #{$medium-up} {
+    margin-bottom: $grid-column-gutter;
+    &:nth-child(2n+1) {
+      clear: left;
+    }
+  }
+  @media #{$large-up} {
+    &:nth-child(2n+1) {
+      clear: none;
+    }
+    &:nth-child(3n+1) {
+      clear: left;
+    }
+  }
+}

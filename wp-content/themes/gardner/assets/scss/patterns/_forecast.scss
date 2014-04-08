@@ -1,0 +1,101 @@
+/**
+ * sections->forecast
+ */
+
+@font-face {
+  font-family: "forecastfont";
+  src: font-url("iconvault_forecastfont.eot");
+  src: font-url("iconvault_forecastfont.eot?#iefix") format("embedded-opentype"),
+       font-url("iconvault_forecastfont.woff") format("woff"),
+       font-url("iconvault_forecastfont.ttf") format("truetype"),
+       font-url("iconvault_forecastfont.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fi {
+  &:before {
+    font-family: "forecastfont";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    text-decoration: inherit;
+  }
+  &-basecloud:before { content: "\f105"; }
+  &-night:before { content: "\f100"; }
+  &-sunny:before { content: "\f101"; }
+  &-frosty:before { content: "\f102"; }
+  &-windysnow:before { content: "\f103"; }
+  &-showers:before { content: "\f104"; }
+  &-cloud:before { content: "\f106"; }
+  &-rainy:before { content: "\f107"; }
+  &-mist:before { content: "\f108"; }
+  &-windysnowcloud:before { content: "\f109"; }
+  &-drizzle:before { content: "\f10a"; }
+  &-snowy:before { content: "\f10b"; }
+  &-sleet:before { content: "\f10c"; }
+  &-moon:before { content: "\f10d"; }
+  &-windyrain:before { content: "\f10e"; }
+  &-hail:before { content: "\f10f"; }
+  &-sunset:before { content: "\f110"; }
+  &-windyraincloud:before { content: "\f111"; }
+  &-sunrise:before { content: "\f112"; }
+  &-sun:before { content: "\f113"; }
+  &-thunder:before { content: "\f114"; }
+  &-windy:before { content: "\f115"; }
+  &-sun,
+  &-sunny {
+    color: orange;
+  }
+  &-moon,
+  &-night {
+    color: #4681c3;
+  }
+  &-basecloud,
+  &-cloud,
+  &-mist,
+  &-windy {
+    color: #cccccc;
+  }
+  &-drizzle,
+  &-rainy,
+  &-showers,
+  &-windyrain,
+  &-sleet {
+    color: #82b2e4;
+  }
+  &-frosty,
+  &-snowy {
+    color: #85d8f7;
+  }
+}
+
+$fi-size: 80;
+
+.forecast {
+  .forecast__icon {
+    background-image: image-url('loading.gif');
+    background-position: center center;
+    background-repeat: no-repeat;
+    .fi {
+      margin-left: -(rem-calc($fi-size/2));
+      position: absolute;
+      top: 0;
+      left: 50%;
+      font-size: rem-calc($fi-size);
+      line-height: rem-calc($fi-size);
+    }
+  }
+  .forecast__data {
+    p {
+      margin: 0;
+    }
+  }
+  .forecast__temperature {
+
+  }
+}

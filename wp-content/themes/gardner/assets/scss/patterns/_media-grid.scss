@@ -1,0 +1,65 @@
+/**
+ * patterns->media-grid
+ */
+
+.media-grid {
+  @extend .clearfix;
+  .media-grid__item {
+    position: relative;
+    width: 100%;
+    @media #{$medium-up} {
+      width: 50%;
+      float: left;
+    }
+    @media #{$large-up} {
+      width: 33.33333%;
+    }
+    @media #{$xlarge-up} {
+      width: 25%;
+    }
+    @media #{$xxlarge-up} {
+      width: 20%;
+    }
+    &.media-grid__item--text {
+      a {
+        display: block;
+        padding: rem-calc($rem-base);
+        color: palette(white);
+      }
+      color: palette(white);
+      background-color: palette(red);
+    }
+    &.media-grid__item--staff {
+      @include pad-this();
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    a {
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        color: palette(red, dark);
+      }
+    }
+  }
+  .media-grid__meta {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    color: palette(white);
+    text-align: center;
+    -webkit-transition: color .15s ease;
+       -moz-transition: color .15s ease;
+            transition: color .15s ease;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+            transform: translateY(-50%);
+    &:hover,
+    &:focus {
+      color: palette(red);
+    }
+  }
+}

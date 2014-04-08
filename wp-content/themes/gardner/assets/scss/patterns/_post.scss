@@ -1,0 +1,118 @@
+/**
+ * patterns->post
+ */
+
+.post {
+  @extend .clearfix;
+  margin-bottom: rem-calc($rem-base*3);
+  &.post--past {
+    opacity: 0.65;
+    -webkit-transition: opacity .15s ease;
+       -moz-transition: opacity .15s ease;
+            transition: opacity .15s ease;
+    a {
+      color: palette(grey);
+      &:hover,
+      &:focus {
+        color: palette(grey, dark);
+      }
+    }
+    .post__meta {
+      .fa {
+        color: palette(grey);
+      }
+    }
+  }
+  &.post--wide {
+    .post__body {
+      @include column(12);
+    }
+  }
+  .post__header {
+    @include column(12);
+  }
+  .post__title {
+    a {
+      text-decoration: none;
+    }
+  }
+  .post__body {
+    @include column(12, 8);
+    > p:first-child {
+      @extend .lede;
+    }
+    p, ul, ol, dl {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .post__sidebar {
+    @include column(12, 4);
+    aside {
+      margin-bottom: rem-calc($rem-base);
+    }
+  }
+  &.vevent .post_sidebar {
+    @media #{$medium-up} {
+      margin-top: -(rem-calc(($rem-base*5)/2));
+    }
+  }
+  .post__meta {
+    @extend %h6; 
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: palette(grey, light);
+    list-style: none;
+    line-height: 1.6em;
+    .fa {
+      color: palette(red);
+    }
+    .post__meta__category {
+      color: palette(grey, light);
+    }
+  }
+  .post__neighbours {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    a {
+      display: block;
+      padding: rem-calc($rem-base/2);
+      border-left: 4px solid palette(grey, x-light);
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        border-left-color: palette(grey);
+      }
+    }
+    strong {
+      @extend %h6; 
+      display: block;
+      margin-bottom: 0;
+      color: $text-color;
+      line-height: 1.6em;
+    }
+  }
+}
+
+.hero-image {
+  @extend .row;
+  width: 100%;
+  margin: 0 auto rem-calc($rem-base*2) auto;
+  padding-bottom: 30%;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: padding-bottom .15s ease;
+     -moz-transition: padding-bottom .15s ease;
+          transition: padding-bottom .15s ease;
+  @media #{$medium-up} {
+    padding-bottom: 25%;
+  }
+  @media #{$xlarge-up} {
+    padding-bottom: 20%;
+  }
+}
