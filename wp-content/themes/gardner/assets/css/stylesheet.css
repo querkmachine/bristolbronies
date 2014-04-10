@@ -1275,7 +1275,7 @@ hr {
  * site->footer
  */
 .footer .footer-links {
-  padding: 1rem 0;
+  padding: 2rem 0;
   border-top: 4px solid rgba(0, 0, 0, 0.5);
   color: #e5e5e5;
   background-color: #444444;
@@ -1321,7 +1321,7 @@ hr {
     .footer .footer-links a:hover, .footer .footer-links a:focus {
       color: #e5e5e5; }
 .footer .boilerplate {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   color: #716e6d;
   background-color: black; }
   .footer .boilerplate small {

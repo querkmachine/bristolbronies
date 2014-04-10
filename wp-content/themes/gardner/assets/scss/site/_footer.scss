@@ -4,7 +4,7 @@
 
 .footer {
   .footer-links {
-    padding: rem-calc($rem-base 0);
+    padding: rem-calc($rem-base*2 0);
     border-top: $rem-base/4 solid rgba(palette(black), 0.5);
     color: palette(grey, x-light);
     background-color: palette(grey, dark);
@@ -50,7 +50,7 @@
     }
   }
   .boilerplate {
-    padding: rem-calc($rem-base/2 0);
+    padding: rem-calc($rem-base 0);
     color: palette(grey);
     background-color: palette(black);
     small {
