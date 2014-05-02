@@ -264,6 +264,44 @@ function bb_runner_staff_column_content($column_name, $post_id) {
 }
 add_filter('manage_meet_runner_posts_custom_column', 'bb_runner_staff_column_content', 10, 2);
 
+function bb_runner_twitter_profile_shortcode($atts, $content = null) {
+  extract(shortcode_atts(array(
+    'username' => false
+  ), $atts));
+  if(!empty($username)) {
+    
+    require_once('functions/TwitterAPIExchange.php');
+    
+    $settings = array(
+      'oauth_access_token'        => TWITTER_OAUTH_TOKEN,
+      'oauth_access_token_secret' => TWITTER_OAUTH_TOKEN_SECRET,
+      'consumer_key'              => TWITTER_CONSUMER_KEY,
+      'consumer_secret'           => TWITTER_CONSUMER_SECRET
+    );
+    
+    $url = 'https://api.twitter.com/1.1/users/show.json';
+    $getfield = '?screen_name=' . $username;
+    
+    $twitter = new TwitterAPIExchange($settings);
+    $return = $twitter->setGetfield($getfield)->buildOauth($url, 'GET')->performRequest();
+
+    if(!empty($return)) {
+      $return = json_decode($return);
+      $output = $return->description;
+    }
+
+  }
+  else {
+    $output = "No username here.";
+  }
+  return $output; 
+}
+
+function bb_runner_twitter_profile_register_shortcode() {
+  add_shortcode('profile', 'bb_runner_twitter_profile_shortcode');
+}
+add_action('init', 'bb_runner_twitter_profile_register_shortcode');
+
 /**
  * Meet category list
  */
