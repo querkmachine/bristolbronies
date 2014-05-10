@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html dir="ltr" >
+<head>
+<meta charset="UTF-8">
+<title>Tweets</title>
+<link rel="stylesheet" href="/plugins/twitter_display/default.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+function refreshTweets() {
+  $("#show_tweets_here").load("/plugins/twitter_display/index.php #TWITTER_STREAM_AJAX_YO", function() {
+    console.log("Tweets refreshed.");
+  });
+}
+$(document).ready(function() {
+  refreshTweets();
+  setInterval(refreshTweets, 5000);
+});
+</script>
+</head>
+<body>
+ 
+<div id="show_tweets_here">
+
+</div>
+
+</body>
+</html>
