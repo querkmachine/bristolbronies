@@ -1218,35 +1218,62 @@ hr {
   .mobile-navigation-icon:hover, .mobile-navigation-icon:focus {
     color: #716e6d;
     background-color: #e5e5e5; }
+  .mobile-navigation-icon.mobile-navigation-icon--active {
+    color: white;
+    background-color: #444444; }
 
 .primary-navigation ul, .control-navigation ul {
   margin: 0;
   padding: 0; }
 @media only screen and (max-width: 40em) {
   .primary-navigation, .control-navigation {
-    display: none; } }
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: #444444;
+    overflow: hidden; }
+    .primary-navigation li, .control-navigation li {
+      display: block;
+      width: 50%;
+      float: left; }
+    .primary-navigation a, .control-navigation a {
+      display: block;
+      padding: 1.25rem 0.5rem;
+      color: white;
+      font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 900;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: 1.25rem;
+      letter-spacing: 1px;
+      white-space: nowrap; } }
 @media only screen and (min-width: 40.063em) {
-  .primary-navigation li, .control-navigation li {
-    display: inline; }
-    .primary-navigation li.current-menu-item a, .control-navigation li.current-menu-item a, body.single-meet .primary-navigation li.menu-item-70 a, body.single-meet .control-navigation li.menu-item-70 a, body.single-news .primary-navigation li.menu-item-180 a, body.single-news .control-navigation li.menu-item-180 a, body.single-community .primary-navigation li.menu-item-212 a, body.single-community .control-navigation li.menu-item-212 a, body.search-results .primary-navigation li.menu-item-24 a, body.search-results .control-navigation li.menu-item-24 a {
-      padding-top: 1rem;
-      border-top-width: 4px; }
-  .primary-navigation a, .control-navigation a {
-    display: inline-block;
-    padding: 1.25rem 0.5rem;
-    border-top: 0 solid #e02436;
-    color: #444444;
-    font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
-    font-size: 0.75rem;
-    font-weight: 900;
-    text-decoration: none;
-    text-transform: uppercase;
-    line-height: 1.25rem;
-    letter-spacing: 1px;
-    white-space: nowrap; }
-    .primary-navigation a:hover, .control-navigation a:hover, .primary-navigation a:focus, .control-navigation a:focus {
-      padding-top: 1rem;
-      border-top-width: 4px; } }
+  .primary-navigation, .control-navigation {
+    display: block !important; }
+    .primary-navigation li, .control-navigation li {
+      display: inline; }
+      .primary-navigation li.current-menu-item a, .control-navigation li.current-menu-item a, body.single-meet .primary-navigation li.menu-item-70 a, body.single-meet .control-navigation li.menu-item-70 a, body.single-news .primary-navigation li.menu-item-180 a, body.single-news .control-navigation li.menu-item-180 a, body.single-community .primary-navigation li.menu-item-212 a, body.single-community .control-navigation li.menu-item-212 a, body.search-results .primary-navigation li.menu-item-24 a, body.search-results .control-navigation li.menu-item-24 a {
+        padding-top: 1rem;
+        border-top-width: 4px; }
+    .primary-navigation a, .control-navigation a {
+      display: inline-block;
+      padding: 1.25rem 0.5rem;
+      border-top: 0 solid #e02436;
+      color: #444444;
+      font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 900;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: 1.25rem;
+      letter-spacing: 1px;
+      white-space: nowrap; }
+      .primary-navigation a:hover, .control-navigation a:hover, .primary-navigation a:focus, .control-navigation a:focus {
+        padding-top: 1rem;
+        border-top-width: 4px; } }
 @media only screen and (min-width: 50.063em) {
   .primary-navigation a, .control-navigation a {
     padding-right: 16px;

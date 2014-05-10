@@ -3,6 +3,7 @@ var BB_VERSION = "gardner";
 $(document).ready(function() {
   initBBSearch();
   initBB404();
+  initBBMobileNavigation();
   initFitVids();
   initForecast();
 });
@@ -70,5 +71,16 @@ function initBB404() {
       "   -moz-transform": "rotate("+((Math.random()*6)-3)+"deg)",
       "        transform": "rotate("+((Math.random()*6)-3)+"deg)"
     });
+  });
+}
+
+function initBBMobileNavigation() {
+  var $navigation = $(".primary-navigation"),
+      $toggler = $(".mobile-navigation-icon");
+  $toggler.on('click', function(e) {
+    $(this).toggleClass("mobile-navigation-icon--active");
+    $navigation.toggle();
+    e.preventDefault();
+    e.stopPropagation();
   });
 }

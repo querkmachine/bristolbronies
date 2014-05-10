@@ -56,6 +56,10 @@
     color: palette(grey);
     background-color: palette(grey, x-light);
   }
+  &.mobile-navigation-icon--active {
+    color: palette(white);
+    background-color: palette(grey, dark);
+  }
 }
 
 %navigation {
@@ -65,8 +69,33 @@
   }
   @media #{$small-only} {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background-color: palette(grey, dark);
+    overflow: hidden;
+    li {
+      display: block;
+      width: 50%;
+      float: left;
+    }
+    a {
+      display: block;
+      padding: rem-calc($masthead-height/3 $rem-base/2);
+      color: palette(white);
+      font-family: $title-font;
+      font-size: rem-calc(12);
+      font-weight: 900;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: rem-calc($masthead-height/3);
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
   }
   @media #{$medium-up} {
+    display: block !important; // TODO: Avoid this.
     li {
       display: inline;
       &.current-menu-item,
