@@ -4,17 +4,17 @@
 ?>
 
 <?php 
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
+  if(have_posts()):
+    while(have_posts()): the_post(); 
 ?>
 
         <?php
-          if(has_post_thumbnail()) {
+          if(has_post_thumbnail()):
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
         ?>
         <div class="hero-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')"></div>
         <?php 
-          } 
+          endif; 
         ?>
         <div class="row">
           <article class="post">
@@ -36,14 +36,14 @@
                 </ul>
               </aside>
               <?php 
-                if(get_the_date('U') <= strtotime("2014-03-31")) { 
+                if(get_the_date('U') <= strtotime("2014-03-31")):
               ?>
               <aside class="alert">
                 <i class="fa fa-warning fa-2x"></i>
                 <p>This page was created in a previous version of the <?php bloginfo('name'); ?> site. Images and styling may not appear as originally intended.</p>
               </aside>
               <?php
-                }
+                endif;
               ?>
             </div>
           </article>

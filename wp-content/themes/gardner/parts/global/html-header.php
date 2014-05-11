@@ -47,16 +47,15 @@
   <!-- Page title -->
   <title>
     <?php 
-      if(is_front_page()) {
+      if(is_front_page()):
         bloginfo('name');
         echo " | "; 
         bloginfo('description');
-      }
-      else {
+      else:
         wp_title('', true, 'right');
         echo " | ";
         bloginfo('name');
-      }
+      endif;
     ?>
   </title>
 

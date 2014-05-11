@@ -67,7 +67,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
   do_action( 'rss2_head');
 
   $posts = new WP_Query('post_type=meet&meta_key=meet_start_time&orderby=meta_value_num&order=DESC');
-  while($posts->have_posts()) : $posts->the_post();
+  while($posts->have_posts()): $posts->the_post();
   ?>
   <item>
     <title><?php the_title_rss() ?></title>
@@ -76,14 +76,14 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
     <?php the_category_rss('rss2') ?>
 
     <guid isPermaLink="false"><?php the_guid(); ?></guid>
-<?php if (get_option('rss_use_excerpt')) : ?>
+<?php if(get_option('rss_use_excerpt')): ?>
     <description><![CDATA[<?php the_excerpt_rss(); ?>]]></description>
-<?php else : ?>
+<?php else: ?>
     <description><![CDATA[<?php the_excerpt_rss(); ?>]]></description>
   <?php $content = get_the_content_feed('rss2'); ?>
-  <?php if ( strlen( $content ) > 0 ) : ?>
+  <?php if(strlen($content) > 0): ?>
     <content:encoded><![CDATA[<?php echo $content; ?>]]></content:encoded>
-  <?php else : ?>
+  <?php else: ?>
     <content:encoded><![CDATA[<?php the_excerpt_rss(); ?>]]></content:encoded>
   <?php endif; ?>
 <?php endif; ?>

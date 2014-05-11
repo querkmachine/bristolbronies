@@ -29,7 +29,7 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 
 <?php 
   $posts = new WP_Query('post_type=meet&meta_key=meet_start_time&orderby=meta_value_num&order=DESC');
-  while($posts->have_posts()) : $posts->the_post(); 
+  while($posts->have_posts()): $posts->the_post(); 
 ?>
   <item>
     <title><?php the_title_rss() ?></title>

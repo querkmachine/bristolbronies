@@ -7,8 +7,8 @@
 ?>
 
 <?php 
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
+  if(have_posts()):
+    while(have_posts()): the_post(); 
 ?>
         <div class="row">
           <div class="post post--wide">
@@ -45,14 +45,14 @@
     $categories = get_categories();
     $break = ceil((count($categories)+1)/2); 
     $i = 0;
-    foreach($categories as $category) {
-      if($i == $break) {
+    foreach($categories as $category):
+      if($i == $break):
         echo '</div><div class="about-meets__item">';
-      }
+      endif;
       echo '<h4>' . $category->name . '</h4>';
       echo '<p>' . $category->description . '</p>';
       $i++;
-    }
+    endforeach;
 ?>
             </div>
             <div class="about-meets__item">
@@ -68,7 +68,7 @@
 
 <?php 
   $staff = new WP_Query('post_type=meet_runner&posts_per_page=-1&orderby=title&order=ASC');
-  if($staff->have_posts()) :
+  if($staff->have_posts()):
 ?>
 
         <div class="row">
@@ -84,8 +84,8 @@
 
         <div class="media-grid">
 <?php 
-    while($staff->have_posts()) : $staff->the_post();
-      if(get_field("runner_staff") == true) : 
+    while($staff->have_posts()): $staff->the_post();
+      if(get_field("runner_staff") == true): 
 ?>
           <div class="media-grid__item media-grid__item--staff">
             <div class="profile postcard">
@@ -98,8 +98,8 @@
               </div>
               <div class="profile__social-links">
                 <ul>
-                  <?php if(bb_custom_field("runner_twitter")) { ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php } ?>
-                  <?php if(bb_custom_field("runner_facebook")) { ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php } ?>
+                  <?php if(bb_custom_field("runner_twitter")): ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php endif; ?>
+                  <?php if(bb_custom_field("runner_facebook")): ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php endif; ?>
                 </ul>
               </div>
             </div>

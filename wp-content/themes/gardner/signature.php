@@ -4,22 +4,23 @@
   */
   header("Content-type: image/png");
   $posts = new WP_Query('post_type=meet&meta_key=meet_start_time&orderby=meta_value_num&order=ASC&posts_per_page=-1');
-  if($posts->have_posts()) :
+  if($posts->have_posts()) {
     $found = false;
-    while($posts->have_posts()) : $posts->the_post(); 
+    while($posts->have_posts()) {
+      $posts->the_post(); 
       if(!$found && get_field("meet_end_time", get_the_ID()) > time()) { 
         $datetime = bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time'));
         $categories = bb_meet_category(get_the_ID());
         $title = get_the_title();
         $found = true;
       }
-    endwhile;
+    }
     $category = "";
     for($i = 0; $i < count($categories); $i++) {
       $category .= $categories[$i];
       if(!empty($categories[$i+1])) { $category .= " / "; }
     } 
-  endif;
+  }
   $image = imagecreatetruecolor(750, 120);
   $color['background'] = imagecolorallocate($image, 255, 255, 255);
   $color['meta'] = imagecolorallocate($image, 149, 149, 153);

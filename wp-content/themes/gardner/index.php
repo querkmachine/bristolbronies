@@ -4,8 +4,8 @@
 ?>
 
 <?php 
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
+  if(have_posts()):
+    while(have_posts()): the_post(); 
 ?>
         <div class="row">
           <article class="post">

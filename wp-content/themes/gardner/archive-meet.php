@@ -19,22 +19,21 @@
 
 <?php 
   $posts = new WP_Query($query_string . '&meta_key=meet_start_time&orderby=meta_value_num&order=DESC');
-  if($posts->have_posts()) :
-    while($posts->have_posts()) : $posts->the_post(); 
-      if(in_array("meet", bb_meet_category(get_the_ID(), "slug")) || in_array("special", bb_meet_category(get_the_ID(), "slug"))) {
+  if($posts->have_posts()):
+    while($posts->have_posts()): $posts->the_post(); 
+      if(in_array("meet", bb_meet_category(get_the_ID(), "slug")) || in_array("special", bb_meet_category(get_the_ID(), "slug"))):
         $special = true;
-      }
-      else {
+      else:
         $special = false;
-      }
+      endif;
 ?>
         <?php
-          if($special && has_post_thumbnail()) {
+          if($special && has_post_thumbnail()):
             $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
         ?>
         <div class="hero-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')"></div>
         <?php 
-          } 
+          endif; 
         ?>
         <div class="row">
           <article class="post vevent<?php if(bb_custom_field('meet_end_time') < time()) { echo " post--past"; } ?>">
@@ -43,31 +42,31 @@
                 <li class="post__meta__category">
                   <?php 
                     $categories = bb_meet_category(get_the_ID());
-                    for($i = 0; $i < count($categories); $i++) {
+                    for($i = 0; $i < count($categories); $i++):
                       echo $categories[$i];
-                      if(!empty($categories[$i+1])) { echo " / "; }
-                    } 
+                      if(!empty($categories[$i+1])): echo " / "; endif;
+                    endfor;
                   ?>
                 </li>
               </ul>
-              <?php if($special) { ?>
+              <?php if($special): ?>
               <h2 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h2>
               <ul class="post__meta">
                 <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
                 <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
               </ul>
-              <?php } else { ?>
+              <?php else: ?>
               <h3 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h3>
               <ul class="post__meta">
                 <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
               </ul>
-              <?php } ?>
+              <?php endif; ?>
             </header>
-            <?php if($special) { ?>
+            <?php if($special): ?>
             <div class="post__body">
               <?php the_excerpt(); ?>
             </div>
-            <?php } ?>
+            <?php endif; ?>
           </article>
         </div>
 <?php

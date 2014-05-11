@@ -54,15 +54,18 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
     </rdf:Seq>
   </items>
 </channel>
-<?php rewind_posts(); while (have_posts()): the_post(); ?>
+<?php 
+  rewind_posts(); 
+  while(have_posts()): the_post(); 
+?>
 <item rdf:about="<?php the_permalink_rss() ?>">
   <title><?php the_title_rss() ?></title>
   <link><?php the_permalink_rss() ?></link>
   <dc:date><?php echo date('Y-m-d\TH:i:s\Z', get_field("meet_start_time", get_the_ID())); ?></dc:date>
   <?php the_category_rss('rdf') ?>
-<?php if (get_option('rss_use_excerpt')) : ?>
+<?php if(get_option('rss_use_excerpt')): ?>
   <description><![CDATA[<?php the_excerpt_rss() ?>]]></description>
-<?php else : ?>
+<?php else: ?>
   <description><![CDATA[<?php the_excerpt_rss() ?>]]></description>
   <content:encoded><![CDATA[<?php the_content_feed('rdf') ?>]]></content:encoded>
 <?php endif; ?>

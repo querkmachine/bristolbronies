@@ -9,12 +9,12 @@
         <?php get_search_form(true); ?>
         <?php
           $results = new WP_Query($query_string . '&posts_per_page=-1');
-          if($results->have_posts()) :
+          if($results->have_posts()):
         ?>
         <div class="search-results js-search-results">
           <ul id="results">
         <?php
-            while($results->have_posts()) : $results->the_post(); 
+            while($results->have_posts()): $results->the_post(); 
         ?>
             <li class="search-results__item">
               <div class="search-results__content">

@@ -4,8 +4,8 @@
 ?>
 
 <?php 
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
+  if(have_posts()):
+    while(have_posts()): the_post(); 
 ?>
 
         <?php
@@ -23,10 +23,12 @@
                 <li class="post__meta__category">
                   <?php 
                     $categories = bb_meet_category(get_the_ID());
-                    for($i = 0; $i < count($categories); $i++) {
+                    for($i = 0; $i < count($categories); $i++):
                       echo $categories[$i];
-                      if(!empty($categories[$i+1])) { echo " / "; }
-                    } 
+                      if(!empty($categories[$i+1])):
+                        echo " / ";
+                      endif;
+                    endfor;
                   ?>
                 </li>
               </ul>
@@ -37,10 +39,16 @@
               </ul>
             </header>
             <div class="post__body">
-              <?php if(strlen(get_the_content()) > 0) { the_content(); } else { echo '<p><em>No meet plans announced.</em></p>'; } ?>
+              <?php 
+                if(strlen(get_the_content()) > 0): 
+                  the_content(); 
+                else: 
+                  echo '<p><em>No meet plans announced.</em></p>'; 
+                endif; 
+              ?>
             </div>
             <div class="post__sidebar">
-              <?php if(bb_custom_field('meet_end_time') > time()) { ?>
+              <?php if(bb_custom_field('meet_end_time') > time()): ?>
               <aside class="forecast js-forecast postcard" 
                 data-latitude="<?php echo bb_meet_location(get_field('meet_location'), "latitude"); ?>" 
                 data-longitude="<?php echo bb_meet_location(get_field('meet_location'), "longitude"); ?>" 
@@ -53,10 +61,10 @@
                   </p>
                 </div>
               </aside>
-              <?php } ?>
+              <?php endif; ?>
               <?php 
                 $runners = get_field('meet_runner');
-                foreach($runners as $runner) {
+                foreach($runners as $runner):
               ?>
               <aside class="profile postcard">
                 <div class="profile__avatar">
@@ -68,23 +76,23 @@
                 </div>
                 <div class="profile__social-links">
                   <ul>
-                    <?php if(bb_custom_field("runner_twitter", $runner)) { ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php } ?>
-                    <?php if(bb_custom_field("runner_facebook", $runner)) { ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php } ?>
+                    <?php if(bb_custom_field("runner_twitter", $runner)): ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php endif; ?>
+                    <?php if(bb_custom_field("runner_facebook", $runner)): ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php endif; ?>
                   </ul>
                 </div>
               </aside>
               <?php 
-                } 
+                endforeach;
               ?>
               <?php 
-                if(get_the_date('U') <= strtotime("2014-03-31")) { 
+                if(get_the_date('U') <= strtotime("2014-03-31")):
               ?>
               <aside class="alert">
                 <i class="fa fa-warning fa-2x"></i>
                 <p>This page was created in a previous version of the <?php bloginfo('name'); ?> site. Images and styling may not appear as originally intended.</p>
               </aside>
               <?php
-                }
+                endif;
               ?>
             </div>
           </article>

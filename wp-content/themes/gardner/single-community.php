@@ -4,8 +4,8 @@
 ?>
 
 <?php 
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
+  if(have_posts()):
+    while(have_posts()): the_post(); 
       switch(get_field("community_type")) {
         case 'image':
           $hires = wp_get_attachment_image_src(get_field("community_image"), "large");
@@ -29,7 +29,7 @@
             <div class="post__sidebar">
               <?php 
                 $runners = get_field('community_creator');
-                foreach($runners as $runner) {
+                foreach($runners as $runner):
               ?>
               <aside class="profile postcard">
                 <div class="profile__avatar">
@@ -47,27 +47,27 @@
                 </div>
               </aside>
               <?php 
-                } 
+                endforeach;
               ?>
               <?php 
                 $camera = community_camera_metadata($cleansed);
-                if($camera['date'] || ($camera['make'] && $camera['model']) || $camera['exposure'] || $camera['aperture'] || $camera['iso']) { 
+                if($camera['date'] || ($camera['make'] && $camera['model']) || $camera['exposure'] || $camera['aperture'] || $camera['iso']):
               ?>
               <aside class="camera-meta postcard">
                 <div class="postcard__title">
                   <h1>Meta</h1>
                 </div>
                 <div class="postcard__data">
-                  <p>Photographed<?php if($camera['date']) { ?> on <strong>10th August 2013 at 9:02pm</strong><?php } if($camera['make'] && $camera['model']) { ?> using a <?php echo $camera['make']; ?> <?php echo $camera['model']; ?><?php } ?>.</p>
+                  <p>Photographed<?php if($camera['date']): ?> on <strong>10th August 2013 at 9:02pm</strong><?php endif; if($camera['make'] && $camera['model']): ?> using a <?php echo $camera['make']; ?> <?php echo $camera['model']; ?><?php endif; ?>.</p>
                   <p>
-                    <?php if($camera['exposure']) { ?><abbr title="<?php echo $camera['exposure']; ?> exposure"><?php echo $camera['exposure']; ?></abbr><?php } ?>
-                    <?php if($camera['aperture']) { ?><abbr title="<?php echo $camera['aperture']; ?> aperture"><?php echo $camera['aperture']; ?></abbr><?php } ?>
-                    <?php if($camera['iso']) { ?><abbr title="ISO <?php echo $camera['iso']; ?>">ISO <?php echo $camera['iso']; ?></abbr><?php } ?>
+                    <?php if($camera['exposure']): ?><abbr title="<?php echo $camera['exposure']; ?> exposure"><?php echo $camera['exposure']; ?></abbr><?php endif; ?>
+                    <?php if($camera['aperture']): ?><abbr title="<?php echo $camera['aperture']; ?> aperture"><?php echo $camera['aperture']; ?></abbr><?php endif; ?>
+                    <?php if($camera['iso']): ?><abbr title="ISO <?php echo $camera['iso']; ?>">ISO <?php echo $camera['iso']; ?></abbr><?php endif; ?>
                   </p>
                 </div>
               </aside>
               <?php 
-                }
+                endif;
               ?>
             </div>
           </article>
@@ -93,7 +93,7 @@
             <div class="post__sidebar">
               <?php 
                 $runners = get_field('community_creator');
-                foreach($runners as $runner) {
+                foreach($runners as $runner):
               ?>
               <aside class="profile postcard">
                 <div class="profile__avatar">
@@ -105,13 +105,13 @@
                 </div>
                 <div class="profile__social-links">
                   <ul>
-                    <?php if(bb_custom_field("runner_twitter", $runner)) { ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php } ?>
-                    <?php if(bb_custom_field("runner_facebook", $runner)) { ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php } ?>
+                    <?php if(bb_custom_field("runner_twitter", $runner)): ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php endif; ?>
+                    <?php if(bb_custom_field("runner_facebook", $runner)): ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php endif; ?>
                   </ul>
                 </div>
               </aside>
               <?php 
-                } 
+                endforeach;
               ?>
             </div>
           </article>
@@ -135,7 +135,7 @@
             <div class="post__sidebar">
               <?php 
                 $runners = get_field('community_creator');
-                foreach($runners as $runner) {
+                foreach($runners as $runner):
               ?>
               <aside class="profile postcard">
                 <div class="profile__avatar">
@@ -147,13 +147,13 @@
                 </div>
                 <div class="profile__social-links">
                   <ul>
-                    <?php if(bb_custom_field("runner_twitter", $runner)) { ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php } ?>
-                    <?php if(bb_custom_field("runner_facebook", $runner)) { ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php } ?>
+                    <?php if(bb_custom_field("runner_twitter", $runner)): ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php endif; ?>
+                    <?php if(bb_custom_field("runner_facebook", $runner)): ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php endif; ?>
                   </ul>
                 </div>
               </aside>
               <?php 
-                } 
+                endforeach;
               ?>
             </div>
           </article>
