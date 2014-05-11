@@ -58,7 +58,7 @@
                   <h1>Meta</h1>
                 </div>
                 <div class="postcard__data">
-                  <p>Photographed<?php if($camera['date']): ?> on <strong><?php echo date("jS F Y \a\t g:ia", strtotime($camera['date'])); ?></strong><?php endif; if($camera['make'] && $camera['model']): ?> using a <?php echo $camera['make']; ?> <?php echo $camera['model']; ?><?php endif; ?>.</p>
+                  <p>Photographed<?php if($camera['date']): ?> on <strong><?php echo date("jS F Y \at g:ia", strtotime($camera['date'])); ?></strong><?php endif; if($camera['make'] && $camera['model']): ?> using a <?php echo $camera['make']; ?> <?php echo $camera['model']; ?><?php endif; ?>.</p>
                   <p>
                     <?php if($camera['exposure']): ?><abbr title="<?php echo $camera['exposure']; ?> exposure"><?php echo $camera['exposure']; ?></abbr><?php endif; ?>
                     <?php if($camera['aperture']): ?><abbr title="<?php echo $camera['aperture']; ?> aperture"><?php echo $camera['aperture']; ?></abbr><?php endif; ?>
