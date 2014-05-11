@@ -1,0 +1,85 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+body {
+	padding: 10px;
+	background-color: #C22232;
+	font-family: "Open Sans";
+	font-weight: 300;
+	overflow: hidden;
+}
+
+a {
+	color: #e02436;
+}
+
+.bb-logo {
+	float: left;
+	display: none;
+}
+
+.bb-logo img {
+	width: 90px;
+	height: 90px;
+}
+
+.tweet-list,
+#tweet-list {
+	height: 90px;
+	float: left;
+	list-style: none;
+}
+
+#tweet-list {
+	width: 3000px;
+}
+
+.tweet {
+	margin-right: 10px;
+	width: 350px;
+	float: left;
+	font-size: 80%;
+	position: relative;
+}
+
+.tweet:nth-child(n+11) {
+	display: none;
+}
+
+.tweet .tweet__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.tweet .tweet__body {
+	margin-left: 53px;
+	padding: 8px;
+	background-color: white;
+	color: #444;
+}
+
+.tweet .tweet__meta {
+	font-weight: 700;
+	font-size: 80%;
+}
+
+.tweet .tweet__meta a {
+	text-decoration: none;
+}
+
+.tweet .tweet__meta .screen_name {
+	color: #716e6d;
+}
+
+.tweet .tweet__meta .tweet_date {
+	color: #959599;
+}

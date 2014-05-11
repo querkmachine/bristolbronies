@@ -1,0 +1,9 @@
+<div class="bb-logo">
+  <img src="http://bristolbronies.co.uk/wp-content/themes/ashman/assets/img/logo.png" alt="Bristol Bronies">
+</div>
+<div class="tweet-list">
+  <ul id="tweet-list">
+    [tweets]
+  </ul>
+</div>
+ 
