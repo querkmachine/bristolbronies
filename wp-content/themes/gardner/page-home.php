@@ -95,6 +95,7 @@
 <?php
     }
   endif;
+  wp_reset_postdata();
 ?>
 
         <div class="row">

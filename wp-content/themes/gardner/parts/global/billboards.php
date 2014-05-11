@@ -1,7 +1,7 @@
 <?php
-  $posts = query_posts('post_type=billboard&orderby=date&order=DESC&posts_per_page=3');
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
+  $billboards = new WP_Query('post_type=billboard&orderby=date&order=DESC&posts_per_page=3');
+  if($billboards->have_posts()) :
+    while($billboards->have_posts()) : $billboards->the_post(); 
 ?>
           <div class="billboard-list">
             <figure class="billboard">
@@ -20,5 +20,5 @@
 <?php
     endwhile;
   endif; 
-  wp_reset_query();
+  wp_reset_postdata();
 ?>

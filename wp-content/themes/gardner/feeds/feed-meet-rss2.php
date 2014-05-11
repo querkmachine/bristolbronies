@@ -66,8 +66,8 @@ echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
    */
   do_action( 'rss2_head');
 
-  $posts=query_posts('post_type=meet&meta_key=meet_start_time&orderby=meta_value_num&order=DESC');
-  while( have_posts()) : the_post();
+  $posts = new WP_Query('post_type=meet&meta_key=meet_start_time&orderby=meta_value_num&order=DESC');
+  while($posts->have_posts()) : $posts->the_post();
   ?>
   <item>
     <title><?php the_title_rss() ?></title>

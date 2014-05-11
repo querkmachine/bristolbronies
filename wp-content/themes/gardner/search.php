@@ -8,13 +8,13 @@
 
         <?php get_search_form(true); ?>
         <?php
-          $posts=query_posts($query_string . '&posts_per_page=-1');
-          if(have_posts()) :
+          $results = new WP_Query($query_string . '&posts_per_page=-1');
+          if($results->have_posts()) :
         ?>
         <div class="search-results js-search-results">
           <ul id="results">
         <?php
-            while(have_posts()) : the_post(); 
+            while($results->have_posts()) : $results->the_post(); 
         ?>
             <li class="search-results__item">
               <div class="search-results__content">
@@ -39,7 +39,8 @@
             </ul>
           </div>
         <?php
-          endif; 
+          endif;
+          wp_reset_postdata(); 
         ?>
 
 <!-- search.php -->

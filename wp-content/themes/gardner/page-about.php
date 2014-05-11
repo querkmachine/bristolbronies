@@ -67,8 +67,8 @@
         <hr>
 
 <?php 
-  $posts = query_posts('post_type=meet_runner&posts_per_page=-1&orderby=title&order=ASC');
-  if(have_posts()) :
+  $staff = new WP_Query('post_type=meet_runner&posts_per_page=-1&orderby=title&order=ASC');
+  if($staff->have_posts()) :
 ?>
 
         <div class="row">
@@ -84,7 +84,7 @@
 
         <div class="media-grid">
 <?php 
-    while(have_posts()) : the_post();
+    while($staff->have_posts()) : $staff->the_post();
       if(get_field("runner_staff") == true) : 
 ?>
           <div class="media-grid__item media-grid__item--staff">
@@ -111,7 +111,7 @@
         </div>
 <?php
   endif; 
-  wp_reset_query();
+  wp_reset_postdata();
 ?>
 
 <!-- page-about.php -->

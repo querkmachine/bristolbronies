@@ -19,9 +19,9 @@
 
         <div class="media-grid">
 <?php 
-  $posts = query_posts($query_string . '&posts_per_page=-1');
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
+  $posts = new WP_Query($query_string . '&posts_per_page=-1');
+  if($posts->have_posts()) :
+    while($posts->have_posts()) : $posts->the_post(); 
 ?>
         <?php 
           switch(get_field("community_type")) {

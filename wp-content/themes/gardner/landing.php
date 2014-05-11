@@ -28,9 +28,9 @@
 
         <div class="row">
 <?php 
-  $posts = query_posts(array('post_parent' => $post->ID, 'post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'ASC'));
-  if(have_posts()) :
-    while(have_posts()) : the_post(); 
+  $children = new WP_Query(array('post_parent' => $post->ID, 'post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'ASC'));
+  if($children->have_posts()) :
+    while($children->have_posts()) : $children->the_post(); 
 ?>
           <div class="billboard-list">
             <figure class="billboard">
@@ -53,6 +53,7 @@
 <?php
     endwhile;
   endif; 
+  wp_reset_postdata();
 ?>
         </div>
 
