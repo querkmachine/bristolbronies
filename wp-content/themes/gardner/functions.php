@@ -683,3 +683,38 @@ function bb_affiliates_post_type() {
   register_post_type('affiliates', $args);
 }
 add_action('init', 'bb_affiliates_post_type');
+
+/**
+ * WordPress Theme Customizer settings 
+ */
+
+function bb_theme_customizer($wp_customize) {
+  // Homepage banner image
+  $wp_customize->add_section(
+    'bb_homepage_banner_options',
+    array(
+      'title'       => "Default homepage banner",
+      'description' => "Upload a new default homepage banner image. This will still be overriden by individual page banners.",
+      "priority"    => 201
+    )
+  );
+  $wp_customize->add_setting(
+    'bb_homepage_banner_image',
+    array(
+      'default'     => '',
+      'transport'   => 'postMessage'
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Image_Control(
+      $wp_customize,
+      'bb_homepage_banner_image',
+      array(
+        'label'     => 'Upload image',
+        'section'   => 'bb_homepage_banner_options',
+        'settings'  => 'bb_homepage_banner_image'
+      )
+    )
+  );
+}
+add_action('customize_register', 'bb_theme_customizer');

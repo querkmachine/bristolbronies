@@ -26,11 +26,10 @@
         if(has_post_thumbnail()): 
           $image_id = get_post_thumbnail_id(); 
           $image_url = wp_get_attachment_image_src($image_id, 'full');
+        elseif(strlen($custom_image_url = get_theme_mod('bb_homepage_banner_image')) > 0): 
+          $image_url[0] = $custom_image_url;
         else: 
           $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
-          // $image_array = array(300, 293, 278, 269); 
-          // $image_id = rand(0, (count($image_array)-1));
-          // $image_id = $image_array[$image_id]; 
         endif;
 ?>
         <div class="homepage-image" style="background-image: url('<?php echo $image_url[0]; ?>');">
@@ -54,7 +53,7 @@
                         if(!empty($categories[$i+1])): 
                           echo " / ";
                         endif;
-                      endif; 
+                      endfor; 
                     ?>
                   </li>
                 </ul>
@@ -83,7 +82,11 @@
       endif;
     endwhile;
     if(!$found):
-      $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
+      if(strlen($custom_image_url = get_theme_mod('bb_homepage_banner_image')) > 0): 
+        $image_url[0] = $custom_image_url;
+      else: 
+        $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
+      endif;
 ?>
         <div class="homepage-image" style="background-image: url('<?php echo $image_url[0]; ?>');">
           <div class="row">
