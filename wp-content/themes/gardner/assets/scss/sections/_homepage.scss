@@ -1,0 +1,47 @@
+/**
+ * sections->homepage
+ */
+
+body.page-id-6 {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    .header__inner {
+      @include pad-this();
+      background-color: palette(white);
+    }
+  }
+  .main {
+    margin-top: 0;
+  }
+  .home-blurb {
+    @include column(12);
+    background-color: palette(white);
+    p {
+      @extend %h3;
+      font-weight: normal;
+    }
+  }
+  .homepage-image {
+    width: 100%;
+    margin: 0 auto rem-calc($rem-base*3) auto;
+    padding-top: 50%;
+    background-color: palette(grey, light);
+    background-position: center center;
+    background-size: cover;
+    -webkit-transition: padding-top .15s ease;
+       -moz-transition: padding-top .15s ease;
+            transition: padding-top .15s ease;
+    @media #{$medium-up} {
+      padding-top: 40%;
+    }
+    @media #{$xlarge-up} {
+      padding-top: 25%;
+    }
+  }
+  .next-meet {
+    margin-bottom: 1rem;
+  }
+}
