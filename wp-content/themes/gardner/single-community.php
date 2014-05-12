@@ -36,7 +36,7 @@
                   <img src="<?php echo bb_profile_avatar($runner); ?>" alt="">
                 </div>
                 <div class="profile__biography postcard__data">
-                  <h1 class="profile__captain"><small>Created by</small> <?php echo get_the_title($runner); ?></h1>
+                  <h1 class="profile__captain"><small>Photographed by</small> <?php echo get_the_title($runner); ?></h1>
                   <p><?php echo bb_profile_biography($runner); ?></p>
                 </div>
                 <div class="profile__social-links">
@@ -58,7 +58,7 @@
                   <h1>Meta</h1>
                 </div>
                 <div class="postcard__data">
-                  <p>Photographed<?php if($camera['date']): ?> on <strong><?php echo date("jS F Y \at g:ia", strtotime($camera['date'])); ?></strong><?php endif; if($camera['make'] && $camera['model']): ?> using a <?php echo $camera['make']; ?> <?php echo $camera['model']; ?><?php endif; ?>.</p>
+                  <p>Photographed<?php if($camera['date']): ?> on <strong><?php echo date("jS F Y \a\\t g:ia", strtotime($camera['date'])); ?></strong><?php endif; if($camera['make'] && $camera['model']): ?> using a <?php echo $camera['make']; ?> <?php echo $camera['model']; ?><?php endif; ?>.</p>
                   <p>
                     <?php if($camera['exposure']): ?><abbr title="<?php echo $camera['exposure']; ?> exposure"><?php echo $camera['exposure']; ?></abbr><?php endif; ?>
                     <?php if($camera['aperture']): ?><abbr title="<?php echo $camera['aperture']; ?> aperture"><?php echo $camera['aperture']; ?></abbr><?php endif; ?>
@@ -100,7 +100,7 @@
                   <img src="<?php echo bb_profile_avatar($runner); ?>" alt="">
                 </div>
                 <div class="profile__biography postcard__data">
-                  <h1 class="profile__captain"><small>Created by</small> <?php echo get_the_title($runner); ?></h1>
+                  <h1 class="profile__captain"><small>Recorded by</small> <?php echo get_the_title($runner); ?></h1>
                   <p><?php echo bb_profile_biography($runner); ?></p>
                 </div>
                 <div class="profile__social-links">
@@ -142,7 +142,7 @@
                   <img src="<?php echo bb_profile_avatar($runner); ?>" alt="">
                 </div>
                 <div class="profile__biography postcard__data">
-                  <h1 class="profile__captain"><small>Created by</small> <?php echo get_the_title($runner); ?></h1>
+                  <h1 class="profile__captain"><small>Written by</small> <?php echo get_the_title($runner); ?></h1>
                   <p><?php echo bb_profile_biography($runner); ?></p>
                 </div>
                 <div class="profile__social-links">
