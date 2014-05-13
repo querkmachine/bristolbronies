@@ -1280,7 +1280,8 @@ hr {
     padding-left: 16px; } }
 
 .primary-navigation {
-  float: left; }
+  float: left;
+  z-index: 10; }
   .primary-navigation li {
     float: left; }
 

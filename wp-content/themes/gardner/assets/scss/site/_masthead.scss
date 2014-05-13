@@ -139,6 +139,7 @@
 
 .primary-navigation {
   float: left;
+  z-index: 10;
   @extend %navigation;
   li {
     float: left;
