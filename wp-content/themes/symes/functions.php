@@ -418,6 +418,28 @@ remove_all_actions('do_feed_rdf');
 add_action('do_feed_rdf', 'bb_meet_feed_rdf', 10, 1);
 
 /**
+ * Meet iCal feed
+ */
+
+function bb_meet_feed_ical() {
+  add_rewrite_rule(
+    '^meet/ical/?',
+    'index.php?page_id=549',
+    'top'
+  ); 
+}
+add_action('init', 'bb_meet_feed_ical');
+
+/**
+ * Flush .htaccess (necessary for iCal feed link to work)
+ */
+
+function bb_flush_rewrite_rules() {
+  flush_rewrite_rules();
+}
+add_action('after_switch_theme', 'bb_flush_rewrite_rules');
+
+/**
  * Profile bios
  */
 
