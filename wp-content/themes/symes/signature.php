@@ -43,9 +43,9 @@
     $datetime = "Soooooooon...";
   }
   /*Category*/  imagettftext($image, $size['meta'], 0, 120, 13+(12+$size['meta']), $color['meta'], $font['title'], "NEXT MEET: ");
-  /*Category*/  imagettftext($image, $size['meta'], 0, 200, 13+(12+$size['meta']), $color['meta'], $font['meta'], $category);
+  /*Category*/  imagettftext($image, $size['meta'], 0, 210, 13+(12+$size['meta']), $color['meta'], $font['meta'], $category);
   /*Title*/     imagettftext($image, ($size['title']+5), 0, 120, 13+(6+$size['title'])+(6+$size['title']), $color['title'], $font['title'], $title);
-  /*Calicon*/   imagettftext($image, $size['meta'], 0, 120, 12+(6+$size['title'])+(6+$size['title'])+(12+$size['meta']), $color['title'], $font['icon'], "");
+  /*Calicon*/   imagettftext($image, $size['meta']+0.5, 0, 120, 12+(6+$size['title'])+(6+$size['title'])+(12+$size['meta']), $color['title'], $font['icon'], "");
   /*Datetime*/   imagettftext($image, $size['meta'], 0, 135, 13+(6+$size['title'])+(6+$size['title'])+(12+$size['meta']), $color['meta'], $font['meta'], $datetime);
   imagepng($image);
 ?>
