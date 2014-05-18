@@ -1,0 +1,22 @@
+/**
+ * patterns->alerts
+ */
+
+.alert {
+  padding: rem-calc($rem-base/2 $rem-base);
+  border: 1px solid palette(grey);
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  background-color: palette(yellow);
+  text-align: center;
+  p {
+    margin: 0;
+    position: relative;
+    font-size: smaller;
+    font-weight: bold;
+  }
+  a {
+    color: inherit;
+  }
+}

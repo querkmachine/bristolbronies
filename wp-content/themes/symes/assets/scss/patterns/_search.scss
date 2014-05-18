@@ -1,0 +1,62 @@
+/**
+ * pattern->search
+ */
+
+.search-overlay {
+  padding: rem-calc($rem-base*2 0);
+  position: fixed;
+  top: $masthead-height;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: palette(grey, x-light);
+  overflow: auto;
+}
+
+.search-form {
+  @include column(12);
+  .search-form__field {
+    margin-bottom: rem-calc($rem-base*2);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background: none;
+    font-size: rem-calc(36);
+    line-height: normal;
+    -webkit-appearance: none;
+    @media #{$medium-up} {
+      font-size: rem-calc(72);
+    }
+  }
+}
+
+.search-results {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .search-results__item {
+    @extend .row;
+    @include pad-this();
+    margin-bottom: rem-calc($rem-base);
+    .search-results__content {
+      max-width: 35em;
+      .search-results__title {
+        a {
+          text-decoration: none;
+        }
+      }
+      p {
+        margin: 0;
+        font-size: smaller;
+      }
+      .search-results__url {
+        color: palette(grey, light);
+      }
+    }
+  }
+}
