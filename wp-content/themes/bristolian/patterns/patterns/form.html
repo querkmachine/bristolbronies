@@ -1,0 +1,35 @@
+<form class="form" method="post" action="#">
+  <div class="form__row">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="e.g. Twilight Sparkle">
+  </div>
+  <div class="form__row">
+    <label for="email">Email address</label>
+    <input type="email" name="email" id="email" required>
+  </div>
+  <div class="form__row">
+    <label for="country">Country</label>
+    <select name="country" id="country">
+      <option>Australia</option>
+      <option>Canada</option>
+      <option>New Zealand</option>
+      <option selected>United Kingdom</option>
+      <option>United States</option>
+    </select>
+  </div>
+  <div class="form__row">
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" id="phone" value="This field is readonly." readonly>
+  </div>
+  <div class="form__row">
+    <label for="fax">Fax</label>
+    <input type="tel" name="fax" id="fax" value="This field is disabled." disabled>
+  </div>
+  <div class="form__row">
+    <label for="comment">Comment</label>
+    <textarea rows="6" name="comment" id="comment"></textarea>
+  </div>
+  <div class="form__row">
+    <button type="submit" class="button--positive"><i class="fa fa-check fa-fw"></i> Submit</button>
+  </div>
+</form>
