@@ -7,7 +7,7 @@
  * unless it's a new version or something.
  */
 
-define('BB_VERSION', 'james');
+define('BB_VERSION', 'bristolian');
 
 /**
  * Register post thumbnails
