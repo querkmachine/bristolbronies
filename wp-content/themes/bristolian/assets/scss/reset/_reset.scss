@@ -204,6 +204,7 @@ input, button, textarea, select, optgroup {
   margin: 0;
   padding: 0;
   border: 1px solid black;
+  border-radius: 0; /* OS X */
   background: transparent;
   font-family: inherit; 
   font-size: 100%;

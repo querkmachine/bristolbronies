@@ -1,0 +1,27 @@
+/**
+ * site->global
+ */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  left: 0;
+  @media #{$small-only} {
+    @include transition(left .3s ease);
+    &.js-navigation-open {
+      left: 200px;
+    }
+  }
+}
+
+.browser-warning {
+  padding: 6px;
+  background-color: palette(yellow);
+  text-align: center;
+  a {
+    color: inherit;
+  }
+}

@@ -1,0 +1,62 @@
+/**
+ * site->footer
+ */
+
+.footer {
+  color: palette(grey, x-light);
+  background-color: palette(grey, dark);
+  font-size: 90%;
+  h6 {
+    @extend %title-list;
+    margin-top: rem-calc($rem-base*2);
+  }
+  a {
+    color: palette(grey, light);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: palette(white);
+    }
+  }
+  ul {
+    line-height: 1.5;
+    list-style: none;
+  }
+  .footer-links {
+    .footer-links__group {
+      @include column(12, 4, 3);
+      &.footer-links__group--site {
+        h6 {
+          @include image-replace("logo.png", 86px, 86px);
+          background-size: 86px 86px;
+          -webkit-filter: grayscale(100%) opacity(90%);
+        }
+      }
+      &.footer-links__group--affiliates {
+        li {
+          display: inline-block;
+          width: 80px;
+          margin: rem-calc(0 $rem-base/4 $rem-base/4 0);
+        }
+        a {
+          -webkit-filter: grayscale(100%) opacity(50%);
+          &:hover,
+          &:focus {
+            -webkit-filter: grayscale(0) opacity(100%);
+          }
+        }
+      }
+    }
+  }
+  .boilerplate {
+    margin-top: rem-calc($rem-base*2);
+    padding-top: rem-calc($rem-base);
+    padding-bottom: rem-calc($rem-base);
+    background-color: palette(grey, x-dark);
+    small {
+      display: block;
+      @include column(12);
+      line-height: 1.5;
+    }
+  }
+}

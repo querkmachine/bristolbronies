@@ -1,0 +1,15 @@
+/**
+ * patterns->breadcrumbs
+ */
+
+.breadcrumbs {
+  font-size: smaller;
+  a {
+    color: palette(grey);
+    text-decoration: none;
+  }
+  .sep {
+    margin: rem-calc(0 $rem-base/2);
+    color: palette(grey, light);
+  }
+}

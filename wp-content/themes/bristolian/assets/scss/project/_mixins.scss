@@ -1,3 +1,18 @@
 /**
  * project->mixins
  */
+
+@mixin image-replace($image, $width, $height) {
+  width: $width;
+  height: $height;
+  background-image: image-url($image);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin transition($rule...) {
+  -webkit-transition: $rule;
+     -moz-transition: $rule; 
+          transition: $rule;
+}

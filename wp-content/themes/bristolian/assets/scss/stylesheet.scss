@@ -12,16 +12,16 @@ $BB_VERSION: "bristolian";
 @import "project/mixins";
 
 // Important stuff
-// @import "components/button";
+@import "components/buttons";
 // @import "components/form";
-// @import "components/grid";
+@import "components/grid";
 // @import "components/postcard";
-// @import "components/typography";
+@import "components/typography";
 
 // Patterns
 // @import "patterns/alerts";
-// @import "patterns/billboard";
-// @import "patterns/breadcrumb";
+@import "patterns/billboard";
+@import "patterns/breadcrumbs";
 // @import "patterns/figure";
 // @import "patterns/forecast";
 // @import "patterns/media-grid";
@@ -31,9 +31,9 @@ $BB_VERSION: "bristolian";
 // @import "patterns/search";
 
 // The site stuff
-// @import "site/global";
-// @import "site/masthead";
-// @import "site/footer";
+@import "site/global";
+@import "site/masthead";
+@import "site/footer";
 
 // Bits and bobs
 // @import "sections/homepage";

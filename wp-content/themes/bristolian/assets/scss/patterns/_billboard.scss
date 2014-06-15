@@ -1,0 +1,38 @@
+/**
+ * patterns->billboard
+ */
+
+.billboard {
+  position: relative;
+  overflow: hidden;
+  .billboard__media {
+    a {
+      display: block;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .billboard__caption {
+    padding: rem-calc($rem-base);
+    color: palette(white);
+    background-color: palette(grey, x-dark);
+    font-size: smaller;
+    line-height: 1.5;
+    @media #{$medium-up} {
+      max-width: 80%;
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      background-color: rgba(palette(black), 0.8);
+    }
+  }
+  .billboard__title {
+    font-size: larger;
+    a {
+      @extend %title-event;
+      color: palette(red);
+      text-decoration: none;
+    }
+  }
+}

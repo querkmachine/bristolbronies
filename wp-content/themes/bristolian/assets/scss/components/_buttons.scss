@@ -1,0 +1,54 @@
+/** 
+ * components->buttons
+ */
+
+.button,
+input[type="submit"],
+input[type="reset"],
+button {
+  display: inline-block;
+  padding: 0.5em 0.75em;
+  border: none;
+  color: palette(white);
+  background-color: palette(grey, light);
+  text-decoration: none;
+  line-height: 1.2em;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: darken(palette(grey, light), 10%);
+  }
+  .fa {
+    padding-right: 0.25em;
+    border-right: 1px solid rgba(palette(white), 0.6);
+  }
+  &.button--small {
+    font-size: smaller;
+  }
+  &.button--large {
+    font-size: larger;
+  }
+  &.button--positive {
+    background-color: palette(green);
+    &:hover,
+    &:focus {
+      background-color: darken(palette(green), 10%);
+    }
+  }
+  &.button--negative {
+    background-color: palette(red, dark);
+    &:hover,
+    &:focus {
+      background-color: darken(palette(red, dark), 10%);
+    }
+  }
+  &.button--rss {
+    background-color: palette(orange);
+    &:hover,
+    &:focus {
+      background-color: darken(palette(orange), 10%);
+    }
+  }
+}

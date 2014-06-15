@@ -32,7 +32,6 @@ function initForecast() {
   var given_latitude = $forecast.attr('data-latitude'),
       given_longitude = $forecast.attr('data-longitude'),
       given_timestamp = $forecast.attr('data-timestamp');
-  
   $.getJSON(
     '/wp-content/themes/'+BB_VERSION+'/parts/meet/forecast.php', 
     {
@@ -75,11 +74,10 @@ function initBB404() {
 }
 
 function initBBMobileNavigation() {
-  var $navigation = $(".primary-navigation"),
-      $toggler = $(".mobile-navigation-icon");
+  var $body = $("body"),
+      $toggler = $(".js-navigation-toggle");
   $toggler.on('click', function(e) {
-    $(this).toggleClass("mobile-navigation-icon--active");
-    $navigation.toggle();
+    $body.toggleClass("js-navigation-open");
     e.preventDefault();
     e.stopPropagation();
   });

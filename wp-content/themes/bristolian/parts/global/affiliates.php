@@ -2,7 +2,7 @@
   $affiliates = new WP_Query('post_type=affiliates&posts_per_page=-1');
   if($affiliates->have_posts()): 
 ?>
-            <div class="footer-links__column footer-links__affiliate">
+            <div class="footer-links__group footer-links__group--affiliates">
               <h6>In Affiliation With</h6>
               <ul>
 <?php

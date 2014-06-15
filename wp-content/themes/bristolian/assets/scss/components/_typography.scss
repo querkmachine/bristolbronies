@@ -1,0 +1,110 @@
+/**
+ * components->typography
+ */
+
+body {
+  color: palette(grey, x-dark);
+  font-size: 18px;
+  font-family: $body-font;
+  font-weight: 300;
+}
+
+strong, 
+b {
+  font-weight: 600;
+}
+
+%title-section {
+  font-size: 3.157em;
+  font-family: $title-font;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2;
+  @media #{$medium-up} {
+    font-size: 3.998em;
+  }
+  small {
+    color: palette(grey);
+    font-size: smaller;
+    font-weight: 300;
+  }
+} 
+
+%title-page {
+  font-size: 2.369em;
+  font-family: $title-font;
+  font-weight: 900;
+  line-height: 1.2;
+  @media #{$medium-up} {
+    font-size: 2.827em;
+  }
+  small {
+    color: palette(grey);
+    font-size: smaller;
+    font-weight: 300;
+  }
+} 
+
+%title-page-section {
+  font-size: 1.777em;
+  font-family: $title-font;
+  font-weight: 500;
+  line-height: 1.15;
+  @media #{$medium-up} {
+    font-size: 1.999em;
+  }
+  small {
+    color: palette(grey);
+    font-size: normal;
+  }
+} 
+
+%title-page-subtitle {
+  color: palette(grey);
+  font-size: 1.333em;
+  font-family: $detail-font;
+  font-weight: 700;
+  font-style: italic;
+  @media #{$medium-up} {
+    font-size: 1.414em;
+  }
+  small {
+    color: palette(grey, light);
+    font-size: normal;
+  }
+}
+
+%title-event {
+  font-size: 1.333em;
+  font-family: $detail-font;
+  font-weight: 300;
+  font-style: italic;
+  @media #{$medium-up} {
+    font-size: 1.414em;
+  }
+  small {
+    color: palette(grey, light);
+    font-size: normal;
+  }
+}
+
+%title-event-subevent {
+  margin-bottom: rem-calc(8);
+  color: palette(grey);
+  font-family: $body-font;
+  font-weight: 700;
+  font-style: italic;
+  small {
+    color: palette(grey, light);
+    font-size: normal;
+  }
+}
+
+%title-list {
+  margin-bottom: rem-calc(15);
+  font-size: smaller;
+  font-family: $title-font;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px; 
+}

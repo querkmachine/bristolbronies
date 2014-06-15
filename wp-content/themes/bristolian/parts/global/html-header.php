@@ -12,11 +12,11 @@
   <meta name="robots" content="all, noydir, noodp">
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="profile" href="http://microformats.org/profile/hcalendar">
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
   <!-- Content metadata -->
-  <meta name="author" content="<?php bloginfo('name'); ?>">
-  <meta name="copyright" content="<?php echo date('Y'); ?> <?php bloginfo('name'); ?>">
+  <meta name="author" content="Bristol Bronies Ltd.">
+  <meta name="copyright" content="<?php echo date('Y'); ?> Bristol Bronies Ltd.">
   <meta name="geo.region" content="GB-BST">
   <meta name="geo.placename" content="Bristol">
   <meta name="geo.position" content="51.454513;-2.58791">
@@ -65,3 +65,4 @@
 </head>
 <body <?php body_class(); ?>>
   <div class="guns-dont-kill-people"><!-- wrappers do -->
+

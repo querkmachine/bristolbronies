@@ -35,7 +35,8 @@ $grid-total-columns:    12;
 $palette: (
   red: (
     base: #e02436, 
-    dark: #930916
+    dark: #ba1933,
+    x-dark: #930916
   ),
   blue: (
     base: #4298bb,
@@ -57,6 +58,7 @@ $palette: (
   grey: (
     base: #716e6d,
     dark: #444,
+    x-dark: #101010,
     light: #959599,
     x-light: #e5e5e5
   ),
@@ -68,12 +70,8 @@ $palette: (
   )
 );
 
-$text-color: palette(grey, dark);
-
 // Font stacks
-$body-font:     "Open Sans", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
-$title-font:    lato, $body-font;
-$detail-font:   Georgia, "Times New Roman", Times, serif;
-
-// Dimensions
-$masthead-height : 60px;
+$body-font:     "lato", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+$title-font:    $body-font;
+$detail-font:   "quatro-slab", Georgia, "Times New Roman", Times, serif;
+$mono-font:     "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
