@@ -42,6 +42,8 @@
   <link rel="stylesheet" media="all" href="<?php echo get_template_directory_uri(); ?>/assets/css/stylesheet.css?v=<?php echo BB_VERSION; ?>">
 
   <!-- Javascripts -->
+  <script src="//use.typekit.net/rvj6shm.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/modernizr-2.7.1.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/pace.min.js"></script>
 
