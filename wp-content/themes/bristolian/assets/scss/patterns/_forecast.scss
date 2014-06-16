@@ -1,0 +1,32 @@
+/**
+ * patterns->forecast
+ */
+
+$fi-size: 80;
+
+.forecast {
+  padding: rem-calc($rem-base);
+  overflow: hidden;
+  .forecast__icon {
+    margin-top: rem-calc(0-$rem-base);
+    margin-bottom: rem-calc(0-$rem-base);
+    width: rem-calc($fi-size);
+    position: relative;
+    float: right;
+    .fi {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: rem-calc($fi-size);
+      line-height: rem-calc($fi-size);
+    }
+  }
+  .forecast__data {
+    p {
+      margin: 0;
+    }
+  }
+  .forecast__temperature {
+
+  }
+}

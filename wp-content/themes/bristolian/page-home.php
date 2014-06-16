@@ -32,16 +32,18 @@
           $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
         endif;
 ?>
-        <div class="homepage-image" style="background-image: url('<?php echo $image_url[0]; ?>');">
-          <div class="row">
-            <div class="home-blurb">
-              <p><?php echo $home_blurb; ?></p>
+        <div class="row">
+          <div class="jumbotron jumbotron--xlarge jumbotron--blurb" style="background-image: url('<?php echo $image_url[0]; ?>');">
+            <div class="jumbotron__inner">
+              <div class="jumbotron__caption">
+                <p><?php echo $home_blurb; ?></p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="next-meet">
-          <div class="row row--skinny">
-            <article class="post vevent">
+        <div class="row">
+          <div class="__home__next-meet">
+            <article class="post <?php if($special): ?>post--special <?php endif; ?>vevent">
               <header class="post__header">
                 <ul class="post__meta">
                   <li class="post__meta__category">
@@ -57,18 +59,13 @@
                     ?>
                   </li>
                 </ul>
+                <h1 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h1>
+                <ul class="post__meta">
+                  <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
                 <?php if($special): ?>
-                <h2 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h2>
-                <ul class="post__meta">
-                  <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
                   <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
-                </ul>
-                <?php else: ?>
-                <h3 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h3>
-                <ul class="post__meta">
-                  <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
-                </ul>
                 <?php endif; ?>
+                </ul>
               </header>
               <?php if($special): ?>
               <div class="post__body">
@@ -88,10 +85,12 @@
         $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
       endif;
 ?>
-        <div class="homepage-image" style="background-image: url('<?php echo $image_url[0]; ?>');">
-          <div class="row">
-            <div class="home-blurb">
-              <p><?php echo $home_blurb; ?></p>
+        <div class="row">
+          <div class="jumbotron jumbotron--xlarge jumbotron--blurb" style="background-image: url('<?php echo $image_url[0]; ?>');">
+            <div class="jumbotron__inner">
+              <div class="jumbotron__caption">
+                <p><?php echo $home_blurb; ?></p>
+              </div>
             </div>
           </div>
         </div>

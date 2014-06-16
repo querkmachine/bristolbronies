@@ -19,8 +19,12 @@
     }
   }
   ul {
-    line-height: 1.5;
+    margin: 0;
+    padding: 0;
     list-style: none;
+  }
+  .footer__breadcrumbs {
+    margin-top: rem-calc($rem-base*2);
   }
   .footer-links {
     .footer-links__group {
@@ -53,10 +57,9 @@
     padding-top: rem-calc($rem-base);
     padding-bottom: rem-calc($rem-base);
     background-color: palette(grey, x-dark);
-    small {
-      display: block;
+    p {
+      margin: 0;
       @include column(12);
-      line-height: 1.5;
     }
   }
 }

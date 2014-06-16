@@ -1,0 +1,30 @@
+/** 
+ * patterns->alerts
+ */
+
+.alert {
+  padding: rem-calc($rem-base $rem-base $rem-base*2 $rem-base);
+  position: relative;
+  border: 4px solid palette(grey, x-dark);
+  border-radius: 4px;
+  background-color: palette(yellow);
+  font-weight: 900;
+  font-size: 90%;
+  text-align: center;
+  &::after {
+    content: "";
+    height: rem-calc($rem-base);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, palette(grey, x-dark)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, palette(grey, x-dark)), color-stop(.75, palette(grey, x-dark)), color-stop(.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(-45deg, palette(grey, x-dark) 25%, transparent 25%, transparent 50%, palette(grey, x-dark) 50%, palette(grey, x-dark) 75%, transparent 75%, transparent);
+    background-image:    -moz-linear-gradient(-45deg, palette(grey, x-dark) 25%, transparent 25%, transparent 50%, palette(grey, x-dark) 50%, palette(grey, x-dark) 75%, transparent 75%, transparent);
+    background-image:     -ms-linear-gradient(-45deg, palette(grey, x-dark) 25%, transparent 25%, transparent 50%, palette(grey, x-dark) 50%, palette(grey, x-dark) 75%, transparent 75%, transparent);
+    background-image:      -o-linear-gradient(-45deg, palette(grey, x-dark) 25%, transparent 25%, transparent 50%, palette(grey, x-dark) 50%, palette(grey, x-dark) 75%, transparent 75%, transparent);
+    background-image:         linear-gradient(-45deg, palette(grey, x-dark) 25%, transparent 25%, transparent 50%, palette(grey, x-dark) 50%, palette(grey, x-dark) 75%, transparent 75%, transparent);
+    background-position: center center;
+    background-size: 50px 50px;
+  }
+}

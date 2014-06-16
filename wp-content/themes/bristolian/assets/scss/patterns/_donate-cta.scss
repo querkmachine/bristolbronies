@@ -1,0 +1,35 @@
+/**
+ * patterns->donate-cta
+ */
+
+.donate-cta {
+  padding: rem-calc($rem-base*2);
+  color: palette(white);
+  background-color: palette(red, x-dark);
+  font-size: smaller; 
+  a {
+    color: palette(white);
+  }
+  .donate-cta__title {
+    @extend %title-page-subtitle;
+    color: palette(white);
+  }
+  .donate-cta__blurb {
+    @include column(12, 6);
+  }
+  .donate-cta__info {
+    @include column(12, 6);
+    margin-top: rem-calc($rem-base);
+    padding-top: rem-calc($rem-base);
+    padding-bottom: rem-calc($rem-base);
+    background-color: palette(red, dark);
+    @media #{$medium-up} {
+      margin-top: 0;
+      margin-bottom: rem-calc(0-($rem-base*3)); 
+      top: rem-calc(0-($rem-base*3));
+    }
+  }
+  .donate-cta__button {
+    display: block;
+  }
+}

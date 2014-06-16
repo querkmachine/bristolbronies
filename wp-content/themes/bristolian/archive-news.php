@@ -7,12 +7,12 @@
 ?>
 
         <div class="row">
-          <div class="post post--wide">
-            <header class="post__header">
-              <h1 class="post__title">Bristol Bronies News</h1>
-            </header>
-            <div class="post__body">
-              <p>Your one-stop-shop for all the developments in the Bristol Bronies meet-verse.</p>
+          <div class="jumbotron jumbotron--large" style="background-image: url('//placeponi.es/1280/720')">
+            <div class="jumbotron__inner">
+              <div class="jumbotron__caption">
+                <h1 class="jumbotron__title">News</h1>
+                <p>Your one-stop-shop for all the developments in the Bristol Bronies meet-verse.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -26,12 +26,19 @@
             <header class="post__header">
               <h2 class="post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <ul class="post__meta">
-                <li class="post__meta__date"><i class="fa fa-pencil-square-o fa-fw"></i> Posted on <time datetime="<?php echo get_the_date("c"); ?>"><?php echo get_the_date("jS F Y, g:ia"); ?></time></li>
-                <li class="post__meta__author"><i class="fa fa-user fa-fw"></i> Written by <?php echo get_the_author(); ?></li>
+                <li class="post__meta__item"><i class="fa fa-fw fa-pencil"></i> Written by <?php echo get_the_author(); ?> on <time datetime="<?php echo get_the_date("c"); ?>"><?php echo get_the_date("jS F Y, g:ia"); ?></time></li>
               </ul>
             </header>
             <div class="post__body">
-              <?php the_excerpt(); ?>
+              <?php
+                if(has_post_thumbnail()):
+                  $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+              ?>
+              <p><img src="<?php echo $image_url[0]; ?>" alt="<?php the_title(); ?>"></p>
+              <?php 
+                endif; 
+              ?>
+              <?php the_content(); ?>
             </div>
           </article>
         </div>

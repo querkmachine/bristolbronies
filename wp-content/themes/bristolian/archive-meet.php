@@ -7,12 +7,12 @@
 ?>
 
         <div class="row">
-          <div class="post post--wide">
-            <header class="post__header">
-              <h1 class="post__title">Meets</h1>
-            </header>
-            <div class="post__body">
-              <p>Meets, socials, special events, movies. We have them all.</p>
+          <div class="jumbotron jumbotron--large" style="background-image: url('//placeponi.es/1280/720')">
+            <div class="jumbotron__inner">
+              <div class="jumbotron__caption">
+                <h1 class="jumbotron__title">Meets</h1>
+                <p>Meets, socials, festivals, birthdays, movies. We have them all.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@
           endif; 
         ?>
         <div class="row">
-          <article class="post vevent<?php if(bb_custom_field('meet_end_time') < time()) { echo " post--past"; } ?>">
+          <article class="post <?php if($special): ?>post--special <?php endif; ?>vevent<?php if(bb_custom_field('meet_end_time') < time()) { echo " post--past"; } ?>">
             <header class="post__header">
               <ul class="post__meta">
                 <li class="post__meta__category">
@@ -49,18 +49,13 @@
                   ?>
                 </li>
               </ul>
+              <h1 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h1>
+              <ul class="post__meta">
+                <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
               <?php if($special): ?>
-              <h2 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h2>
-              <ul class="post__meta">
-                <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
                 <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
-              </ul>
-              <?php else: ?>
-              <h3 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h3>
-              <ul class="post__meta">
-                <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
-              </ul>
               <?php endif; ?>
+              </ul>
             </header>
             <?php if($special): ?>
             <div class="post__body">

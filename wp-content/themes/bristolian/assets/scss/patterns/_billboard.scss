@@ -22,17 +22,29 @@
     @media #{$medium-up} {
       max-width: 80%;
       position: absolute;
-      bottom: 10%;
+      bottom: 5%;
       left: 0;
-      background-color: rgba(palette(black), 0.8);
+      background-color: rgba(palette(black), 0.85);
+    }
+    p {
+      margin: 0;
     }
   }
   .billboard__title {
     font-size: larger;
     a {
       @extend %title-event;
-      color: palette(red);
+      border-bottom: 2px solid palette(red);
+      color: palette(white);
       text-decoration: none;
+      &:hover,
+      &:focus {
+        color: palette(red);
+      }
     }
+  }
+  &.billboard--inline {
+    @include column(12, 12, 6);
+    @include pad-this(0);
   }
 }

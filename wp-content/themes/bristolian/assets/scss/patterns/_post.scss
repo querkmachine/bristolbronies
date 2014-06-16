@@ -1,0 +1,51 @@
+/**
+ * patterns->post
+ */
+
+.post {
+  @include column(12, 10, 8);
+  position: relative;
+  margin-top: rem-calc($rem-base*4);
+  padding-bottom: rem-calc($rem-base*2);
+  font-family: $detail-font;
+  @media #{$medium-up} { 
+    @include push(1);
+    @include pull(1);
+  }
+  @media #{$large-up} { 
+    @include push(2);
+    @include pull(2);
+  }
+  &::after {
+    content: "";
+    margin-left: rem-calc(0-($rem-base));
+    width: rem-calc($rem-base*2);
+    height: rem-calc($rem-base*2);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    background-image: image-url('logo-notext.svg');
+    background-size: 100% 100%;
+    -webkit-filter: grayscale(100%) opacity(0.5);
+  }
+  a {
+    color: palette(red);
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: palette(red, dark);
+    }
+  }
+  .post__title {
+    @extend %title-page;
+  }
+  .post__meta {
+    margin: 0;
+    padding: 0;
+    color: palette(grey);
+    font-size: smaller;
+    list-style: none;
+  }
+  .post__body {
+  }
+}

@@ -1,0 +1,73 @@
+/**
+ * patterns->profile
+ */
+
+.profile {
+  .profile__header {
+    padding: rem-calc($rem-base $rem-base 0 $rem-base);
+    position: relative;
+  }
+  .profile__media {
+    margin-bottom: 25px;
+  }
+  .profile__banner {
+    height: 140px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 1px solid palette(grey, x-light);
+    background-color: palette(red, dark);
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .profile__avatar {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    z-index: 2;
+    padding: 4px;
+    border: 1px solid palette(grey, x-light);
+    background-color: palette(white);
+  }
+  .profile__captain {
+    @extend %title-postcard;
+    display: inline;
+  }
+  .profile__social-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media #{$medium-up} {
+      display: inline;
+      margin-left: rem-calc($rem-base);
+    }
+    li {
+      display: inline;
+    }
+    a {
+      color: palette(grey);
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        color: palette(grey, dark);
+      }
+    }
+  }
+  .profile__biography {
+    padding: rem-calc(0 $rem-base $rem-base);
+    p {
+      margin: 0;
+    }
+    a {
+      color: palette(red);
+      &:hover,
+      &:focus {
+        color: palette(red, dark);
+      }
+    }
+  }
+}

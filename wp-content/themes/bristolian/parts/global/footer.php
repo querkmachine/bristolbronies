@@ -1,12 +1,19 @@
       </main>
 
-      <?php if(function_exists('bcn_display') && !is_front_page()): ?>
-        <div class="breadcrumbs">
-          <?php bcn_display(); ?>
-        </div>
-      <?php endif; ?>
+      <?php 
+        if(is_front_page()):
+          get_template_part('parts/global/donate-cta');
+        endif; 
+      ?>
 
       <footer class="footer" id="bottom" role="contentinfo">
+      <?php if(function_exists('bcn_display') && !is_front_page()): ?>
+        <div class="row">
+          <nav class="breadcrumbs footer__breadcrumbs">
+            <?php bcn_display(); ?>
+          </nav>
+        </div>
+      <?php endif; ?>
         <div class="footer-links">
           <div class="row">
             <div class="footer-links__group footer-links__group--site">
@@ -36,17 +43,19 @@
                 ));
               ?>
             </div>
-<?php
-  get_template_part('parts/global/affiliates');
-?>
+            <?php
+              get_template_part('parts/global/affiliates');
+            ?>
           </div>
         </div>
         <div class="boilerplate">
           <div class="row">
-            <small>
-              &copy;<?php echo date('Y'); ?> Bristol Bronies. All rights reserved. Another one of <a href="http://greysadventures.com/">Grey's Adventures</a>.<br>
-              My Little Pony: Friendship is Magic is &copy; Hasbro. Bristol Bronies is not affiliated in any way with Hasbro or DHX Media. No copyright infringement intended.
-            </small>
+            <p>
+              <small>
+                &copy;<?php echo date('Y'); ?> Bristol Bronies. All rights reserved. Another one of <a href="http://greysadventures.com/">Grey's Adventures</a>.<br>
+                My Little Pony: Friendship is Magic is &copy; Hasbro. Bristol Bronies is not affiliated in any way with Hasbro or DHX Media. No copyright infringement intended.
+              </small>
+            </p>
           </div>
         </div>
       </footer>

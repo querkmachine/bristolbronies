@@ -3,6 +3,7 @@
  */
 
 html {
+  background-color: palette(grey, x-dark);
   overflow-x: hidden;
 }
 
@@ -23,5 +24,16 @@ body {
   text-align: center;
   a {
     color: inherit;
+  }
+}
+
+.guns-dont-kill-people {
+  background-color: palette(white);
+}
+
+.main {
+  @media #{$medium-up} {
+    margin-top: rem-calc($rem-base);
+    margin-bottom: rem-calc($rem-base*2);
   }
 }

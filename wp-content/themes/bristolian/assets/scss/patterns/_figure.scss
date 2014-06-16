@@ -1,0 +1,27 @@
+/** 
+ * patterns->figure
+ */
+
+.figure {
+  margin: rem-calc($rem-base 0);
+  position: relative;
+  .figure__caption {
+    margin-top: rem-calc($rem-base/2);
+    color: palette(grey);
+    font-size: small;
+    font-style: italic;
+    @media #{$medium-up} {
+      width: 120px;
+      padding-right: rem-calc($rem-base);
+      position: absolute;
+      bottom: 0;
+      right: 100%;
+      text-align: right;
+    }
+  }
+  blockquote,
+  img,
+  iframe {
+    width: 100%;
+  }
+}

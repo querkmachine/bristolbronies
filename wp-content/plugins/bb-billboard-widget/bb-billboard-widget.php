@@ -34,9 +34,11 @@ class bb_billboard_widget extends WP_Widget {
             <?php
               $image_url = get_field("billboard_image"); 
             ?>
-            <a href="<?php echo get_field("billboard_url"); ?>">
-              <img src="<?php echo $image_url['url']; ?>" alt="<?php the_title(); ?>">
-            </a>
+            <div class="billboard__media">
+              <a href="<?php echo get_field("billboard_url"); ?>">
+                <img src="<?php echo $image_url['url']; ?>" alt="<?php the_title(); ?>">
+              </a>
+            </div>
             <figcaption class="billboard__caption">
               <h4 class="billboard__title"><a href="<?php echo get_field("billboard_url"); ?>"><?php the_title(); ?></a></h4>
               <?php the_excerpt(); ?>

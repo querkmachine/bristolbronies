@@ -16,7 +16,7 @@
   }
 }
 
-@mixin column($α, $β: false, $γ: false) {
+@mixin column($α, $β: false, $γ: false, $δ: false) {
   @if $α { 
     width: percentage(($α / $grid-total-columns));
   } 
@@ -32,10 +32,23 @@
     @media #{$large-up} {  
       width: percentage(($γ / $grid-total-columns));
     }
-  } 
+  }
+  @if $δ {
+    @media #{$xlarge-up} {
+      width: percentage(($δ / $grid-total-columns));
+    }
+  }
 }
 
-@mixin pull($dir, $breakpoint: $medium-up) {
+@mixin push($num) {
+  left: percentage($num / $grid-total-columns);
+}
+
+@mixin pull($num) {
+  right: percentage($num / $grid-total-columns);
+}
+
+@mixin float($dir, $breakpoint: $medium-up) {
   @if $dir != none {
     @media #{$breakpoint} {
       float: $dir; 
@@ -43,7 +56,7 @@
   }
 }
 
-@mixin pad-this() {
-  padding-right: $grid-column-gutter/2;
-  padding-left: $grid-column-gutter/2;
+@mixin pad-this($gutter: $grid-column-gutter) {
+  padding-right: $gutter/2;
+  padding-left: $gutter/2;
 }

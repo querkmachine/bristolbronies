@@ -9,15 +9,25 @@
 ?>
 
         <?php
-          if(has_post_thumbnail()) {
-            $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
-        ?>
-        <div class="hero-image" style="background-image: url('<?php echo $large_image_url[0]; ?>')"></div>
-        <?php 
-          } 
+          if(has_post_thumbnail()):
+            $image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+          else:
+            $image_url[0] = "//placeponi.es/1280/720";
+          endif;
         ?>
         <div class="row">
-          <article class="post vevent">
+          <div class="jumbotron" style="background-image: url('<?php echo $image_url[0]; ?>')">
+            <div class="jumbotron__inner">
+              <div class="jumbotron__caption">
+                <h1 class="jumbotron__title">Meets</h1>
+                <p>Meets, socials, festivals, birthdays, movies. We have them all.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <article class="post post--special vevent">
             <header class="post__header">
               <ul class="post__meta">
                 <li class="post__meta__category">
@@ -32,7 +42,7 @@
                   ?>
                 </li>
               </ul>
-              <h2 class="post__title summary"><?php the_title(); ?></h2>
+              <h1 class="post__title summary"><?php the_title(); ?></h1>
               <ul class="post__meta">
                 <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
                 <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
@@ -67,18 +77,19 @@
                 foreach($runners as $runner):
               ?>
               <aside class="profile postcard">
-                <div class="profile__avatar">
-                  <img src="<?php echo bb_profile_avatar($runner); ?>" alt="">
-                </div>
-                <div class="profile__biography postcard__data">
-                  <h1 class="profile__captain"><small>Meet Runner</small> <?php echo get_the_title($runner); ?></h1>
-                  <p><?php echo bb_profile_biography($runner); ?></p>
-                </div>
-                <div class="profile__social-links">
-                  <ul>
-                    <?php if(bb_custom_field("runner_twitter", $runner)): ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php endif; ?>
-                    <?php if(bb_custom_field("runner_facebook", $runner)): ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php endif; ?>
+                <header class="profile__header">
+                  <div class="profile__media">
+                    <div class="profile__banner"><?php // <img src="//placeponi.es/550/200" alt=""> ?> </div>
+                    <img class="profile__avatar" src="<?php echo bb_profile_avatar($runner); ?>" alt="<?php echo get_the_title($runner); ?>">
+                  </div>
+                  <h1 class="profile__captain"><small>Meet runner</small> <?php echo get_the_title($runner); ?></h1>
+                  <ul class="profile__social-links">
+                    <?php if(bb_custom_field("runner_twitter", $runner)): ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a></li><?php endif; ?>
+                    <?php if(bb_custom_field("runner_facebook", $runner)): ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-fw fa-facebook"></i> <span class="hidden">Facebook</span></a></li><?php endif; ?>
                   </ul>
+                </header>
+                <div class="profile__biography postcard__data">
+                  <p><?php echo bb_profile_biography($runner); ?></p>
                 </div>
               </aside>
               <?php 

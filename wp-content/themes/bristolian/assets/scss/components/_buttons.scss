@@ -30,6 +30,9 @@ button {
   &.button--large {
     font-size: larger;
   }
+  &.button--xlarge {
+    font-size: x-large;
+  }
   &.button--positive {
     background-color: palette(green);
     &:hover,

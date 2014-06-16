@@ -1,0 +1,10 @@
+/** 
+ * sections->home
+ */
+
+.__home__next-meet {
+  @include column(12);
+  margin-bottom: rem-calc($rem-base*2);
+  padding-top: rem-calc($rem-base);
+  padding-bottom: rem-calc($rem-base);
+}

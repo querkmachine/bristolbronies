@@ -7,12 +7,12 @@
 ?>
 
         <div class="row">
-          <div class="post post--wide">
-            <header class="post__header">
-              <h1 class="post__title">Community</h1>
-            </header>
-            <div class="post__body">
-              <p>We've got lots of opportunity in this very community!</p>
+          <div class="jumbotron jumbotron--large" style="background-image: url('//placeponi.es/1280/720')">
+            <div class="jumbotron__inner">
+              <div class="jumbotron__caption">
+                <h1 class="jumbotron__title">Community</h1>
+                <p>We've got lots of opportunity in this very community!</p>
+              </div>
             </div>
           </div>
         </div>

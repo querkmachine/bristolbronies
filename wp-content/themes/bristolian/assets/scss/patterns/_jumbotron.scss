@@ -1,0 +1,51 @@
+/** 
+ * patterns->jumbotron
+ */
+
+.jumbotron {
+  height: rem-calc(160px);
+  position: relative;
+  color: palette(white);
+  background-position: center center;
+  background-size: cover;
+  text-shadow: 0 0 3px rgba(palette(black), 0.6);
+  overflow: hidden;
+  a {
+    color: palette(white);
+  }
+  .jumbotron__inner {
+    height: 100%;
+    padding: rem-calc($rem-base);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include linear-gradient(rgba(palette(black), 0.25), rgba(palette(black), 0.85));
+  }
+  .jumbotron__title {
+    @extend %title-page;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+  .jumbotron__caption {
+    @include vertical-align;
+    text-align: center;
+    p {
+      @extend .lede;
+      margin: 0;
+    }
+  }
+  &.jumbotron--large {
+    height: rem-calc(320px);
+  }
+  &.jumbotron--xlarge {
+    height: rem-calc(480px);
+  }
+  &.jumbotron--blurb {
+    .jumbotron__caption {
+      @include vertical-align(100%);
+    }
+  }
+}

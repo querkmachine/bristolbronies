@@ -13,21 +13,24 @@ $BB_VERSION: "bristolian";
 
 // Important stuff
 @import "components/buttons";
+@import "components/forecast";
 // @import "components/form";
 @import "components/grid";
-// @import "components/postcard";
+@import "components/postcard";
 @import "components/typography";
 
 // Patterns
-// @import "patterns/alerts";
+@import "patterns/alerts";
 @import "patterns/billboard";
 @import "patterns/breadcrumbs";
-// @import "patterns/figure";
-// @import "patterns/forecast";
-// @import "patterns/media-grid";
+@import "patterns/donate-cta";
+@import "patterns/figure";
+@import "patterns/forecast";
+@import "patterns/jumbotron";
+@import "patterns/media-grid";
 // @import "patterns/pagination";
-// @import "patterns/post";
-// @import "patterns/profile";
+@import "patterns/post";
+@import "patterns/profile";
 // @import "patterns/search";
 
 // The site stuff
@@ -36,7 +39,7 @@ $BB_VERSION: "bristolian";
 @import "site/footer";
 
 // Bits and bobs
-// @import "sections/homepage";
+@import "sections/home";
 // @import "sections/community";
 // @import "sections/about";
 // @import "sections/404";

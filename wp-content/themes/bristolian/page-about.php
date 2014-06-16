@@ -88,21 +88,22 @@
       if(get_field("runner_staff") == true): 
 ?>
           <div class="media-grid__item media-grid__item--staff">
-            <div class="profile postcard">
-              <div class="profile__avatar">
-                <img src="<?php echo bb_profile_avatar(get_the_ID()); ?>" alt="">
-              </div>
-              <div class="profile__biography postcard__data">
-                <h1 class="profile__captain"><?php echo get_the_title(); ?></h1>
-                <p><?php echo bb_profile_biography(get_the_ID()); ?></p>
-              </div>
-              <div class="profile__social-links">
-                <ul>
-                  <?php if(bb_custom_field("runner_twitter")): ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-twitter fa-fw"></i> <span class="hidden">Twitter</span></a></li><?php endif; ?>
-                  <?php if(bb_custom_field("runner_facebook")): ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-facebook fa-fw"></i> <span class="hidden">Facebook</span></a></li><?php endif; ?>
+            <article class="profile postcard">
+              <header class="profile__header">
+                <div class="profile__media">
+                  <div class="profile__banner"><?php // <img src="//placeponi.es/550/200" alt=""> ?> </div>
+                  <img class="profile__avatar" src="<?php echo bb_profile_avatar($runner); ?>" alt="<?php echo get_the_title($runner); ?>">
+                </div>
+                <h1 class="profile__captain"><?php echo get_the_title($runner); ?></h1>
+                <ul class="profile__social-links">
+                  <?php if(bb_custom_field("runner_twitter", $runner)): ?><li><a href="http://twitter.com/<?php echo bb_custom_field("runner_twitter", $runner); ?>"><i class="fa fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a></li><?php endif; ?>
+                  <?php if(bb_custom_field("runner_facebook", $runner)): ?><li><a href="http://facebook.com/<?php echo bb_custom_field("runner_facebook", $runner); ?>"><i class="fa fa-fw fa-facebook"></i> <span class="hidden">Facebook</span></a></li><?php endif; ?>
                 </ul>
+              </header>
+              <div class="profile__biography postcard__data">
+                <p><?php echo bb_profile_biography($runner); ?></p>
               </div>
-            </div>
+            </article>
           </div>
 <?php
       endif; 
