@@ -34,6 +34,7 @@ button {
     font-size: x-large;
   }
   &.button--positive {
+    color: palette(white);
     background-color: palette(green);
     &:hover,
     &:focus {
@@ -41,6 +42,7 @@ button {
     }
   }
   &.button--negative {
+    color: palette(white);
     background-color: palette(red, dark);
     &:hover,
     &:focus {
@@ -48,6 +50,7 @@ button {
     }
   }
   &.button--rss {
+    color: palette(white);
     background-color: palette(orange);
     &:hover,
     &:focus {

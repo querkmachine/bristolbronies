@@ -362,6 +362,7 @@ button {
   input[type="submit"].button--positive,
   input[type="reset"].button--positive,
   button.button--positive {
+    color: white;
     background-color: #00a175; }
     .button.button--positive:hover, .button.button--positive:focus,
     input[type="submit"].button--positive:hover,
@@ -375,6 +376,7 @@ button {
   input[type="submit"].button--negative,
   input[type="reset"].button--negative,
   button.button--negative {
+    color: white;
     background-color: #ba1933; }
     .button.button--negative:hover, .button.button--negative:focus,
     input[type="submit"].button--negative:hover,
@@ -388,6 +390,7 @@ button {
   input[type="submit"].button--rss,
   input[type="reset"].button--rss,
   button.button--rss {
+    color: white;
     background-color: #ff6600; }
     .button.button--rss:hover, .button.button--rss:focus,
     input[type="submit"].button--rss:hover,
