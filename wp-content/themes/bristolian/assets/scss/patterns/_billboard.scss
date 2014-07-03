@@ -17,7 +17,8 @@
     padding: rem-calc($rem-base);
     color: palette(white);
     background-color: palette(grey, x-dark);
-    font-size: smaller;
+    font-family: $body-font;
+    font-size: rem-calc(15px);
     line-height: 1.5;
     @media #{$medium-up} {
       max-width: 80%;
@@ -31,10 +32,13 @@
     }
   }
   .billboard__title {
+    margin-bottom: rem-calc($rem-base/4);
+    padding-bottom: rem-calc($rem-base/4);
+    border-bottom: 4px solid palette(red);
     font-size: larger;
     a {
       @extend %title-event;
-      border-bottom: 2px solid palette(red);
+      display: block;
       color: palette(white);
       text-decoration: none;
       &:hover,

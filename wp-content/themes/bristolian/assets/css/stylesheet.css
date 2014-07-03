@@ -491,6 +491,13 @@ button {
 .postcard {
   border: 1px solid #e5e5e5; }
 
+/** 
+ * components->sidebar
+ */
+.sidebar {
+  margin: 0;
+  padding: 0; }
+
 /**
  * components->typography
  */
@@ -711,7 +718,8 @@ samp {
     padding: 1rem;
     color: white;
     background-color: #101010;
-    font-size: smaller;
+    font-family: "lato", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+    font-size: 0.9375rem;
     line-height: 1.5; }
     @media only screen and (min-width: 40.063em) {
       .billboard .billboard__caption {
@@ -723,9 +731,12 @@ samp {
     .billboard .billboard__caption p {
       margin: 0; }
   .billboard .billboard__title {
+    margin-bottom: 0.25rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 4px solid #e02436;
     font-size: larger; }
     .billboard .billboard__title a {
-      border-bottom: 2px solid #e02436;
+      display: block;
       color: white;
       text-decoration: none; }
       .billboard .billboard__title a:hover, .billboard .billboard__title a:focus {
