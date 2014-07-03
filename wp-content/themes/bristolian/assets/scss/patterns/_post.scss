@@ -37,7 +37,10 @@
     }
   }
   .post__title {
-    @extend %title-page;
+    @extend %title-news; 
+    margin-bottom: rem-calc($rem-base);
+    padding-bottom: rem-calc($rem-base);
+    border-bottom: 4px solid palette(grey, dark);
   }
   .post__meta {
     margin: 0;
@@ -45,6 +48,17 @@
     color: palette(grey);
     font-size: smaller;
     list-style: none;
+    @media #{$medium-up} {
+      margin-left: -1.5em; 
+    }
+    a {
+      color: palette(grey);
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
   }
   .post__body {
   }

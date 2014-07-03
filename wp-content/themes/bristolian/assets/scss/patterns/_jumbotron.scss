@@ -21,7 +21,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    @include linear-gradient(rgba(palette(black), 0.25), rgba(palette(black), 0.85));
+    background-color: rgba(palette(black), 0.65);
+    // @include linear-gradient(rgba(palette(black), 0.25), rgba(palette(black), 0.85));
   }
   .jumbotron__title {
     @extend %title-page;
@@ -38,10 +39,15 @@
     }
   }
   &.jumbotron--large {
-    height: rem-calc(320px);
+    @media #{$medium-up} {
+      height: rem-calc(320px);
+    }
   }
   &.jumbotron--xlarge {
-    height: rem-calc(480px);
+    height: rem-calc(320px);
+    @media #{$medium-up} {
+      height: rem-calc(480px);
+    }
   }
   &.jumbotron--blurb {
     .jumbotron__caption {

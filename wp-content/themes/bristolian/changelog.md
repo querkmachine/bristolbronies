@@ -15,3 +15,5 @@ CMS changes needed following this update
 * Change theme to v4.4 "James"
 * Re-identify menus.
 * Add profile banner custom field (image object type). 
+* Activate comments on news items.
+* Disable comment nesting in Settings->Discussion.

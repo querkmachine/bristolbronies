@@ -522,29 +522,29 @@ h4 + h3,
 h4 + h4 {
   margin-top: 1rem; }
 
-.jumbotron .jumbotron__title, .post .post__title {
+.jumbotron .jumbotron__title {
   font-size: 1.777em;
   font-family: "lato", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
   font-weight: 900;
   line-height: 1.2; }
   @media only screen and (min-width: 40.063em) {
-    .jumbotron .jumbotron__title, .post .post__title {
+    .jumbotron .jumbotron__title {
       font-size: 1.999em; } }
-  .jumbotron .jumbotron__title small, .post .post__title small {
+  .jumbotron .jumbotron__title small {
     color: #716e6d;
     font-size: smaller;
     font-weight: 300; }
 
-.donate-cta .donate-cta__title {
+.comments .comments__title, .donate-cta .donate-cta__title {
   color: #716e6d;
   font-size: 1.333em;
   font-family: "quatro-slab", Georgia, "Times New Roman", Times, serif;
   font-weight: 700;
   font-style: italic; }
   @media only screen and (min-width: 40.063em) {
-    .donate-cta .donate-cta__title {
+    .comments .comments__title, .donate-cta .donate-cta__title {
       font-size: 1.414em; } }
-  .donate-cta .donate-cta__title small {
+  .comments .comments__title small, .donate-cta .donate-cta__title small {
     color: #959599;
     font-size: normal; }
 
@@ -559,6 +559,18 @@ h4 + h4 {
   .billboard .billboard__title a small {
     color: #959599;
     font-size: normal; }
+
+.post .post__title {
+  color: #444444;
+  font-family: "quatro-slab", Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 2.6em; }
+  @media only screen and (min-width: 40.063em) {
+    .post .post__title {
+      font-size: 3.2em; } }
+  @media only screen and (min-width: 50.063em) {
+    .post .post__title {
+      font-size: 3.6em; } }
 
 .footer h6 {
   margin-bottom: 0.9375rem;
@@ -581,6 +593,14 @@ h4 + h4 {
     color: #716e6d;
     font-size: smaller;
     font-weight: 300; }
+
+.comment .comment__meta {
+  color: #959599;
+  font-family: "quatro-slab", Georgia, "Times New Roman", Times, serif;
+  font-size: 0.75rem; }
+  @media only screen and (min-width: 40.063em) {
+    .comment .comment__meta {
+      font-size: 0.9375rem; } }
 
 p,
 ul,
@@ -650,6 +670,33 @@ samp {
     background-position: center center;
     background-size: 50px 50px; }
 
+/** 
+ * patterns->aside
+ */
+.aside {
+  color: #716e6d;
+  font-size: small;
+  font-style: italic; }
+  @media only screen and (min-width: 40.063em) {
+    .aside {
+      width: 120px; } }
+  .aside p, .aside ul, .aside ol dl {
+    margin: 0.5em; }
+  @media only screen and (min-width: 40.063em) {
+    .aside.aside--left {
+      padding-right: 1rem;
+      float: left;
+      clear: left;
+      margin-left: -120px;
+      text-align: right; } }
+  @media only screen and (min-width: 40.063em) {
+    .aside.aside--right {
+      padding-left: 1rem;
+      float: right;
+      clear: right;
+      margin-right: -120px;
+      text-align: left; } }
+
 /**
  * patterns->billboard
  */
@@ -717,6 +764,123 @@ samp {
     margin: 0 0.5rem;
     color: #959599; }
 
+/** 
+ * patterns->comments
+ */
+.comments {
+  width: 100%;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
+  position: relative;
+  float: left;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-family: "quatro-slab", Georgia, "Times New Roman", Times, serif; }
+  @media only screen and (min-width: 40.063em) {
+    .comments {
+      width: 83.33333%; } }
+  @media only screen and (min-width: 50.063em) {
+    .comments {
+      width: 50%; } }
+  @media only screen and (min-width: 40.063em) {
+    .comments {
+      left: 8.33333%;
+      right: 8.33333%;
+      margin-bottom: 0; } }
+  @media only screen and (min-width: 50.063em) {
+    .comments {
+      left: 25%;
+      right: 25%; } }
+  .comments .comments__title {
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid #e5e5e5; }
+    .comments .comments__title small {
+      font-size: 100%;
+      color: #959599; }
+      .comments .comments__title small::before {
+        content: "\00BB"; }
+  .comments .comments__list {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+
+.comment {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem; }
+  .comment .comment__meta {
+    overflow: hidden;
+    line-height: 34px; }
+    @media only screen and (min-width: 40.063em) {
+      .comment .comment__meta {
+        margin-left: -44px; } }
+    .comment .comment__meta a {
+      color: #959599;
+      text-decoration: none; }
+      .comment .comment__meta a:hover, .comment .comment__meta a:focus {
+        color: #716e6d; }
+  .comment .avatar {
+    margin-right: 10px;
+    float: left; }
+  .comment .comment__body {
+    margin-left: 44px;
+    font-size: 14px; }
+    @media only screen and (min-width: 40.063em) {
+      .comment .comment__body {
+        margin-left: 0;
+        font-size: 16px; } }
+    .comment .comment__body p:first-child, .comment .comment__body ul:first-child, .comment .comment__body ol:first-child, .comment .comment__body dl:first-child {
+      margin-top: 0; }
+
+.comment-form {
+  padding: 1rem 0;
+  background-color: #fafafa;
+  overflow: hidden; }
+  .comment-form h2 {
+    margin-bottom: 1rem; }
+  .comment-form p {
+    margin-top: 0; }
+  .comment-form .comment-form__author,
+  .comment-form .comment-form__email {
+    width: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    position: relative;
+    float: left; }
+    @media only screen and (min-width: 40.063em) {
+      .comment-form .comment-form__author,
+      .comment-form .comment-form__email {
+        width: 50%; } }
+  .comment-form h2,
+  .comment-form .comment-form__comment,
+  .comment-form .comment-form__submit {
+    width: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    position: relative;
+    float: left; }
+  .comment-form .comment-form__submit {
+    text-align: right; }
+  .comment-form input[type="text"],
+  .comment-form input[type="email"],
+  .comment-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    background-color: white; }
+    .comment-form input[type="text"]:focus,
+    .comment-form input[type="email"]:focus,
+    .comment-form textarea:focus {
+      outline: 1px solid #959599; }
+  .comment-form textarea {
+    resize: vertical; }
+  .comment-form h2 {
+    height: 0.8em;
+    border-bottom: 4px solid #e5e5e5;
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    overflow: hidden; }
+
 /**
  * patterns->donate-cta
  */
@@ -782,6 +946,11 @@ samp {
   .figure img,
   .figure iframe {
     width: 100%; }
+  .figure blockquote {
+    font-size: 1.2em;
+    font-family: "quatro-slab", Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    line-height: 1.2; }
 
 /**
  * patterns->forecast
@@ -825,12 +994,7 @@ samp {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.25)), color-stop(100%, rgba(0, 0, 0, 0.85)));
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.85) 100%);
-    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.85) 100%);
-    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.85) 100%);
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.85) 100%);
-    background-image: linear-gradient(top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.85) 100%); }
+    background-color: rgba(0, 0, 0, 0.65); }
   .jumbotron .jumbotron__title {
     position: relative;
     z-index: 2;
@@ -844,10 +1008,14 @@ samp {
     text-align: center; }
     .jumbotron .jumbotron__caption p {
       margin: 0; }
-  .jumbotron.jumbotron--large {
-    height: 20rem; }
+  @media only screen and (min-width: 40.063em) {
+    .jumbotron.jumbotron--large {
+      height: 20rem; } }
   .jumbotron.jumbotron--xlarge {
-    height: 30rem; }
+    height: 20rem; }
+    @media only screen and (min-width: 40.063em) {
+      .jumbotron.jumbotron--xlarge {
+        height: 30rem; } }
   .jumbotron.jumbotron--blurb .jumbotron__caption {
     position: relative;
     top: 100%;
@@ -950,12 +1118,24 @@ samp {
     text-decoration: none; }
     .post a:hover, .post a:focus {
       color: #ba1933; }
+  .post .post__title {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid #444444; }
   .post .post__meta {
     margin: 0;
     padding: 0;
     color: #716e6d;
     font-size: smaller;
     list-style: none; }
+    @media only screen and (min-width: 40.063em) {
+      .post .post__meta {
+        margin-left: -1.5em; } }
+    .post .post__meta a {
+      color: #716e6d;
+      text-decoration: none; }
+      .post .post__meta a:hover, .post .post__meta a:focus {
+        text-decoration: underline; }
 
 /**
  * patterns->profile
@@ -1073,7 +1253,8 @@ body {
       font-family: "lato", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
       font-weight: 900;
       text-transform: uppercase;
-      text-decoration: none; } }
+      text-decoration: none;
+      white-space: nowrap; } }
   @media only screen and (min-width: 40.063em) {
     .header .branding a {
       display: block;

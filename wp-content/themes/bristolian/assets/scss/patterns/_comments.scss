@@ -1,0 +1,120 @@
+/** 
+ * patterns->comments
+ */
+
+.comments {
+	@include column(12, 10, 6);
+  margin-top: rem-calc($rem-base*4);
+  margin-bottom: rem-calc($rem-base*2);
+  font-family: $detail-font;
+  @media #{$medium-up} { 
+    @include push(1);
+    @include pull(1);
+    margin-bottom: 0;
+  }
+  @media #{$large-up} { 
+    @include push(3);
+    @include pull(3);
+  }
+  .comments__title {
+    @extend %title-page-subtitle;
+    padding-bottom: rem-calc($rem-base/2);
+    border-bottom: 4px solid palette(grey, x-light);
+    small {
+      font-size: 100%;
+      color: palette(grey, light);
+      &::before {
+        content: "\00BB";
+      }
+    }
+  }
+  .comments__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.comment {
+  margin-top: rem-calc($rem-base/2);
+  margin-bottom: rem-calc($rem-base);
+  .comment__meta {
+    @extend %title-comment;
+    overflow: hidden;
+    line-height: 34px;
+    @media #{$medium-up} {
+      margin-left: -44px;
+    }
+    a {
+      color: palette(grey, light);
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        color: palette(grey);
+      }
+    }
+  }
+  .avatar {
+    margin-right: 10px;
+    float: left;
+  }
+  .comment__body {
+    margin-left: 44px;
+    font-size: 14px;
+    @media #{$medium-up} {
+      margin-left: 0;
+      font-size: 16px;
+    }
+    p, ul, ol, dl {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.comment-form {
+  padding: rem-calc($rem-base 0);
+  background-color: palette(grey, xx-light);
+  overflow: hidden;
+  h2 {
+    margin-bottom: rem-calc($rem-base);
+  }
+  p {
+    margin-top: 0;
+  }
+  .comment-form__author,
+  .comment-form__email {
+    @include column(12, 6);
+  }
+  h2,
+  .comment-form__comment,
+  .comment-form__submit {
+    @include column(12);
+  }
+  .comment-form__submit {
+    text-align: right;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: rem-calc($rem-base/2);
+    border: none;
+    background-color: palette(white);
+    &:focus {
+      outline: 1px solid palette(grey, light);
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  h2 {
+    height: 0.8em;
+    border-bottom: 4px solid palette(grey, x-light);
+    font-size: rem-calc(32px);
+    font-style: italic;
+    text-align: center;
+    overflow: hidden;
+  }
+}

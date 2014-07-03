@@ -119,6 +119,19 @@ h4 {
   }
 }
 
+%title-news {
+  color: palette(grey, dark);
+  font-family: $detail-font;
+  font-weight: 700;
+  font-size: 2.6em;
+  @media #{$medium-up} {
+    font-size: 3.2em;
+  }
+  @media #{$large-up} {
+    font-size: 3.6em;
+  }
+}
+
 %title-list {
   margin-bottom: rem-calc(15);
   font-size: smaller;
@@ -143,6 +156,15 @@ h4 {
     font-weight: 300;
   }
 } 
+
+%title-comment {
+  color: palette(grey, light);
+  font-family: $detail-font;
+  font-size: rem-calc(12px);
+  @media #{$medium-up} {
+    font-size: rem-calc(15px);
+  }
+}
 
 p, 
 ul, 

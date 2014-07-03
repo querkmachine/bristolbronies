@@ -1,0 +1,33 @@
+/** 
+ * patterns->aside
+ */
+
+.aside {
+  color: palette(grey);
+  font-size: small;
+  font-style: italic;
+  @media #{$medium-up} {
+    width: 120px;
+  }
+  p, ul, ol dl {
+    margin: 0.5em;
+  }
+  &.aside--left {
+    @media #{$medium-up} {
+      padding-right: rem-calc($rem-base);
+      float: left;
+      clear: left;
+      margin-left: -120px;
+      text-align: right;
+    }
+  }
+  &.aside--right {
+    @media #{$medium-up} {
+      padding-left: rem-calc($rem-base);
+      float: right;
+      clear: right;
+      margin-right: -120px;
+      text-align: left;
+    }
+  }
+}

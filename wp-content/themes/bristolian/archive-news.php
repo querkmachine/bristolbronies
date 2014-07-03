@@ -4,18 +4,11 @@
   */
   get_template_part('parts/global/html-header');
   get_template_part('parts/global/masthead');
+  $section_index = true;
+  require(locate_template('parts/news/masthead.php'));
 ?>
 
-        <div class="row">
-          <div class="jumbotron jumbotron--large" style="background-image: url('//placeponi.es/1280/720')">
-            <div class="jumbotron__inner">
-              <div class="jumbotron__caption">
-                <h1 class="jumbotron__title">News</h1>
-                <p>Your one-stop-shop for all the developments in the Bristol Bronies meet-verse.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
 <?php 
   if(have_posts()):
