@@ -20,6 +20,7 @@
               <h2 class="post__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
               <ul class="post__meta">
                 <li class="post__meta__item"><i class="fa fa-fw fa-pencil"></i> Written by <?php echo get_the_author(); ?> on <time datetime="<?php echo get_the_date("c"); ?>"><?php echo get_the_date("jS F Y, g:ia"); ?></time></li>
+                <?php if(have_comments() || comments_open()): ?><li class="post__meta__item"><i class="fa fa-fw fa-comments"></i> <a href="<?php the_permalink(); ?>#comments"><?php printf( _n( '1 comment', '%1$s comments', get_comments_number() ), number_format_i18n( get_comments_number() ) ); ?></a></li><?php endif; ?>
               </ul>
             </header>
             <div class="post__body">
