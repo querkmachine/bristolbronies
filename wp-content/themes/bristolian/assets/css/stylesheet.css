@@ -285,16 +285,16 @@ legend {
   overflow: hidden;
   clip: rect(0 0 0 0); }
 
-.clearfix:after, .row:after, .header .header__inner:after, .media-grid:after {
+.clearfix:after, .row:after, .header .header__inner:after, .media-grid:after, .pagination ul:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
-* html .clearfix, * html .row, * html .header .header__inner, .header * html .header__inner, * html .media-grid {
+* html .clearfix, * html .row, * html .header .header__inner, .header * html .header__inner, * html .media-grid, * html .pagination ul, .pagination * html ul {
   height: 1%;
   /* IE6 */ }
-*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .media-grid {
+*:first-child + html .clearfix, *:first-child + html .row, *:first-child + html .header .header__inner, .header *:first-child + html .header__inner, *:first-child + html .media-grid, *:first-child + html .pagination ul, .pagination *:first-child + html ul {
   min-height: 1px;
   /* IE7 */ }
 
@@ -532,18 +532,36 @@ h4 + h3,
 h4 + h4 {
   margin-top: 1rem; }
 
-.jumbotron .jumbotron__title {
+.meet .meet__title, .jumbotron .jumbotron__title {
   font-size: 1.777em;
   font-family: "lato", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
   font-weight: 900;
   line-height: 1.2; }
   @media only screen and (min-width: 40.063em) {
-    .jumbotron .jumbotron__title {
+    .meet .meet__title, .jumbotron .jumbotron__title {
       font-size: 1.999em; } }
-  .jumbotron .jumbotron__title small {
+  .meet .meet__title small, .jumbotron .jumbotron__title small {
     color: #716e6d;
     font-size: smaller;
     font-weight: 300; }
+
+.meet .meet__title {
+  font-size: 1.999em; }
+  @media only screen and (min-width: 40.063em) {
+    .meet .meet__title {
+      font-size: 2.827em; } }
+
+.meet .meet__body h3 {
+  font-size: 1.777em;
+  font-family: "lato", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+  font-weight: 900;
+  line-height: 1.15; }
+  @media only screen and (min-width: 40.063em) {
+    .meet .meet__body h3 {
+      font-size: 1.999em; } }
+  .meet .meet__body h3 small {
+    color: #716e6d;
+    font-size: normal; }
 
 .comments .comments__title, .donate-cta .donate-cta__title {
   color: #716e6d;
@@ -558,17 +576,28 @@ h4 + h4 {
     color: #959599;
     font-size: normal; }
 
-.billboard .billboard__title a {
+.billboard .billboard__title a, .meet .meet__body h4 {
   font-size: 1.1em;
   font-family: "quatro-slab", Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
   line-height: 1.2; }
   @media only screen and (min-width: 40.063em) {
-    .billboard .billboard__title a {
+    .billboard .billboard__title a, .meet .meet__body h4 {
       font-size: 1.2em; } }
-  .billboard .billboard__title a small {
+  .billboard .billboard__title a small, .meet .meet__body h4 small {
     color: #959599;
     font-size: normal; }
+
+.meet .meet__body h5 {
+  color: #716e6d;
+  font-family: "quatro-slab", Georgia, "Times New Roman", Times, serif;
+  font-weight: 300;
+  line-height: 1.4; }
+  .meet .meet__body h5 small {
+    color: #959599;
+    font-size: normal; }
+  .meet .meet__body h5 + p, .meet .meet__body h5 + ul, .meet .meet__body h5 + ol, .meet .meet__body h5 + dl {
+    margin-top: 0.5rem; }
 
 .post .post__title {
   color: #444444;
@@ -582,7 +611,7 @@ h4 + h4 {
     .post .post__title {
       font-size: 3.6em; } }
 
-.footer h6 {
+.meet .meet__meta, .footer h6 {
   margin-bottom: 0.9375rem;
   font-size: smaller;
   font-family: "lato", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
@@ -788,7 +817,6 @@ samp {
   position: relative;
   float: left;
   margin-top: 4rem;
-  margin-bottom: 2rem;
   font-family: "quatro-slab", Georgia, "Times New Roman", Times, serif; }
   @media only screen and (min-width: 40.063em) {
     .comments {
@@ -799,8 +827,7 @@ samp {
   @media only screen and (min-width: 40.063em) {
     .comments {
       left: 8.33333%;
-      right: 8.33333%;
-      margin-bottom: 0; } }
+      right: 8.33333%; } }
   @media only screen and (min-width: 50.063em) {
     .comments {
       left: 25%;
@@ -846,11 +873,10 @@ samp {
       margin-top: 0; }
 
 .comment-form {
-  padding: 1rem 0;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
   background-color: #fafafa;
   overflow: hidden; }
-  .comment-form h2 {
-    margin-bottom: 1rem; }
   .comment-form p {
     margin-top: 0; }
   .comment-form .comment-form__author,
@@ -889,10 +915,12 @@ samp {
     resize: vertical; }
   .comment-form h2 {
     height: 0.8em;
+    margin-bottom: 1rem;
     border-bottom: 4px solid #e5e5e5;
+    color: #716e6d;
+    background-color: white;
     font-size: 2rem;
     font-style: italic;
-    text-align: center;
     overflow: hidden; }
 
 /**
@@ -1089,6 +1117,78 @@ samp {
   .media-grid .media-grid__meta:hover, .media-grid .media-grid__meta:focus {
     color: #e02436; }
 
+/** 
+ * patterns->meet
+ */
+.meet {
+  margin-top: 1rem; }
+  .meet .meet__header,
+  .meet .meet__body,
+  .meet .meet__sidebar {
+    width: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    position: relative;
+    float: left; }
+    @media only screen and (min-width: 40.063em) {
+      .meet .meet__header,
+      .meet .meet__body,
+      .meet .meet__sidebar {
+        width: 83.33333%; } }
+    @media only screen and (min-width: 50.063em) {
+      .meet .meet__header,
+      .meet .meet__body,
+      .meet .meet__sidebar {
+        width: 66.66667%; } }
+    @media only screen and (min-width: 40.063em) {
+      .meet .meet__header,
+      .meet .meet__body,
+      .meet .meet__sidebar {
+        left: 8.33333%;
+        right: 8.33333%; } }
+    @media only screen and (min-width: 50.063em) {
+      .meet .meet__header,
+      .meet .meet__body,
+      .meet .meet__sidebar {
+        left: 16.66667%;
+        right: 16.66667%; } }
+  .meet .meet__meta {
+    margin: 0;
+    padding: 0;
+    color: #716e6d;
+    list-style: none; }
+    @media only screen and (min-width: 40.063em) {
+      .meet .meet__meta.meet__meta--outdent {
+        margin-left: -1.5em; } }
+  .meet .meet__body {
+    margin-bottom: 1rem; }
+
+/**
+ * patterns->pagination
+ */
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  list-item: 0; }
+  .pagination ul li {
+    display: block;
+    width: 10%;
+    float: left; }
+  .pagination ul .page-numbers {
+    display: block;
+    padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+    border-bottom: 4px solid #e5e5e5;
+    font-family: "lato", "Helvetica Neue", Helvetica, Arial, FreeSans, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    color: #e02436; }
+    .pagination ul .page-numbers:hover, .pagination ul .page-numbers:focus, .pagination ul .page-numbers.current {
+      border-bottom-color: #e02436; }
+    .pagination ul .page-numbers.current {
+      color: white;
+      background-color: #e02436; }
+
 /**
  * patterns->post
  */
@@ -1160,7 +1260,7 @@ samp {
 .profile .profile__media {
   margin-bottom: 25px; }
 .profile .profile__banner {
-  height: 140px;
+  height: 100px;
   position: absolute;
   top: 0;
   right: 0;
@@ -1168,17 +1268,27 @@ samp {
   z-index: 1;
   border-bottom: 1px solid #e5e5e5;
   background-color: #ba1933;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden; }
+  @media only screen and (min-width: 40.063em) {
+    .profile .profile__banner {
+      height: 140px; } }
   .profile .profile__banner img {
     width: 100%; }
 .profile .profile__avatar {
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   position: relative;
   z-index: 2;
   padding: 4px;
   border: 1px solid #e5e5e5;
   background-color: white; }
+  @media only screen and (min-width: 40.063em) {
+    .profile .profile__avatar {
+      width: 140px;
+      height: 140px; } }
 .profile .profile__captain {
   display: inline; }
 .profile .profile__social-links {
@@ -1233,10 +1343,11 @@ body {
 .guns-dont-kill-people {
   background-color: white; }
 
-@media only screen and (min-width: 40.063em) {
-  .main {
-    margin-top: 1rem;
-    margin-bottom: 2rem; } }
+.main {
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 40.063em) {
+    .main {
+      margin-top: 1rem; } }
 
 /**
  * site->masthead

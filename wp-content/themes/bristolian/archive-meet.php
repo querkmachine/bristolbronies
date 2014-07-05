@@ -36,10 +36,10 @@
           endif; 
         ?>
         <div class="row">
-          <article class="post <?php if($special): ?>post--special <?php endif; ?>vevent<?php if(bb_custom_field('meet_end_time') < time()) { echo " post--past"; } ?>">
-            <header class="post__header">
-              <ul class="post__meta">
-                <li class="post__meta__category">
+          <article class="meet <?php if($special): ?>meet--special <?php endif; ?>vevent<?php if(bb_custom_field('meet_end_time') < time()) { echo " meet--past"; } ?>">
+            <header class="meet__header">
+              <ul class="meet__meta">
+                <li class="meet__meta__category">
                   <?php 
                     $categories = bb_meet_category(get_the_ID());
                     for($i = 0; $i < count($categories); $i++):
@@ -49,16 +49,16 @@
                   ?>
                 </li>
               </ul>
-              <h1 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h1>
-              <ul class="post__meta">
-                <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
+              <h1 class="meet__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h1>
+              <ul class="meet__meta meet__meta--outdent">
+                <li class="meet__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
               <?php if($special): ?>
-                <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
+                <li class="meet__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
               <?php endif; ?>
               </ul>
             </header>
             <?php if($special): ?>
-            <div class="post__body">
+            <div class="meet__body">
               <?php the_excerpt(); ?>
             </div>
             <?php endif; ?>

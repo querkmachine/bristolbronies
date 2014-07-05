@@ -32,8 +32,8 @@ body {
 }
 
 .main {
+  margin-bottom: rem-calc($rem-base*2);
   @media #{$medium-up} {
     margin-top: rem-calc($rem-base);
-    margin-bottom: rem-calc($rem-base*2);
   }
 }

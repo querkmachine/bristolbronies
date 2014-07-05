@@ -5,12 +5,10 @@
 .comments {
 	@include column(12, 10, 6);
   margin-top: rem-calc($rem-base*4);
-  margin-bottom: rem-calc($rem-base*2);
   font-family: $detail-font;
   @media #{$medium-up} { 
     @include push(1);
     @include pull(1);
-    margin-bottom: 0;
   }
   @media #{$large-up} { 
     @include push(3);
@@ -74,12 +72,10 @@
 }
 
 .comment-form {
-  padding: rem-calc($rem-base 0);
+  margin-top: rem-calc($rem-base*2);
+  padding-bottom: rem-calc($rem-base);
   background-color: palette(grey, xx-light);
   overflow: hidden;
-  h2 {
-    margin-bottom: rem-calc($rem-base);
-  }
   p {
     margin-top: 0;
   }
@@ -111,10 +107,12 @@
   }
   h2 {
     height: 0.8em;
+    margin-bottom: rem-calc($rem-base);
     border-bottom: 4px solid palette(grey, x-light);
+    color: palette(grey);
+    background-color: palette(white);
     font-size: rem-calc(32px);
     font-style: italic;
-    text-align: center;
     overflow: hidden;
   }
 }

@@ -464,6 +464,15 @@ function bb_profile_avatar($id) {
   }
 }
 
+function bb_profile_banner($id) {
+  if($image = get_field("runner_banner", $id)) {
+    return $image['sizes']['large'];
+  }
+  else {
+    return false;
+  }
+}
+
 /**
  * News post type
  */

@@ -27,10 +27,10 @@
         </div>
 
         <div class="row">
-          <article class="post post--special vevent">
-            <header class="post__header">
-              <ul class="post__meta">
-                <li class="post__meta__category">
+          <article class="meet meet--special vevent">
+            <header class="meet__header">
+              <ul class="meet__meta">
+                <li class="meet__meta__category">
                   <?php 
                     $categories = bb_meet_category(get_the_ID());
                     for($i = 0; $i < count($categories); $i++):
@@ -42,13 +42,13 @@
                   ?>
                 </li>
               </ul>
-              <h1 class="post__title summary"><?php the_title(); ?></h1>
-              <ul class="post__meta">
-                <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
-                <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
+              <h1 class="meet__title summary"><?php the_title(); ?></h1>
+              <ul class="meet__meta meet__meta--outdent">
+                <li class="meet__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
+                <li class="meet__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
               </ul>
             </header>
-            <div class="post__body">
+            <div class="meet__body">
               <?php 
                 if(strlen(get_the_content()) > 0): 
                   the_content(); 
@@ -57,7 +57,7 @@
                 endif; 
               ?>
             </div>
-            <div class="post__sidebar">
+            <div class="meet__sidebar">
               <?php if(bb_custom_field('meet_end_time') > time()): ?>
               <aside class="forecast js-forecast postcard" 
                 data-latitude="<?php echo bb_meet_location(get_field('meet_location'), "latitude"); ?>" 
@@ -79,7 +79,7 @@
               <aside class="profile postcard">
                 <header class="profile__header">
                   <div class="profile__media">
-                    <div class="profile__banner"><?php // <img src="//placeponi.es/550/200" alt=""> ?> </div>
+                    <div class="profile__banner"<?php if($banner = bb_profile_banner($runner)): ?> style="background-image: url('<?php echo $banner; ?>');"<?php endif; ?>></div>
                     <img class="profile__avatar" src="<?php echo bb_profile_avatar($runner); ?>" alt="<?php echo get_the_title($runner); ?>">
                   </div>
                   <h1 class="profile__captain"><small>Meet runner</small> <?php echo get_the_title($runner); ?></h1>

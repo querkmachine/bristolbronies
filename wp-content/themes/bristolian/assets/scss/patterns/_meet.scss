@@ -1,0 +1,47 @@
+/** 
+ * patterns->meet
+ */
+
+.meet {
+	margin-top: rem-calc($rem-base);
+	.meet__header,
+	.meet__body,
+	.meet__sidebar {
+		@include column(12, 10, 8);
+		@media #{$medium-up} {
+			@include push(1);
+			@include pull(1);
+		}
+		@media #{$large-up} {
+			@include push(2);
+			@include pull(2);
+		}
+	}
+	.meet__title {
+		@extend %title-page-large;
+	}
+	.meet__meta {
+		@extend %title-list;
+		margin: 0;
+		padding: 0;
+		color: palette(grey);
+		list-style: none;
+		&.meet__meta--outdent {
+			@media #{$medium-up} {
+				margin-left: -1.5em;
+			}
+		}
+	}
+	.meet__body {
+		margin-bottom: rem-calc($rem-base);
+		h3 {
+			@extend %title-page-section;
+		}
+		h4 {
+			@extend %title-event;
+		}
+		h5 {
+			@extend %title-event-subevent;
+		}
+	}
+}
