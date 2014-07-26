@@ -1,0 +1,26 @@
+/**
+ * patterns->cover
+ */
+
+.cover {
+	height: 460px;
+	height: 100vh;
+	position: relative;
+	background-color: palette(grey, xx-light);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media #{$medium-up} {
+		height: 700px;
+		height: 100vh;
+	}
+  &__caption {
+  	@extend .billboard__caption;
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  }
+  &__title {
+  	@extend .billboard__title;
+  }
+}

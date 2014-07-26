@@ -7,7 +7,7 @@ $fi-size: 80;
 .forecast {
   padding: rem-calc($rem-base);
   overflow: hidden;
-  .forecast__icon {
+  &__icon {
     margin-top: rem-calc(0-$rem-base);
     margin-bottom: rem-calc(0-$rem-base);
     width: rem-calc($fi-size);
@@ -21,12 +21,12 @@ $fi-size: 80;
       line-height: rem-calc($fi-size);
     }
   }
-  .forecast__data {
+  &__data {
     p {
       margin: 0;
     }
   }
-  .forecast__temperature {
+  &__temperature {
 
   }
 }

@@ -13,7 +13,7 @@
   a {
     color: palette(white);
   }
-  .jumbotron__inner {
+  &__inner {
     height: 100%;
     padding: rem-calc($rem-base);
     position: absolute;
@@ -24,13 +24,13 @@
     background-color: rgba(palette(black), 0.65);
     // @include linear-gradient(rgba(palette(black), 0.25), rgba(palette(black), 0.85));
   }
-  .jumbotron__title {
+  &__title {
     @extend %title-page;
     position: relative;
     z-index: 2;
     text-transform: uppercase;
   }
-  .jumbotron__caption {
+  &__caption {
     @include vertical-align;
     text-align: center;
     p {
@@ -38,20 +38,15 @@
       margin: 0;
     }
   }
-  &.jumbotron--large {
+  &--large {
     @media #{$medium-up} {
       height: rem-calc(320px);
     }
   }
-  &.jumbotron--xlarge {
+  &--xlarge {
     height: rem-calc(320px);
     @media #{$medium-up} {
       height: rem-calc(480px);
-    }
-  }
-  &.jumbotron--blurb {
-    .jumbotron__caption {
-      @include vertical-align(100%);
     }
   }
 }

@@ -4,7 +4,7 @@
 
 .media-grid {
   @extend .clearfix;
-  .media-grid__item {
+  &__item {
     position: relative;
     width: 100%;
     @media #{$medium-up} {
@@ -20,7 +20,7 @@
     @media #{$xxlarge-up} {
       width: 20%;
     }
-    &.media-grid__item--text {
+    &--text {
       a {
         display: block;
         padding: rem-calc($rem-base);
@@ -29,7 +29,7 @@
       color: palette(white);
       background-color: palette(grey, x-dark);
     }
-    &.media-grid__item--staff {
+    &--staff {
       @include pad-this();
     }
     img {
@@ -44,7 +44,7 @@
       }
     }
   }
-  .media-grid__meta {
+  &__meta {
     position: absolute;
     top: 50%;
     right: 0;

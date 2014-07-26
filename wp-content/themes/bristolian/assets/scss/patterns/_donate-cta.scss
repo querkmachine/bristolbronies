@@ -10,14 +10,14 @@
   a {
     color: palette(white);
   }
-  .donate-cta__title {
+  &__title {
     @extend %title-page-subtitle;
     color: palette(white);
   }
-  .donate-cta__blurb {
+  &__blurb {
     @include column(12, 6);
   }
-  .donate-cta__info {
+  &__info {
     @include column(12, 6);
     margin-top: rem-calc($rem-base);
     padding-top: rem-calc($rem-base);
@@ -29,7 +29,7 @@
       top: rem-calc(0-($rem-base*3));
     }
   }
-  .donate-cta__button {
+  &__button {
     display: block;
   }
 }

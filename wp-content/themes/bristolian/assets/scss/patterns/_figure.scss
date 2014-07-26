@@ -5,7 +5,7 @@
 .figure {
   margin: rem-calc($rem-base 0);
   position: relative;
-  .figure__caption {
+  &__caption {
     margin-top: rem-calc($rem-base/2);
     color: palette(grey);
     font-size: small;

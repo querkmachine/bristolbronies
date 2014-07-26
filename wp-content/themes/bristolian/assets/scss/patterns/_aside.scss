@@ -12,7 +12,7 @@
   p, ul, ol dl {
     margin: 0.5em;
   }
-  &.aside--left {
+  &--left {
     @media #{$medium-up} {
       padding-right: rem-calc($rem-base);
       float: left;
@@ -21,7 +21,7 @@
       text-align: right;
     }
   }
-  &.aside--right {
+  &--right {
     @media #{$medium-up} {
       padding-left: rem-calc($rem-base);
       float: right;

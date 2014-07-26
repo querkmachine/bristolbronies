@@ -4,9 +4,9 @@
 
 .meet {
 	margin-top: rem-calc($rem-base);
-	.meet__header,
-	.meet__body,
-	.meet__sidebar {
+	&__header,
+	&__body,
+	&__sidebar {
 		@include column(12, 10, 8);
 		@media #{$medium-up} {
 			@include push(1);
@@ -17,22 +17,22 @@
 			@include pull(2);
 		}
 	}
-	.meet__title {
+	&__title {
 		@extend %title-page-large;
 	}
-	.meet__meta {
+	&__meta {
 		@extend %title-list;
 		margin: 0;
 		padding: 0;
 		color: palette(grey);
 		list-style: none;
-		&.meet__meta--outdent {
+		&--outdent {
 			@media #{$medium-up} {
 				margin-left: -1.5em;
 			}
 		}
 	}
-	.meet__body {
+	&__body {
 		margin-bottom: rem-calc($rem-base);
 		h3 {
 			@extend %title-page-section;

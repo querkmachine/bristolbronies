@@ -17,9 +17,9 @@ function initFitVids() {
 }
 
 function initBBCommunity() {
-  var $container = $('.media-grid');
+  var $container = $(".media-grid");
   $container.packery({ 
-    itemSelector: '.media-grid__item',
+    itemSelector: ".media-grid__item",
     gutter: 0,
     columnWidth: ".media-grid__item",
     transitionDuration: "0.3s"

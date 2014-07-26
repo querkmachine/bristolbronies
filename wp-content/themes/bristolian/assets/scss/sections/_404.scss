@@ -1,0 +1,44 @@
+/**
+ * sections->404
+ */
+
+body.error404 {
+  overflow: hidden;
+  * {
+    -webkit-transition: -webkit-transform 0.5s ease;
+       -moz-transition: -webkit-transform 0.5s ease;
+            transition: -webkit-transform 0.5s ease;
+    &:nth-child(2n) {
+      -webkit-transition-delay: 0.15s;
+         -moz-transition-delay: 0.15s;
+              transition-delay: 0.15s;
+    }
+    &:nth-child(3n) {
+      -webkit-transition-delay: 0.3s;
+         -moz-transition-delay: 0.3s;
+              transition-delay: 0.3s;
+    }
+    &:nth-child(5n) {
+      -webkit-transition-delay: 0.45s;
+         -moz-transition-delay: 0.45s;
+              transition-delay: 0.45s;
+    }
+  }
+  .error-404 {
+    @include column(12);
+    text-align: center;
+    h1 {
+      @extend %title-page;
+    }
+    img {
+      margin-bottom: rem-calc($rem-base*2);
+    }
+    a {
+      color: palette(red);
+      &:hover,
+      &:focus {
+        color: palette(red, dark);
+      }
+    }
+  }
+}

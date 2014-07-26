@@ -32,21 +32,21 @@
           $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
         endif;
 ?>
-        <div class="row">
-          <div class="jumbotron jumbotron--xlarge jumbotron--blurb" style="background-image: url('<?php echo $image_url[0]; ?>');">
-            <div class="jumbotron__inner">
-              <div class="jumbotron__caption">
-                <p><?php echo $home_blurb; ?></p>
-              </div>
-            </div>
+        <div class="row row--fullwidth">
+          <div class="cover" style="background-image: url('<?php echo $image_url[0]; ?>');">
+            <figcaption class="cover__caption">
+              <h4 class="cover__title"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h4>
+              <p><strong><?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></strong></p>
+              <?php the_excerpt(); ?>
+            </figcaption>
           </div>
         </div>
-        <div class="row">
+        <!--<div class="row">
           <div class="__home__next-meet">
-            <article class="post <?php if($special): ?>post--special <?php endif; ?>vevent">
-              <header class="post__header">
-                <ul class="post__meta">
-                  <li class="post__meta__category">
+            <article class="meet <?php if($special): ?>meet--special <?php endif; ?>vevent">
+              <header class="meet__header">
+                <ul class="meet__meta">
+                  <li class="meet__meta__category">
                     <strong>Next meet:</strong> 
                     <?php 
                       $categories = bb_meet_category(get_the_ID());
@@ -59,22 +59,22 @@
                     ?>
                   </li>
                 </ul>
-                <h1 class="post__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h1>
-                <ul class="post__meta">
-                  <li class="post__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
+                <h1 class="meet__title summary"><a href="<?php the_permalink(); ?>" class="url"><?php the_title(); ?></a></h1>
+                <ul class="meet__meta">
+                  <li class="meet__meta__date"><i class="fa fa-calendar fa-fw"></i> <?php echo bb_meet_dates(bb_custom_field('meet_start_time'), bb_custom_field('meet_end_time')); ?></li>
                 <?php if($special): ?>
-                  <li class="post__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
+                  <li class="meet__meta__location"><i class="fa fa-map-marker fa-fw"></i> <?php echo bb_meet_location(get_field('meet_location')); ?></li>
                 <?php endif; ?>
                 </ul>
               </header>
               <?php if($special): ?>
-              <div class="post__body">
+              <div class="meet__body">
                 <?php the_excerpt(); ?>
               </div>
               <?php endif; ?>
             </article>
           </div>
-        </div>
+        </div>-->
 <?php
       endif;
     endwhile;
@@ -85,12 +85,10 @@
         $image_url[0] = "/wp-content/themes/".BB_VERSION."/assets/img/banner/banner-1.jpg";
       endif;
 ?>
-        <div class="row">
-          <div class="jumbotron jumbotron--xlarge jumbotron--blurb" style="background-image: url('<?php echo $image_url[0]; ?>');">
-            <div class="jumbotron__inner">
-              <div class="jumbotron__caption">
-                <p><?php echo $home_blurb; ?></p>
-              </div>
+        <div class="row row--fullwidth">
+          <div class="cover" style="background-image: url('<?php echo $image_url[0]; ?>');">
+            <div class="cover__caption">
+              <p><?php echo $home_blurb; ?></p>
             </div>
           </div>
         </div>
@@ -100,7 +98,7 @@
   wp_reset_postdata();
 ?>
 
-        <div class="row">
+        <div class="row row--fullwidth">
 <?php 
   get_template_part('parts/global/billboards');
 

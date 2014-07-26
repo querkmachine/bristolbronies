@@ -36,13 +36,13 @@
       color: palette(red, dark);
     }
   }
-  .post__title {
+  &__title {
     @extend %title-news; 
     margin-bottom: rem-calc($rem-base);
     padding-bottom: rem-calc($rem-base);
     border-bottom: 4px solid palette(grey, dark);
   }
-  .post__meta {
+  &__meta {
     margin: 0;
     padding: 0;
     color: palette(grey);
@@ -60,6 +60,6 @@
       }
     }
   }
-  .post__body {
+  &__body {
   }
 }

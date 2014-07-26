@@ -14,7 +14,7 @@
     @include push(3);
     @include pull(3);
   }
-  .comments__title {
+  &__title {
     @extend %title-page-subtitle;
     padding-bottom: rem-calc($rem-base/2);
     border-bottom: 4px solid palette(grey, x-light);
@@ -26,7 +26,7 @@
       }
     }
   }
-  .comments__list {
+  &__list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -36,7 +36,7 @@
 .comment {
   margin-top: rem-calc($rem-base/2);
   margin-bottom: rem-calc($rem-base);
-  .comment__meta {
+  &__meta {
     @extend %title-comment;
     overflow: hidden;
     line-height: 34px;
@@ -56,7 +56,7 @@
     margin-right: 10px;
     float: left;
   }
-  .comment__body {
+  &__body {
     margin-left: 44px;
     font-size: 14px;
     @media #{$medium-up} {
@@ -79,16 +79,16 @@
   p {
     margin-top: 0;
   }
-  .comment-form__author,
-  .comment-form__email {
+  &__author,
+  &__email {
     @include column(12, 6);
   }
   h2,
-  .comment-form__comment,
-  .comment-form__submit {
+  &__comment,
+  &__submit {
     @include column(12);
   }
-  .comment-form__submit {
+  &__submit {
     text-align: right;
   }
   input[type="text"],

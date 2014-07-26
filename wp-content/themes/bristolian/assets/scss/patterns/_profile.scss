@@ -3,14 +3,14 @@
  */
 
 .profile {
-  .profile__header {
+  &__header {
     padding: rem-calc($rem-base $rem-base 0 $rem-base);
     position: relative;
   }
-  .profile__media {
+  &__media {
     margin-bottom: 25px;
   }
-  .profile__banner {
+  &__banner {
     height: 100px;
     position: absolute;
     top: 0;
@@ -30,7 +30,7 @@
       width: 100%;
     }
   }
-  .profile__avatar {
+  &__avatar {
     width: 100px;
     height: 100px;
     position: relative;
@@ -43,11 +43,11 @@
       height: 140px;
     }
   }
-  .profile__captain {
+  &__captain {
     @extend %title-postcard;
     display: inline;
   }
-  .profile__social-links {
+  &__social-links {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -67,7 +67,7 @@
       }
     }
   }
-  .profile__biography {
+  &__biography {
     padding: rem-calc(0 $rem-base $rem-base);
     p {
       margin: 0;
@@ -78,6 +78,25 @@
       &:focus {
         color: palette(red, dark);
       }
+    }
+  }
+}
+
+.profile-grid {
+  &__item {
+    width: 100%;
+    margin-bottom: rem-calc($rem-base*1.5);
+    padding: 0 $rem-base/2;
+    @media #{$medium-up} {
+      width: 50%;
+    }
+    &:nth-child(odd) {
+      float: left;
+      clear: left;
+    }
+    &:nth-child(even) {
+      float: right;
+      clear: right;
     }
   }
 }

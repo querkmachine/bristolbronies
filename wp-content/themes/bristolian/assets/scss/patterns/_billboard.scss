@@ -5,7 +5,7 @@
 .billboard {
   position: relative;
   overflow: hidden;
-  .billboard__media {
+  &__media {
     a {
       display: block;
     }
@@ -13,25 +13,24 @@
       width: 100%;
     }
   }
-  .billboard__caption {
+  &__caption {
     padding: rem-calc($rem-base);
-    color: palette(white);
-    background-color: palette(grey, x-dark);
+    color: palette(grey, x-dark);
+    background-color: palette(white);
     font-family: $body-font;
     font-size: rem-calc(15px);
     line-height: 1.5;
     @media #{$medium-up} {
-      max-width: 80%;
+      max-width: 83.3333%;
       position: absolute;
-      bottom: 5%;
+      bottom: 0;
       left: 0;
-      background-color: rgba(palette(black), 0.85);
     }
     p {
       margin: 0;
     }
   }
-  .billboard__title {
+  &__title {
     margin-bottom: rem-calc($rem-base/4);
     padding-bottom: rem-calc($rem-base/4);
     border-bottom: 4px solid palette(red);
@@ -39,7 +38,7 @@
     a {
       @extend %title-event;
       display: block;
-      color: palette(white);
+      color: palette(grey, x-dark);
       text-decoration: none;
       &:hover,
       &:focus {
@@ -47,7 +46,7 @@
       }
     }
   }
-  &.billboard--inline {
+  &--inline {
     @include column(12, 12, 6);
     @include pad-this(0);
   }

@@ -44,7 +44,7 @@
   <!-- Javascripts -->
   <script src="//use.typekit.net/rvj6shm.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
-  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/modernizr-2.7.1.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/modernizr.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/assets/js/pace.min.js"></script>
 
   <!-- Page title -->
